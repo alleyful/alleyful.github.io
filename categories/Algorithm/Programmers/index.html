@@ -162,6 +162,101 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-12T15:55:09.000Z">2019-06-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/13/programmers-level1-04/">체육복</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다.<br>다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다.<br>학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다.<br>예를 들어, 4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다.<br>체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.</p>
+<p>전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.<br><br></p>
+<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><ul>
+<li>전체 학생의 수는 2명 이상 30명 이하입니다.</li>
+<li>체육복을 도난당한 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.</li>
+<li>여벌의 체육복을 가져온 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.</li>
+<li>여벌 체육복이 있는 학생만 다른 학생에게 체육복을 빌려줄 수 있습니다.</li>
+<li>여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다. 이때 이 학생은 체육복을 하나만 도난당했다고 가정하며, 남은 체육복이 하나이기에 다른 학생에게는 체육복을 빌려줄 수 없습니다.<br>
+<br>
+
+</li>
+</ul>
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
+<thead>
+<tr>
+<th>n</th>
+<th align="center">lost</th>
+<th align="center">reserve</th>
+<th align="center">return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5</td>
+<td align="center">[2, 4]</td>
+<td align="center">[1, 3, 5]</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td>5</td>
+<td align="center">[2, 4]</td>
+<td align="center">[3]</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td>3</td>
+<td align="center">[3]</td>
+<td align="center">[1]</td>
+<td align="center">2</td>
+</tr>
+</tbody></table>
+<br>
+
+<h3 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h3><ul>
+<li><p>예제 #1</p>
+<ul>
+<li>1번 학생이 2번 학생에게 체육복을 빌려주고, 3번 학생이나 5번 학생이 4번 학생에게 체육복을 빌려주면 학생 5명이 체육수업을 들을 수 있습니다.</li>
+</ul>
+</li>
+<li><p>예제 #2</p>
+<ul>
+<li>3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n, lost, reserve</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> reserveList = reserve;</span><br><span class="line">    <span class="hljs-keyword">let</span> reserveLostIndex = <span class="hljs-number">-1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">let</span> lostList = lost.reduce(<span class="hljs-function">(<span class="hljs-params">target, item</span>) =&gt;</span> &#123;</span><br><span class="line">        reserveLostIndex = reserveList.findIndex(<span class="hljs-function"><span class="hljs-params">reser</span> =&gt;</span> item === reser);</span><br><span class="line">        reserveLostIndex &gt;= <span class="hljs-number">0</span> ? reserveList.splice(reserveLostIndex, <span class="hljs-number">1</span>) : target.push(item);</span><br><span class="line">     </span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">return</span> n - lostList.reduce(<span class="hljs-function">(<span class="hljs-params">target, item</span>) =&gt;</span> &#123;        </span><br><span class="line">        <span class="hljs-keyword">let</span> index = reserveList.findIndex(<span class="hljs-function"><span class="hljs-params">reser</span> =&gt;</span> reser === item - <span class="hljs-number">1</span> || reser === item + <span class="hljs-number">1</span>);</span><br><span class="line">        index &gt;= <span class="hljs-number">0</span> &amp;&amp; (</span><br><span class="line">            reserveList.splice(index, <span class="hljs-number">1</span>),</span><br><span class="line">            target--</span><br><span class="line">        );</span><br><span class="line">        </span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, lostList.length);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-11T15:08:20.000Z">2019-06-12</time>
                 
                 <div class="level-item">
@@ -175,7 +270,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/12/programmers-level-03/">K번째수</a>
+                <a class="has-link-black-ter" href="/2019/06/12/programmers-level1-03/">K번째수</a>
             
         </h1>
         <div class="content">
@@ -473,7 +568,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        4
                     </p>
                 </div>
             </div>
@@ -545,7 +640,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
@@ -553,7 +648,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -586,8 +681,21 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-12T15:55:09.000Z">2019-06-13</time></div>
+                    <a href="/2019/06/13/programmers-level1-04/" class="has-link-black-ter is-size-6">체육복</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-11T15:08:20.000Z">2019-06-12</time></div>
-                    <a href="/2019/06/12/programmers-level-03/" class="has-link-black-ter is-size-6">K번째수</a>
+                    <a href="/2019/06/12/programmers-level1-03/" class="has-link-black-ter is-size-6">K번째수</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -639,7 +747,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -660,14 +768,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -698,8 +806,21 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-12T15:55:09.000Z">2019-06-13</time></div>
+                    <a href="/2019/06/13/programmers-level1-04/" class="has-link-black-ter is-size-6">체육복</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-11T15:08:20.000Z">2019-06-12</time></div>
-                    <a href="/2019/06/12/programmers-level-03/" class="has-link-black-ter is-size-6">K번째수</a>
+                    <a href="/2019/06/12/programmers-level1-03/" class="has-link-black-ter is-size-6">K번째수</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -751,7 +872,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -772,14 +893,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
