@@ -160,6 +160,95 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-14T14:06:38.000Z">2019-06-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/14/programmers-level1-08/">나누어 떨어지는 숫자 배열</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.<br><br>divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.<br><br><br><br></p>
+<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><p>arr은 자연수를 담은 배열입니다.<br><br>정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입니다.<br><br>divisor는 자연수입니다.<br><br>array는 길이 1 이상인 배열입니다.<br><br><br><br></p>
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
+<thead>
+<tr>
+<th>arr</th>
+<th align="center">divisor</th>
+<th align="center">return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[5, 9, 7, 10]</td>
+<td align="center">5</td>
+<td align="center">[5, 10]</td>
+</tr>
+<tr>
+<td>[2, 36, 1, 3]</td>
+<td align="center">1</td>
+<td align="center">[1, 2, 3, 36]</td>
+</tr>
+<tr>
+<td>[3,2,6]</td>
+<td align="center">10</td>
+<td align="center">[-1]</td>
+</tr>
+<tr>
+<td><br></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h3><ul>
+<li><p>입출력 예#1</p>
+<ul>
+<li>arr의 원소 중 5로 나누어 떨어지는 원소는 5와 10입니다. 따라서 [5, 10]을 리턴합니다.</li>
+</ul>
+</li>
+<li><p>입출력 예#2</p>
+<ul>
+<li>arr의 모든 원소는 1으로 나누어 떨어집니다. 원소를 오름차순으로 정렬해 [1, 2, 3, 36]을 리턴합니다.</li>
+</ul>
+</li>
+<li><p>입출력 예#3</p>
+<ul>
+<li>3, 2, 6은 10으로 나누어 떨어지지 않습니다. 나누어 떨어지는 원소가 없으므로 [-1]을 리턴합니다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">arr, divisor</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> result = arr.reduce(<span class="hljs-function">(<span class="hljs-params">target, item</span>) =&gt;</span> &#123;</span><br><span class="line">        (item % divisor === <span class="hljs-number">0</span>) &amp;&amp; target.push(item);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">return</span> result.length &gt; <span class="hljs-number">0</span> ? result.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b) : [<span class="hljs-number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-13T14:06:38.000Z">2019-06-13</time>
                 
                 <div class="level-item">
@@ -765,7 +854,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        8
                     </p>
                 </div>
             </div>
@@ -791,7 +880,7 @@
             </div>
         </nav>
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
+            <a class="level-item button is-link is-rounded" href="https://github.com/alleyful" target="_blank">
                 Follow</a>
         </div>
         
@@ -837,7 +926,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">7</span>
+                <span class="level-item tag">8</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
@@ -845,7 +934,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">7</span>
+                <span class="level-item tag">8</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -878,6 +967,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-14T14:06:38.000Z">2019-06-14</time></div>
+                    <a href="/2019/06/14/programmers-level1-08/" class="has-link-black-ter is-size-6">나누어 떨어지는 숫자 배열</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T14:06:38.000Z">2019-06-13</time></div>
                     <a href="/2019/06/13/programmers-level1-07/" class="has-link-black-ter is-size-6">같은 숫자는 싫어</a>
                     <p class="is-size-7 is-uppercase">
@@ -926,19 +1028,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-11T15:08:20.000Z">2019-06-12</time></div>
-                    <a href="/2019/06/12/programmers-level1-03/" class="has-link-black-ter is-size-6">K번째수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -957,7 +1046,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -978,14 +1067,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">7</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">7</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -1016,6 +1105,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-14T14:06:38.000Z">2019-06-14</time></div>
+                    <a href="/2019/06/14/programmers-level1-08/" class="has-link-black-ter is-size-6">나누어 떨어지는 숫자 배열</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T14:06:38.000Z">2019-06-13</time></div>
                     <a href="/2019/06/13/programmers-level1-07/" class="has-link-black-ter is-size-6">같은 숫자는 싫어</a>
                     <p class="is-size-7 is-uppercase">
@@ -1064,19 +1166,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-11T15:08:20.000Z">2019-06-12</time></div>
-                    <a href="/2019/06/12/programmers-level1-03/" class="has-link-black-ter is-size-6">K번째수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1095,7 +1184,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">8</span>
                 </span>
             </a>
         </li>
@@ -1116,14 +1205,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">7</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">7</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
