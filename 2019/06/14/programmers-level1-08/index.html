@@ -16,7 +16,7 @@
 <meta property="og:description" content="문제 설명array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요. 제한사항arr은 자연수를 담은 배열입니다.정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-15T09:31:23.448Z">
+<meta property="og:updated_time" content="2019-06-15T09:41:00.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="나누어 떨어지는 숫자 배열">
 <meta name="twitter:description" content="문제 설명array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요. 제한사항arr은 자연수를 담은 배열입니다.정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입">
@@ -150,7 +150,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-14T14:06:38.000Z">2019-06-14</time>
+                <time class="level-item has-text-grey" datetime="2019-06-14T06:06:38.000Z">2019-06-14</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
@@ -215,6 +215,8 @@
 </ul>
 </li>
 </ul>
+<br>
+
 <hr>
 <h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">arr, divisor</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> result = arr.reduce(<span class="hljs-function">(<span class="hljs-params">target, item</span>) =&gt;</span> &#123;</span><br><span class="line">        (item % divisor === <span class="hljs-number">0</span>) &amp;&amp; target.push(item);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">return</span> result.length &gt; <span class="hljs-number">0</span> ? result.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b) : [<span class="hljs-number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -276,6 +278,13 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/14/programmers-level1-09/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">두 정수 사이의 합</span>
+            </a>
+        </div>
+        
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/13/programmers-level1-07/">
@@ -331,7 +340,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        10
                     </p>
                 </div>
             </div>
@@ -403,7 +412,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">8</span>
+                <span class="level-item tag">10</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
@@ -411,7 +420,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">8</span>
+                <span class="level-item tag">10</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -445,6 +454,32 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-14T14:06:38.000Z">2019-06-14</time></div>
+                    <a href="/2019/06/14/programmers-level1-10/" class="has-link-black-ter is-size-6">문자열 내 마음대로 정렬하기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-14T11:06:38.000Z">2019-06-14</time></div>
+                    <a href="/2019/06/14/programmers-level1-09/" class="has-link-black-ter is-size-6">두 정수 사이의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-14T06:06:38.000Z">2019-06-14</time></div>
                     <a href="/2019/06/14/programmers-level1-08/" class="has-link-black-ter is-size-6">나누어 떨어지는 숫자 배열</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
@@ -479,32 +514,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T13:56:26.000Z">2019-06-13</time></div>
-                    <a href="/2019/06/13/programmers-level1-05/" class="has-link-black-ter is-size-6">2016년</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-12T15:55:09.000Z">2019-06-13</time></div>
-                    <a href="/2019/06/13/programmers-level1-04/" class="has-link-black-ter is-size-6">체육복</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -523,7 +532,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">10</span>
                 </span>
             </a>
         </li>
@@ -544,14 +553,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
@@ -583,6 +592,32 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-14T14:06:38.000Z">2019-06-14</time></div>
+                    <a href="/2019/06/14/programmers-level1-10/" class="has-link-black-ter is-size-6">문자열 내 마음대로 정렬하기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-14T11:06:38.000Z">2019-06-14</time></div>
+                    <a href="/2019/06/14/programmers-level1-09/" class="has-link-black-ter is-size-6">두 정수 사이의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-14T06:06:38.000Z">2019-06-14</time></div>
                     <a href="/2019/06/14/programmers-level1-08/" class="has-link-black-ter is-size-6">나누어 떨어지는 숫자 배열</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
@@ -617,32 +652,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-13T13:56:26.000Z">2019-06-13</time></div>
-                    <a href="/2019/06/13/programmers-level1-05/" class="has-link-black-ter is-size-6">2016년</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-12T15:55:09.000Z">2019-06-13</time></div>
-                    <a href="/2019/06/13/programmers-level1-04/" class="has-link-black-ter is-size-6">체육복</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -661,7 +670,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">10</span>
                 </span>
             </a>
         </li>
@@ -682,14 +691,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
