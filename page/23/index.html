@@ -151,7 +151,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T07:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T09:24:41.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -164,36 +164,44 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day6_LetsReview/">Day6 Let&#39;s Review</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day11_2DArrays/">Day11 2D Arrays</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a string, <strong>S</strong>, of length <strong>N</strong> that is indexed from <strong>0</strong> to <strong>N - 1</strong>, print its even-indexed and odd-indexed characters as <strong>2</strong> space-separated strings on a single line (see the Sample below for more detail).</p>
-<p><strong>Note: 0</strong> is considered to be an even index.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, <strong>T</strong> (the number of test cases).<br>Each line <strong>i</strong> of the <strong>T</strong> subsequent lines contain a String, <strong>S</strong>.</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re building on our knowledge of Arrays by adding another dimension. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h2 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h2><p>Given a <strong>6 X 6</strong> 2D Array, <strong>A</strong>:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 1 1 0 0 0</span><br><span class="line">0 1 0 0 0 0</span><br><span class="line">1 1 1 0 0 0</span><br><span class="line">0 0 0 0 0 0</span><br><span class="line">0 0 0 0 0 0</span><br><span class="line">0 0 0 0 0 0</span><br></pre></td></tr></table></figure>
+
+<p>We define an hourglass in <strong>A</strong> to be a subset of values with indices falling in this pattern in <strong>A</strong>‘s graphical representation:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a b c</span><br><span class="line">  d</span><br><span class="line">e f g</span><br></pre></td></tr></table></figure>
+
+<p>There are <strong>16</strong> hourglasses in <strong>A</strong>, and an hourglass sum is the sum of an hourglass’ values.</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Calculate the hourglass sum for every hourglass in <strong>A</strong>, then print the maximum hourglass sum.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>There are <strong>6</strong> lines of input, where each line contains <strong>6</strong> space-separated integers describing 2D Array <strong>A</strong>; every value in <strong>A</strong> will be in the inclusive range of <strong>-9</strong> to <strong>9</strong>.</p>
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li><strong>1 &lt;= T &lt;= 10</strong></li>
-<li><strong>2 &lt;= length of S &lt;= 10000</strong></li>
+<li><strong>-9 &lt;= A[i][j] &lt;= 9</strong></li>
+<li><strong>0 &lt;= i,j &lt;= 5</strong></li>
 </ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>For each String <strong>S<sub>j</sub></strong> (where <strong>0 &lt;= j &lt;= T - 1</strong>), print <strong>S<sub>j</sub></strong>‘s even-indexed characters, followed by a space, followed by <strong>S<sub>j</sub></strong>‘s odd-indexed characters.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">Hacker</span><br><span class="line">Rank</span><br></pre></td></tr></table></figure>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print the largest (maximum) hourglass sum found in <strong>A</strong>.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 1 1 0 0 0</span><br><span class="line">0 1 0 0 0 0</span><br><span class="line">1 1 1 0 0 0</span><br><span class="line">0 0 2 4 4 0</span><br><span class="line">0 0 0 2 0 0</span><br><span class="line">0 0 1 2 4 0</span><br></pre></td></tr></table></figure>
 
-<p>##Sample Output</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hce akr</span><br><span class="line">Rn ak</span><br></pre></td></tr></table></figure>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">19</span><br></pre></td></tr></table></figure>
 
-<p>##Explanation</p>
-<p>Test Case 0: <strong>S = “Hacker”</strong><br><br><strong>S[0] = “H”</strong><br><br><strong>S[1] = “a”</strong><br><br><strong>S[2] = “c”</strong><br><br><strong>S[3] = “k”</strong><br><br><strong>S[4] = “e”</strong><br><br><strong>S[5] = “r”</strong><br></p>
-<p>The even indices are <strong>0</strong>, <strong>2</strong>, and <strong>4</strong>, and the odd indices are <strong>1</strong>, <strong>3</strong>, and <strong>5</strong>. We then print a single line of <strong>2</strong> space-separated strings; the first string contains the ordered characters from <strong>S</strong>‘s even indices (<strong>Hce</strong>), and the second string contains the ordered characters from <strong>S</strong>‘s odd indices (<strong>akr</strong>).</p>
-<p>Test Case 1: <strong>S = “Rank”</strong><br><br><strong>S[0] = “R”</strong><br><br><strong>S[1] = “a”</strong><br><br><strong>S[2] = “n”</strong><br><br><strong>S[3] = “k”</strong><br></p>
-<p>The even indices are <strong>0</strong> and <strong>2</strong>, and the odd indices are <strong>1</strong> and <strong>3</strong>. We then print a single line of <strong>2</strong> space-separated strings; the first string contains the ordered characters from <strong>S</strong>‘s even indices (<strong>Rn</strong>), and the second string contains the ordered characters from <strong>S</strong>‘s odd indices (<strong>ak</strong>).</p>
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p><strong>A</strong> contains the following hourglasses:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1 1 1   1 1 0   1 0 0   0 0 0</span><br><span class="line">  1       0       0       0</span><br><span class="line">1 1 1   1 1 0   1 0 0   0 0 0</span><br><span class="line"></span><br><span class="line">0 1 0   1 0 0   0 0 0   0 0 0</span><br><span class="line">  1       1       0       0</span><br><span class="line">0 0 2   0 2 4   2 4 4   4 4 0</span><br><span class="line"></span><br><span class="line">1 1 1   1 1 0   1 0 0   0 0 0</span><br><span class="line">  0       2       4       4</span><br><span class="line">0 0 0   0 0 2   0 2 0   2 0 0</span><br><span class="line"></span><br><span class="line">0 0 2   0 2 4   2 4 4   4 4 0</span><br><span class="line">  0       0       2       0</span><br><span class="line">0 0 1   0 1 2   1 2 4   2 4 0</span><br></pre></td></tr></table></figure>
+
+<p>The hourglass with the maximum sum (<strong>19</strong>) is:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2 4 4</span><br><span class="line">  2</span><br><span class="line">1 2 4</span><br></pre></td></tr></table></figure>
+
 <br>
 <br>
 
 <hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> array = input.split(<span class="hljs-string">'\n'</span>);</span><br><span class="line">    array.shift();</span><br><span class="line">    </span><br><span class="line">    array.map(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> odd = <span class="hljs-string">''</span>;</span><br><span class="line">        <span class="hljs-keyword">let</span> even = <span class="hljs-string">''</span>;</span><br><span class="line"></span><br><span class="line">        value.split(<span class="hljs-string">''</span>).map(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> &#123;</span><br><span class="line">            index % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? odd += value : even += value;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;odd&#125;</span> <span class="hljs-subst">$&#123;even&#125;</span>`</span>);</span><br><span class="line">     &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> arr = <span class="hljs-built_in">Array</span>(<span class="hljs-number">6</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">6</span>; i++) &#123;</span><br><span class="line">        arr[i] = readLine().split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span class="hljs-params">arrTemp</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(arrTemp, <span class="hljs-number">10</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">let</span> result = arr.reduce(<span class="hljs-function">(<span class="hljs-params">target, rows, index</span>) =&gt;</span> &#123;</span><br><span class="line">        rows.reduce(<span class="hljs-function">(<span class="hljs-params">subTarget, item, subIndex</span>) =&gt;</span> &#123;</span><br><span class="line">            (</span><br><span class="line">                index &lt; arr.length - <span class="hljs-number">2</span> &amp;&amp; subIndex &lt; arr.length - <span class="hljs-number">2</span></span><br><span class="line">            ) &amp;&amp;</span><br><span class="line">                target.push(</span><br><span class="line">                    arr[index][subIndex] + arr[index][subIndex + <span class="hljs-number">1</span>] + arr[index][subIndex + <span class="hljs-number">2</span>] + arr[index + <span class="hljs-number">1</span>][subIndex + <span class="hljs-number">1</span>] + arr[index + <span class="hljs-number">2</span>][subIndex] + arr[index + <span class="hljs-number">2</span>][subIndex + <span class="hljs-number">1</span>] + arr[index + <span class="hljs-number">2</span>][subIndex + <span class="hljs-number">2</span>]</span><br><span class="line">                );</span><br><span class="line">        &#125;, []);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.max.apply(<span class="hljs-literal">null</span>, result));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//Enter your code here</span></span><br><span class="line">    input.split(<span class="hljs-string">"\n"</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (index &amp;&amp; <span class="hljs-built_in">Number</span>.isNaN(+item)) &#123;</span><br><span class="line">            <span class="hljs-keyword">let</span> result = item.split(<span class="hljs-string">''</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, text, index</span>) =&gt;</span> &#123;</span><br><span class="line">                target[+(index % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>)] += text;</span><br><span class="line"></span><br><span class="line">                <span class="hljs-keyword">return</span> target;</span><br><span class="line">            &#125;, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">2</span>).fill(<span class="hljs-string">''</span>)).join(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">            <span class="hljs-built_in">console</span>.log(result);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">     <span class="hljs-keyword">let</span> arr = <span class="hljs-built_in">Array</span>(<span class="hljs-number">6</span>);</span><br><span class="line">     <span class="hljs-keyword">let</span> maxSum;</span><br><span class="line"> </span><br><span class="line">     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">6</span>; i++) &#123;</span><br><span class="line">         arr[i] = readLine().split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span class="hljs-params">arrTemp</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(arrTemp, <span class="hljs-number">10</span>));</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     <span class="hljs-keyword">const</span> findMaxSum = <span class="hljs-function">(<span class="hljs-params">n, m</span>) =&gt;</span> &#123;</span><br><span class="line">         <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;</span><br><span class="line">         <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) &#123;</span><br><span class="line">             <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) &#123;</span><br><span class="line">                 sum += !(i === <span class="hljs-number">1</span> &amp;&amp; (j === <span class="hljs-number">0</span> || j === <span class="hljs-number">2</span>)) &amp;&amp; arr[n + i][m + j];</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="hljs-keyword">return</span> sum;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     <span class="hljs-keyword">const</span> search = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">         <span class="hljs-keyword">let</span> sum;</span><br><span class="line">         <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;</span><br><span class="line">             <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">4</span>; j++) &#123;</span><br><span class="line">                 sum = findMaxSum(i, j);</span><br><span class="line">                 (i === <span class="hljs-number">0</span> &amp;&amp; j === <span class="hljs-number">0</span>) &amp;&amp; (maxSum = sum);</span><br><span class="line">                 maxSum &lt; sum &amp;&amp; (maxSum = sum);</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     search();</span><br><span class="line">     <span class="hljs-built_in">console</span>.log(maxSum);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution 3"></a>Solution 3</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> arr = <span class="hljs-built_in">Array</span>(<span class="hljs-number">6</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">6</span>; i++) &#123;</span><br><span class="line">        arr[i] = readLine().split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span class="hljs-params">arrTemp</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(arrTemp, <span class="hljs-number">10</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> temp = []</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">4</span>; j++) &#123;</span><br><span class="line">            temp.push(arr[i][j] + arr[i][j + <span class="hljs-number">1</span>] + arr[i][j + <span class="hljs-number">2</span>] + arr[i + <span class="hljs-number">1</span>][j + <span class="hljs-number">1</span>] + arr[i + <span class="hljs-number">2</span>][j] + arr[i + <span class="hljs-number">2</span>][j + <span class="hljs-number">1</span>] + arr[i + <span class="hljs-number">2</span>][j + <span class="hljs-number">2</span>])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">let</span> max = temp.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">previous, current</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> previous &gt; current ? previous : current;</span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-built_in">console</span>.log(max);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -234,7 +242,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/39/">39</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
             
         </ul>
     </nav>
@@ -282,7 +290,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        44
                     </p>
                 </div>
             </div>
@@ -354,7 +362,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">39</span>
+                <span class="level-item tag">44</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -370,7 +378,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">15</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -403,10 +411,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -416,10 +424,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -429,10 +437,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -442,10 +450,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -455,10 +463,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -482,7 +490,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -503,7 +511,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">39</span>
+                        <span class="tag is-grey">44</span>
                     </a>
                 </div>
                 
@@ -517,7 +525,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
@@ -548,10 +556,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -561,10 +569,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -574,10 +582,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -587,10 +595,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -600,10 +608,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -627,7 +635,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -648,7 +656,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">39</span>
+                        <span class="tag is-grey">44</span>
                     </a>
                 </div>
                 
@@ -662,7 +670,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 

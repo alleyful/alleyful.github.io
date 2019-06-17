@@ -151,10 +151,10 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time>
+                <time class="level-item has-text-grey" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
                 </div>
                 
                 
@@ -164,40 +164,40 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/">Day26 Nested Logic</a>
+                <a class="has-link-black-ter" href="/2019/06/17/algorithm/programmers/level1-13/">문자열 다루기 기본</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today’s challenge puts your understanding of nested conditional statements to the test. You already have the knowledge to complete this challenge, but check out the Tutorial tab for a video on testing!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Your local library needs your help! Given the expected and actual return dates for a library book, create a program that calculates the fine (if any). The fee structure is as follows:</p>
-<ol>
-<li>If the book is returned on or before the expected return date, no fine will be charged (i.e.: <strong>fine = 0</strong>).</li>
-<li>If the book is returned after the expected return day but still within the same calendar month and year as the expected return date, <strong>fine = 15 Hackos x (the number of days late)</strong>.</li>
-<li>If the book is returned after the expected return month but still within the same calendar year as the expected return date, the <strong>fine = 500 Hackos x (the number of months late)</strong>.</li>
-<li>If the book is returned after the calendar year in which it was expected, there is a fixed fine of <strong>10000 Hackos</strong>.</li>
-</ol>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains <strong>3</strong> space-separated integers denoting the respective <strong>day</strong>, <strong>month</strong>, and <strong>year</strong> on which the book was actually returned.<br>The second line contains <strong>3</strong> space-separated integers denoting the respective <strong>day</strong>, <strong>month</strong>, and <strong>year</strong> on which the book was expected to be returned (due date).</p>
-<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li>1 &lt;= D &lt;= 31</li>
-<li>1 &lt;= M &lt;= 12</li>
-<li>1 &lt;= Y &lt;= 3000</li>
-<li>It is guanranteed that the dates will be valid Gregorian calendar dates.</li>
-</ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print a single integer denoting the library fine for the book received as input.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9 6 2015</span><br><span class="line">6 6 2015</span><br></pre></td></tr></table></figure>
-
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">45</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>Given the following return dates: <br><br>Actual:  <strong>D<sub>a</sub> = 9, M<sub>a</sub> = 6, Y<sub>a</sub> = 2015</strong><br><br>Expected: <strong>D<sub>e</sub> = 6, M<sub>e</sub> = 6, Y<sub>e</sub> = 2015</strong></p>
-<p>Because <strong>Y<sub>e</sub> = Y<sub>a</sub></strong>, we know it is less than a year late. <br><br>Because <strong>M<sub>e</sub> = M<sub>a</sub></strong>, we know it’s less than a month late. <br><br>Because <strong>D<sub>e</sub> = D<sub>a</sub></strong>, we know that it was returned late (but still within the same month and year).<br></p>
-<p>Per the library’s fee structure, we know that our fine will be <strong>15 Hackos X (# days late)</strong>. We then print the result of <strong>15 X (D<sub>a</sub> - D<sub>e</sub>) = 15 X (9 - 6) = 45</strong> as our output.</p>
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열 s의 길이가 4 혹은 6이고, 숫자로만 구성돼있는지 확인해주는 함수, solution을 완성하세요. 예를 들어 s가 a234이면 False를 리턴하고 1234라면 True를 리턴하면 됩니다.</p>
 <br>
+
+<h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>s는 길이 1 이상, 길이 8 이하인 문자열입니다.</p>
+<br>
+
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
+<thead>
+<tr>
+<th align="center">s</th>
+<th align="center">return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">“a234”</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">“1234”</td>
+<td align="center">true</td>
+</tr>
+</tbody></table>
 <br>
 
 <hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//Enter your code here</span></span><br><span class="line">    <span class="hljs-keyword">let</span> fine = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">const</span> [actual, expected] = input.split(<span class="hljs-string">'\n'</span>).map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> [day, month, year] = item.split(<span class="hljs-string">' '</span>).map(<span class="hljs-built_in">Number</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> &#123; day, month, year &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    (</span><br><span class="line">        actual.year === expected.year &amp;&amp;</span><br><span class="line">        actual.month === expected.month &amp;&amp;</span><br><span class="line">        actual.day &gt; expected.day</span><br><span class="line">    ) &amp;&amp; (fine = (actual.day - expected.day) * <span class="hljs-number">15</span>);</span><br><span class="line"></span><br><span class="line">    (</span><br><span class="line">        actual.year === expected.year &amp;&amp;</span><br><span class="line">        actual.month &gt; expected.month</span><br><span class="line">    ) &amp;&amp; (fine = (actual.month - expected.month) * <span class="hljs-number">500</span>);</span><br><span class="line"></span><br><span class="line">    (actual.year &gt; expected.year) &amp;&amp; (fine = <span class="hljs-number">10000</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(fine);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> !(s.match(<span class="hljs-regexp">/\D/g</span>)) &amp;&amp; (s.length === <span class="hljs-number">4</span> || s.length === <span class="hljs-number">6</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> data = input.split(<span class="hljs-string">"\n"</span>); </span><br><span class="line">    <span class="hljs-keyword">const</span> [actual, expected] = data.map(<span class="hljs-function"><span class="hljs-params">line</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> [day, month, year] = line.split(<span class="hljs-string">" "</span>).map(<span class="hljs-built_in">Number</span>); </span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> &#123; day, month, year &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(calculatePrice(actual, expected));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> calculatePrice = <span class="hljs-function">(<span class="hljs-params">actual, expected</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> actual.year &gt; expected.year ? <span class="hljs-number">10000</span> : (</span><br><span class="line">        actual.year &lt; expected.year ? <span class="hljs-number">0</span> : (</span><br><span class="line">            actual.month &gt; expected.month ? (actual.month - expected.month) * <span class="hljs-number">500</span> : (</span><br><span class="line">                actual.month &lt; expected.month</span><br><span class="line">                    ? <span class="hljs-number">0</span></span><br><span class="line">                    : (actual.day - expected.day) * <span class="hljs-number">15</span></span><br><span class="line">            ) </span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-regexp">/^\d&#123;6&#125;$|^\d&#123;4&#125;$/</span>.test(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
         </div>
         
         
@@ -234,7 +234,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/39/">39</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
             
         </ul>
     </nav>
@@ -282,7 +282,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        44
                     </p>
                 </div>
             </div>
@@ -354,7 +354,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">39</span>
+                <span class="level-item tag">44</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -370,7 +370,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">15</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -403,10 +403,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -416,10 +416,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -429,10 +429,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -442,10 +442,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -455,10 +455,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -482,7 +482,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -503,7 +503,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">39</span>
+                        <span class="tag is-grey">44</span>
                     </a>
                 </div>
                 
@@ -517,7 +517,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
@@ -548,10 +548,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -561,10 +561,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -574,10 +574,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -587,10 +587,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -600,10 +600,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -627,7 +627,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -648,7 +648,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">39</span>
+                        <span class="tag is-grey">44</span>
                     </a>
                 </div>
                 
@@ -662,7 +662,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 

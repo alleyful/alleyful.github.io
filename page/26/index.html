@@ -151,7 +151,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T04:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-15T10:01:34.000Z">2019-06-15</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -164,45 +164,41 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day3_IntroToConditionalStatements/">Day3 Intro to Conditional Statements</a>
+                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day8_DictionariesAndMaps/">Day8 Dictionaries and Maps</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this challenge, we’re getting started with conditional statements. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an integer, <strong>n</strong>, perform the following conditional actions:</p>
-<ul>
-<li>If <strong>n</strong> is odd, print Weird</li>
-<li>If <strong>n</strong> is even and in the inclusive range of <strong>2</strong> to <strong>5</strong>, print Not Weird</li>
-<li>If <strong>n</strong> is even and in the inclusive range of <strong>6</strong> to <strong>20</strong>, print Weird</li>
-<li>If <strong>n</strong> is even and greater than <strong>20</strong>, print Not Weird</li>
-</ul>
-<p>Complete the stub code provided in your editor to print whether or not  is weird.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>A single line containing a positive integer, <strong>n</strong>.</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Key-Value pair mappings using a Map or Dictionary data structure. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given <strong>n</strong> names and phone numbers, assemble a phone book that maps friends’ names to their respective phone numbers. You will then be given an unknown number of names to query your phone book for. For each <strong>name</strong> queried, print the associated entry from your phone book on a new line in the form name=phoneNumber; if an entry for <strong>name</strong> is not found, print Not found instead.</p>
+<p><strong>Note:</strong> Your phone book should be a Dictionary/Map/HashMap data structure.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, <strong>n</strong>, denoting the number of entries in the phone book.<br>Each of the <strong>n</strong> subsequent lines describes an entry in the form of <strong>2</strong> space-separated values on a single line. The first value is a friend’s name, and the second value is an <strong>8</strong>-digit phone number.</p>
+<p>After the <strong>n</strong> lines of phone book entries, there are an unknown number of lines of queries. Each line (query) contains a <strong>name</strong> to look up, and you must continue reading lines until there is no more input.</p>
+<p><strong>Note:</strong> Names consist of lowercase English alphabetic letters and are first names only.</p>
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li><strong>1 &lt;= n &lt;= 100</strong></li>
+<li><strong>1 &lt;= n &lt;= 10<sup>5</sup></strong></li>
+<li><strong>1 &lt;= queries &lt;= 10<sup>5</sup></strong></li>
 </ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print Weird if the number is weird; otherwise, print Not Weird.</p>
-<h2 id="Sample-Input-0"><a href="#Sample-Input-0" class="headerlink" title="Sample Input 0"></a>Sample Input 0</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>On a new line for each query, print Not found if the name has no corresponding entry in the phone book; otherwise, print the full <strong>name</strong> and <strong>phoneNumber</strong> in the format name=phoneNumber.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">sam 99912222</span><br><span class="line">tom 11122222</span><br><span class="line">harry 12299933</span><br><span class="line">sam</span><br><span class="line">edward</span><br><span class="line">harry</span><br></pre></td></tr></table></figure>
 
-<p>##Sample Output 0</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Weird</span><br></pre></td></tr></table></figure>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sam=99912222</span><br><span class="line">Not found</span><br><span class="line">harry=12299933</span><br></pre></td></tr></table></figure>
 
-<h2 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">24</span><br></pre></td></tr></table></figure>
-
-<p>##Sample Output 1</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Not Weird</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>Sample Case 0: <strong>n = 3</strong><br><strong>n</strong> is odd and odd numbers are weird, so we print Weird.</p>
-<p>Sample Case 1: <strong>n = 24</strong><br><strong>n &gt; 20</strong> and <strong>n</strong> is even, so it isn’t weird. Thus, we print Not Weird.</p>
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>We add the following <strong>n = 3</strong> (Key,Value) pairs to our map so it looks like this:</p>
+<p><strong>phoneBook = {(sam, 99912222), (tom, 11122222), (harry, 12299933)}</strong></p>
+<p>We then process each query and print key=value if the queried <strong>key</strong> is found in the map; otherwise, we print Not found.</p>
+<p>Query 0: sam<br>Sam is one of the keys in our dictionary, so we print sam=99912222.</p>
+<p>Query 1: edward<br>Edward is not one of the keys in our dictionary, so we print Not found.</p>
+<p>Query 2: harry<br>Harry is one of the keys in our dictionary, so we print harry=12299933.</p>
 <br>
 <br>
 
 <hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">// Complete the solve function below.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> N = <span class="hljs-built_in">parseInt</span>(readLine());</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">if</span>(N % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(N &gt;= <span class="hljs-number">2</span> &amp;&amp; N &lt; <span class="hljs-number">6</span>) &#123;</span><br><span class="line">            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Not Weird'</span>);</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(N &gt;= <span class="hljs-number">6</span> &amp;&amp; N &lt;= <span class="hljs-number">20</span>) &#123;</span><br><span class="line">            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Weird'</span>);</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(N &gt; <span class="hljs-number">20</span>) &#123;</span><br><span class="line">            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Not Weird'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Weird'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//Enter your code here</span></span><br><span class="line">    <span class="hljs-keyword">const</span> &#123; phoneBook, queries &#125; = input.split(<span class="hljs-string">'\n'</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> total = !index ? item : target[<span class="hljs-string">'total'</span>];</span><br><span class="line">        <span class="hljs-keyword">let</span> &#123; <span class="hljs-number">0</span>: key, <span class="hljs-number">1</span>: value &#125; = item.split(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">        !index</span><br><span class="line">            ? (target[<span class="hljs-string">'total'</span>] = total)</span><br><span class="line">            : (</span><br><span class="line">                index &lt;= total</span><br><span class="line">                    ? (target[<span class="hljs-string">'phoneBook'</span>][key] = value)</span><br><span class="line">                    : target[<span class="hljs-string">'queries'</span>].push(item)</span><br><span class="line">            );</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, &#123; <span class="hljs-attr">total</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">phoneBook</span>: [], <span class="hljs-attr">queries</span>: [] &#125;);</span><br><span class="line"></span><br><span class="line">    queries.forEach(<span class="hljs-function">(<span class="hljs-params">query</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> value = phoneBook[<span class="hljs-built_in">String</span>(query)];</span><br><span class="line"></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(value ? <span class="hljs-string">`<span class="hljs-subst">$&#123;query&#125;</span>=<span class="hljs-subst">$&#123;value&#125;</span>`</span> : <span class="hljs-string">'Not found'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">// Complete the solve function below.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> N = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line">    <span class="hljs-keyword">let</span> result = (N % <span class="hljs-number">2</span> === <span class="hljs-number">1</span> || (N % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> &amp;&amp; N &gt;= <span class="hljs-number">6</span> &amp;&amp; N &lt;= <span class="hljs-number">20</span>)) ? <span class="hljs-string">'Weird'</span> : <span class="hljs-string">'Not Weird'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//Enter your code here</span></span><br><span class="line">    <span class="hljs-keyword">const</span> inputData = input.split(<span class="hljs-string">'\n'</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> dataLength = <span class="hljs-built_in">Number</span>(inputData.shift());</span><br><span class="line">    <span class="hljs-keyword">const</span> phoneBook = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();</span><br><span class="line">    <span class="hljs-keyword">const</span> queryData = inputData.reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        index &lt; dataLength ? phoneBook.set(item.split(<span class="hljs-string">' '</span>)[<span class="hljs-number">0</span>], item.split(<span class="hljs-string">' '</span>)[<span class="hljs-number">1</span>]) : target.push(item);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []);</span><br><span class="line"></span><br><span class="line">    queryData.forEach(<span class="hljs-function">(<span class="hljs-params">val, index</span>) =&gt;</span> &#123; </span><br><span class="line">        <span class="hljs-built_in">console</span>.log(phoneBook.get(val) ? <span class="hljs-string">`<span class="hljs-subst">$&#123;val&#125;</span>=<span class="hljs-subst">$&#123;phoneBook.get(val)&#125;</span>`</span> : <span class="hljs-string">'Not found'</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<hr>
+<h2 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution 3"></a>Solution 3</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//Enter your code here</span></span><br><span class="line">    <span class="hljs-keyword">const</span> splitInput = input.split(<span class="hljs-string">"\n"</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> phoneBookSize = +splitInput[<span class="hljs-number">0</span>];</span><br><span class="line">    <span class="hljs-keyword">const</span> inputValue = splitInput.slice(phoneBookSize + <span class="hljs-number">1</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> temp = splitInput.slice(<span class="hljs-number">1</span>, phoneBookSize + <span class="hljs-number">1</span>).map(<span class="hljs-function"><span class="hljs-params">list</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> result = &#123;</span><br><span class="line">            name: list.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">0</span>],</span><br><span class="line">            phoneNumber: list.split(<span class="hljs-string">" "</span>)[<span class="hljs-number">1</span>]</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="hljs-keyword">return</span> result;</span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">let</span> phoneBook = [];</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> list <span class="hljs-keyword">of</span> temp) &#123;</span><br><span class="line">        phoneBook[list.name] = list.phoneNumber;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> name <span class="hljs-keyword">of</span> inputValue) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (phoneBook[name]) &#123;</span><br><span class="line">            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;name&#125;</span>=<span class="hljs-subst">$&#123;phoneBook[name]&#125;</span>`</span>);</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Not found'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -242,7 +238,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/39/">39</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
             
         </ul>
     </nav>
@@ -290,7 +286,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        44
                     </p>
                 </div>
             </div>
@@ -362,7 +358,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">39</span>
+                <span class="level-item tag">44</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -378,7 +374,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">15</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -411,10 +407,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -424,10 +420,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -437,10 +433,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -450,10 +446,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -463,10 +459,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -490,7 +486,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -511,7 +507,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">39</span>
+                        <span class="tag is-grey">44</span>
                     </a>
                 </div>
                 
@@ -525,7 +521,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
@@ -556,10 +552,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -569,10 +565,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -582,10 +578,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -595,10 +591,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -608,10 +604,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -635,7 +631,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -656,7 +652,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">39</span>
+                        <span class="tag is-grey">44</span>
                     </a>
                 </div>
                 
@@ -670,7 +666,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 

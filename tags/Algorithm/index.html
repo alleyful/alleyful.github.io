@@ -161,6 +161,354 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/18/algorithm/programmers/level1-15/">시저 암호</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>어떤 문장의 각 알파벳을 일정한 거리만큼 밀어서 다른 알파벳으로 바꾸는 암호화 방식을 시저 암호라고 합니다. <br><br>예를 들어 AB는 1만큼 밀면 BC가 되고, 3만큼 밀면 DE가 됩니다. <br><br>z는 1만큼 밀면 a가 됩니다. <br><br>문자열 s와 거리 n을 입력받아 s를 n만큼 민 암호문을 만드는 함수, solution을 완성해 보세요.</p>
+<br>
+
+<h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><ul>
+<li>공백은 아무리 밀어도 공백입니다.</li>
+<li>s는 알파벳 소문자, 대문자, 공백으로만 이루어져 있습니다.</li>
+<li>s의 길이는 8000이하입니다.</li>
+<li>n은 1 이상, 25이하인 자연수입니다.</li>
+</ul>
+<br>
+<br>
+
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
+<thead>
+<tr>
+<th align="center">s</th>
+<th align="center">n</th>
+<th align="center">result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">“AB”</td>
+<td align="center">1</td>
+<td align="center">“BC”</td>
+</tr>
+<tr>
+<td align="center">“z”</td>
+<td align="center">1</td>
+<td align="center">“a”</td>
+</tr>
+<tr>
+<td align="center">“a B z”</td>
+<td align="center">4</td>
+<td align="center">“e F d”</td>
+</tr>
+</tbody></table>
+<br>
+<br>
+
+<hr>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s, n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//ASCII : A~Z(65~90) , a~z(97~122)</span></span><br><span class="line">    <span class="hljs-keyword">return</span> [...s].reduce(<span class="hljs-function">(<span class="hljs-params">target, string, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> asciiCode = s.charCodeAt(index)</span><br><span class="line">        <span class="hljs-keyword">let</span> changedCode = asciiCode + n</span><br><span class="line">        <span class="hljs-keyword">let</span> sCode = asciiCode &lt; <span class="hljs-number">65</span> ? asciiCode : (</span><br><span class="line">            (asciiCode &gt;= <span class="hljs-number">65</span> &amp;&amp; asciiCode &lt;= <span class="hljs-number">90</span>) </span><br><span class="line">            ? (changedCode &gt; <span class="hljs-number">90</span> ? changedCode - <span class="hljs-number">26</span> : changedCode)</span><br><span class="line">            : (changedCode &gt; <span class="hljs-number">122</span> ? changedCode - <span class="hljs-number">26</span> : changedCode)</span><br><span class="line">        )</span><br><span class="line">        target.push(<span class="hljs-built_in">String</span>.fromCharCode(sCode))</span><br><span class="line">        </span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []).join(<span class="hljs-string">''</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s, n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">s || <span class="hljs-string">''</span></span>).<span class="hljs-params">split</span>(<span class="hljs-params"><span class="hljs-string">''</span></span>).<span class="hljs-params">reduce</span>(<span class="hljs-params">(target,item,index</span>) =&gt;</span> &#123;</span><br><span class="line">        target += (</span><br><span class="line">            item == <span class="hljs-string">' '</span> </span><br><span class="line">            ? <span class="hljs-string">' '</span> </span><br><span class="line">            : <span class="hljs-built_in">String</span>.fromCharCode((s.charCodeAt(index)&gt;<span class="hljs-number">90</span>)</span><br><span class="line">                    ? (s.charCodeAt(index)+n<span class="hljs-number">-97</span>)%<span class="hljs-number">26</span>+<span class="hljs-number">97</span> </span><br><span class="line">                    : (s.charCodeAt(index)+n<span class="hljs-number">-65</span>)%<span class="hljs-number">26</span>+<span class="hljs-number">65</span> )</span><br><span class="line">            );</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-string">''</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/18/algorithm/programmers/level1-14/">문자열을 정수로 바꾸기</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열 s를 숫자로 변환한 결과를 반환하는 함수, solution을 완성하세요.</p>
+<br>
+
+<h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><ul>
+<li>s의 길이는 1 이상 5이하입니다.</li>
+<li>s의 맨앞에는 부호(+, -)가 올 수 있습니다.</li>
+<li>s는 부호와 숫자로만 이루어져있습니다.</li>
+<li>s는 0으로 시작하지 않습니다.</li>
+</ul>
+<br>
+
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p>예를들어 str이 1234이면 1234를 반환하고, -1234이면 -1234를 반환하면 됩니다.<br>str은 부호(+,-)와 숫자로만 구성되어 있고, 잘못된 값이 입력되는 경우는 없습니다.</p>
+<br>
+
+<hr>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> +s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/17/algorithm/programmers/level1-13/">문자열 다루기 기본</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열 s의 길이가 4 혹은 6이고, 숫자로만 구성돼있는지 확인해주는 함수, solution을 완성하세요. 예를 들어 s가 a234이면 False를 리턴하고 1234라면 True를 리턴하면 됩니다.</p>
+<br>
+
+<h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>s는 길이 1 이상, 길이 8 이하인 문자열입니다.</p>
+<br>
+
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
+<thead>
+<tr>
+<th align="center">s</th>
+<th align="center">return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">“a234”</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">“1234”</td>
+<td align="center">true</td>
+</tr>
+</tbody></table>
+<br>
+
+<hr>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> !(s.match(<span class="hljs-regexp">/\D/g</span>)) &amp;&amp; (s.length === <span class="hljs-number">4</span> || s.length === <span class="hljs-number">6</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-regexp">/^\d&#123;6&#125;$|^\d&#123;4&#125;$/</span>.test(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/17/algorithm/programmers/level1-12/">문자열 내림차순으로 배치하기</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열 s에 나타나는 문자를 큰것부터 작은 순으로 정렬해 새로운 문자열을 리턴하는 함수, solution을 완성해주세요.<br>s는 영문 대소문자로만 구성되어 있으며, 대문자는 소문자보다 작은 것으로 간주합니다.</p>
+<br>
+
+<h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>str은 길이 1 이상인 문자열입니다.</p>
+<br>
+
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
+<thead>
+<tr>
+<th align="center">s</th>
+<th align="center">return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">“Zbcdefg”</td>
+<td align="center">“gfedcbZ”</td>
+</tr>
+</tbody></table>
+<br>
+
+<hr>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> [...s].sort().reverse().join(<span class="hljs-string">''</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/17/algorithm/programmers/level1-11/">문자열 내 p와 y의 개수</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>대문자와 소문자가 섞여있는 문자열 s가 주어집니다.<br>s에 ‘p’의 개수와 ‘y’의 개수를 비교해 같으면 True, 다르면 False를 return 하는 solution를 완성하세요.<br>‘p’, ‘y’ 모두 하나도 없는 경우는 항상 True를 리턴합니다. 단, 개수를 비교할 때 대문자와 소문자는 구별하지 않습니다.<br>예를들어 s가 pPoooyY면 true를 return하고 Pyy라면 false를 return합니다.</p>
+<br>
+
+
+<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><ul>
+<li>문자열 s의 길이 : 50 이하의 자연수</li>
+<li>문자열 s는 알파벳으로만 이루어져 있습니다.</li>
+</ul>
+<br>
+
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
+<thead>
+<tr>
+<th align="center">s</th>
+<th align="center">answer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">pPoooyY</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">Pyy</td>
+<td align="center">false</td>
+</tr>
+</tbody></table>
+<br>
+
+<h2 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h2><ul>
+<li><p>입출력 예 #1</p>
+<ul>
+<li>‘p’의 개수 2개, ‘y’의 개수 2개로 같으므로 true를 return 합니다.</li>
+</ul>
+</li>
+<li><p>입출력 예 #2</p>
+<ul>
+<li>‘p’의 개수 1개, ‘y’의 개수 2개로 다르므로 false를 return 합니다.</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<hr>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>)</span>&#123;</span><br><span class="line">     <span class="hljs-keyword">let</span> pList = [...s].filter(<span class="hljs-function"><span class="hljs-params">v</span> =&gt;</span> v === <span class="hljs-string">'p'</span> || v === <span class="hljs-string">'P'</span>);</span><br><span class="line">     <span class="hljs-keyword">let</span> yList = [...s].filter(<span class="hljs-function"><span class="hljs-params">v</span> =&gt;</span> v === <span class="hljs-string">'y'</span> || v === <span class="hljs-string">'Y'</span>);</span><br><span class="line">   </span><br><span class="line">     <span class="hljs-keyword">return</span> pList.length === yList.length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>)</span>&#123;</span><br><span class="line">     <span class="hljs-keyword">return</span> (s.match(<span class="hljs-regexp">/p/gi</span>) || []).length === (s.match(<span class="hljs-regexp">/y/gi</span>) || []).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time>
                 
                 <div class="level-item">
@@ -455,310 +803,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T14:30:34.000Z">2019-06-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day23_BSTLevelOrderTraversal/">Day23 BST Level-Order Traversal</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re going further with Binary Search Trees. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>A level-order traversal, also known as a breadth-first search, visits each level of a tree’s nodes from left to right, top to bottom. You are given a pointer, <strong>root</strong>, pointing to the root of a binary search tree. Complete the levelOrder function provided in your editor so that it prints the level-order traversal of the binary search tree.</p>
-<p><strong>Hint:</strong> You’ll find a queue helpful in completing this challenge.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The locked stub code in your editor reads the following inputs and assembles them into a BST:<br>The first line contains an integer, <strong>T</strong> (the number of test cases).<br>The <strong>T</strong> subsequent lines each contain an integer, <strong>data</strong>, denoting the value of an element that must be added to the BST.</p>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print the <strong>data</strong> value of each node in the tree’s level-order traversal as a single line of <strong>N</strong> space-separated integers.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">3</span><br><span class="line">5</span><br><span class="line">4</span><br><span class="line">7</span><br><span class="line">2</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 2 5 1 4 7</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The input forms the following binary search tree: <br></p>
-<p><img src="https://s3.amazonaws.com/hr-challenge-images/17176/1461696188-8eddd12300-BST.png" alt="Binary Search Tree"></p>
-<p>We traverse each level of the tree from the root downward, and we process the nodes at each level from left to right. The resulting level-order traversal is <strong>3 -&gt; 2 -&gt; 5 -&gt; 1 -&gt; 4 -&gt; 7</strong>, and we print these data values as a single line of space-separated integers.</p>
-<br>
-<br>
-
-<hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Add your code here</span></span><br><span class="line"><span class="hljs-comment">// To print values separated by spaces use process.stdout.write(someValue + ' ')</span></span><br><span class="line"><span class="hljs-keyword">const</span> queue = [root];</span><br><span class="line"><span class="hljs-keyword">const</span> result = [];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">while</span> (queue.length) &#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> treeNode = queue.shift();</span><br><span class="line"></span><br><span class="line">    result.push(treeNode.data);</span><br><span class="line"></span><br><span class="line">    treeNode.left &amp;&amp; queue.push(treeNode.left);</span><br><span class="line">    treeNode.right &amp;&amp; queue.push(treeNode.right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result.join(<span class="hljs-string">' '</span>));</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Start of function Node</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Node</span>(<span class="hljs-params">data</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.data = data;</span><br><span class="line">    <span class="hljs-keyword">this</span>.left = <span class="hljs-literal">null</span>;</span><br><span class="line">    <span class="hljs-keyword">this</span>.right = <span class="hljs-literal">null</span>;</span><br><span class="line">&#125;; <span class="hljs-comment">// End of function Node</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Start of function BinarySearchTree</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BinarySearchTree</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.insert = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">root, data</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (root === <span class="hljs-literal">null</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">this</span>.root = <span class="hljs-keyword">new</span> Node(data);</span><br><span class="line">            </span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.root;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="hljs-keyword">if</span> (data &lt;= root.data) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (root.left) &#123;</span><br><span class="line">                <span class="hljs-keyword">this</span>.insert(root.left, data);</span><br><span class="line">            &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">                root.left = <span class="hljs-keyword">new</span> Node(data);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (root.right) &#123;</span><br><span class="line">                <span class="hljs-keyword">this</span>.insert(root.right, data);</span><br><span class="line">            &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">                root.right = <span class="hljs-keyword">new</span> Node(data);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.root;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// Start of function levelOrder</span></span><br><span class="line">    <span class="hljs-keyword">this</span>.levelOrder = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">root</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// Add your code here</span></span><br><span class="line">        <span class="hljs-comment">// To print values separated by spaces use process.stdout.write(someValue + ' ')</span></span><br><span class="line">        <span class="hljs-keyword">let</span> temp;</span><br><span class="line">        <span class="hljs-keyword">const</span> queue = [];</span><br><span class="line">        <span class="hljs-keyword">const</span> result = [];</span><br><span class="line"></span><br><span class="line">        queue.push(root);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">while</span> (queue.length) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-comment">// Deque the Queue</span></span><br><span class="line">            temp = queue.splice(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>];</span><br><span class="line"></span><br><span class="line">            result.push(temp.data);</span><br><span class="line"></span><br><span class="line">            <span class="hljs-comment">// Enqueue the Queue</span></span><br><span class="line">            <span class="hljs-keyword">if</span> (temp.left) queue.push(temp.left);</span><br><span class="line">            <span class="hljs-keyword">if</span> (temp.right) queue.push(temp.right)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(result.join(<span class="hljs-string">' '</span>));</span><br><span class="line">	&#125;; <span class="hljs-comment">// End of function levelOrder</span></span><br><span class="line">&#125;; <span class="hljs-comment">// End of function BinarySearchTree</span></span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T13:30:34.000Z">2019-06-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day22_BinarySearchTrees/">Day22 Binary Search Trees</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The height of a binary search tree is the number of edges between the tree’s root and its furthest leaf. You are given a pointer, <strong>root</strong>, pointing to the root of a binary search tree. Complete the getHeight function provided in your editor so that it returns the height of the binary search tree.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The locked stub code in your editor reads the following inputs and assembles them into a binary search tree: <br><br>The first line contains an integer, <strong>n</strong>, denoting the number of nodes in the tree. <br><br>Each of the <strong>n</strong> subsequent lines contains an integer, <strong>data</strong>, denoting the value of an element that must be added to the BST.</p>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>The locked stub code in your editor will print the integer returned by your getHeight function denoting the height of the BST.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">3</span><br><span class="line">5</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">4</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
-
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The input forms the following BST:<br></p>
-<p><img src="https://s3.amazonaws.com/hr-challenge-images/17175/1459894869-6bb53ce6eb-BST.png" alt="Binary Search Tree"></p>
-<p>The longest root-to-leaf path is shown below:<br></p>
-<p><img src="https://s3.amazonaws.com/hr-challenge-images/17175/1459895368-4955f9ce74-LongestRTL.png" alt="Longest Root-to-Leaf Path"></p>
-<p>There are <strong>4</strong> nodes in this path that are connected by <strong>3</strong> edges, meaning our BST’s <strong>height = 3</strong>. Thus, we print <strong>3</strong> as our answer.<br><br><br><br></p>
-<hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> (root === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(<span class="hljs-keyword">this</span>.getHeight(root.left), <span class="hljs-keyword">this</span>.getHeight(root.right)) + <span class="hljs-number">1</span>;</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T13:20:30.000Z">2019-06-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day21_Generics/">Day21 Generics</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing Generics; be aware that not all languages support this construct, so fewer languages are enabled for this challenge. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a single generic function named printArray; this function must take an array of generic elements as a parameter (the exception to this is C++, which takes a vector). The locked Solution class in your editor tests your function.</p>
-<p><strong>Note:</strong> You must use generics to solve this challenge. Do not write overloaded functions.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The locked Solution class in your editor will pass different types of arrays to your printArray function.</p>
-<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li>You must have exactly  function named printArray. <strong>1</strong></li>
-</ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Your printArray function should print each element of its generic array parameter on a new line.</p>
-<br>
-<br>
-
-<hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">*</span></span><br><span class="line"><span class="hljs-comment">* What is the Generic?</span></span><br><span class="line"><span class="hljs-comment">* That is being able to create a component that can work over a variety of types rather than a single one.</span></span><br><span class="line"><span class="hljs-comment">* JavaScript is a dynamically typed language and it doesn't have any generics. So we can write a normal function or method.</span></span><br><span class="line"><span class="hljs-comment">* Also, you can write in languages like TypeScript, Java, C#.</span></span><br><span class="line"><span class="hljs-comment">* It's a creation code in C#</span></span><br><span class="line"><span class="hljs-comment">*</span></span><br><span class="line"><span class="hljs-comment">**/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> PrintArray&lt;T&gt;(T[] array)&#123;</span><br><span class="line">    foreach(T i <span class="hljs-keyword">in</span> array)</span><br><span class="line">        Console.WriteLine(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T13:01:03.000Z">2019-06-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day20_Sorting/">Day20 Sorting</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re discussing a simple sorting algorithm called Bubble Sort. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<hr>
-<p>Consider the following version of Bubble Sort:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    // Track number of elements swapped during a single array traversal</span><br><span class="line">    int numberOfSwaps = 0;</span><br><span class="line">    </span><br><span class="line">    for (int j = 0; j &lt; n - 1; j++) &#123;</span><br><span class="line">        // Swap adjacent elements if they are in decreasing order</span><br><span class="line">        if (a[j] &gt; a[j + 1]) &#123;</span><br><span class="line">            swap(a[j], a[j + 1]);</span><br><span class="line">            numberOfSwaps++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // If no elements were swapped during a traversal, array is sorted</span><br><span class="line">    if (numberOfSwaps == 0) &#123;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an array, <strong>a</strong>, of size <strong>n</strong> distinct elements, sort the array in ascending order using the Bubble Sort algorithm above. Once sorted, print the following <strong>3</strong> lines:</p>
-<ol>
-<li>Array is sorted in numSwaps swaps.<br>where <strong>numSwaps</strong> is the number of swaps that took place.</li>
-<li>First Element: firstElement<br>where <strong>firstElement</strong> is the first element in the sorted array.</li>
-<li>Last Element: lastElement<br>where <strong>lastElement</strong> is the last element in the sorted array.</li>
-</ol>
-<p><strong>Hint:</strong> To complete this challenge, you will need to add a variable that keeps a running tally of all swaps that occur during execution.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, <strong>n</strong>, denoting the number of elements in array <strong>a</strong>. 
-The second line contains <strong>n</strong> space-separated integers describing the respective values of <strong>a<sub>0</sub>, a<sub>1</sub>, …, a<sub>n-1</sub></strong>.</p>
-<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li><strong>2 &lt;= n &lt;= 600</strong></li>
-<li><strong>1 &lt;= a<sub>i</sub> &lt;= 2 X 10<sup>6</sup>, where 0 &lt;= i &lt; n</strong></li>
-</ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print the following three lines of output:</p>
-<ol>
-<li>Array is sorted in numSwaps swaps.<br>where <strong>numSwaps</strong> is the number of swaps that took place.</li>
-<li>First Element: firstElement<br>where <strong>firstElement</strong> is the first element in the sorted array.</li>
-<li>Last Element: lastElement<br>where <strong>lastElements</strong> is the last element in the sorted array.</li>
-</ol>
-<h2 id="Sample-Input-0"><a href="#Sample-Input-0" class="headerlink" title="Sample Input 0"></a>Sample Input 0</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="Sample-Output-0"><a href="#Sample-Output-0" class="headerlink" title="Sample Output 0"></a>Sample Output 0</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Array is sorted in 0 swaps.</span><br><span class="line">First Element: 1</span><br><span class="line">Last Element: 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation-0"><a href="#Explanation-0" class="headerlink" title="Explanation 0"></a>Explanation 0</h2><p>The array is already sorted, so <strong>0</strong> swaps take place and we print the necessary <strong>3</strong> lines of output shown above.</p>
-<h2 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">3 2 1</span><br></pre></td></tr></table></figure>
-
-<h2 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Array is sorted in 3 swaps.</span><br><span class="line">First Element: 1</span><br><span class="line">Last Element: 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation-1"><a href="#Explanation-1" class="headerlink" title="Explanation 1"></a>Explanation 1</h2><p>The array <strong>a = [3, 2, 1]</strong> is not sorted, so we perform the following  swaps:<br></p>
-<ol>
-<li>[3, 2, 1] -&gt; [2, 3, 1]</li>
-<li>[2, 3, 1] -&gt; [2, 1, 3]</li>
-<li>[2, 1, 3] -&gt; [1, 2, 3]</li>
-</ol>
-<p>At this point the array is sorted and we print the necessary <strong>3</strong> lines of output shown above.</p>
-<br>
-<br>
-
-<hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> n = <span class="hljs-built_in">parseInt</span>(readLine());</span><br><span class="line">    a = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line">    a = a.map(<span class="hljs-built_in">Number</span>);</span><br><span class="line">    <span class="hljs-comment">// Write Your Code Here</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">let</span> numberOfSwaps = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> bubbleSort = <span class="hljs-function">(<span class="hljs-params">array</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> arr = array;</span><br><span class="line">        <span class="hljs-keyword">let</span> length = arr.length;</span><br><span class="line">        <span class="hljs-keyword">let</span> i, j, temp;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; length - <span class="hljs-number">1</span>; i++) &#123;</span><br><span class="line">            <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; length - <span class="hljs-number">1</span> - i; j++) &#123;</span><br><span class="line">                <span class="hljs-keyword">if</span> (arr[j] &gt; arr[j + <span class="hljs-number">1</span>]) &#123;</span><br><span class="line">                    temp = arr[j + <span class="hljs-number">1</span>];</span><br><span class="line">                    arr[j + <span class="hljs-number">1</span>] = arr[j];</span><br><span class="line">                    arr[j] = temp;</span><br><span class="line">                    numberOfSwaps++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">let</span> sortArray = bubbleSort(a);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Array is sorted in <span class="hljs-subst">$&#123;numberOfSwaps&#125;</span> swaps.`</span>)</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`First Element: <span class="hljs-subst">$&#123;sortArray[<span class="hljs-number">0</span>]&#125;</span>`</span>)</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Last Element: <span class="hljs-subst">$&#123;sortArray[sortArray.length<span class="hljs-number">-1</span>]&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> n = <span class="hljs-built_in">parseInt</span>(readLine());</span><br><span class="line">    a = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line">    a = a.map(<span class="hljs-built_in">Number</span>);</span><br><span class="line">    <span class="hljs-comment">// Write Your Code Here</span></span><br><span class="line">    <span class="hljs-keyword">let</span> numberOfSwaps = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> bubbleSort = <span class="hljs-function">(<span class="hljs-params">values</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> swapped;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">do</span> &#123;</span><br><span class="line">            swapped = <span class="hljs-literal">false</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, &#123; length &#125; = values; i &lt; length; i++) &#123;</span><br><span class="line">                <span class="hljs-keyword">if</span> (values[i] &gt; values[i + <span class="hljs-number">1</span>]) &#123;</span><br><span class="line">                    <span class="hljs-keyword">let</span> tmp = values[i];</span><br><span class="line">                    </span><br><span class="line">                    values[i] = values[i + <span class="hljs-number">1</span>];</span><br><span class="line">                    values[i + <span class="hljs-number">1</span>] = tmp;</span><br><span class="line">                    </span><br><span class="line">                    swapped = <span class="hljs-literal">true</span>;</span><br><span class="line">                    numberOfSwaps++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="hljs-keyword">while</span> (swapped);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> values;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">let</span> result = bubbleSort(a);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Array is sorted in <span class="hljs-subst">$&#123;numberOfSwaps&#125;</span> swaps.\nFirst Element: <span class="hljs-subst">$&#123;result[<span class="hljs-number">0</span>]&#125;</span>\nLast Element: <span class="hljs-subst">$&#123;result[n - <span class="hljs-number">1</span>]&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T12:53:20.000Z">2019-06-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day19_Interfaces/">Day19 Interfaces</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="Day-19-Interfaces"><a href="#Day-19-Interfaces" class="headerlink" title="Day 19: Interfaces"></a>Day 19: Interfaces</h1><h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The AdvancedArithmetic interface and the method declaration for the abstract divisorSum(n) method are provided for you in the editor below.</p>
-<p>Complete the implementation of Calculator class, which implements the AdvancedArithmetic interface. The implementation for the divisorSum(n) method must return the sum of all divisors of <strong>n</strong>.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>A single line containing an integer, <strong>n</strong>.</p>
-<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li><strong>1 &lt;= n &lt;= 1000</strong></li>
-</ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>You are not responsible for printing anything to stdout. The locked template code in the editor below will call your code and print the necessary output.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6</span><br></pre></td></tr></table></figure>
-
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I implemented: AdvancedArithmetic</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The integer <strong>6</strong> is evenly divisible by <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, and <strong>6</strong>. Our divisorSum method should return the sum of these numbers, which is <strong>1 + 2 + 3 + 6 = 12</strong>. The Solution class then prints <strong>I implemented: AdvancedArithmetic</strong> on the first line, followed by the sum returned by divisorSum (which is <strong>12</strong>) on the second line.</p>
-<br>
-
-<hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/** It's not supported JavaScript so it create similar code **/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">  divisor(n) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> n || <span class="hljs-number">0</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Calculator</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="hljs-keyword">super</span>(props);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.divisor = <span class="hljs-keyword">this</span>.divisorSum.bind(<span class="hljs-keyword">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  divisorSum(n) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>(n).fill(<span class="hljs-number">0</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">      !(n % (index + <span class="hljs-number">1</span>)) &amp;&amp; (target += (index + <span class="hljs-number">1</span>)) ;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Solution</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> n = <span class="hljs-number">6</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> myCalculator = <span class="hljs-keyword">new</span> Calculator();</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">let</span> sum = myCalculator.divisor(n);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I implemented: AdvancedArithmetic\n"</span> + sum); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Solution();</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -775,9 +819,9 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <li><a class="pagination-link has-text-black-ter" href="/tags/Algorithm/page/2/">2</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/tags/Algorithm/page/3/">3</a></li>
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/tags/Algorithm/page/4/">4</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/tags/Algorithm/page/5/">5</a></li>
             
         </ul>
     </nav>
@@ -825,7 +869,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        44
                     </p>
                 </div>
             </div>
@@ -897,7 +941,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">39</span>
+                <span class="level-item tag">44</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -913,7 +957,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">15</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -946,10 +990,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -959,10 +1003,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -972,10 +1016,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -985,10 +1029,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -998,10 +1042,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -1025,7 +1069,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -1046,7 +1090,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">39</span>
+                        <span class="tag is-grey">44</span>
                     </a>
                 </div>
                 
@@ -1060,7 +1104,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
@@ -1091,10 +1135,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -1104,10 +1148,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -1117,10 +1161,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -1130,10 +1174,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -1143,10 +1187,10 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -1170,7 +1214,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">44</span>
                 </span>
             </a>
         </li>
@@ -1191,7 +1235,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">39</span>
+                        <span class="tag is-grey">44</span>
                     </a>
                 </div>
                 
@@ -1205,7 +1249,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
