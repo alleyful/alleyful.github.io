@@ -111,6 +111,8 @@
                 
                 <a class="navbar-item" href="/">Home</a>
                 
+                <a class="navbar-item" href="/categories">Categories</a>
+                
                 <a class="navbar-item" href="/tags">Tags</a>
                 
                 <a class="navbar-item" href="/about">About</a>
@@ -149,10 +151,10 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-13T14:00:47.000Z">2019-06-13</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T10:20:34.000Z">2019-06-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
                 </div>
                 
                 
@@ -162,34 +164,48 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/13/algorithm-programmers-level1-06/">가운데 글자 가져오기</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day13_AbstractClasses/">Day13 Abstract Classes</a>
             
         </h1>
         <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>단어 s의 가운데 글자를 반환하는 함수, solution을 만들어 보세요.<br><br>단어의 길이가 짝수라면 가운데 두글자를 반환하면 됩니다.<br><br></p>
-<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><p>s는 길이가 1 이상, 100이하인 스트링입니다.<br><br></p>
-<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
-<thead>
-<tr>
-<th>s</th>
-<th align="center">return</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>“abcde”</td>
-<td align="center">“c”</td>
-</tr>
-<tr>
-<td>“qwer”</td>
-<td align="center">“we”</td>
-</tr>
-</tbody></table>
+            <h1 id="Day-13-Abstract-Classes"><a href="#Day-13-Abstract-Classes" class="headerlink" title="Day 13: Abstract Classes"></a>Day 13: Abstract Classes</h1><h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the few languages that use this construct. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a Book class and a Solution class, write a MyBook class that does the following:</p>
+<ul>
+<li>Inherits from Book</li>
+<li>Has a parameterized constructor taking these <strong>3</strong> parameters:</li>
+</ul>
+<ol>
+<li>string <strong>title</strong></li>
+<li>string <strong>author</strong></li>
+<li>int <strong>price</strong></li>
+</ol>
+<ul>
+<li>Implements the Book class’ abstract display() method so it prints these <strong>3</strong> lines:</li>
+</ul>
+<ol>
+<li><strong>title</strong>, a space, and then the current instance’s <strong>title</strong>.</li>
+<li><strong>author</strong>, a space, and then the current instance’s <strong>author</strong>.</li>
+<li><strong>price</strong>, a space, and then the current instance’s <strong>price</strong>.</li>
+</ol>
+<p><strong>Note:</strong> Because these classes are being written in the same file, you must not use an access modifier (e.g.: <strong>public</strong>) when declaring MyBook or your code will not execute.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You are not responsible for reading any input from stdin. The Solution class creates a Book object and calls the MyBook class constructor (passing it the necessary arguments). It then calls the display method on the Book object.</p>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>The <strong>void display()</strong> method should print and label the respective <strong>title</strong>, <strong>author</strong>, and <strong>price</strong> of the MyBook object’s instance (with each value on its own line) like so:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Title: $title</span><br><span class="line">Author: $author</span><br><span class="line">Price: $price</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong> The <strong>$</strong> is prepended to variable names to indicate they are placeholders for variables.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><p>The following input from stdin is handled by the locked stub code in your editor:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The Alchemist</span><br><span class="line">Paulo Coelho</span><br><span class="line">248</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><p>The following output is printed by your display() method:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Title: The Alchemist</span><br><span class="line">Author: Paulo Coelho</span><br><span class="line">Price: 248</span><br></pre></td></tr></table></figure>
+
+<br>
 <br>
 
 <hr>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> string = [...s];</span><br><span class="line">    <span class="hljs-keyword">const</span> leng = string.length;</span><br><span class="line">    <span class="hljs-keyword">return</span> (leng % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? string.splice(leng/<span class="hljs-number">2</span> - <span class="hljs-number">1</span>, <span class="hljs-number">2</span>) : string.splice(leng/<span class="hljs-number">2</span>, <span class="hljs-number">1</span>)).join(<span class="hljs-string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">// Declare your class here.</span></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyBook</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Book</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Class Constructor</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   @param title The book's title.</span></span><br><span class="line"><span class="hljs-comment">    *   @param author The book's author.</span></span><br><span class="line"><span class="hljs-comment">    *   @param price The book's price.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your constructor here</span></span><br><span class="line">    <span class="hljs-keyword">constructor</span>(title, author, price) &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>();</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">this</span>.title = title;</span><br><span class="line">        <span class="hljs-keyword">this</span>.author = author;</span><br><span class="line">        <span class="hljs-keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Method Name: display</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   Print the title, author, and price in the specified format.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your method here</span></span><br><span class="line">    display() &#123;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Title: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.title&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Author: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.author&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Price: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.price&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment">// End class</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> s.substr(<span class="hljs-built_in">Math</span>.ceil(s.length / <span class="hljs-number">2</span>) - <span class="hljs-number">1</span>, s.length % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? <span class="hljs-number">2</span> : <span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
         </div>
         
         
@@ -228,7 +244,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/21/">21</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/39/">39</a></li>
             
         </ul>
     </nav>
@@ -248,16 +264,16 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="alleyful">
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Alley">
                     
                     
                     <p class="is-size-4 is-block">
-                        alleyful
+                        Alley
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        alleyful
+                        Front-End Developer
                     </p>
                     
                     
@@ -276,7 +292,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        21
+                        39
                     </p>
                 </div>
             </div>
@@ -348,7 +364,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">21</span>
+                <span class="level-item tag">39</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -356,7 +372,7 @@
                 <span class="level-item">HackerRank</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">11</span>
+                <span class="level-item tag">29</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
@@ -397,8 +413,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T16:01:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day10_BinaryNumbers/" class="has-link-black-ter is-size-6">Day10 Binary Numbers</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -410,8 +426,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T15:01:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day9_Recursion3/" class="has-link-black-ter is-size-6">Day9 Recursion 3</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -423,8 +439,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T10:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day8_DictionariesAndMaps/" class="has-link-black-ter is-size-6">Day8 Dictionaries and Maps</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -436,8 +452,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T08:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day7_Arrays/" class="has-link-black-ter is-size-6">Day7 Arrays</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -449,8 +465,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T07:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day6_LetsReview/" class="has-link-black-ter is-size-6">Day6 Let&#39;s Review</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
+                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -476,7 +492,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">21</span>
+                    <span class="level-item tag">39</span>
                 </span>
             </a>
         </li>
@@ -497,14 +513,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">21</span>
+                        <span class="tag is-grey">39</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HackerRank/">
                         <span class="tag">HackerRank</span>
-                        <span class="tag is-grey">11</span>
+                        <span class="tag is-grey">29</span>
                     </a>
                 </div>
                 
@@ -542,8 +558,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T16:01:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day10_BinaryNumbers/" class="has-link-black-ter is-size-6">Day10 Binary Numbers</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -555,8 +571,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T15:01:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day9_Recursion3/" class="has-link-black-ter is-size-6">Day9 Recursion 3</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -568,8 +584,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T10:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day8_DictionariesAndMaps/" class="has-link-black-ter is-size-6">Day8 Dictionaries and Maps</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -581,8 +597,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T08:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day7_Arrays/" class="has-link-black-ter is-size-6">Day7 Arrays</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -594,8 +610,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T07:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day6_LetsReview/" class="has-link-black-ter is-size-6">Day6 Let&#39;s Review</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
+                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -621,7 +637,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">21</span>
+                    <span class="level-item tag">39</span>
                 </span>
             </a>
         </li>
@@ -642,14 +658,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">21</span>
+                        <span class="tag is-grey">39</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HackerRank/">
                         <span class="tag">HackerRank</span>
-                        <span class="tag is-grey">11</span>
+                        <span class="tag is-grey">29</span>
                     </a>
                 </div>
                 

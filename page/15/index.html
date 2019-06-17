@@ -111,6 +111,8 @@
                 
                 <a class="navbar-item" href="/">Home</a>
                 
+                <a class="navbar-item" href="/categories">Categories</a>
+                
                 <a class="navbar-item" href="/tags">Tags</a>
                 
                 <a class="navbar-item" href="/about">About</a>
@@ -149,10 +151,10 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-13T14:06:38.000Z">2019-06-13</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T10:38:51.000Z">2019-06-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
                 </div>
                 
                 
@@ -162,44 +164,39 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/13/algorithm-programmers-level1-07/">같은 숫자는 싫어</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day14_Scope/">Day14 Scope</a>
             
         </h1>
         <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>배열 arr가 주어집니다. 배열 arr의 각 원소는 숫자 0부터 9까지로 이루어져 있습니다.<br>이때, 배열 arr에서 연속적으로 나타나는 숫자는 하나만 남기고 전부 제거하려고 합니다.<br>배열 arr에서 제거 되고 남은 수들을 return 하는 solution 함수를 완성해 주세요.<br>단, 제거된 후 남은 수들을 반환할 때는 배열 arr의 원소들의 순서를 유지해야 합니다.<br>예를들면</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing scope. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<p>The absolute difference between two integers, <strong>a</strong> and <strong>b</strong>, is written as <strong>|a - b|</strong>. The maximum absolute difference between two integers in a set of positive integers, <strong>elements</strong>, is the largest absolute difference between any two integers in <strong>elements</strong>.</p>
+<p>The Difference class is started for you in the editor. It has a private integer array (<strong>elements</strong>) for storing <strong>N</strong> non-negative integers, and a public integer (<strong>maximumDifference</strong>) for storing the maximum absolute difference.</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Complete the Difference class by writing the following:</p>
 <ul>
-<li>arr = [1, 1, 3, 3, 0, 1, 1] 이면 [1, 3, 0, 1] 을 return 합니다.</li>
-<li>arr = [4, 4, 4, 3, 3] 이면 [4, 3] 을 return 합니다.</li>
+<li>A class constructor that takes an array of integers as a parameter and saves it to the <strong>elements</strong> instance variable.</li>
+<li>A computeDifference method that finds the maximum absolute difference between any <strong>2</strong> numbers in <strong>N</strong> and stores it in the <strong>maximumDifference</strong> instance variable.</li>
 </ul>
-<p>배열 arr에서 연속적으로 나타나는 숫자는 제거하고 남은 수들을 return 하는 solution 함수를 완성해 주세요.<br><br></p>
-<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><ul>
-<li>배열 arr의 크기 : 1,000,000 이하의 자연수</li>
-<li>배열 arr의 원소의 크기 : 0보다 크거나 같고 9보다 작거나 같은 정수<br>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You are not responsible for reading any input from stdin. The locked Solution class in your editor reads in <strong>2</strong> lines of input; the first line contains <strong>N</strong>, and the second line describes the <strong>elements</strong> array.</p>
+<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
+<li><strong>1 &lt;= N &lt;= 10</strong></li>
+<li><strong>1 &lt;= elements[i] &lt;= 100, where 0 &lt;= i &lt;= N - 1</strong></li>
+</ul>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>You are not responsible for printing any output; the Solution class will print the value of the <strong>maximumDifference</strong> instance variable.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 5</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The scope of the <strong>elements</strong> array and <strong>maximumDifference</strong> integer is the entire class instance. The class constructor saves the argument passed to the constructor as the <strong>elements</strong> instance variable (where the computeDifference method can access it).</p>
+<p>To find the maximum difference, computeDifference checks each element in the array and finds the maximum difference between any <strong>2</strong> elements: <strong>|1 - 2| = 1</strong></p>
+<p><strong>|1 - 5| = 4</strong><br><strong>|2 - 5| = 3</strong></p>
+<p>The maximum of these differences is <strong>4</strong>, so it saves the value <strong>4</strong> as the <strong>maximumDifference</strong> instance variable. The locked stub code in the editor then prints the value stored as <strong>maximumDifference</strong>, which is <strong>4</strong>.</p>
+<br>
 <br>
 
-</li>
-</ul>
-<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
-<thead>
-<tr>
-<th>arr</th>
-<th align="center">answer</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>[1,1,3,3,0,1,1]</td>
-<td align="center">[1,3,0,1]</td>
-</tr>
-<tr>
-<td>[4,4,4,3,3]</td>
-<td align="center">[4,3]</td>
-</tr>
-</tbody></table>
-<h3 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h3><p>입출력 예 #1,2<br>문제의 예시와 같습니다.<br><br></p>
 <hr>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">arr</span>)</span>&#123;</span><br><span class="line">     <span class="hljs-keyword">return</span> arr.reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">         (index === <span class="hljs-number">0</span> || target[target.length<span class="hljs-number">-1</span>] !== item) &amp;&amp; target.push(item);</span><br><span class="line"></span><br><span class="line">         <span class="hljs-keyword">return</span> target;</span><br><span class="line">     &#125;, []);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> input = <span class="hljs-string">"3\n1 2 5"</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> difference = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> result = input.split(<span class="hljs-string">'\n'</span>)[<span class="hljs-number">1</span>].split(<span class="hljs-string">' '</span>).reduce(</span><br><span class="line">    (target, el) =&gt; &#123;</span><br><span class="line">      <span class="hljs-keyword">let</span> &#123; min, max &#125; = target;</span><br><span class="line"></span><br><span class="line">      target[<span class="hljs-string">"min"</span>] = el &gt; min ? el : min;</span><br><span class="line">      target[<span class="hljs-string">"max"</span>] = el &lt; max ? el : max;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="hljs-attr">min</span>: <span class="hljs-number">-999</span>, <span class="hljs-attr">max</span>: <span class="hljs-number">999</span> &#125;</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.abs(result[<span class="hljs-string">"max"</span>] - result[<span class="hljs-string">"min"</span>]));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">difference();</span><br></pre></td></tr></table></figure>
 
-<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> arr.filter(<span class="hljs-function">(<span class="hljs-params">v, i</span>) =&gt;</span> v !== arr[i + <span class="hljs-number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> input = <span class="hljs-string">"3\n1 2 5"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">difference</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> split = input.split(<span class="hljs-string">"\n"</span>);</span><br><span class="line">  <span class="hljs-keyword">const</span> length = +split[<span class="hljs-number">0</span>];</span><br><span class="line">  <span class="hljs-keyword">const</span> array = split[<span class="hljs-number">1</span>].split(<span class="hljs-string">" "</span>);</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(array, length);</span><br><span class="line">  <span class="hljs-keyword">let</span> maximum = <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-keyword">let</span> result = <span class="hljs-number">0</span>;</span><br><span class="line">  </span><br><span class="line">  array.forEach(<span class="hljs-function"><span class="hljs-params">value1</span> =&gt;</span> &#123;</span><br><span class="line">    array.forEach(<span class="hljs-function"><span class="hljs-params">value2</span> =&gt;</span>&#123;</span><br><span class="line">      result = <span class="hljs-built_in">Math</span>.abs(value1-value2);</span><br><span class="line">      <span class="hljs-keyword">if</span>(result &gt; maximum) &#123;</span><br><span class="line">        maximum = result;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(maximum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(input);</span><br><span class="line"></span><br><span class="line">difference(input);</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -240,7 +237,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/21/">21</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/39/">39</a></li>
             
         </ul>
     </nav>
@@ -260,16 +257,16 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="alleyful">
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Alley">
                     
                     
                     <p class="is-size-4 is-block">
-                        alleyful
+                        Alley
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        alleyful
+                        Front-End Developer
                     </p>
                     
                     
@@ -288,7 +285,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        21
+                        39
                     </p>
                 </div>
             </div>
@@ -360,7 +357,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">21</span>
+                <span class="level-item tag">39</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -368,7 +365,7 @@
                 <span class="level-item">HackerRank</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">11</span>
+                <span class="level-item tag">29</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
@@ -409,8 +406,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T16:01:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day10_BinaryNumbers/" class="has-link-black-ter is-size-6">Day10 Binary Numbers</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -422,8 +419,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T15:01:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day9_Recursion3/" class="has-link-black-ter is-size-6">Day9 Recursion 3</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -435,8 +432,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T10:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day8_DictionariesAndMaps/" class="has-link-black-ter is-size-6">Day8 Dictionaries and Maps</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -448,8 +445,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T08:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day7_Arrays/" class="has-link-black-ter is-size-6">Day7 Arrays</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -461,8 +458,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T07:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day6_LetsReview/" class="has-link-black-ter is-size-6">Day6 Let&#39;s Review</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
+                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -488,7 +485,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">21</span>
+                    <span class="level-item tag">39</span>
                 </span>
             </a>
         </li>
@@ -509,14 +506,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">21</span>
+                        <span class="tag is-grey">39</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HackerRank/">
                         <span class="tag">HackerRank</span>
-                        <span class="tag is-grey">11</span>
+                        <span class="tag is-grey">29</span>
                     </a>
                 </div>
                 
@@ -554,8 +551,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T16:01:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day10_BinaryNumbers/" class="has-link-black-ter is-size-6">Day10 Binary Numbers</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/" class="has-link-black-ter is-size-6">Day29 Bitwise AND</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -567,8 +564,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T15:01:34.000Z">2019-06-16</time></div>
-                    <a href="/2019/06/16/algorithm/hackerrank/Day9_Recursion3/" class="has-link-black-ter is-size-6">Day9 Recursion 3</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/" class="has-link-black-ter is-size-6">Day28 RegEx, Patterns, and Intro to Databases</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -580,8 +577,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T10:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day8_DictionariesAndMaps/" class="has-link-black-ter is-size-6">Day8 Dictionaries and Maps</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T01:51:34.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/" class="has-link-black-ter is-size-6">Day26 Nested Logic</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -593,8 +590,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T08:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day7_Arrays/" class="has-link-black-ter is-size-6">Day7 Arrays</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T00:40:03.000Z">2019-06-17</time></div>
+                    <a href="/2019/06/17/algorithm/hackerrank/Day25_RunningTimeAndComplexity/" class="has-link-black-ter is-size-6">Day25 Running Time and Complexity</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -606,8 +603,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-15T07:01:34.000Z">2019-06-15</time></div>
-                    <a href="/2019/06/15/algorithm/hackerrank/Day6_LetsReview/" class="has-link-black-ter is-size-6">Day6 Let&#39;s Review</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time></div>
+                    <a href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/" class="has-link-black-ter is-size-6">Day24 More Linked Lists</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
                     </p>
@@ -633,7 +630,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">21</span>
+                    <span class="level-item tag">39</span>
                 </span>
             </a>
         </li>
@@ -654,14 +651,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">21</span>
+                        <span class="tag is-grey">39</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HackerRank/">
                         <span class="tag">HackerRank</span>
-                        <span class="tag is-grey">11</span>
+                        <span class="tag is-grey">29</span>
                     </a>
                 </div>
                 
