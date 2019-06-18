@@ -2,24 +2,24 @@
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>문자열 내 마음대로 정렬하기 - ALLEYFUL</title>
+<title>프로그래머스 - 문자열 내 마음대로 정렬하기 - ALLEYFUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다. 제한 조건strings는 길이 1 이상, 50이하인 배열입니다.stri">
+    <meta name="description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.    제한 조건strings는 길이 1 이상, 50이하인 배열입니다.s">
 <meta name="keywords" content="Algorithm,Programmers,프로그래머스">
 <meta property="og:type" content="article">
-<meta property="og:title" content="문자열 내 마음대로 정렬하기">
+<meta property="og:title" content="프로그래머스 - 문자열 내 마음대로 정렬하기">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/14/algorithm/programmers/level1-10/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다. 제한 조건strings는 길이 1 이상, 50이하인 배열입니다.stri">
+<meta property="og:description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.    제한 조건strings는 길이 1 이상, 50이하인 배열입니다.s">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-18T13:47:50.560Z">
+<meta property="og:updated_time" content="2019-06-18T14:01:20.189Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="문자열 내 마음대로 정렬하기">
-<meta name="twitter:description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다. 제한 조건strings는 길이 1 이상, 50이하인 배열입니다.stri">
+<meta name="twitter:title" content="프로그래머스 - 문자열 내 마음대로 정렬하기">
+<meta name="twitter:description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.    제한 조건strings는 길이 1 이상, 50이하인 배열입니다.s">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <i class="fas fa-code" style="font-size:24px"></i>
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
             
             </a>
         </div>
@@ -165,12 +165,17 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                문자열 내 마음대로 정렬하기
+                프로그래머스 - 문자열 내 마음대로 정렬하기
             
         </h1>
         <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.<br>예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.<br><br><br><br></p>
-<h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><p>strings는 길이 1 이상, 50이하인 배열입니다.<br>strings의 원소는 소문자 알파벳으로 이루어져 있습니다.<br>strings의 원소는 길이 1 이상, 100이하인 문자열입니다.<br>모든 strings의 원소의 길이는 n보다 큽니다.<br>인덱스 1의 문자가 같은 문자열이 여럿 일 경우, 사전순으로 앞선 문자열이 앞쪽에 위치합니다.<br><br><br><br></p>
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.<br>예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.</p>
+<br>
+
+
+<h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><p>strings는 길이 1 이상, 50이하인 배열입니다.<br>strings의 원소는 소문자 알파벳으로 이루어져 있습니다.<br>strings의 원소는 길이 1 이상, 100이하인 문자열입니다.<br>모든 strings의 원소의 길이는 n보다 큽니다.<br>인덱스 1의 문자가 같은 문자열이 여럿 일 경우, 사전순으로 앞선 문자열이 앞쪽에 위치합니다.</p>
+<br>
+
 <h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
 <thead>
 <tr>
@@ -189,12 +194,9 @@
 <td align="center">2</td>
 <td align="left">[abcd, abce, cdx]</td>
 </tr>
-<tr>
-<td><br></td>
-<td align="center"></td>
-<td align="left"></td>
-</tr>
 </tbody></table>
+<br>
+
 <h3 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h3><ul>
 <li><p>입출력 예 1</p>
 <ul>
@@ -249,7 +251,7 @@
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/14/algorithm/programmers/level1-09/">
-                <span class="level-item">두 정수 사이의 합</span>
+                <span class="level-item">프로그래머스 - 두 정수 사이의 합</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -273,7 +275,7 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Alley">
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
                     
                     
                     <p class="is-size-4 is-block">
@@ -423,7 +425,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -436,7 +438,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -449,7 +451,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -462,7 +464,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -475,7 +477,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -575,7 +577,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -588,7 +590,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -601,7 +603,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -614,7 +616,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -627,7 +629,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -716,7 +718,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <i class="fas fa-code" style="font-size:20px"></i>
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
                 
                 </a>
                 <p class="is-size-7">

@@ -2,24 +2,24 @@
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>나누어 떨어지는 숫자 배열 - ALLEYFUL</title>
+<title>프로그래머스 - 나누어 떨어지는 숫자 배열 - ALLEYFUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="문제 설명array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요. 제한사항arr은 자연수를 담은 배열입니다.정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입">
+    <meta name="description" content="문제 설명array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.   제한사항arr은 자연수를 담은 배열입니다.정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j]">
 <meta name="keywords" content="Algorithm,Programmers,프로그래머스">
 <meta property="og:type" content="article">
-<meta property="og:title" content="나누어 떨어지는 숫자 배열">
+<meta property="og:title" content="프로그래머스 - 나누어 떨어지는 숫자 배열">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/14/algorithm/programmers/level1-08/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="문제 설명array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요. 제한사항arr은 자연수를 담은 배열입니다.정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입">
+<meta property="og:description" content="문제 설명array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.   제한사항arr은 자연수를 담은 배열입니다.정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j]">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-18T13:47:50.584Z">
+<meta property="og:updated_time" content="2019-06-18T14:01:20.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="나누어 떨어지는 숫자 배열">
-<meta name="twitter:description" content="문제 설명array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요. 제한사항arr은 자연수를 담은 배열입니다.정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입">
+<meta name="twitter:title" content="프로그래머스 - 나누어 떨어지는 숫자 배열">
+<meta name="twitter:description" content="문제 설명array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.   제한사항arr은 자연수를 담은 배열입니다.정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j]">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <i class="fas fa-code" style="font-size:24px"></i>
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
             
             </a>
         </div>
@@ -165,12 +165,16 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                나누어 떨어지는 숫자 배열
+                프로그래머스 - 나누어 떨어지는 숫자 배열
             
         </h1>
         <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.<br><br>divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.<br><br><br><br></p>
-<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><p>arr은 자연수를 담은 배열입니다.<br><br>정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입니다.<br><br>divisor는 자연수입니다.<br><br>array는 길이 1 이상인 배열입니다.<br><br><br><br></p>
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>array의 각 element 중 divisor로 나누어 떨어지는 값을 오름차순으로 정렬한 배열을 반환하는 함수, solution을 작성해주세요.<br><br>divisor로 나누어 떨어지는 element가 하나도 없다면 배열에 -1을 담아 반환하세요.</p>
+<br>
+
+<h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><p>arr은 자연수를 담은 배열입니다.<br><br>정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입니다.<br><br>divisor는 자연수입니다.<br><br>array는 길이 1 이상인 배열입니다.</p>
+<br>
+
 <h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
 <thead>
 <tr>
@@ -194,12 +198,9 @@
 <td align="center">10</td>
 <td align="center">[-1]</td>
 </tr>
-<tr>
-<td><br></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
 </tbody></table>
+<br>
+
 <h3 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h3><ul>
 <li><p>입출력 예#1</p>
 <ul>
@@ -220,7 +221,7 @@
 <br>
 
 <hr>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">arr, divisor</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> result = arr.reduce(<span class="hljs-function">(<span class="hljs-params">target, item</span>) =&gt;</span> &#123;</span><br><span class="line">        (item % divisor === <span class="hljs-number">0</span>) &amp;&amp; target.push(item);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">return</span> result.length &gt; <span class="hljs-number">0</span> ? result.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b) : [<span class="hljs-number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">arr, divisor</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> result = arr.reduce(<span class="hljs-function">(<span class="hljs-params">target, item</span>) =&gt;</span> &#123;</span><br><span class="line">        (item % divisor === <span class="hljs-number">0</span>) &amp;&amp; target.push(item);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">return</span> result.length &gt; <span class="hljs-number">0</span> ? result.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b) : [<span class="hljs-number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -249,14 +250,14 @@
         <div class="level-start">
             <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/14/algorithm/programmers/level1-09/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">두 정수 사이의 합</span>
+                <span class="level-item">프로그래머스 - 두 정수 사이의 합</span>
             </a>
         </div>
         
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/13/algorithm/programmers/level1-07/">
-                <span class="level-item">같은 숫자는 싫어</span>
+                <span class="level-item">프로그래머스 - 같은 숫자는 싫어</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -280,7 +281,7 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Alley">
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
                     
                     
                     <p class="is-size-4 is-block">
@@ -430,7 +431,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -443,7 +444,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -456,7 +457,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -469,7 +470,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -482,7 +483,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -582,7 +583,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">시저 암호</a>
+                    <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -595,7 +596,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">문자열을 정수로 바꾸기</a>
+                    <a href="/2019/06/18/algorithm/programmers/level1-14/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열을 정수로 바꾸기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -608,7 +609,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">문자열 다루기 기본</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-13/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 다루기 기본</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -621,7 +622,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:28:38.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">문자열 내림차순으로 배치하기</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-12/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내림차순으로 배치하기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -634,7 +635,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">문자열 내 p와 y의 개수</a>
+                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -723,7 +724,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <i class="fas fa-code" style="font-size:20px"></i>
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
                 
                 </a>
                 <p class="is-size-7">
