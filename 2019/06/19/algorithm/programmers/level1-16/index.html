@@ -2,24 +2,24 @@
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Day28 RegEx, Patterns, and Intro to Databases - ALLEYFUL</title>
+<title>프로그래머스 - 약수의 합 - ALLEYFUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video! TaskConsider a database table, Emails, which has the attributes Fi">
-<meta name="keywords" content="Algorithm,HackerRank">
+    <meta name="description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.   제한 사항n은 0 이상 3000이하인 자연수입니다.   입출력 예   n return    12 28   5 6     입출력 예 설명 입출력 예 #1  12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28입니다.   입출력">
+<meta name="keywords" content="Algorithm,Programmers,프로그래머스">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Day28 RegEx, Patterns, and Intro to Databases">
-<meta property="og:url" content="https://alleyful.github.io/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/index.html">
+<meta property="og:title" content="프로그래머스 - 약수의 합">
+<meta property="og:url" content="https://alleyful.github.io/2019/06/19/algorithm/programmers/level1-16/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video! TaskConsider a database table, Emails, which has the attributes Fi">
+<meta property="og:description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.   제한 사항n은 0 이상 3000이하인 자연수입니다.   입출력 예   n return    12 28   5 6     입출력 예 설명 입출력 예 #1  12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28입니다.   입출력">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T03:59:39.713Z">
+<meta property="og:updated_time" content="2019-06-18T15:57:40.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Day28 RegEx, Patterns, and Intro to Databases">
-<meta name="twitter:description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video! TaskConsider a database table, Emails, which has the attributes Fi">
+<meta name="twitter:title" content="프로그래머스 - 약수의 합">
+<meta name="twitter:description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.   제한 사항n은 0 이상 3000이하인 자연수입니다.   입출력 예   n return    12 28   5 6     입출력 예 설명 입출력 예 #1  12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28입니다.   입출력">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -143,10 +143,10 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time>
+                <time class="level-item has-text-grey" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
                 </div>
                 
                 
@@ -156,21 +156,50 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Day28 RegEx, Patterns, and Intro to Databases
+                프로그래머스 - 약수의 합
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Consider a database table, Emails, which has the attributes First Name and Email ID. Given  rows of data simulating the Emails table, print an alphabetically-ordered list of people whose email address ends in .</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, , total number of rows in the table.<br>Each of the  subsequent lines contains  space-separated strings denoting a person’s first name and email ID, respectively.</p>
-<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><p>Each of the first names consists of lower case letters  only.<br>Each of the email IDs consists of lower case letters ,  and  only.<br>The length of the first name is no longer than 20.<br>The length of the email ID is no longer than 50.</p>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print an alphabetically-ordered list of first names for every user with a gmail account. Each name must be printed on a new line.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">riya riya@gmail.com</span><br><span class="line">julia julia@julia.me</span><br><span class="line">julia sjulia@gmail.com</span><br><span class="line">julia julia@gmail.com</span><br><span class="line">samantha samantha@gmail.com</span><br><span class="line">tanya tanya@gmail.com</span><br><span class="line">Sample Output</span><br></pre></td></tr></table></figure>
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.</p>
+<br>
 
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">julia</span><br><span class="line">julia</span><br><span class="line">riya</span><br><span class="line">samantha</span><br><span class="line">tanya</span><br></pre></td></tr></table></figure>
+<h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>n은 0 이상 3000이하인 자연수입니다.</p>
+<br>
+
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
+<thead>
+<tr>
+<th align="center">n</th>
+<th align="center">return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">12</td>
+<td align="center">28</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<br>
+
+<h2 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h2><ul>
+<li><p>입출력 예 #1</p>
+<ul>
+<li>12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28입니다.</li>
+</ul>
+</li>
+<li><p>입출력 예 #2</p>
+<ul>
+<li>5의 약수는 1, 5입니다. 이를 모두 더하면 6입니다.</li>
+</ul>
+</li>
+</ul>
+<br>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> N = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> patten = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"@gmail.com"</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> names = [];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> NItr = <span class="hljs-number">0</span>; NItr &lt; N; NItr++) &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> firstNameEmailID = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> firstName = firstNameEmailID[<span class="hljs-number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> emailID = firstNameEmailID[<span class="hljs-number">1</span>];</span><br><span class="line"></span><br><span class="line">        patten.test(emailID) &amp;&amp; names.push(firstName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    names.sort().forEach(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(name));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.sqrt(n))).fill(<span class="hljs-number">0</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, arr, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> number = index + <span class="hljs-number">1</span>;</span><br><span class="line">        <span class="hljs-keyword">let</span> numberLast = n / number;</span><br><span class="line">        n % number === <span class="hljs-number">0</span> &amp;&amp; (target = target + (numberLast === number ? number : number + numberLast))</span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -179,7 +208,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Algorithm/">Algorithm</a>, <a class="has-link-grey -link" href="/tags/HackerRank/">HackerRank</a>
+                    <a class="has-link-grey -link" href="/tags/Algorithm/">Algorithm</a>, <a class="has-link-grey -link" href="/tags/Programmers/">Programmers</a>, <a class="has-link-grey -link" href="/tags/프로그래머스/">프로그래머스</a>
                 </div>
             </div>
         </div>
@@ -196,17 +225,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Day29 Bitwise AND</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/17/algorithm/hackerrank/Day26_NestedLogic/">
-                <span class="level-item">Day26 Nested Logic</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/18/algorithm/programmers/level1-15/">
+                <span class="level-item">프로그래머스 - 시저 암호</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>

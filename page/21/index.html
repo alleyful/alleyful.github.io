@@ -121,15 +121,6 @@
             
             <div class="navbar-end">
                 
-                    
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://alleyful.github.io/">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
                 
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
@@ -151,7 +142,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T10:20:34.000Z">2019-06-16</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T10:38:51.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -164,46 +155,39 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day13_AbstractClasses/">Day13 Abstract Classes</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day14_Scope/">Day14 Scope</a>
             
         </h1>
         <div class="content">
-            <h1 id="Day-13-Abstract-Classes"><a href="#Day-13-Abstract-Classes" class="headerlink" title="Day 13: Abstract Classes"></a>Day 13: Abstract Classes</h1><h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the few languages that use this construct. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a Book class and a Solution class, write a MyBook class that does the following:</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing scope. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<p>The absolute difference between two integers, <strong>a</strong> and <strong>b</strong>, is written as <strong>|a - b|</strong>. The maximum absolute difference between two integers in a set of positive integers, <strong>elements</strong>, is the largest absolute difference between any two integers in <strong>elements</strong>.</p>
+<p>The Difference class is started for you in the editor. It has a private integer array (<strong>elements</strong>) for storing <strong>N</strong> non-negative integers, and a public integer (<strong>maximumDifference</strong>) for storing the maximum absolute difference.</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Complete the Difference class by writing the following:</p>
 <ul>
-<li>Inherits from Book</li>
-<li>Has a parameterized constructor taking these <strong>3</strong> parameters:</li>
+<li>A class constructor that takes an array of integers as a parameter and saves it to the <strong>elements</strong> instance variable.</li>
+<li>A computeDifference method that finds the maximum absolute difference between any <strong>2</strong> numbers in <strong>N</strong> and stores it in the <strong>maximumDifference</strong> instance variable.</li>
 </ul>
-<ol>
-<li>string <strong>title</strong></li>
-<li>string <strong>author</strong></li>
-<li>int <strong>price</strong></li>
-</ol>
-<ul>
-<li>Implements the Book class’ abstract display() method so it prints these <strong>3</strong> lines:</li>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You are not responsible for reading any input from stdin. The locked Solution class in your editor reads in <strong>2</strong> lines of input; the first line contains <strong>N</strong>, and the second line describes the <strong>elements</strong> array.</p>
+<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
+<li><strong>1 &lt;= N &lt;= 10</strong></li>
+<li><strong>1 &lt;= elements[i] &lt;= 100, where 0 &lt;= i &lt;= N - 1</strong></li>
 </ul>
-<ol>
-<li><strong>title</strong>, a space, and then the current instance’s <strong>title</strong>.</li>
-<li><strong>author</strong>, a space, and then the current instance’s <strong>author</strong>.</li>
-<li><strong>price</strong>, a space, and then the current instance’s <strong>price</strong>.</li>
-</ol>
-<p><strong>Note:</strong> Because these classes are being written in the same file, you must not use an access modifier (e.g.: <strong>public</strong>) when declaring MyBook or your code will not execute.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You are not responsible for reading any input from stdin. The Solution class creates a Book object and calls the MyBook class constructor (passing it the necessary arguments). It then calls the display method on the Book object.</p>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>The <strong>void display()</strong> method should print and label the respective <strong>title</strong>, <strong>author</strong>, and <strong>price</strong> of the MyBook object’s instance (with each value on its own line) like so:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Title: $title</span><br><span class="line">Author: $author</span><br><span class="line">Price: $price</span><br></pre></td></tr></table></figure>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>You are not responsible for printing any output; the Solution class will print the value of the <strong>maximumDifference</strong> instance variable.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 5</span><br></pre></td></tr></table></figure>
 
-<p><strong>Note:</strong> The <strong>$</strong> is prepended to variable names to indicate they are placeholders for variables.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><p>The following input from stdin is handled by the locked stub code in your editor:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The Alchemist</span><br><span class="line">Paulo Coelho</span><br><span class="line">248</span><br></pre></td></tr></table></figure>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
 
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><p>The following output is printed by your display() method:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Title: The Alchemist</span><br><span class="line">Author: Paulo Coelho</span><br><span class="line">Price: 248</span><br></pre></td></tr></table></figure>
-
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The scope of the <strong>elements</strong> array and <strong>maximumDifference</strong> integer is the entire class instance. The class constructor saves the argument passed to the constructor as the <strong>elements</strong> instance variable (where the computeDifference method can access it).</p>
+<p>To find the maximum difference, computeDifference checks each element in the array and finds the maximum difference between any <strong>2</strong> elements: <strong>|1 - 2| = 1</strong></p>
+<p><strong>|1 - 5| = 4</strong><br><strong>|2 - 5| = 3</strong></p>
+<p>The maximum of these differences is <strong>4</strong>, so it saves the value <strong>4</strong> as the <strong>maximumDifference</strong> instance variable. The locked stub code in the editor then prints the value stored as <strong>maximumDifference</strong>, which is <strong>4</strong>.</p>
 <br>
 <br>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">// Declare your class here.</span></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyBook</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Book</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Class Constructor</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   @param title The book's title.</span></span><br><span class="line"><span class="hljs-comment">    *   @param author The book's author.</span></span><br><span class="line"><span class="hljs-comment">    *   @param price The book's price.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your constructor here</span></span><br><span class="line">    <span class="hljs-keyword">constructor</span>(title, author, price) &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>();</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">this</span>.title = title;</span><br><span class="line">        <span class="hljs-keyword">this</span>.author = author;</span><br><span class="line">        <span class="hljs-keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Method Name: display</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   Print the title, author, and price in the specified format.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your method here</span></span><br><span class="line">    display() &#123;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Title: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.title&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Author: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.author&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Price: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.price&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment">// End class</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> input = <span class="hljs-string">"3\n1 2 5"</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> difference = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> result = input.split(<span class="hljs-string">'\n'</span>)[<span class="hljs-number">1</span>].split(<span class="hljs-string">' '</span>).reduce(</span><br><span class="line">    (target, el) =&gt; &#123;</span><br><span class="line">      <span class="hljs-keyword">let</span> &#123; min, max &#125; = target;</span><br><span class="line"></span><br><span class="line">      target[<span class="hljs-string">"min"</span>] = el &gt; min ? el : min;</span><br><span class="line">      target[<span class="hljs-string">"max"</span>] = el &lt; max ? el : max;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="hljs-attr">min</span>: <span class="hljs-number">-999</span>, <span class="hljs-attr">max</span>: <span class="hljs-number">999</span> &#125;</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.abs(result[<span class="hljs-string">"max"</span>] - result[<span class="hljs-string">"min"</span>]));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">difference();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> input = <span class="hljs-string">"3\n1 2 5"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">difference</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> split = input.split(<span class="hljs-string">"\n"</span>);</span><br><span class="line">  <span class="hljs-keyword">const</span> length = +split[<span class="hljs-number">0</span>];</span><br><span class="line">  <span class="hljs-keyword">const</span> array = split[<span class="hljs-number">1</span>].split(<span class="hljs-string">" "</span>);</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(array, length);</span><br><span class="line">  <span class="hljs-keyword">let</span> maximum = <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-keyword">let</span> result = <span class="hljs-number">0</span>;</span><br><span class="line">  </span><br><span class="line">  array.forEach(<span class="hljs-function"><span class="hljs-params">value1</span> =&gt;</span> &#123;</span><br><span class="line">    array.forEach(<span class="hljs-function"><span class="hljs-params">value2</span> =&gt;</span>&#123;</span><br><span class="line">      result = <span class="hljs-built_in">Math</span>.abs(value1-value2);</span><br><span class="line">      <span class="hljs-keyword">if</span>(result &gt; maximum) &#123;</span><br><span class="line">        maximum = result;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(maximum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(input);</span><br><span class="line"></span><br><span class="line">difference(input);</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -244,7 +228,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/45/">45</a></li>
             
         </ul>
     </nav>
@@ -292,7 +276,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        45
                     </p>
                 </div>
             </div>
@@ -364,7 +348,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">44</span>
+                <span class="level-item tag">45</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -380,7 +364,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -413,6 +397,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -461,19 +458,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -492,7 +476,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -513,7 +497,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -527,14 +511,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
@@ -565,6 +549,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -613,19 +610,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -644,7 +628,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -665,7 +649,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -679,14 +663,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 

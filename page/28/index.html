@@ -121,15 +121,6 @@
             
             <div class="navbar-end">
                 
-                    
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://alleyful.github.io/">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
                 
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
@@ -151,7 +142,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T07:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-15T08:01:34.000Z">2019-06-15</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -164,36 +155,29 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day6_LetsReview/">Day6 Let&#39;s Review</a>
+                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day7_Arrays/">Day7 Arrays</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a string, <strong>S</strong>, of length <strong>N</strong> that is indexed from <strong>0</strong> to <strong>N - 1</strong>, print its even-indexed and odd-indexed characters as <strong>2</strong> space-separated strings on a single line (see the Sample below for more detail).</p>
-<p><strong>Note: 0</strong> is considered to be an even index.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, <strong>T</strong> (the number of test cases).<br>Each line <strong>i</strong> of the <strong>T</strong> subsequent lines contain a String, <strong>S</strong>.</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an array, <strong>A</strong>, of <strong>N</strong> integers, print <strong>A</strong>‘s elements in reverse order as a single line of space-separated numbers.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, <strong>N</strong> (the size of our array).<br>The second line contains <strong>N</strong> space-separated integers describing array <strong>A</strong>‘s elements.</p>
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li><strong>1 &lt;= T &lt;= 10</strong></li>
-<li><strong>2 &lt;= length of S &lt;= 10000</strong></li>
+<li><strong>1 &lt;= N &lt;= 1000</strong></li>
+<li><strong>1 &lt;= A<sub>i</sub> &lt;= 10000</strong>, where <strong>Ai</strong> is the <strong>i<sup>th</sup></strong> integer in the array.</li>
 </ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>For each String <strong>S<sub>j</sub></strong> (where <strong>0 &lt;= j &lt;= T - 1</strong>), print <strong>S<sub>j</sub></strong>‘s even-indexed characters, followed by a space, followed by <strong>S<sub>j</sub></strong>‘s odd-indexed characters.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">Hacker</span><br><span class="line">Rank</span><br></pre></td></tr></table></figure>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print the elements of array <strong>A</strong> in reverse order as a single line of space-separated numbers.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 4 3 2</span><br></pre></td></tr></table></figure>
 
-<p>##Sample Output</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hce akr</span><br><span class="line">Rn ak</span><br></pre></td></tr></table></figure>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 3 4 1</span><br></pre></td></tr></table></figure>
 
-<p>##Explanation</p>
-<p>Test Case 0: <strong>S = “Hacker”</strong><br><br><strong>S[0] = “H”</strong><br><br><strong>S[1] = “a”</strong><br><br><strong>S[2] = “c”</strong><br><br><strong>S[3] = “k”</strong><br><br><strong>S[4] = “e”</strong><br><br><strong>S[5] = “r”</strong><br></p>
-<p>The even indices are <strong>0</strong>, <strong>2</strong>, and <strong>4</strong>, and the odd indices are <strong>1</strong>, <strong>3</strong>, and <strong>5</strong>. We then print a single line of <strong>2</strong> space-separated strings; the first string contains the ordered characters from <strong>S</strong>‘s even indices (<strong>Hce</strong>), and the second string contains the ordered characters from <strong>S</strong>‘s odd indices (<strong>akr</strong>).</p>
-<p>Test Case 1: <strong>S = “Rank”</strong><br><br><strong>S[0] = “R”</strong><br><br><strong>S[1] = “a”</strong><br><br><strong>S[2] = “n”</strong><br><br><strong>S[3] = “k”</strong><br></p>
-<p>The even indices are <strong>0</strong> and <strong>2</strong>, and the odd indices are <strong>1</strong> and <strong>3</strong>. We then print a single line of <strong>2</strong> space-separated strings; the first string contains the ordered characters from <strong>S</strong>‘s even indices (<strong>Rn</strong>), and the second string contains the ordered characters from <strong>S</strong>‘s odd indices (<strong>ak</strong>).</p>
 <br>
 <br>
 
 <hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> array = input.split(<span class="hljs-string">'\n'</span>);</span><br><span class="line">    array.shift();</span><br><span class="line">    </span><br><span class="line">    array.map(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> odd = <span class="hljs-string">''</span>;</span><br><span class="line">        <span class="hljs-keyword">let</span> even = <span class="hljs-string">''</span>;</span><br><span class="line"></span><br><span class="line">        value.split(<span class="hljs-string">''</span>).map(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> &#123;</span><br><span class="line">            index % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? odd += value : even += value;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;odd&#125;</span> <span class="hljs-subst">$&#123;even&#125;</span>`</span>);</span><br><span class="line">     &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h2><h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> n = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> arr = readLine().split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span class="hljs-params">arrTemp</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(arrTemp, <span class="hljs-number">10</span>));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(arr.reverse().join(<span class="hljs-string">' '</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//Enter your code here</span></span><br><span class="line">    input.split(<span class="hljs-string">"\n"</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (index &amp;&amp; <span class="hljs-built_in">Number</span>.isNaN(+item)) &#123;</span><br><span class="line">            <span class="hljs-keyword">let</span> result = item.split(<span class="hljs-string">''</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, text, index</span>) =&gt;</span> &#123;</span><br><span class="line">                target[+(index % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>)] += text;</span><br><span class="line"></span><br><span class="line">                <span class="hljs-keyword">return</span> target;</span><br><span class="line">            &#125;, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">2</span>).fill(<span class="hljs-string">''</span>)).join(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">            <span class="hljs-built_in">console</span>.log(result);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> n = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> arr = readLine().split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span class="hljs-params">arrTemp</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(arrTemp, <span class="hljs-number">10</span>));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> reverseArray = <span class="hljs-function">(<span class="hljs-params">array</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> temp = <span class="hljs-literal">null</span>;</span><br><span class="line">        <span class="hljs-keyword">const</span> length = array.length;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length / <span class="hljs-number">2</span>; i++)&#123;</span><br><span class="line">            temp = array[i];</span><br><span class="line">            array[i] = array[length - <span class="hljs-number">1</span> - i];</span><br><span class="line">            array[length - <span class="hljs-number">1</span> - i] = temp;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> array;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(reverseArray(arr).join(<span class="hljs-string">' '</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -234,7 +218,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/45/">45</a></li>
             
         </ul>
     </nav>
@@ -282,7 +266,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        45
                     </p>
                 </div>
             </div>
@@ -354,7 +338,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">44</span>
+                <span class="level-item tag">45</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -370,7 +354,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -403,6 +387,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -451,19 +448,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -482,7 +466,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -503,7 +487,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -517,14 +501,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
@@ -555,6 +539,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -603,19 +600,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -634,7 +618,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -655,7 +639,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -669,14 +653,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 

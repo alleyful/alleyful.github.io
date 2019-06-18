@@ -121,15 +121,6 @@
             
             <div class="navbar-end">
                 
-                    
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://alleyful.github.io/">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
                 
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
@@ -151,7 +142,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T13:01:03.000Z">2019-06-16</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T13:20:30.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -164,57 +155,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day20_Sorting/">Day20 Sorting</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day21_Generics/">Day21 Generics</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re discussing a simple sorting algorithm called Bubble Sort. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<hr>
-<p>Consider the following version of Bubble Sort:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    // Track number of elements swapped during a single array traversal</span><br><span class="line">    int numberOfSwaps = 0;</span><br><span class="line">    </span><br><span class="line">    for (int j = 0; j &lt; n - 1; j++) &#123;</span><br><span class="line">        // Swap adjacent elements if they are in decreasing order</span><br><span class="line">        if (a[j] &gt; a[j + 1]) &#123;</span><br><span class="line">            swap(a[j], a[j + 1]);</span><br><span class="line">            numberOfSwaps++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // If no elements were swapped during a traversal, array is sorted</span><br><span class="line">    if (numberOfSwaps == 0) &#123;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an array, <strong>a</strong>, of size <strong>n</strong> distinct elements, sort the array in ascending order using the Bubble Sort algorithm above. Once sorted, print the following <strong>3</strong> lines:</p>
-<ol>
-<li>Array is sorted in numSwaps swaps.<br>where <strong>numSwaps</strong> is the number of swaps that took place.</li>
-<li>First Element: firstElement<br>where <strong>firstElement</strong> is the first element in the sorted array.</li>
-<li>Last Element: lastElement<br>where <strong>lastElement</strong> is the last element in the sorted array.</li>
-</ol>
-<p><strong>Hint:</strong> To complete this challenge, you will need to add a variable that keeps a running tally of all swaps that occur during execution.</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, <strong>n</strong>, denoting the number of elements in array <strong>a</strong>. 
-The second line contains <strong>n</strong> space-separated integers describing the respective values of <strong>a<sub>0</sub>, a<sub>1</sub>, …, a<sub>n-1</sub></strong>.</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing Generics; be aware that not all languages support this construct, so fewer languages are enabled for this challenge. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a single generic function named printArray; this function must take an array of generic elements as a parameter (the exception to this is C++, which takes a vector). The locked Solution class in your editor tests your function.</p>
+<p><strong>Note:</strong> You must use generics to solve this challenge. Do not write overloaded functions.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The locked Solution class in your editor will pass different types of arrays to your printArray function.</p>
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li><strong>2 &lt;= n &lt;= 600</strong></li>
-<li><strong>1 &lt;= a<sub>i</sub> &lt;= 2 X 10<sup>6</sup>, where 0 &lt;= i &lt; n</strong></li>
+<li>You must have exactly  function named printArray. <strong>1</strong></li>
 </ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print the following three lines of output:</p>
-<ol>
-<li>Array is sorted in numSwaps swaps.<br>where <strong>numSwaps</strong> is the number of swaps that took place.</li>
-<li>First Element: firstElement<br>where <strong>firstElement</strong> is the first element in the sorted array.</li>
-<li>Last Element: lastElement<br>where <strong>lastElements</strong> is the last element in the sorted array.</li>
-</ol>
-<h2 id="Sample-Input-0"><a href="#Sample-Input-0" class="headerlink" title="Sample Input 0"></a>Sample Input 0</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="Sample-Output-0"><a href="#Sample-Output-0" class="headerlink" title="Sample Output 0"></a>Sample Output 0</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Array is sorted in 0 swaps.</span><br><span class="line">First Element: 1</span><br><span class="line">Last Element: 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation-0"><a href="#Explanation-0" class="headerlink" title="Explanation 0"></a>Explanation 0</h2><p>The array is already sorted, so <strong>0</strong> swaps take place and we print the necessary <strong>3</strong> lines of output shown above.</p>
-<h2 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input 1"></a>Sample Input 1</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">3 2 1</span><br></pre></td></tr></table></figure>
-
-<h2 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output 1"></a>Sample Output 1</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Array is sorted in 3 swaps.</span><br><span class="line">First Element: 1</span><br><span class="line">Last Element: 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="Explanation-1"><a href="#Explanation-1" class="headerlink" title="Explanation 1"></a>Explanation 1</h2><p>The array <strong>a = [3, 2, 1]</strong> is not sorted, so we perform the following  swaps:<br></p>
-<ol>
-<li>[3, 2, 1] -&gt; [2, 3, 1]</li>
-<li>[2, 3, 1] -&gt; [2, 1, 3]</li>
-<li>[2, 1, 3] -&gt; [1, 2, 3]</li>
-</ol>
-<p>At this point the array is sorted and we print the necessary <strong>3</strong> lines of output shown above.</p>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Your printArray function should print each element of its generic array parameter on a new line.</p>
 <br>
 <br>
 
 <hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> n = <span class="hljs-built_in">parseInt</span>(readLine());</span><br><span class="line">    a = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line">    a = a.map(<span class="hljs-built_in">Number</span>);</span><br><span class="line">    <span class="hljs-comment">// Write Your Code Here</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">let</span> numberOfSwaps = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> bubbleSort = <span class="hljs-function">(<span class="hljs-params">array</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> arr = array;</span><br><span class="line">        <span class="hljs-keyword">let</span> length = arr.length;</span><br><span class="line">        <span class="hljs-keyword">let</span> i, j, temp;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; length - <span class="hljs-number">1</span>; i++) &#123;</span><br><span class="line">            <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; length - <span class="hljs-number">1</span> - i; j++) &#123;</span><br><span class="line">                <span class="hljs-keyword">if</span> (arr[j] &gt; arr[j + <span class="hljs-number">1</span>]) &#123;</span><br><span class="line">                    temp = arr[j + <span class="hljs-number">1</span>];</span><br><span class="line">                    arr[j + <span class="hljs-number">1</span>] = arr[j];</span><br><span class="line">                    arr[j] = temp;</span><br><span class="line">                    numberOfSwaps++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">let</span> sortArray = bubbleSort(a);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Array is sorted in <span class="hljs-subst">$&#123;numberOfSwaps&#125;</span> swaps.`</span>)</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`First Element: <span class="hljs-subst">$&#123;sortArray[<span class="hljs-number">0</span>]&#125;</span>`</span>)</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Last Element: <span class="hljs-subst">$&#123;sortArray[sortArray.length<span class="hljs-number">-1</span>]&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> n = <span class="hljs-built_in">parseInt</span>(readLine());</span><br><span class="line">    a = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line">    a = a.map(<span class="hljs-built_in">Number</span>);</span><br><span class="line">    <span class="hljs-comment">// Write Your Code Here</span></span><br><span class="line">    <span class="hljs-keyword">let</span> numberOfSwaps = <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> bubbleSort = <span class="hljs-function">(<span class="hljs-params">values</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> swapped;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">do</span> &#123;</span><br><span class="line">            swapped = <span class="hljs-literal">false</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, &#123; length &#125; = values; i &lt; length; i++) &#123;</span><br><span class="line">                <span class="hljs-keyword">if</span> (values[i] &gt; values[i + <span class="hljs-number">1</span>]) &#123;</span><br><span class="line">                    <span class="hljs-keyword">let</span> tmp = values[i];</span><br><span class="line">                    </span><br><span class="line">                    values[i] = values[i + <span class="hljs-number">1</span>];</span><br><span class="line">                    values[i + <span class="hljs-number">1</span>] = tmp;</span><br><span class="line">                    </span><br><span class="line">                    swapped = <span class="hljs-literal">true</span>;</span><br><span class="line">                    numberOfSwaps++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="hljs-keyword">while</span> (swapped);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> values;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">let</span> result = bubbleSort(a);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Array is sorted in <span class="hljs-subst">$&#123;numberOfSwaps&#125;</span> swaps.\nFirst Element: <span class="hljs-subst">$&#123;result[<span class="hljs-number">0</span>]&#125;</span>\nLast Element: <span class="hljs-subst">$&#123;result[n - <span class="hljs-number">1</span>]&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">*</span></span><br><span class="line"><span class="hljs-comment">* What is the Generic?</span></span><br><span class="line"><span class="hljs-comment">* That is being able to create a component that can work over a variety of types rather than a single one.</span></span><br><span class="line"><span class="hljs-comment">* JavaScript is a dynamically typed language and it doesn't have any generics. So we can write a normal function or method.</span></span><br><span class="line"><span class="hljs-comment">* Also, you can write in languages like TypeScript, Java, C#.</span></span><br><span class="line"><span class="hljs-comment">* It's a creation code in C#</span></span><br><span class="line"><span class="hljs-comment">*</span></span><br><span class="line"><span class="hljs-comment">**/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> PrintArray&lt;T&gt;(T[] array)&#123;</span><br><span class="line">    foreach(T i <span class="hljs-keyword">in</span> array)</span><br><span class="line">        Console.WriteLine(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -255,7 +212,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/45/">45</a></li>
             
         </ul>
     </nav>
@@ -303,7 +260,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        45
                     </p>
                 </div>
             </div>
@@ -375,7 +332,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">44</span>
+                <span class="level-item tag">45</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -391,7 +348,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -424,6 +381,19 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -472,19 +442,6 @@ The second line contains <strong>n</strong> space-separated integers describing 
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -503,7 +460,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -524,7 +481,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -538,14 +495,14 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
@@ -576,6 +533,19 @@ The second line contains <strong>n</strong> space-separated integers describing 
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -624,19 +594,6 @@ The second line contains <strong>n</strong> space-separated integers describing 
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -655,7 +612,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -676,7 +633,7 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -690,14 +647,14 @@ The second line contains <strong>n</strong> space-separated integers describing 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 

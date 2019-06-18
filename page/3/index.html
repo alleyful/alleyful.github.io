@@ -121,15 +121,6 @@
             
             <div class="navbar-end">
                 
-                    
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://alleyful.github.io/">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
                 
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
@@ -151,7 +142,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-17T14:48:38.000Z">2019-06-17</time>
+                <time class="level-item has-text-grey" datetime="2019-06-17T15:01:38.000Z">2019-06-18</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
@@ -164,38 +155,28 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/17/algorithm/programmers/level1-13/">프로그래머스 - 문자열 다루기 기본</a>
+                <a class="has-link-black-ter" href="/2019/06/18/algorithm/programmers/level1-14/">프로그래머스 - 문자열을 정수로 바꾸기</a>
             
         </h1>
         <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열 s의 길이가 4 혹은 6이고, 숫자로만 구성돼있는지 확인해주는 함수, solution을 완성하세요. 예를 들어 s가 a234이면 False를 리턴하고 1234라면 True를 리턴하면 됩니다.</p>
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열 s를 숫자로 변환한 결과를 반환하는 함수, solution을 완성하세요.</p>
 <br>
 
-<h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>s는 길이 1 이상, 길이 8 이하인 문자열입니다.</p>
+<h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><ul>
+<li>s의 길이는 1 이상 5이하입니다.</li>
+<li>s의 맨앞에는 부호(+, -)가 올 수 있습니다.</li>
+<li>s는 부호와 숫자로만 이루어져있습니다.</li>
+<li>s는 0으로 시작하지 않습니다.</li>
+</ul>
 <br>
 
-<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
-<thead>
-<tr>
-<th align="center">s</th>
-<th align="center">return</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">“a234”</td>
-<td align="center">false</td>
-</tr>
-<tr>
-<td align="center">“1234”</td>
-<td align="center">true</td>
-</tr>
-</tbody></table>
+<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><p>예를들어 str이 1234이면 1234를 반환하고, -1234이면 -1234를 반환하면 됩니다.<br>str은 부호(+,-)와 숫자로만 구성되어 있고, 잘못된 값이 입력되는 경우는 없습니다.</p>
 <br>
 
 <hr>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> !(s.match(<span class="hljs-regexp">/\D/g</span>)) &amp;&amp; (s.length === <span class="hljs-number">4</span> || s.length === <span class="hljs-number">6</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-regexp">/^\d&#123;6&#125;$|^\d&#123;4&#125;$/</span>.test(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> +s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -234,7 +215,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/45/">45</a></li>
             
         </ul>
     </nav>
@@ -282,7 +263,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        45
                     </p>
                 </div>
             </div>
@@ -354,7 +335,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">44</span>
+                <span class="level-item tag">45</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -370,7 +351,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -403,6 +384,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -451,19 +445,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -482,7 +463,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -503,7 +484,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -517,14 +498,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
@@ -555,6 +536,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -603,19 +597,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -634,7 +615,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -655,7 +636,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -669,14 +650,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 

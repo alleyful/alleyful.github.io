@@ -121,15 +121,6 @@
             
             <div class="navbar-end">
                 
-                    
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://alleyful.github.io/">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
                 
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
@@ -151,7 +142,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T09:49:34.000Z">2019-06-16</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T10:20:34.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -164,46 +155,48 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day12_Inheritance/">Day12 Inheritance</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day13_AbstractClasses/">Day13 Abstract Classes</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re delving into Inheritance. Check out the attached tutorial for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>You are given two classes, Person and Student, where Person is the base class and Student is the derived class. Completed code for Person and a declaration for Student are provided for you in the editor. Observe that Student inherits all the properties of Person.</p>
-<p>Complete the Student class by writing the following:</p>
+            <h1 id="Day-13-Abstract-Classes"><a href="#Day-13-Abstract-Classes" class="headerlink" title="Day 13: Abstract Classes"></a>Day 13: Abstract Classes</h1><h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the few languages that use this construct. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a Book class and a Solution class, write a MyBook class that does the following:</p>
 <ul>
-<li>A Student class constructor, which has <strong>4</strong> parameters:</li>
+<li>Inherits from Book</li>
+<li>Has a parameterized constructor taking these <strong>3</strong> parameters:</li>
 </ul>
 <ol>
-<li>A string, <strong>firstName</strong>.</li>
-<li>A string, <strong>lastName</strong>.</li>
-<li>An integer, <strong>id</strong>.</li>
-<li>An integer array (or vector) of test scores, <strong>scores</strong>.</li>
+<li>string <strong>title</strong></li>
+<li>string <strong>author</strong></li>
+<li>int <strong>price</strong></li>
 </ol>
 <ul>
-<li>A char calculate() method that calculates a Student object’s average and returns the grade character representative of their calculated average:</li>
+<li>Implements the Book class’ abstract display() method so it prints these <strong>3</strong> lines:</li>
 </ul>
-<p><img src="https://s3.amazonaws.com/hr-challenge-images/17165/1458142706-3073bc9143-Grading.png" alt="Grading Scale"></p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The locked stub code in your editor calls your Student class constructor and passes it the necessary arguments. It also calls the calculate method (which takes no arguments).</p>
-<p>You are not responsible for reading the following input from stdin:<br>The first line contains <strong>firstName</strong>, <strong>lastName</strong>, and <strong>id</strong>, respectively. The second line contains the number of test scores. The third line of space-separated integers describes <strong>scores</strong>.</p>
-<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li><strong>1 &lt;= |firstName|,|lastName| &lt;= 10</strong></li>
-<li><strong>|id| = 7</strong></li>
-<li><strong>0 &lt;= score,average &lt;= 100</strong></li>
-</ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>This is handled by the locked stub code in your editor. Your output will be correct if your Student class constructor and calculate() method are properly implemented.</p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Heraldo Memelli 8135627</span><br><span class="line">2</span><br><span class="line">100 80</span><br></pre></td></tr></table></figure>
+<ol>
+<li><strong>title</strong>, a space, and then the current instance’s <strong>title</strong>.</li>
+<li><strong>author</strong>, a space, and then the current instance’s <strong>author</strong>.</li>
+<li><strong>price</strong>, a space, and then the current instance’s <strong>price</strong>.</li>
+</ol>
+<p><strong>Note:</strong> Because these classes are being written in the same file, you must not use an access modifier (e.g.: <strong>public</strong>) when declaring MyBook or your code will not execute.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You are not responsible for reading any input from stdin. The Solution class creates a Book object and calls the MyBook class constructor (passing it the necessary arguments). It then calls the display method on the Book object.</p>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>The <strong>void display()</strong> method should print and label the respective <strong>title</strong>, <strong>author</strong>, and <strong>price</strong> of the MyBook object’s instance (with each value on its own line) like so:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Title: $title</span><br><span class="line">Author: $author</span><br><span class="line">Price: $price</span><br></pre></td></tr></table></figure>
 
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Name: Memelli, Heraldo</span><br><span class="line">ID: 8135627</span><br><span class="line">Grade: O</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The <strong>$</strong> is prepended to variable names to indicate they are placeholders for variables.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><p>The following input from stdin is handled by the locked stub code in your editor:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The Alchemist</span><br><span class="line">Paulo Coelho</span><br><span class="line">248</span><br></pre></td></tr></table></figure>
 
-<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>This student had <strong>2</strong> scores to average: <strong>100</strong> and <strong>80</strong>. The student’s average grade is <strong><a href="https://latex.codecogs.com/svg.latex?\frac{(100&space;&plus;&space;80)}{2}" target="_blank" rel="noopener">https://latex.codecogs.com/svg.latex?\frac{(100&space;&plus;&space;80)}{2}</a> = 90</strong>. An average grade of <strong>90</strong> corresponds to the letter grade <strong>O</strong>, so our calculate() method should return the character’O’.</p>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><p>The following output is printed by your display() method:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Title: The Alchemist</span><br><span class="line">Author: Paulo Coelho</span><br><span class="line">Price: 248</span><br></pre></td></tr></table></figure>
+
 <br>
 <br>
 
 <hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">constructor</span>(firstName, lastName, id, scores) &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>(firstName, lastName, id, scores);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">this</span>.scores = scores;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    calculate() &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> average = <span class="hljs-keyword">this</span>.scores.reduce(<span class="hljs-function">(<span class="hljs-params">target, score</span>) =&gt;</span> &#123; <span class="hljs-keyword">return</span> target + score &#125;) / <span class="hljs-keyword">this</span>.scores.length;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> range = (average &lt; <span class="hljs-number">70</span>)</span><br><span class="line">            ? <span class="hljs-built_in">Math</span>.ceil((<span class="hljs-number">100</span> - average) / <span class="hljs-number">15</span>)</span><br><span class="line">            : <span class="hljs-built_in">Math</span>.floor((<span class="hljs-number">100</span> - average - <span class="hljs-number">1</span>) / <span class="hljs-number">10</span>);</span><br><span class="line">        <span class="hljs-keyword">let</span> letter = <span class="hljs-string">''</span>;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">switch</span> (range) &#123;</span><br><span class="line">            <span class="hljs-keyword">case</span> <span class="hljs-number">-1</span>:</span><br><span class="line">            <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:</span><br><span class="line">                letter = <span class="hljs-string">'O'</span>;</span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:</span><br><span class="line">                letter = <span class="hljs-string">'E'</span>;</span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:</span><br><span class="line">                letter = <span class="hljs-string">'A'</span>;</span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:</span><br><span class="line">                letter = <span class="hljs-string">'P'</span>;</span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:</span><br><span class="line">                letter = <span class="hljs-string">'D'</span>;</span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">default</span>:</span><br><span class="line">                letter = <span class="hljs-string">'T'</span>;</span><br><span class="line">                <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> letter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">// Declare your class here.</span></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyBook</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Book</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Class Constructor</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   @param title The book's title.</span></span><br><span class="line"><span class="hljs-comment">    *   @param author The book's author.</span></span><br><span class="line"><span class="hljs-comment">    *   @param price The book's price.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your constructor here</span></span><br><span class="line">    <span class="hljs-keyword">constructor</span>(title, author, price) &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>();</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">this</span>.title = title;</span><br><span class="line">        <span class="hljs-keyword">this</span>.author = author;</span><br><span class="line">        <span class="hljs-keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Method Name: display</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   Print the title, author, and price in the specified format.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your method here</span></span><br><span class="line">    display() &#123;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Title: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.title&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Author: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.author&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Price: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.price&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment">// End class</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">constructor</span>(firstName, lastName, idNumber, testScores) &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>(firstName, lastName, idNumber);</span><br><span class="line">        <span class="hljs-keyword">this</span>.testScores = testScores;</span><br><span class="line">    &#125;</span><br><span class="line">    calculate() &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> average = <span class="hljs-number">0</span>;</span><br><span class="line">        <span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;</span><br><span class="line">        <span class="hljs-keyword">let</span> grade = <span class="hljs-string">''</span>;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, length = <span class="hljs-keyword">this</span>.testScores.length; i &lt; length; i++) &#123;</span><br><span class="line">            sum += <span class="hljs-keyword">this</span>.testScores[i];</span><br><span class="line">        &#125;</span><br><span class="line">        average = sum / <span class="hljs-keyword">this</span>.testScores.length;</span><br><span class="line">        <span class="hljs-keyword">if</span> (<span class="hljs-number">90</span> &lt;= average &amp;&amp; average &lt;= <span class="hljs-number">100</span>) &#123;</span><br><span class="line">            grade = <span class="hljs-string">'O'</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">80</span> &lt;= average &amp;&amp; average &lt; <span class="hljs-number">90</span>) &#123;</span><br><span class="line">            grade = <span class="hljs-string">'E'</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">70</span> &lt;= average &amp;&amp; average &lt; <span class="hljs-number">80</span>) &#123;</span><br><span class="line">            grade = <span class="hljs-string">'A'</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">55</span> &lt;= average &amp;&amp; average &lt; <span class="hljs-number">70</span>) &#123;</span><br><span class="line">            grade = <span class="hljs-string">'P'</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-number">40</span> &lt;= average &amp;&amp; average &lt; <span class="hljs-number">55</span>) &#123;</span><br><span class="line">            grade = <span class="hljs-string">'D'</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            grade = <span class="hljs-string">'T'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> grade;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
         </div>
         
         
@@ -242,7 +235,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/45/">45</a></li>
             
         </ul>
     </nav>
@@ -290,7 +283,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        45
                     </p>
                 </div>
             </div>
@@ -362,7 +355,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">44</span>
+                <span class="level-item tag">45</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -378,7 +371,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -411,6 +404,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -459,19 +465,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -490,7 +483,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -511,7 +504,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -525,14 +518,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
@@ -563,6 +556,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -611,19 +617,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -642,7 +635,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -663,7 +656,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -677,14 +670,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 

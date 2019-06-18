@@ -121,15 +121,6 @@
             
             <div class="navbar-end">
                 
-                    
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://alleyful.github.io/">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
                 
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
@@ -151,7 +142,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-17T02:10:34.000Z">2019-06-17</time>
+                <time class="level-item has-text-grey" datetime="2019-06-17T03:01:34.000Z">2019-06-17</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -164,21 +155,40 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/">Day28 RegEx, Patterns, and Intro to Databases</a>
+                <a class="has-link-black-ter" href="/2019/06/17/algorithm/hackerrank/Day29_BitwiseAND/">Day29 Bitwise AND</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Consider a database table, Emails, which has the attributes First Name and Email ID. Given  rows of data simulating the Emails table, print an alphabetically-ordered list of people whose email address ends in .</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, , total number of rows in the table.<br>Each of the  subsequent lines contains  space-separated strings denoting a person’s first name and email ID, respectively.</p>
-<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><p>Each of the first names consists of lower case letters  only.<br>Each of the email IDs consists of lower case letters ,  and  only.<br>The length of the first name is no longer than 20.<br>The length of the email ID is no longer than 50.</p>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print an alphabetically-ordered list of first names for every user with a gmail account. Each name must be printed on a new line.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">riya riya@gmail.com</span><br><span class="line">julia julia@julia.me</span><br><span class="line">julia sjulia@gmail.com</span><br><span class="line">julia julia@gmail.com</span><br><span class="line">samantha samantha@gmail.com</span><br><span class="line">tanya tanya@gmail.com</span><br><span class="line">Sample Output</span><br></pre></td></tr></table></figure>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Welcome to the last day! Today, we’re discussing bitwise operations. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given set <img src="https://latex.codecogs.com/svg.latex?S=%5Cleft&space;%7B1,2,3,...,N&space;%5Cright&space;%7D" alt>. Find two integers,  A and B (where A &lt; B ), from set S such that the value of A &amp; B is the maximum possible and also less than a given integer, K.<br>In this case, &amp; represents the bitwise AND operator.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, T, the number of test cases.<br>Each of the T subsequent lines defines a test case as 2 space-separated integers, N and K, respectively.</p>
+<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
+<li><img src="https://latex.codecogs.com/svg.latex?1%5Cleq&space;T%5Cleq&space;10%5E%7B3%7D" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?2%5Cleq&space;N%5Cleq&space;10%5E%7B3%7D" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?2%5Cleq&space;K%5Cleq&space;N" alt></li>
+</ul>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>For each test case, print the maximum possible value of <img src="https://latex.codecogs.com/svg.latex?A&B" alt> on a new line.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">5 2</span><br><span class="line">8 5</span><br><span class="line">2 2</span><br></pre></td></tr></table></figure>
 
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">julia</span><br><span class="line">julia</span><br><span class="line">riya</span><br><span class="line">samantha</span><br><span class="line">tanya</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">4</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
 
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p><img src="https://latex.codecogs.com/svg.latex?N&space;=&space;5,&space;K&space;=&space;2&space;S&space;=%5Cleft&space;%7B&space;1,2,3,4,5&space;%5Cright&space;%7D" alt></p>
+<p>All possible values of  and  are:</p>
+<ol>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;1,&space;B&space;=&space;2;&space;A&B&space;=&space;0" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;1,&space;B&space;=&space;3;&space;A&B&space;=&space;1" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;1,&space;B&space;=&space;4;&space;A&B&space;=&space;0" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;1,&space;B&space;=&space;5;&space;A&B&space;=&space;1" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;2,&space;B&space;=&space;3;&space;A&B&space;=&space;2" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;2,&space;B&space;=&space;4;&space;A&B&space;=&space;0" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;2,&space;B&space;=&space;5;&space;A&B&space;=&space;0" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;3,&space;B&space;=&space;4;&space;A&B&space;=&space;0" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;3,&space;B&space;=&space;5;&space;A&B&space;=&space;1" alt></li>
+<li><img src="https://latex.codecogs.com/svg.latex?A&space;=&space;4,&space;B&space;=&space;5;&space;A&B&space;=&space;4" alt></li>
+</ol>
+<p>The maximum possible value of A&amp;B that is also &lt; (K = 2) is 1, so we print 1 on a new line.</p>
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> N = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> patten = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"@gmail.com"</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> names = [];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> NItr = <span class="hljs-number">0</span>; NItr &lt; N; NItr++) &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> firstNameEmailID = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> firstName = firstNameEmailID[<span class="hljs-number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> emailID = firstNameEmailID[<span class="hljs-number">1</span>];</span><br><span class="line"></span><br><span class="line">        patten.test(emailID) &amp;&amp; names.push(firstName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    names.sort().forEach(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(name));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findMax</span>(<span class="hljs-params">n, k</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> max = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">            <span class="hljs-keyword">let</span> value = j &amp; i;</span><br><span class="line">            <span class="hljs-keyword">if</span> (value &lt; k &amp;&amp; value &gt; max) &#123;</span><br><span class="line">                max = value;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> max;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> t = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> tItr = <span class="hljs-number">0</span>; tItr &lt; t; tItr++) &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> nk = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> n = <span class="hljs-built_in">parseInt</span>(nk[<span class="hljs-number">0</span>], <span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> k = <span class="hljs-built_in">parseInt</span>(nk[<span class="hljs-number">1</span>], <span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(findMax(n, k));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -219,7 +229,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/45/">45</a></li>
             
         </ul>
     </nav>
@@ -267,7 +277,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        45
                     </p>
                 </div>
             </div>
@@ -339,7 +349,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">44</span>
+                <span class="level-item tag">45</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -355,7 +365,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -388,6 +398,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -436,19 +459,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -467,7 +477,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -488,7 +498,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -502,14 +512,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
@@ -540,6 +550,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -588,19 +611,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -619,7 +629,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -640,7 +650,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -654,14 +664,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 

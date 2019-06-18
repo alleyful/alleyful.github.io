@@ -121,15 +121,6 @@
             
             <div class="navbar-end">
                 
-                    
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://alleyful.github.io/">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
                 
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
@@ -151,7 +142,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T12:39:34.000Z">2019-06-16</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T12:53:20.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -164,34 +155,27 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day18_QueuesAndStack/">Day18 Queues and Stacks</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day19_Interfaces/">Day19 Interfaces</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Welcome to Day 18! Today we’re learning about Stacks and Queues. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<p>A palindrome is a word, phrase, number, or other sequence of characters which reads the same backwards and forwards. Can you determine if a given string, <strong>s</strong>, is a palindrome?</p>
-<p>To solve this challenge, we must first take each character in <strong>s</strong>, enqueue it in a queue, and also push that same character onto a stack. Once that’s done, we must dequeue the first character from the queue and pop the top character off the stack, then compare the two characters to see if they are the same; as long as the characters match, we continue dequeueing, popping, and comparing each character until our containers are empty (a non-match means <strong>s</strong> isn’t a palindrome).</p>
-<p>Write the following declarations and implementations:</p>
-<ol>
-<li>Two instance variables: one for your <strong>stack</strong>, and one for your <strong>queue</strong>.</li>
-<li>A void pushCharacter(char ch) method that pushes a character onto a stack.</li>
-<li>A void enqueueCharacter(char ch) method that enqueues a character in the <strong>queue</strong> instance variable.</li>
-<li>A char popCharacter() method that pops and returns the character at the top of the <strong>stack</strong> instance variable.</li>
-<li>A char dequeueCharacter() method that dequeues and returns the first character in the <strong>queue</strong> instance variable.</li>
-</ol>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You do not need to read anything from stdin. The locked stub code in your editor reads a single line containing string <strong>s</strong>. It then calls the methods specified above to pass each character to your instance variables.</p>
+            <h1 id="Day-19-Interfaces"><a href="#Day-19-Interfaces" class="headerlink" title="Day 19: Interfaces"></a>Day 19: Interfaces</h1><h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The AdvancedArithmetic interface and the method declaration for the abstract divisorSum(n) method are provided for you in the editor below.</p>
+<p>Complete the implementation of Calculator class, which implements the AdvancedArithmetic interface. The implementation for the divisorSum(n) method must return the sum of all divisors of <strong>n</strong>.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>A single line containing an integer, <strong>n</strong>.</p>
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
-<li><strong>s</strong> is composed of lowercase English letters.</li>
+<li><strong>1 &lt;= n &lt;= 1000</strong></li>
 </ul>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>You are not responsible for printing any output to stdout.<br>If your code is correctly written and <strong>s</strong> is a palindrome, the locked stub code will print  <strong>The word, s, is not a palindrome</strong>; otherwise, it will print <strong>The word, s, is not a palindrome</strong></p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">racecar</span><br></pre></td></tr></table></figure>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>You are not responsible for printing anything to stdout. The locked template code in the editor below will call your code and print the necessary output.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6</span><br></pre></td></tr></table></figure>
 
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The word, racecar, is a palindrome.</span><br></pre></td></tr></table></figure>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I implemented: AdvancedArithmetic</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
 
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The integer <strong>6</strong> is evenly divisible by <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, and <strong>6</strong>. Our divisorSum method should return the sum of these numbers, which is <strong>1 + 2 + 3 + 6 = 12</strong>. The Solution class then prints <strong>I implemented: AdvancedArithmetic</strong> on the first line, followed by the sum returned by divisorSum (which is <strong>12</strong>) on the second line.</p>
 <br>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Solution</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">  <span class="hljs-comment">//Write your code here</span></span><br><span class="line">    <span class="hljs-keyword">this</span>.stack = [];</span><br><span class="line">    <span class="hljs-keyword">this</span>.queue = [];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.pushCharacter = <span class="hljs-function">(<span class="hljs-params">value</span>) =&gt;</span> <span class="hljs-keyword">this</span>.stack.push(value); </span><br><span class="line">    <span class="hljs-keyword">this</span>.enqueueCharacter = <span class="hljs-function">(<span class="hljs-params">value</span>) =&gt;</span> <span class="hljs-keyword">this</span>.queue.push(value);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.popCharacter = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.stack.pop();</span><br><span class="line">    <span class="hljs-keyword">this</span>.dequeueCharacter = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.queue.shift();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/** It's not supported JavaScript so it create similar code **/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">  divisor(n) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> n || <span class="hljs-number">0</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Calculator</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="hljs-keyword">super</span>(props);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.divisor = <span class="hljs-keyword">this</span>.divisorSum.bind(<span class="hljs-keyword">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  divisorSum(n) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>(n).fill(<span class="hljs-number">0</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">      !(n % (index + <span class="hljs-number">1</span>)) &amp;&amp; (target += (index + <span class="hljs-number">1</span>)) ;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Solution</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> n = <span class="hljs-number">6</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> myCalculator = <span class="hljs-keyword">new</span> Calculator();</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">let</span> sum = myCalculator.divisor(n);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I implemented: AdvancedArithmetic\n"</span> + sum); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Solution();</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -232,7 +216,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/44/">44</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/45/">45</a></li>
             
         </ul>
     </nav>
@@ -280,7 +264,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        44
+                        45
                     </p>
                 </div>
             </div>
@@ -352,7 +336,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">44</span>
+                <span class="level-item tag">45</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -368,7 +352,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -401,6 +385,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -449,19 +446,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -480,7 +464,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -501,7 +485,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -515,14 +499,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
@@ -553,6 +537,19 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
+                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time></div>
                     <a href="/2019/06/18/algorithm/programmers/level1-15/" class="has-link-black-ter is-size-6">프로그래머스 - 시저 암호</a>
                     <p class="is-size-7 is-uppercase">
@@ -601,19 +598,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-17T14:26:40.000Z">2019-06-17</time></div>
-                    <a href="/2019/06/17/algorithm/programmers/level1-11/" class="has-link-black-ter is-size-6">프로그래머스 - 문자열 내 p와 y의 개수</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -632,7 +616,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">44</span>
+                    <span class="level-item tag">45</span>
                 </span>
             </a>
         </li>
@@ -653,7 +637,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">44</span>
+                        <span class="tag is-grey">45</span>
                     </a>
                 </div>
                 
@@ -667,14 +651,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">16</span>
                     </a>
                 </div>
                 
