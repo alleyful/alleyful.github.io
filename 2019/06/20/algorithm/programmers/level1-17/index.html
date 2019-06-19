@@ -2,25 +2,25 @@
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>프로그래머스 - 문자열 내 마음대로 정렬하기 - ALLEYFUL</title>
+<title>프로그래머스 - 이상한 문자 만들기 - ALLEYFUL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="canonical" href="https://alleyful.github.io/2019/06/14/algorithm/programmers/level1-10/">
+<link rel="canonical" href="https://alleyful.github.io/2019/06/20/algorithm/programmers/level1-17/">
 
 
-    <meta name="description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.">
+    <meta name="description" content="문제 설명문자열 s는 한 개 이상의 단어로 구성되어 있습니다.각 단어는 하나 이상의 공백문자로 구분되어 있습니다.각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.">
 <meta name="keywords" content="Algorithm,Programmers,프로그래머스">
 <meta property="og:type" content="article">
-<meta property="og:title" content="프로그래머스 - 문자열 내 마음대로 정렬하기">
-<meta property="og:url" content="https://alleyful.github.io/2019/06/14/algorithm/programmers/level1-10/index.html">
+<meta property="og:title" content="프로그래머스 - 이상한 문자 만들기">
+<meta property="og:url" content="https://alleyful.github.io/2019/06/20/algorithm/programmers/level1-17/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.">
+<meta property="og:description" content="문제 설명문자열 s는 한 개 이상의 단어로 구성되어 있습니다.각 단어는 하나 이상의 공백문자로 구분되어 있습니다.각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-19T15:13:24.453Z">
+<meta property="og:updated_time" content="2019-06-19T15:54:17.397Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="프로그래머스 - 문자열 내 마음대로 정렬하기">
-<meta name="twitter:description" content="문제 설명문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.">
+<meta name="twitter:title" content="프로그래머스 - 이상한 문자 만들기">
+<meta name="twitter:description" content="문제 설명문자열 s는 한 개 이상의 단어로 구성되어 있습니다.각 단어는 하나 이상의 공백문자로 구분되어 있습니다.각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -144,7 +144,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-14T14:06:38.000Z">2019-06-14</time>
+                <time class="level-item has-text-grey" datetime="2019-06-19T15:50:49.000Z">2019-06-20</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
@@ -157,58 +157,39 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                프로그래머스 - 문자열 내 마음대로 정렬하기
+                프로그래머스 - 이상한 문자 만들기
             
         </h1>
         <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.<br>예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.</p>
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열 s는 한 개 이상의 단어로 구성되어 있습니다.<br>각 단어는 하나 이상의 공백문자로 구분되어 있습니다.<br>각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.</p>
 <a id="more"></a>
 <br>
 
-
-<h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><p>strings는 길이 1 이상, 50이하인 배열입니다.<br>strings의 원소는 소문자 알파벳으로 이루어져 있습니다.<br>strings의 원소는 길이 1 이상, 100이하인 문자열입니다.<br>모든 strings의 원소의 길이는 n보다 큽니다.<br>인덱스 1의 문자가 같은 문자열이 여럿 일 경우, 사전순으로 앞선 문자열이 앞쪽에 위치합니다.</p>
+<h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>문자열 전체의 짝/홀수 인덱스가 아니라, 단어(공백을 기준)별로 짝/홀수 인덱스를 판단해야합니다.<br>첫 번째 글자는 0번째 인덱스로 보아 짝수번째 알파벳으로 처리해야 합니다.</p>
 <br>
 
 <h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
 <thead>
 <tr>
-<th>strings</th>
-<th align="center">n</th>
+<th align="left">s</th>
 <th align="left">return</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>[sun, bed, car]</td>
-<td align="center">1</td>
-<td align="left">[car, bed, sun]</td>
-</tr>
-<tr>
-<td>[abce, abcd, cdx]</td>
-<td align="center">2</td>
-<td align="left">[abcd, abce, cdx]</td>
+<td align="left">“try hello world”</td>
+<td align="left">“TrY HeLlO WoRlD”</td>
 </tr>
 </tbody></table>
-<br>
-
 <h3 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h3><ul>
-<li><p>입출력 예 1</p>
-<ul>
-<li>sun, bed, car의 1번째 인덱스 값은 각각 u, e, a 입니다. 이를 기준으로 strings를 정렬하면 [car, bed, sun] 입니다.</li>
-</ul>
-</li>
-<li><p>입출력 예 2</p>
-<ul>
-<li>abce와 abcd, cdx의 2번째 인덱스 값은 c, c, x입니다. 따라서 정렬 후에는 cdx가 가장 뒤에 위치합니다.<br>abce와 abcd는 사전순으로 정렬하면 abcd가 우선하므로, 답은 [abcd, abce, cdx] 입니다.</li>
-</ul>
-</li>
+<li>“try hello world”는 세 단어 “try”, “hello”, “world”로 구성되어 있습니다. </li>
+<li>각 단어의 짝수번째 문자를 대문자로, 홀수번째 문자를 소문자로 바꾸면 “TrY”, “HeLlO”, “WoRlD”입니다. </li>
+<li>따라서 “TrY HeLlO WoRlD” 를 리턴합니다.</li>
 </ul>
 <br>
-
+<br>
 
 <hr>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">strings, n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> strings.sort(<span class="hljs-function">(<span class="hljs-params">p, c</span>) =&gt;</span> p[n] === c[n] ? p.localeCompare(c) : p[n].localeCompare(c[n]))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">strings, n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> strings.sort(<span class="hljs-function">(<span class="hljs-params">p, c</span>) =&gt;</span> p[n] === c[n] </span><br><span class="line">                        ? (p &lt; c ? <span class="hljs-number">-1</span> : (p &gt; c ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>)) : (p[n] &lt; c[n] ? <span class="hljs-number">-1</span> : (p[n] &gt; c[n] ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>)))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> s.split(<span class="hljs-string">' '</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, string</span>) =&gt;</span> &#123;</span><br><span class="line">        target.push(</span><br><span class="line">            [...string].reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">                target.push(index % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? item.toUpperCase() : item.toLowerCase())</span><br><span class="line">                </span><br><span class="line">                <span class="hljs-keyword">return</span> target;</span><br><span class="line">            &#125;, []).join(<span class="hljs-string">''</span>)</span><br><span class="line">        );</span><br><span class="line">        </span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []).join(<span class="hljs-string">' '</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -234,17 +215,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/15/algorithm/hackerrank/Day0_HelloWorld/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Day0 Hello World</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/14/algorithm/programmers/level1-09/">
-                <span class="level-item">프로그래머스 - 두 정수 사이의 합</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/19/algorithm/programmers/level1-16/">
+                <span class="level-item">프로그래머스 - 약수의 합</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -260,8 +234,8 @@
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://alleyful.github.io/2019/06/14/algorithm/programmers/level1-10/';
-        this.page.identifier = '2019/06/14/algorithm/programmers/level1-10/';
+        this.page.url = 'https://alleyful.github.io/2019/06/20/algorithm/programmers/level1-17/';
+        this.page.identifier = '2019/06/20/algorithm/programmers/level1-17/';
     };
     (function() {
         var d = document, s = d.createElement('script');  
