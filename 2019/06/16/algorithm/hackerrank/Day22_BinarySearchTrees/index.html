@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/16/algorithm/hackerrank/day22_binarysearchtrees/">
 
 
-    <meta name="description" content="ObjectiveToday, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video! TaskThe height of a binary search tree is the number of edg">
+    <meta name="description" content="ObjectiveToday, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video!   TaskThe height of a binary search tree is the number of e">
 <meta name="keywords" content="Algorithm,HackerRank">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day22 Binary Search Trees">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day22_BinarySearchTrees/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="ObjectiveToday, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video! TaskThe height of a binary search tree is the number of edg">
+<meta property="og:description" content="ObjectiveToday, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video!   TaskThe height of a binary search tree is the number of e">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T03:59:39.733Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day22 Binary Search Trees">
-<meta name="twitter:description" content="ObjectiveToday, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video! TaskThe height of a binary search tree is the number of edg">
+<meta name="twitter:description" content="ObjectiveToday, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video!   TaskThe height of a binary search tree is the number of e">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -162,20 +162,36 @@
         </h1>
         <div class="content">
             <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The height of a binary search tree is the number of edges between the tree’s root and its furthest leaf. You are given a pointer, <strong>root</strong>, pointing to the root of a binary search tree. Complete the getHeight function provided in your editor so that it returns the height of the binary search tree.</p>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The locked stub code in your editor reads the following inputs and assembles them into a binary search tree: <br><br>The first line contains an integer, <strong>n</strong>, denoting the number of nodes in the tree. <br><br>Each of the <strong>n</strong> subsequent lines contains an integer, <strong>data</strong>, denoting the value of an element that must be added to the BST.</p>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>The locked stub code in your editor will print the integer returned by your getHeight function denoting the height of the BST.</p>
+<br>
+
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">3</span><br><span class="line">5</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">4</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
 
+<br>
+
 <h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The input forms the following BST:<br></p>
 <p><img src="https://s3.amazonaws.com/hr-challenge-images/17175/1459894869-6bb53ce6eb-BST.png" alt="Binary Search Tree"></p>
 <p>The longest root-to-leaf path is shown below:<br></p>
 <p><img src="https://s3.amazonaws.com/hr-challenge-images/17175/1459895368-4955f9ce74-LongestRTL.png" alt="Longest Root-to-Leaf Path"></p>
-<p>There are <strong>4</strong> nodes in this path that are connected by <strong>3</strong> edges, meaning our BST’s <strong>height = 3</strong>. Thus, we print <strong>3</strong> as our answer.<br><br><br><br></p>
+<p>There are <strong>4</strong> nodes in this path that are connected by <strong>3</strong> edges, meaning our BST’s <strong>height = 3</strong>. Thus, we print <strong>3</strong> as our answer.</p>
+<br>
+<br>
+
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> (root === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(<span class="hljs-keyword">this</span>.getHeight(root.left), <span class="hljs-keyword">this</span>.getHeight(root.right)) + <span class="hljs-number">1</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> (root === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(<span class="hljs-keyword">this</span>.getHeight(root.left), <span class="hljs-keyword">this</span>.getHeight(root.right)) + <span class="hljs-number">1</span>;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -220,6 +236,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day22_BinarySearchTrees/';
+        this.page.identifier = '2019/06/16/algorithm/hackerrank/Day22_BinarySearchTrees/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/16/algorithm/hackerrank/day24_morelinkedlists/">
 
 
-    <meta name="description" content="ObjectiveCheck out the Tutorial tab for learning materials and an instructional video! TaskA Node class is provided for you in the editor. A Node object has an integer data field, data, and a Node ins">
+    <meta name="description" content="ObjectiveCheck out the Tutorial tab for learning materials and an instructional video!   TaskA Node class is provided for you in the editor. A Node object has an integer data field, data, and a Node i">
 <meta name="keywords" content="Algorithm,HackerRank">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day24 More Linked Lists">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="ObjectiveCheck out the Tutorial tab for learning materials and an instructional video! TaskA Node class is provided for you in the editor. A Node object has an integer data field, data, and a Node ins">
+<meta property="og:description" content="ObjectiveCheck out the Tutorial tab for learning materials and an instructional video!   TaskA Node class is provided for you in the editor. A Node object has an integer data field, data, and a Node i">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T03:59:39.689Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day24 More Linked Lists">
-<meta name="twitter:description" content="ObjectiveCheck out the Tutorial tab for learning materials and an instructional video! TaskA Node class is provided for you in the editor. A Node object has an integer data field, data, and a Node ins">
+<meta name="twitter:description" content="ObjectiveCheck out the Tutorial tab for learning materials and an instructional video!   TaskA Node class is provided for you in the editor. A Node object has an integer data field, data, and a Node i">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -162,22 +162,39 @@
         </h1>
         <div class="content">
             <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>A Node class is provided for you in the editor. A Node object has an integer data field, <strong>data</strong>, and a Node instance pointer, <strong>next</strong>, pointing to another node (i.e.: the next node in a list).</p>
 <p>A removeDuplicates function is declared in your editor, which takes a pointer to the <strong>head</strong> node of a linked list as a parameter. Complete removeDuplicates so that it deletes any duplicate nodes from the list and returns the head of the updated list.</p>
 <p><strong>Note:</strong> The <strong>head</strong> pointer may be null, indicating that the list is empty. Be sure to reset your <strong>next</strong> pointer when performing deletions to avoid breaking the list.</p>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You do not need to read any input from stdin. The following input is handled by the locked stub code and passed to the removeDuplicates function:<br>The first line contains an integer, <strong>N</strong>, the number of nodes to be inserted.<br>The <strong>N</strong> subsequent lines each contain an integer describing the <strong>data</strong> value of a node being inserted at the list’s tail.</p>
+<br>
+
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
 <li>The data elements of the linked list argument will always be in non-decreasing order.</li>
 </ul>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Your removeDuplicates function should return the head of the updated linked list. The locked stub code in your editor will print the returned list to stdout.</p>
+<br>
+
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4</span><br></pre></td></tr></table></figure>
 
-<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p><strong>N = 6</strong>, and our non-decreasing list is <strong>{1, 2, 2, 3, 3, 4}</strong>. The values <strong>2</strong> and <strong>3</strong> both occur twice in the list, so we remove the two duplicate nodes. We then return our updated (ascending) list, which is <strong>{1, 2, 3, 4}</strong>.
-<br><br><br></p>
+<br>
+
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p><strong>N = 6</strong>, and our non-decreasing list is <strong>{1, 2, 2, 3, 3, 4}</strong>. The values <strong>2</strong> and <strong>3</strong> both occur twice in the list, so we remove the two duplicate nodes. We then return our updated (ascending) list, which is <strong>{1, 2, 3, 4}</strong>.</p>
+<br>
+<br>
+
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">this</span>.removeDuplicates=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>)</span>&#123;</span><br><span class="line">  <span class="hljs-comment">//Write your code here</span></span><br><span class="line">    <span class="hljs-keyword">let</span> prev = head;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">while</span> (prev) &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> next = prev.next;</span><br><span class="line"></span><br><span class="line">        (next &amp;&amp; prev.data == next.data)</span><br><span class="line">            ? (prev.next = next.next)</span><br><span class="line">            : (prev = prev.next);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">this</span>.removeDuplicates=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>)</span>&#123;</span><br><span class="line">  <span class="hljs-comment">//Write your code here</span></span><br><span class="line">    <span class="hljs-keyword">let</span> prev = head;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">while</span> (prev) &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> next = prev.next;</span><br><span class="line"></span><br><span class="line">        (next &amp;&amp; prev.data == next.data)</span><br><span class="line">            ? (prev.next = next.next)</span><br><span class="line">            : (prev = prev.next);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -220,6 +237,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/';
+        this.page.identifier = '2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

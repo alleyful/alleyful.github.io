@@ -17,7 +17,7 @@
 <meta property="og:description" content="ObjectiveWelcome to Day 18! Today we’re learning about Stacks and Queues. Check out the Tutorial tab for learning materials and an instructional video! A palindrome is a word, phrase, number, or other">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T03:59:39.720Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day18 Queues and Stacks">
 <meta name="twitter:description" content="ObjectiveWelcome to Day 18! Today we’re learning about Stacks and Queues. Check out the Tutorial tab for learning materials and an instructional video! A palindrome is a word, phrase, number, or other">
@@ -172,19 +172,30 @@
 <li>A char popCharacter() method that pops and returns the character at the top of the <strong>stack</strong> instance variable.</li>
 <li>A char dequeueCharacter() method that dequeues and returns the first character in the <strong>queue</strong> instance variable.</li>
 </ol>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You do not need to read anything from stdin. The locked stub code in your editor reads a single line containing string <strong>s</strong>. It then calls the methods specified above to pass each character to your instance variables.</p>
+<br>
+
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
 <li><strong>s</strong> is composed of lowercase English letters.</li>
 </ul>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>You are not responsible for printing any output to stdout.<br>If your code is correctly written and <strong>s</strong> is a palindrome, the locked stub code will print  <strong>The word, s, is not a palindrome</strong>; otherwise, it will print <strong>The word, s, is not a palindrome</strong></p>
+<br>
+
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">racecar</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The word, racecar, is a palindrome.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Solution</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">  <span class="hljs-comment">//Write your code here</span></span><br><span class="line">    <span class="hljs-keyword">this</span>.stack = [];</span><br><span class="line">    <span class="hljs-keyword">this</span>.queue = [];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.pushCharacter = <span class="hljs-function">(<span class="hljs-params">value</span>) =&gt;</span> <span class="hljs-keyword">this</span>.stack.push(value); </span><br><span class="line">    <span class="hljs-keyword">this</span>.enqueueCharacter = <span class="hljs-function">(<span class="hljs-params">value</span>) =&gt;</span> <span class="hljs-keyword">this</span>.queue.push(value);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.popCharacter = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.stack.pop();</span><br><span class="line">    <span class="hljs-keyword">this</span>.dequeueCharacter = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.queue.shift();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Solution</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">  <span class="hljs-comment">//Write your code here</span></span><br><span class="line">    <span class="hljs-keyword">this</span>.stack = [];</span><br><span class="line">    <span class="hljs-keyword">this</span>.queue = [];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.pushCharacter = <span class="hljs-function">(<span class="hljs-params">value</span>) =&gt;</span> <span class="hljs-keyword">this</span>.stack.push(value); </span><br><span class="line">    <span class="hljs-keyword">this</span>.enqueueCharacter = <span class="hljs-function">(<span class="hljs-params">value</span>) =&gt;</span> <span class="hljs-keyword">this</span>.queue.push(value);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.popCharacter = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.stack.pop();</span><br><span class="line">    <span class="hljs-keyword">this</span>.dequeueCharacter = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.queue.shift();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -229,6 +240,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day18_QueuesAndStack/';
+        this.page.identifier = '2019/06/16/algorithm/hackerrank/Day18_QueuesAndStack/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

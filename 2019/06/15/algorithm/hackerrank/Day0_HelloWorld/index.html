@@ -17,7 +17,7 @@
 <meta property="og:description" content="ObjectiveIn this challenge, we review some basic concepts that will get you started with this series. You will need to use the same (or similar) syntax to read input and write output in challenges thr">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-15T17:42:53.143Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day0 Hello World">
 <meta name="twitter:description" content="ObjectiveIn this challenge, we review some basic concepts that will get you started with this series. You will need to use the same (or similar) syntax to read input and write output in challenges thr">
@@ -162,22 +162,35 @@
         </h1>
         <div class="content">
             <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this challenge, we review some basic concepts that will get you started with this series. You will need to use the same (or similar) syntax to read input and write output in challenges throughout HackerRank. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>To complete this challenge, you must save a line of input from stdin to a variable, print Hello, World. on a single line, and finally print the value of your variable on a second line.</p>
 <p>You’ve got this!</p>
 <p><strong>Note</strong>: The instructions are Java-based, but we support submissions in many popular languages. You can switch languages using the drop-down menu above your editor, and the <strong>InputString</strong> variable may be written differently depending on the best-practice conventions of your submission language.</p>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>A single line of text denoting <strong>inputString</strong> (the variable whose contents must be printed).</p>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print Hello, World. on the first line, and the contents of <strong>inputString</strong> on the second line.</p>
+<br>
+
 <h2 id="Sample-Input-0"><a href="#Sample-Input-0" class="headerlink" title="Sample Input 0"></a>Sample Input 0</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome to 30 Days of Code!</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <p>##Sample Output 0</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello, World. </span><br><span class="line">Welcome to 30 Days of Code!</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>On the first line, we print the string literal Hello, World.. On the second line, we print the contents of the <strong>inputString</strong> variable which, for this sample case, happens to be Welcome to 30 Days of Code!. If you do not print the variable’s contents to stdout, you will not pass the hidden test case.</p>
 <br>
 <br>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">inputString</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// This line of code prints the first line of output</span></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello, World."</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// Write the second line of output that prints the contents of 'inputString' here.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">inputString</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// This line of code prints the first line of output</span></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello, World."</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// Write the second line of output that prints the contents of 'inputString' here.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -222,6 +235,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/15/algorithm/hackerrank/Day0_HelloWorld/';
+        this.page.identifier = '2019/06/15/algorithm/hackerrank/Day0_HelloWorld/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

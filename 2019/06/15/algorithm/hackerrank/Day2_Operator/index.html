@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/15/algorithm/hackerrank/day2_operator/">
 
 
-    <meta name="description" content="ObjectiveIn this challenge, you’ll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video! TaskGiven the meal price (base cost of a meal), tip per">
+    <meta name="description" content="ObjectiveIn this challenge, you’ll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video!   TaskGiven the meal price (base cost of a meal), tip p">
 <meta name="keywords" content="Algorithm,HackerRank">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day2 Operators">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/15/algorithm/hackerrank/Day2_Operator/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="ObjectiveIn this challenge, you’ll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video! TaskGiven the meal price (base cost of a meal), tip per">
+<meta property="og:description" content="ObjectiveIn this challenge, you’ll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video!   TaskGiven the meal price (base cost of a meal), tip p">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-15T17:42:53.147Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day2 Operators">
-<meta name="twitter:description" content="ObjectiveIn this challenge, you’ll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video! TaskGiven the meal price (base cost of a meal), tip per">
+<meta name="twitter:description" content="ObjectiveIn this challenge, you’ll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video!   TaskGiven the meal price (base cost of a meal), tip p">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -162,14 +162,27 @@
         </h1>
         <div class="content">
             <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this challenge, you’ll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal’s total cost.</p>
 <p><strong>Note</strong>: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result!</p>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>There are <strong>3</strong> lines of numeric input:<br>The first line has a double, <strong>mealCost</strong> (the cost of the meal before tax and tip).<br>The second line has an integer, <strong>tipPercent</strong> (the percentage of <strong>mealCost</strong> being added as tip).<br>The third line has an integer, <strong>taxPercent</strong> (the percentage of <strong>mealCost</strong> being added as tax).</p>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print the total meal cost, where <strong>totalCost</strong> is the rounded integer result of the entire bill (<strong>mealCost</strong> with added tax and tip).</p>
+<br>
+
 <h2 id="Sample-Input-0"><a href="#Sample-Input-0" class="headerlink" title="Sample Input 0"></a>Sample Input 0</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">12.00</span><br><span class="line">20</span><br><span class="line">8</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <p>##Sample Output 0</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">15</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>Given:<br><strong>mealCost = 12, tipPercent = 20, taxPercent = 8</strong></p>
 <p>Calculations: </p>
@@ -184,7 +197,7 @@
 <br>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> cost = +input_stdin_array[<span class="hljs-number">0</span>];</span><br><span class="line">    <span class="hljs-keyword">var</span> tip = cost * input_stdin_array[<span class="hljs-number">1</span>] / <span class="hljs-number">100</span>;</span><br><span class="line">    <span class="hljs-keyword">var</span> tax = cost * input_stdin_array[<span class="hljs-number">2</span>] / <span class="hljs-number">100</span>;</span><br><span class="line">    <span class="hljs-keyword">var</span> total = cost + tip + tax;</span><br><span class="line">    <span class="hljs-keyword">var</span> round = <span class="hljs-built_in">Math</span>.round(total);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The total meal cost is '</span> + round + <span class="hljs-string">' dollars.'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Complete the solve function below.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solve</span>(<span class="hljs-params">meal_cost, tip_percent, tax_percent</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> totalCost = meal_cost * (<span class="hljs-number">1</span> + (tip_percent / <span class="hljs-number">100</span>) + (tax_percent / <span class="hljs-number">100</span>));</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.round(totalCost));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> cost = +input_stdin_array[<span class="hljs-number">0</span>];</span><br><span class="line">    <span class="hljs-keyword">var</span> tip = cost * input_stdin_array[<span class="hljs-number">1</span>] / <span class="hljs-number">100</span>;</span><br><span class="line">    <span class="hljs-keyword">var</span> tax = cost * input_stdin_array[<span class="hljs-number">2</span>] / <span class="hljs-number">100</span>;</span><br><span class="line">    <span class="hljs-keyword">var</span> total = cost + tip + tax;</span><br><span class="line">    <span class="hljs-keyword">var</span> round = <span class="hljs-built_in">Math</span>.round(total);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The total meal cost is '</span> + round + <span class="hljs-string">' dollars.'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Complete the solve function below.</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solve</span>(<span class="hljs-params">meal_cost, tip_percent, tax_percent</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> totalCost = meal_cost * (<span class="hljs-number">1</span> + (tip_percent / <span class="hljs-number">100</span>) + (tax_percent / <span class="hljs-number">100</span>));</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.round(totalCost));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
 
@@ -230,6 +243,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/15/algorithm/hackerrank/Day2_Operator/';
+        this.page.identifier = '2019/06/15/algorithm/hackerrank/Day2_Operator/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

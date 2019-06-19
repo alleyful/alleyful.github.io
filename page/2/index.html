@@ -143,10 +143,10 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-17T15:52:18.000Z">2019-06-18</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T14:49:34.000Z">2019-06-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
                 </div>
                 
                 
@@ -156,53 +156,490 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/18/algorithm/programmers/level1-15/">프로그래머스 - 시저 암호</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/">Day24 More Linked Lists</a>
             
         </h1>
         <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>어떤 문장의 각 알파벳을 일정한 거리만큼 밀어서 다른 알파벳으로 바꾸는 암호화 방식을 시저 암호라고 합니다.<br>예를 들어 AB는 1만큼 밀면 BC가 되고, 3만큼 밀면 DE가 됩니다.<br>z는 1만큼 밀면 a가 됩니다.<br>문자열 s와 거리 n을 입력받아 s를 n만큼 민 암호문을 만드는 함수, solution을 완성해 보세요.</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Check out the Tutorial tab for learning materials and an instructional video!</p>
 <br>
 
-<h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><ul>
-<li>공백은 아무리 밀어도 공백입니다.</li>
-<li>s는 알파벳 소문자, 대문자, 공백으로만 이루어져 있습니다.</li>
-<li>s의 길이는 8000이하입니다.</li>
-<li>n은 1 이상, 25이하인 자연수입니다.</li>
-</ul>
-<br>
-
-<h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table>
-<thead>
-<tr>
-<th align="center">s</th>
-<th align="center">n</th>
-<th align="center">result</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">“AB”</td>
-<td align="center">1</td>
-<td align="center">“BC”</td>
-</tr>
-<tr>
-<td align="center">“z”</td>
-<td align="center">1</td>
-<td align="center">“a”</td>
-</tr>
-<tr>
-<td align="center">“a B z”</td>
-<td align="center">4</td>
-<td align="center">“e F d”</td>
-</tr>
-</tbody></table>
-<br>
-
-<hr>
-<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s, n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//ASCII : A~Z(65~90) , a~z(97~122)</span></span><br><span class="line">    <span class="hljs-keyword">return</span> [...s].reduce(<span class="hljs-function">(<span class="hljs-params">target, string, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> asciiCode = s.charCodeAt(index)</span><br><span class="line">        <span class="hljs-keyword">let</span> changedCode = asciiCode + n</span><br><span class="line">        <span class="hljs-keyword">let</span> sCode = asciiCode &lt; <span class="hljs-number">65</span> ? asciiCode : (</span><br><span class="line">            (asciiCode &gt;= <span class="hljs-number">65</span> &amp;&amp; asciiCode &lt;= <span class="hljs-number">90</span>) </span><br><span class="line">            ? (changedCode &gt; <span class="hljs-number">90</span> ? changedCode - <span class="hljs-number">26</span> : changedCode)</span><br><span class="line">            : (changedCode &gt; <span class="hljs-number">122</span> ? changedCode - <span class="hljs-number">26</span> : changedCode)</span><br><span class="line">        )</span><br><span class="line">        target.push(<span class="hljs-built_in">String</span>.fromCharCode(sCode))</span><br><span class="line">        </span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []).join(<span class="hljs-string">''</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">s, n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">s || <span class="hljs-string">''</span></span>).<span class="hljs-params">split</span>(<span class="hljs-params"><span class="hljs-string">''</span></span>).<span class="hljs-params">reduce</span>(<span class="hljs-params">(target,item,index</span>) =&gt;</span> &#123;</span><br><span class="line">        target += (</span><br><span class="line">            item == <span class="hljs-string">' '</span> </span><br><span class="line">            ? <span class="hljs-string">' '</span> </span><br><span class="line">            : <span class="hljs-built_in">String</span>.fromCharCode((s.charCodeAt(index)&gt;<span class="hljs-number">90</span>)</span><br><span class="line">                    ? (s.charCodeAt(index)+n<span class="hljs-number">-97</span>)%<span class="hljs-number">26</span>+<span class="hljs-number">97</span> </span><br><span class="line">                    : (s.charCodeAt(index)+n<span class="hljs-number">-65</span>)%<span class="hljs-number">26</span>+<span class="hljs-number">65</span> )</span><br><span class="line">            );</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-string">''</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>A Node class is provided for you in the editor. A Node object has an integer data field, <strong>data</strong>, and a Node instance pointer, <strong>next</strong>, pointing to another node (i.e.: the next node in a list).</p>
+<p>A removeDuplicates function is declared in your editor, which takes a pointer to the <strong>head</strong> node of a linked list as a parameter. Complete removeDuplicates so that it deletes any duplicate nodes from the list and returns the head of the updated list.</p>
+<p><strong>Note:</strong> The <strong>head</strong> pointer may be null, indicating that the list is empty. Be sure to reset your <strong>next</strong> pointer when performing deletions to avoid breaking the list.</p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day24_MoreLinkedLists/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T14:30:34.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day23_BSTLevelOrderTraversal/">Day23 BST Level-Order Traversal</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re going further with Binary Search Trees. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>A level-order traversal, also known as a breadth-first search, visits each level of a tree’s nodes from left to right, top to bottom. You are given a pointer, <strong>root</strong>, pointing to the root of a binary search tree. Complete the levelOrder function provided in your editor so that it prints the level-order traversal of the binary search tree.</p>
+<p><strong>Hint:</strong> You’ll find a queue helpful in completing this challenge.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day23_BSTLevelOrderTraversal/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T13:30:34.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day22_BinarySearchTrees/">Day22 Binary Search Trees</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re working with Binary Search Trees (BSTs). Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The height of a binary search tree is the number of edges between the tree’s root and its furthest leaf. You are given a pointer, <strong>root</strong>, pointing to the root of a binary search tree. Complete the getHeight function provided in your editor so that it returns the height of the binary search tree.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day22_BinarySearchTrees/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T13:20:30.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day21_Generics/">Day21 Generics</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing Generics; be aware that not all languages support this construct, so fewer languages are enabled for this challenge. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a single generic function named printArray; this function must take an array of generic elements as a parameter (the exception to this is C++, which takes a vector). The locked Solution class in your editor tests your function.</p>
+<p><strong>Note:</strong> You must use generics to solve this challenge. Do not write overloaded functions.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day21_Generics/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T13:01:03.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day20_Sorting/">Day20 Sorting</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re discussing a simple sorting algorithm called Bubble Sort. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h3 id="Consider-the-following-version-of-Bubble-Sort"><a href="#Consider-the-following-version-of-Bubble-Sort" class="headerlink" title="Consider the following version of Bubble Sort:"></a>Consider the following version of Bubble Sort:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    // Track number of elements swapped during a single array traversal</span><br><span class="line">    int numberOfSwaps = 0;</span><br><span class="line">    </span><br><span class="line">    for (int j = 0; j &lt; n - 1; j++) &#123;</span><br><span class="line">        // Swap adjacent elements if they are in decreasing order</span><br><span class="line">        if (a[j] &gt; a[j + 1]) &#123;</span><br><span class="line">            swap(a[j], a[j + 1]);</span><br><span class="line">            numberOfSwaps++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // If no elements were swapped during a traversal, array is sorted</span><br><span class="line">    if (numberOfSwaps == 0) &#123;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an array, <strong>a</strong>, of size <strong>n</strong> distinct elements, sort the array in ascending order using the Bubble Sort algorithm above. Once sorted, print the following <strong>3</strong> lines:</p>
+<ol>
+<li>Array is sorted in numSwaps swaps.<br>where <strong>numSwaps</strong> is the number of swaps that took place.</li>
+<li>First Element: firstElement<br>where <strong>firstElement</strong> is the first element in the sorted array.</li>
+<li>Last Element: lastElement<br>where <strong>lastElement</strong> is the last element in the sorted array.</li>
+</ol>
+<p><strong>Hint:</strong> To complete this challenge, you will need to add a variable that keeps a running tally of all swaps that occur during execution.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day20_Sorting/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T12:53:20.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day19_Interfaces/">Day19 Interfaces</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The AdvancedArithmetic interface and the method declaration for the abstract divisorSum(n) method are provided for you in the editor below.</p>
+<p>Complete the implementation of Calculator class, which implements the AdvancedArithmetic interface. The implementation for the divisorSum(n) method must return the sum of all divisors of <strong>n</strong>.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day19_Interfaces/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T12:39:34.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day18_QueuesAndStack/">Day18 Queues and Stacks</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Welcome to Day 18! Today we’re learning about Stacks and Queues. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<p>A palindrome is a word, phrase, number, or other sequence of characters which reads the same backwards and forwards. Can you determine if a given string, <strong>s</strong>, is a palindrome?</p>
+<p>To solve this challenge, we must first take each character in <strong>s</strong>, enqueue it in a queue, and also push that same character onto a stack. Once that’s done, we must dequeue the first character from the queue and pop the top character off the stack, then compare the two characters to see if they are the same; as long as the characters match, we continue dequeueing, popping, and comparing each character until our containers are empty (a non-match means <strong>s</strong> isn’t a palindrome).</p>
+<p>Write the following declarations and implementations:</p>
+<ol>
+<li>Two instance variables: one for your <strong>stack</strong>, and one for your <strong>queue</strong>.</li>
+<li>A void pushCharacter(char ch) method that pushes a character onto a stack.</li>
+<li>A void enqueueCharacter(char ch) method that enqueues a character in the <strong>queue</strong> instance variable.</li>
+<li>A char popCharacter() method that pops and returns the character at the top of the <strong>stack</strong> instance variable.</li>
+<li>A char dequeueCharacter() method that dequeues and returns the first character in the <strong>queue</strong> instance variable.</li>
+</ol>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day18_QueuesAndStack/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T12:08:18.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day17_MoreExceptions/">Day17 More Exceptions</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Yesterday’s challenge taught you to manage exceptional situations by using try and catch blocks. In today’s challenge, you’re going to practice throwing and propagating an exception. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a Calculator class with a single method: int power(int,int). The power method takes two integers, <strong>n</strong> and <strong>p</strong>, as parameters and returns the integer result of <strong>n<sup>p</sup></strong>. If either  or  is negative, then the method must throw an exception with the message: n and p should be non-negative.</p>
+<p><strong>Note:</strong> Do not use an access modifier (e.g.: public) in the declaration for your Calculator class.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day17_MoreExceptions/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T11:05:46.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day16_ExceptionsStringToInteger/">Day16 Exceptions - String to Integer</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re getting started with Exceptions by learning how to parse an integer from a string and print a custom error message. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Read a string, <strong>S</strong>, and print its integer value; if <strong>S</strong> cannot be converted to an integer, print Bad String.</p>
+<p><strong>Note:</strong> You must use the String-to-Integer and exception handling constructs built into your submission language. If you attempt to use loops/conditional statements, you will get a <strong>0</strong> score.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day16_ExceptionsStringToInteger/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T11:01:34.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day15_LinkedList/">Day15 Linked List</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re working with Linked Lists. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<p>A Node class is provided for you in the editor. A Node object has an integer data field, <strong>data</strong>, and a Node instance pointer, <strong>next</strong>, pointing to another node (i.e.: the next node in a list).</p>
+<p>A Node insert function is also declared in your editor. It has two parameters: a pointer, <strong>head</strong>, pointing to the first node of a linked list, and an integer <strong>data</strong> value that must be added to the end of the list as a new Node object.</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Complete the insert function in your editor so that it creates a new Node (pass <strong>data</strong> as the Node constructor argument) and inserts it at the tail of the linked list referenced by the <strong>head</strong> parameter. Once the new node is added, return the reference to the <strong>head</strong> node.</p>
+<p><strong>Note:</strong> If the <strong>head</strong> argument passed to the insert function is null, then the initial list is empty.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day15_LinkedList/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -233,9 +670,9 @@
             
             <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
             
-            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/4/">4</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/45/">45</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/5/">5</a></li>
             
         </ul>
     </nav>

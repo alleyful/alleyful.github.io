@@ -17,7 +17,7 @@
 <meta property="og:description" content="ObjectiveToday we’re discussing scope. Check out the Tutorial tab for learning materials and an instructional video! The absolute difference between two integers, a and b, is written as |a - b|. The m">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T03:59:39.707Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day14 Scope">
 <meta name="twitter:description" content="ObjectiveToday we’re discussing scope. Check out the Tutorial tab for learning materials and an instructional video! The absolute difference between two integers, a and b, is written as |a - b|. The m">
@@ -164,20 +164,35 @@
             <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing scope. Check out the Tutorial tab for learning materials and an instructional video!</p>
 <p>The absolute difference between two integers, <strong>a</strong> and <strong>b</strong>, is written as <strong>|a - b|</strong>. The maximum absolute difference between two integers in a set of positive integers, <strong>elements</strong>, is the largest absolute difference between any two integers in <strong>elements</strong>.</p>
 <p>The Difference class is started for you in the editor. It has a private integer array (<strong>elements</strong>) for storing <strong>N</strong> non-negative integers, and a public integer (<strong>maximumDifference</strong>) for storing the maximum absolute difference.</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Complete the Difference class by writing the following:</p>
 <ul>
 <li>A class constructor that takes an array of integers as a parameter and saves it to the <strong>elements</strong> instance variable.</li>
 <li>A computeDifference method that finds the maximum absolute difference between any <strong>2</strong> numbers in <strong>N</strong> and stores it in the <strong>maximumDifference</strong> instance variable.</li>
 </ul>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You are not responsible for reading any input from stdin. The locked Solution class in your editor reads in <strong>2</strong> lines of input; the first line contains <strong>N</strong>, and the second line describes the <strong>elements</strong> array.</p>
+<br>
+
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
 <li><strong>1 &lt;= N &lt;= 10</strong></li>
 <li><strong>1 &lt;= elements[i] &lt;= 100, where 0 &lt;= i &lt;= N - 1</strong></li>
 </ul>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>You are not responsible for printing any output; the Solution class will print the value of the <strong>maximumDifference</strong> instance variable.</p>
+<br>
+
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 5</span><br></pre></td></tr></table></figure>
 
+<br>
+
 <h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The scope of the <strong>elements</strong> array and <strong>maximumDifference</strong> integer is the entire class instance. The class constructor saves the argument passed to the constructor as the <strong>elements</strong> instance variable (where the computeDifference method can access it).</p>
 <p>To find the maximum difference, computeDifference checks each element in the array and finds the maximum difference between any <strong>2</strong> elements: <strong>|1 - 2| = 1</strong></p>
@@ -187,9 +202,9 @@
 <br>
 
 <hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> input = <span class="hljs-string">"3\n1 2 5"</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> difference = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> result = input.split(<span class="hljs-string">'\n'</span>)[<span class="hljs-number">1</span>].split(<span class="hljs-string">' '</span>).reduce(</span><br><span class="line">    (target, el) =&gt; &#123;</span><br><span class="line">      <span class="hljs-keyword">let</span> &#123; min, max &#125; = target;</span><br><span class="line"></span><br><span class="line">      target[<span class="hljs-string">"min"</span>] = el &gt; min ? el : min;</span><br><span class="line">      target[<span class="hljs-string">"max"</span>] = el &lt; max ? el : max;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="hljs-attr">min</span>: <span class="hljs-number">-999</span>, <span class="hljs-attr">max</span>: <span class="hljs-number">999</span> &#125;</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.abs(result[<span class="hljs-string">"max"</span>] - result[<span class="hljs-string">"min"</span>]));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">difference();</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> input = <span class="hljs-string">"3\n1 2 5"</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> difference = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> result = input.split(<span class="hljs-string">'\n'</span>)[<span class="hljs-number">1</span>].split(<span class="hljs-string">' '</span>).reduce(</span><br><span class="line">    (target, el) =&gt; &#123;</span><br><span class="line">      <span class="hljs-keyword">let</span> &#123; min, max &#125; = target;</span><br><span class="line"></span><br><span class="line">      target[<span class="hljs-string">"min"</span>] = el &gt; min ? el : min;</span><br><span class="line">      target[<span class="hljs-string">"max"</span>] = el &lt; max ? el : max;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="hljs-attr">min</span>: <span class="hljs-number">-999</span>, <span class="hljs-attr">max</span>: <span class="hljs-number">999</span> &#125;</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.abs(result[<span class="hljs-string">"max"</span>] - result[<span class="hljs-string">"min"</span>]));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">difference();</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> input = <span class="hljs-string">"3\n1 2 5"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">difference</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> split = input.split(<span class="hljs-string">"\n"</span>);</span><br><span class="line">  <span class="hljs-keyword">const</span> length = +split[<span class="hljs-number">0</span>];</span><br><span class="line">  <span class="hljs-keyword">const</span> array = split[<span class="hljs-number">1</span>].split(<span class="hljs-string">" "</span>);</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(array, length);</span><br><span class="line">  <span class="hljs-keyword">let</span> maximum = <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-keyword">let</span> result = <span class="hljs-number">0</span>;</span><br><span class="line">  </span><br><span class="line">  array.forEach(<span class="hljs-function"><span class="hljs-params">value1</span> =&gt;</span> &#123;</span><br><span class="line">    array.forEach(<span class="hljs-function"><span class="hljs-params">value2</span> =&gt;</span>&#123;</span><br><span class="line">      result = <span class="hljs-built_in">Math</span>.abs(value1-value2);</span><br><span class="line">      <span class="hljs-keyword">if</span>(result &gt; maximum) &#123;</span><br><span class="line">        maximum = result;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(maximum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(input);</span><br><span class="line"></span><br><span class="line">difference(input);</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> input = <span class="hljs-string">"3\n1 2 5"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">difference</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> split = input.split(<span class="hljs-string">"\n"</span>);</span><br><span class="line">  <span class="hljs-keyword">const</span> length = +split[<span class="hljs-number">0</span>];</span><br><span class="line">  <span class="hljs-keyword">const</span> array = split[<span class="hljs-number">1</span>].split(<span class="hljs-string">" "</span>);</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(array, length);</span><br><span class="line">  <span class="hljs-keyword">let</span> maximum = <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-keyword">let</span> result = <span class="hljs-number">0</span>;</span><br><span class="line">  </span><br><span class="line">  array.forEach(<span class="hljs-function"><span class="hljs-params">value1</span> =&gt;</span> &#123;</span><br><span class="line">    array.forEach(<span class="hljs-function"><span class="hljs-params">value2</span> =&gt;</span>&#123;</span><br><span class="line">      result = <span class="hljs-built_in">Math</span>.abs(value1-value2);</span><br><span class="line">      <span class="hljs-keyword">if</span>(result &gt; maximum) &#123;</span><br><span class="line">        maximum = result;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(maximum);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(input);</span><br><span class="line"></span><br><span class="line">difference(input);</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -234,6 +249,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day14_Scope/';
+        this.page.identifier = '2019/06/16/algorithm/hackerrank/Day14_Scope/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

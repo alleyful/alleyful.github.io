@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/15/algorithm/hackerrank/day7_arrays/">
 
 
-    <meta name="description" content="ObjectiveToday, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video! TaskGiven an array, A, of N integers, print A‘s elements in">
+    <meta name="description" content="ObjectiveToday, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video!   TaskGiven an array, A, of N integers, print A‘s elements">
 <meta name="keywords" content="Algorithm,HackerRank">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day7 Arrays">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/15/algorithm/hackerrank/Day7_Arrays/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="ObjectiveToday, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video! TaskGiven an array, A, of N integers, print A‘s elements in">
+<meta property="og:description" content="ObjectiveToday, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video!   TaskGiven an array, A, of N integers, print A‘s elements">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-15T18:02:55.018Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day7 Arrays">
-<meta name="twitter:description" content="ObjectiveToday, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video! TaskGiven an array, A, of N integers, print A‘s elements in">
+<meta name="twitter:description" content="ObjectiveToday, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video!   TaskGiven an array, A, of N integers, print A‘s elements">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -162,14 +162,27 @@
         </h1>
         <div class="content">
             <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an array, <strong>A</strong>, of <strong>N</strong> integers, print <strong>A</strong>‘s elements in reverse order as a single line of space-separated numbers.</p>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, <strong>N</strong> (the size of our array).<br>The second line contains <strong>N</strong> space-separated integers describing array <strong>A</strong>‘s elements.</p>
+<br>
+
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
 <li><strong>1 &lt;= N &lt;= 1000</strong></li>
 <li><strong>1 &lt;= A<sub>i</sub> &lt;= 10000</strong>, where <strong>Ai</strong> is the <strong>i<sup>th</sup></strong> integer in the array.</li>
 </ul>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print the elements of array <strong>A</strong> in reverse order as a single line of space-separated numbers.</p>
+<br>
+
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 4 3 2</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 3 4 1</span><br></pre></td></tr></table></figure>
 
@@ -177,7 +190,7 @@
 <br>
 
 <hr>
-<h2 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h2><h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> n = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> arr = readLine().split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span class="hljs-params">arrTemp</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(arrTemp, <span class="hljs-number">10</span>));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(arr.reverse().join(<span class="hljs-string">' '</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> n = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> arr = readLine().split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span class="hljs-params">arrTemp</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(arrTemp, <span class="hljs-number">10</span>));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">console</span>.log(arr.reverse().join(<span class="hljs-string">' '</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> n = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> arr = readLine().split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span class="hljs-params">arrTemp</span> =&gt;</span> <span class="hljs-built_in">parseInt</span>(arrTemp, <span class="hljs-number">10</span>));</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> reverseArray = <span class="hljs-function">(<span class="hljs-params">array</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> temp = <span class="hljs-literal">null</span>;</span><br><span class="line">        <span class="hljs-keyword">const</span> length = array.length;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length / <span class="hljs-number">2</span>; i++)&#123;</span><br><span class="line">            temp = array[i];</span><br><span class="line">            array[i] = array[length - <span class="hljs-number">1</span> - i];</span><br><span class="line">            array[length - <span class="hljs-number">1</span> - i] = temp;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> array;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(reverseArray(arr).join(<span class="hljs-string">' '</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -224,6 +237,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/15/algorithm/hackerrank/Day7_Arrays/';
+        this.page.identifier = '2019/06/15/algorithm/hackerrank/Day7_Arrays/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

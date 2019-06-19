@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/16/algorithm/hackerrank/day19_interfaces/">
 
 
-    <meta name="description" content="Day 19: InterfacesObjectiveToday, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video! TaskThe AdvancedArithmetic interface and the method dec">
+    <meta name="description" content="ObjectiveToday, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!   TaskThe AdvancedArithmetic interface and the method declaration for the">
 <meta name="keywords" content="Algorithm,HackerRank">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day19 Interfaces">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day19_Interfaces/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="Day 19: InterfacesObjectiveToday, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video! TaskThe AdvancedArithmetic interface and the method dec">
+<meta property="og:description" content="ObjectiveToday, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!   TaskThe AdvancedArithmetic interface and the method declaration for the">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T03:59:39.695Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day19 Interfaces">
-<meta name="twitter:description" content="Day 19: InterfacesObjectiveToday, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video! TaskThe AdvancedArithmetic interface and the method dec">
+<meta name="twitter:description" content="ObjectiveToday, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!   TaskThe AdvancedArithmetic interface and the method declaration for the">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -161,23 +161,39 @@
             
         </h1>
         <div class="content">
-            <h1 id="Day-19-Interfaces"><a href="#Day-19-Interfaces" class="headerlink" title="Day 19: Interfaces"></a>Day 19: Interfaces</h1><h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The AdvancedArithmetic interface and the method declaration for the abstract divisorSum(n) method are provided for you in the editor below.</p>
 <p>Complete the implementation of Calculator class, which implements the AdvancedArithmetic interface. The implementation for the divisorSum(n) method must return the sum of all divisors of <strong>n</strong>.</p>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>A single line containing an integer, <strong>n</strong>.</p>
+<br>
+
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
 <li><strong>1 &lt;= n &lt;= 1000</strong></li>
 </ul>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>You are not responsible for printing anything to stdout. The locked template code in the editor below will call your code and print the necessary output.</p>
+<br>
+
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I implemented: AdvancedArithmetic</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
 
+<br>
+
 <h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The integer <strong>6</strong> is evenly divisible by <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, and <strong>6</strong>. Our divisorSum method should return the sum of these numbers, which is <strong>1 + 2 + 3 + 6 = 12</strong>. The Solution class then prints <strong>I implemented: AdvancedArithmetic</strong> on the first line, followed by the sum returned by divisorSum (which is <strong>12</strong>) on the second line.</p>
+<br>
 <br>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/** It's not supported JavaScript so it create similar code **/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">  divisor(n) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> n || <span class="hljs-number">0</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Calculator</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="hljs-keyword">super</span>(props);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.divisor = <span class="hljs-keyword">this</span>.divisorSum.bind(<span class="hljs-keyword">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  divisorSum(n) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>(n).fill(<span class="hljs-number">0</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">      !(n % (index + <span class="hljs-number">1</span>)) &amp;&amp; (target += (index + <span class="hljs-number">1</span>)) ;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Solution</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> n = <span class="hljs-number">6</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> myCalculator = <span class="hljs-keyword">new</span> Calculator();</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">let</span> sum = myCalculator.divisor(n);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I implemented: AdvancedArithmetic\n"</span> + sum); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Solution();</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/** It's not supported JavaScript so it create similar code **/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">  divisor(n) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> n || <span class="hljs-number">0</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Calculator</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="hljs-keyword">super</span>(props);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">this</span>.divisor = <span class="hljs-keyword">this</span>.divisorSum.bind(<span class="hljs-keyword">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  divisorSum(n) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>(n).fill(<span class="hljs-number">0</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">      !(n % (index + <span class="hljs-number">1</span>)) &amp;&amp; (target += (index + <span class="hljs-number">1</span>)) ;</span><br><span class="line"></span><br><span class="line">      <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Solution</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> n = <span class="hljs-number">6</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> myCalculator = <span class="hljs-keyword">new</span> Calculator();</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">let</span> sum = myCalculator.divisor(n);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"I implemented: AdvancedArithmetic\n"</span> + sum); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Solution();</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -222,6 +238,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day19_Interfaces/';
+        this.page.identifier = '2019/06/16/algorithm/hackerrank/Day19_Interfaces/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/17/algorithm/hackerrank/day28_regexpatternsandintrotodatabases/">
 
 
-    <meta name="description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video! TaskConsider a database table, Emails, which has the attributes Fi">
+    <meta name="description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video!   TaskConsider a database table, Emails, which has the attributes">
 <meta name="keywords" content="Algorithm,HackerRank">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day28 RegEx, Patterns, and Intro to Databases">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video! TaskConsider a database table, Emails, which has the attributes Fi">
+<meta property="og:description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video!   TaskConsider a database table, Emails, which has the attributes">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T03:59:39.713Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day28 RegEx, Patterns, and Intro to Databases">
-<meta name="twitter:description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video! TaskConsider a database table, Emails, which has the attributes Fi">
+<meta name="twitter:description" content="ObjectiveToday, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video!   TaskConsider a database table, Emails, which has the attributes">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -162,16 +162,27 @@
         </h1>
         <div class="content">
             <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re working with regular expressions. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Consider a database table, Emails, which has the attributes First Name and Email ID. Given  rows of data simulating the Emails table, print an alphabetically-ordered list of people whose email address ends in .</p>
-<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, , total number of rows in the table.<br>Each of the  subsequent lines contains  space-separated strings denoting a person’s first name and email ID, respectively.</p>
-<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><p>Each of the first names consists of lower case letters  only.<br>Each of the email IDs consists of lower case letters ,  and  only.<br>The length of the first name is no longer than 20.<br>The length of the email ID is no longer than 50.</p>
-<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print an alphabetically-ordered list of first names for every user with a gmail account. Each name must be printed on a new line.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">riya riya@gmail.com</span><br><span class="line">julia julia@julia.me</span><br><span class="line">julia sjulia@gmail.com</span><br><span class="line">julia julia@gmail.com</span><br><span class="line">samantha samantha@gmail.com</span><br><span class="line">tanya tanya@gmail.com</span><br><span class="line">Sample Output</span><br></pre></td></tr></table></figure>
+<br>
 
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">julia</span><br><span class="line">julia</span><br><span class="line">riya</span><br><span class="line">samantha</span><br><span class="line">tanya</span><br></pre></td></tr></table></figure>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Consider a database table, Emails, which has the attributes First Name and Email ID. Given  rows of data simulating the Emails table, print an alphabetically-ordered list of people whose email address ends in .</p>
+<a id="more"></a>
+<br>
+
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, , total number of rows in the table.<br>Each of the  subsequent lines contains  space-separated strings denoting a person’s first name and email ID, respectively.</p>
+<br>
+
+<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><p>Each of the first names consists of lower case letters  only.<br>Each of the email IDs consists of lower case letters ,  and  only.<br>The length of the first name is no longer than 20.<br>The length of the email ID is no longer than 50.</p>
+<br>
+
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print an alphabetically-ordered list of first names for every user with a gmail account. Each name must be printed on a new line.</p>
+<br>
+
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">riya riya@gmail.com</span><br><span class="line">julia julia@julia.me</span><br><span class="line">julia sjulia@gmail.com</span><br><span class="line">julia julia@gmail.com</span><br><span class="line">samantha samantha@gmail.com</span><br><span class="line">tanya tanya@gmail.com</span><br><span class="line">Sample Output</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">julia</span><br><span class="line">julia</span><br><span class="line">riya</span><br><span class="line">samantha</span><br><span class="line">tanya</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> N = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> patten = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"@gmail.com"</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> names = [];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> NItr = <span class="hljs-number">0</span>; NItr &lt; N; NItr++) &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> firstNameEmailID = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> firstName = firstNameEmailID[<span class="hljs-number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> emailID = firstNameEmailID[<span class="hljs-number">1</span>];</span><br><span class="line"></span><br><span class="line">        patten.test(emailID) &amp;&amp; names.push(firstName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    names.sort().forEach(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(name));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> N = <span class="hljs-built_in">parseInt</span>(readLine(), <span class="hljs-number">10</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> patten = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"@gmail.com"</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> names = [];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> NItr = <span class="hljs-number">0</span>; NItr &lt; N; NItr++) &#123;</span><br><span class="line">        <span class="hljs-keyword">const</span> firstNameEmailID = readLine().split(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> firstName = firstNameEmailID[<span class="hljs-number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">const</span> emailID = firstNameEmailID[<span class="hljs-number">1</span>];</span><br><span class="line"></span><br><span class="line">        patten.test(emailID) &amp;&amp; names.push(firstName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    names.sort().forEach(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(name));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -216,6 +227,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/';
+        this.page.identifier = '2019/06/17/algorithm/hackerrank/Day28_RegExPatternsAndIntroToDatabases/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

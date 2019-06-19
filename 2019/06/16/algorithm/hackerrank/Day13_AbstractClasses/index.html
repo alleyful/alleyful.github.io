@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/16/algorithm/hackerrank/day13_abstractclasses/">
 
 
-    <meta name="description" content="Day 13: Abstract ClassesObjectiveToday, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissi">
+    <meta name="description" content="ObjectiveToday, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the f">
 <meta name="keywords" content="Algorithm,HackerRank">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day13 Abstract Classes">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day13_AbstractClasses/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="Day 13: Abstract ClassesObjectiveToday, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissi">
+<meta property="og:description" content="ObjectiveToday, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the f">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-17T03:59:39.735Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day13 Abstract Classes">
-<meta name="twitter:description" content="Day 13: Abstract ClassesObjectiveToday, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissi">
+<meta name="twitter:description" content="ObjectiveToday, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the f">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -161,7 +161,9 @@
             
         </h1>
         <div class="content">
-            <h1 id="Day-13-Abstract-Classes"><a href="#Day-13-Abstract-Classes" class="headerlink" title="Day 13: Abstract Classes"></a>Day 13: Abstract Classes</h1><h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the few languages that use this construct. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the few languages that use this construct. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a Book class and a Solution class, write a MyBook class that does the following:</p>
 <ul>
 <li>Inherits from Book</li>
@@ -181,13 +183,22 @@
 <li><strong>price</strong>, a space, and then the current instance’s <strong>price</strong>.</li>
 </ol>
 <p><strong>Note:</strong> Because these classes are being written in the same file, you must not use an access modifier (e.g.: <strong>public</strong>) when declaring MyBook or your code will not execute.</p>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>You are not responsible for reading any input from stdin. The Solution class creates a Book object and calls the MyBook class constructor (passing it the necessary arguments). It then calls the display method on the Book object.</p>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>The <strong>void display()</strong> method should print and label the respective <strong>title</strong>, <strong>author</strong>, and <strong>price</strong> of the MyBook object’s instance (with each value on its own line) like so:</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Title: $title</span><br><span class="line">Author: $author</span><br><span class="line">Price: $price</span><br></pre></td></tr></table></figure>
 
 <p><strong>Note:</strong> The <strong>$</strong> is prepended to variable names to indicate they are placeholders for variables.</p>
+<br>
+
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><p>The following input from stdin is handled by the locked stub code in your editor:</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The Alchemist</span><br><span class="line">Paulo Coelho</span><br><span class="line">248</span><br></pre></td></tr></table></figure>
+
+<br>
 
 <h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><p>The following output is printed by your display() method:</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Title: The Alchemist</span><br><span class="line">Author: Paulo Coelho</span><br><span class="line">Price: 248</span><br></pre></td></tr></table></figure>
@@ -196,7 +207,7 @@
 <br>
 
 <hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-comment">// Declare your class here.</span></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyBook</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Book</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Class Constructor</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   @param title The book's title.</span></span><br><span class="line"><span class="hljs-comment">    *   @param author The book's author.</span></span><br><span class="line"><span class="hljs-comment">    *   @param price The book's price.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your constructor here</span></span><br><span class="line">    <span class="hljs-keyword">constructor</span>(title, author, price) &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>();</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">this</span>.title = title;</span><br><span class="line">        <span class="hljs-keyword">this</span>.author = author;</span><br><span class="line">        <span class="hljs-keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Method Name: display</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   Print the title, author, and price in the specified format.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your method here</span></span><br><span class="line">    display() &#123;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Title: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.title&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Author: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.author&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Price: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.price&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment">// End class</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyBook</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Book</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Class Constructor</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   @param title The book's title.</span></span><br><span class="line"><span class="hljs-comment">    *   @param author The book's author.</span></span><br><span class="line"><span class="hljs-comment">    *   @param price The book's price.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your constructor here</span></span><br><span class="line">    <span class="hljs-keyword">constructor</span>(title, author, price) &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>();</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">this</span>.title = title;</span><br><span class="line">        <span class="hljs-keyword">this</span>.author = author;</span><br><span class="line">        <span class="hljs-keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">/**   </span></span><br><span class="line"><span class="hljs-comment">    *   Method Name: display</span></span><br><span class="line"><span class="hljs-comment">    *   </span></span><br><span class="line"><span class="hljs-comment">    *   Print the title, author, and price in the specified format.</span></span><br><span class="line"><span class="hljs-comment">    **/</span></span><br><span class="line">    <span class="hljs-comment">// Write your method here</span></span><br><span class="line">    display() &#123;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Title: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.title&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Author: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.author&#125;</span>`</span>);</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Price: <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.price&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment">// End class</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -241,6 +252,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/16/algorithm/hackerrank/Day13_AbstractClasses/';
+        this.page.identifier = '2019/06/16/algorithm/hackerrank/Day13_AbstractClasses/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/19/algorithm/programmers/level1-16/">
 
 
-    <meta name="description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.   제한 사항n은 0 이상 3000이하인 자연수입니다.   입출력 예   n return    12 28   5 6     입출력 예 설명 입출력 예 #1  12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28입니다.   입출력">
+    <meta name="description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.">
 <meta name="keywords" content="Algorithm,Programmers,프로그래머스">
 <meta property="og:type" content="article">
 <meta property="og:title" content="프로그래머스 - 약수의 합">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/19/algorithm/programmers/level1-16/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.   제한 사항n은 0 이상 3000이하인 자연수입니다.   입출력 예   n return    12 28   5 6     입출력 예 설명 입출력 예 #1  12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28입니다.   입출력">
+<meta property="og:description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-18T15:57:40.851Z">
+<meta property="og:updated_time" content="2019-06-19T15:04:47.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="프로그래머스 - 약수의 합">
-<meta name="twitter:description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.   제한 사항n은 0 이상 3000이하인 자연수입니다.   입출력 예   n return    12 28   5 6     입출력 예 설명 입출력 예 #1  12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28입니다.   입출력">
+<meta name="twitter:description" content="문제 설명자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -162,6 +162,7 @@
         </h1>
         <div class="content">
             <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.</p>
+<a id="more"></a>
 <br>
 
 <h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>n은 0 이상 3000이하인 자연수입니다.</p>
@@ -198,6 +199,7 @@
 </li>
 </ul>
 <br>
+
 
 <hr>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.sqrt(n))).fill(<span class="hljs-number">0</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, arr, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> number = index + <span class="hljs-number">1</span>;</span><br><span class="line">        <span class="hljs-keyword">let</span> numberLast = n / number;</span><br><span class="line">        n % number === <span class="hljs-number">0</span> &amp;&amp; (target = target + (numberLast === number ? number : number + numberLast))</span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -238,6 +240,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/19/algorithm/programmers/level1-16/';
+        this.page.identifier = '2019/06/19/algorithm/programmers/level1-16/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 

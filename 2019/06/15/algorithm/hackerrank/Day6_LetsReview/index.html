@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/15/algorithm/hackerrank/day6_letsreview/">
 
 
-    <meta name="description" content="ObjectiveToday we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video! Task">
+    <meta name="description" content="ObjectiveToday we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video!   Ta">
 <meta name="keywords" content="Algorithm,HackerRank">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day6 Let&#39;s Review">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/15/algorithm/hackerrank/Day6_LetsReview/index.html">
 <meta property="og:site_name" content="ALLEYFUL">
-<meta property="og:description" content="ObjectiveToday we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video! Task">
+<meta property="og:description" content="ObjectiveToday we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video!   Ta">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-15T17:42:53.145Z">
+<meta property="og:updated_time" content="2019-06-19T15:48:44.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Day6 Let&#39;s Review">
-<meta name="twitter:description" content="ObjectiveToday we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video! Task">
+<meta name="twitter:description" content="ObjectiveToday we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video!   Ta">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -162,21 +162,34 @@
         </h1>
         <div class="content">
             <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
 <h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a string, <strong>S</strong>, of length <strong>N</strong> that is indexed from <strong>0</strong> to <strong>N - 1</strong>, print its even-indexed and odd-indexed characters as <strong>2</strong> space-separated strings on a single line (see the Sample below for more detail).</p>
 <p><strong>Note: 0</strong> is considered to be an even index.</p>
+<a id="more"></a>
+<br>
+
 <h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer, <strong>T</strong> (the number of test cases).<br>Each line <strong>i</strong> of the <strong>T</strong> subsequent lines contain a String, <strong>S</strong>.</p>
+<br>
+
 <h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
 <li><strong>1 &lt;= T &lt;= 10</strong></li>
 <li><strong>2 &lt;= length of S &lt;= 10000</strong></li>
 </ul>
+<br>
+
 <h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>For each String <strong>S<sub>j</sub></strong> (where <strong>0 &lt;= j &lt;= T - 1</strong>), print <strong>S<sub>j</sub></strong>‘s even-indexed characters, followed by a space, followed by <strong>S<sub>j</sub></strong>‘s odd-indexed characters.</p>
+<br>
+
 <h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">Hacker</span><br><span class="line">Rank</span><br></pre></td></tr></table></figure>
 
-<p>##Sample Output</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hce akr</span><br><span class="line">Rn ak</span><br></pre></td></tr></table></figure>
+<br>
 
-<p>##Explanation</p>
-<p>Test Case 0: <strong>S = “Hacker”</strong><br><br><strong>S[0] = “H”</strong><br><br><strong>S[1] = “a”</strong><br><br><strong>S[2] = “c”</strong><br><br><strong>S[3] = “k”</strong><br><br><strong>S[4] = “e”</strong><br><br><strong>S[5] = “r”</strong><br></p>
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hce akr</span><br><span class="line">Rn ak</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>Test Case 0: <strong>S = “Hacker”</strong><br><br><strong>S[0] = “H”</strong><br><br><strong>S[1] = “a”</strong><br><br><strong>S[2] = “c”</strong><br><br><strong>S[3] = “k”</strong><br><br><strong>S[4] = “e”</strong><br><br><strong>S[5] = “r”</strong><br></p>
 <p>The even indices are <strong>0</strong>, <strong>2</strong>, and <strong>4</strong>, and the odd indices are <strong>1</strong>, <strong>3</strong>, and <strong>5</strong>. We then print a single line of <strong>2</strong> space-separated strings; the first string contains the ordered characters from <strong>S</strong>‘s even indices (<strong>Hce</strong>), and the second string contains the ordered characters from <strong>S</strong>‘s odd indices (<strong>akr</strong>).</p>
 <p>Test Case 1: <strong>S = “Rank”</strong><br><br><strong>S[0] = “R”</strong><br><br><strong>S[1] = “a”</strong><br><br><strong>S[2] = “n”</strong><br><br><strong>S[3] = “k”</strong><br></p>
 <p>The even indices are <strong>0</strong> and <strong>2</strong>, and the odd indices are <strong>1</strong> and <strong>3</strong>. We then print a single line of <strong>2</strong> space-separated strings; the first string contains the ordered characters from <strong>S</strong>‘s even indices (<strong>Rn</strong>), and the second string contains the ordered characters from <strong>S</strong>‘s odd indices (<strong>ak</strong>).</p>
@@ -184,9 +197,9 @@
 <br>
 
 <hr>
-<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> array = input.split(<span class="hljs-string">'\n'</span>);</span><br><span class="line">    array.shift();</span><br><span class="line">    </span><br><span class="line">    array.map(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> odd = <span class="hljs-string">''</span>;</span><br><span class="line">        <span class="hljs-keyword">let</span> even = <span class="hljs-string">''</span>;</span><br><span class="line"></span><br><span class="line">        value.split(<span class="hljs-string">''</span>).map(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> &#123;</span><br><span class="line">            index % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? odd += value : even += value;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;odd&#125;</span> <span class="hljs-subst">$&#123;even&#125;</span>`</span>);</span><br><span class="line">     &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> array = input.split(<span class="hljs-string">'\n'</span>);</span><br><span class="line">    array.shift();</span><br><span class="line">    </span><br><span class="line">    array.map(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> odd = <span class="hljs-string">''</span>;</span><br><span class="line">        <span class="hljs-keyword">let</span> even = <span class="hljs-string">''</span>;</span><br><span class="line"></span><br><span class="line">        value.split(<span class="hljs-string">''</span>).map(<span class="hljs-function">(<span class="hljs-params">value, index</span>) =&gt;</span> &#123;</span><br><span class="line">            index % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? odd += value : even += value;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;odd&#125;</span> <span class="hljs-subst">$&#123;even&#125;</span>`</span>);</span><br><span class="line">     &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//Enter your code here</span></span><br><span class="line">    input.split(<span class="hljs-string">"\n"</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (index &amp;&amp; <span class="hljs-built_in">Number</span>.isNaN(+item)) &#123;</span><br><span class="line">            <span class="hljs-keyword">let</span> result = item.split(<span class="hljs-string">''</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, text, index</span>) =&gt;</span> &#123;</span><br><span class="line">                target[+(index % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>)] += text;</span><br><span class="line"></span><br><span class="line">                <span class="hljs-keyword">return</span> target;</span><br><span class="line">            &#125;, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">2</span>).fill(<span class="hljs-string">''</span>)).join(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">            <span class="hljs-built_in">console</span>.log(result);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processData</span>(<span class="hljs-params">input</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">//Enter your code here</span></span><br><span class="line">    input.split(<span class="hljs-string">"\n"</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (index &amp;&amp; <span class="hljs-built_in">Number</span>.isNaN(+item)) &#123;</span><br><span class="line">            <span class="hljs-keyword">let</span> result = item.split(<span class="hljs-string">''</span>).reduce(<span class="hljs-function">(<span class="hljs-params">target, text, index</span>) =&gt;</span> &#123;</span><br><span class="line">                target[+(index % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>)] += text;</span><br><span class="line"></span><br><span class="line">                <span class="hljs-keyword">return</span> target;</span><br><span class="line">            &#125;, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">2</span>).fill(<span class="hljs-string">''</span>)).join(<span class="hljs-string">' '</span>);</span><br><span class="line"></span><br><span class="line">            <span class="hljs-built_in">console</span>.log(result);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, <span class="hljs-string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -231,6 +244,30 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/06/15/algorithm/hackerrank/Day6_LetsReview/';
+        this.page.identifier = '2019/06/15/algorithm/hackerrank/Day6_LetsReview/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 
