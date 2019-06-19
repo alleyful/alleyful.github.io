@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alleyful.github.io/sitemap.xml
