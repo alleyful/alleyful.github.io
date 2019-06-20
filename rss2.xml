@@ -3,11 +3,11 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ALLEYFUL</title>
+    <title>ALLEY</title>
     <link>https://alleyful.github.io/</link>
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
-    <description>alleyful&#39;s blog for study</description>
+    <description>alley&#39;s blog for study</description>
     <pubDate>Wed, 19 Jun 2019 15:54:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
