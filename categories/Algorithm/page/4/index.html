@@ -154,7 +154,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T10:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T13:20:30.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -167,22 +167,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day8_DictionariesAndMaps/">Day8 Dictionaries and Maps</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day21_Generics/">Day21 Generics</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Key-Value pair mappings using a Map or Dictionary data structure. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing Generics; be aware that not all languages support this construct, so fewer languages are enabled for this challenge. Check out the Tutorial tab for learning materials and an instructional video!</p>
 <br>
 
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given <strong>n</strong> names and phone numbers, assemble a phone book that maps friends’ names to their respective phone numbers. You will then be given an unknown number of names to query your phone book for. For each <strong>name</strong> queried, print the associated entry from your phone book on a new line in the form name=phoneNumber; if an entry for <strong>name</strong> is not found, print Not found instead.</p>
-<p><strong>Note:</strong> Your phone book should be a Dictionary/Map/HashMap data structure.</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a single generic function named printArray; this function must take an array of generic elements as a parameter (the exception to this is C++, which takes a vector). The locked Solution class in your editor tests your function.</p>
+<p><strong>Note:</strong> You must use generics to solve this challenge. Do not write overloaded functions.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day8_DictionariesAndMaps/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day21_Generics/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -204,7 +204,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T08:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T13:01:03.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -217,21 +217,29 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day7_Arrays/">Day7 Arrays</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day20_Sorting/">Day20 Sorting</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about the Array data structure. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re discussing a simple sorting algorithm called Bubble Sort. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h3 id="Consider-the-following-version-of-Bubble-Sort"><a href="#Consider-the-following-version-of-Bubble-Sort" class="headerlink" title="Consider the following version of Bubble Sort:"></a>Consider the following version of Bubble Sort:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    // Track number of elements swapped during a single array traversal</span><br><span class="line">    int numberOfSwaps = 0;</span><br><span class="line">    </span><br><span class="line">    for (int j = 0; j &lt; n - 1; j++) &#123;</span><br><span class="line">        // Swap adjacent elements if they are in decreasing order</span><br><span class="line">        if (a[j] &gt; a[j + 1]) &#123;</span><br><span class="line">            swap(a[j], a[j + 1]);</span><br><span class="line">            numberOfSwaps++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // If no elements were swapped during a traversal, array is sorted</span><br><span class="line">    if (numberOfSwaps == 0) &#123;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <br>
 
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an array, <strong>A</strong>, of <strong>N</strong> integers, print <strong>A</strong>‘s elements in reverse order as a single line of space-separated numbers.</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an array, <strong>a</strong>, of size <strong>n</strong> distinct elements, sort the array in ascending order using the Bubble Sort algorithm above. Once sorted, print the following <strong>3</strong> lines:</p>
+<ol>
+<li>Array is sorted in numSwaps swaps.<br>where <strong>numSwaps</strong> is the number of swaps that took place.</li>
+<li>First Element: firstElement<br>where <strong>firstElement</strong> is the first element in the sorted array.</li>
+<li>Last Element: lastElement<br>where <strong>lastElement</strong> is the last element in the sorted array.</li>
+</ol>
+<p><strong>Hint:</strong> To complete this challenge, you will need to add a variable that keeps a running tally of all swaps that occur during execution.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day7_Arrays/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day20_Sorting/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -253,7 +261,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T07:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T12:53:20.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -266,22 +274,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day6_LetsReview/">Day6 Let&#39;s Review</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day19_Interfaces/">Day19 Interfaces</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re expanding our knowledge of Strings and combining it with what we’ve already learned about loops. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!</p>
 <br>
 
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a string, <strong>S</strong>, of length <strong>N</strong> that is indexed from <strong>0</strong> to <strong>N - 1</strong>, print its even-indexed and odd-indexed characters as <strong>2</strong> space-separated strings on a single line (see the Sample below for more detail).</p>
-<p><strong>Note: 0</strong> is considered to be an even index.</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The AdvancedArithmetic interface and the method declaration for the abstract divisorSum(n) method are provided for you in the editor below.</p>
+<p>Complete the implementation of Calculator class, which implements the AdvancedArithmetic interface. The implementation for the divisorSum(n) method must return the sum of all divisors of <strong>n</strong>.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day6_LetsReview/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day19_Interfaces/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -303,7 +311,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T06:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T12:39:34.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -316,21 +324,28 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day5_Loops/">Day5 Loops</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day18_QueuesAndStack/">Day18 Queues and Stacks</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this challenge, we’re going to use loops to help us do some simple math. Check out the Tutorial tab to learn more.</p>
-<br>
-
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an integer, <strong>n</strong>, print its first <strong>10</strong> multiples. Each multiple <strong>n x i</strong> (where <strong>1 &lt;= i &lt;= 10</strong>) should be printed on a new line in the form: n x i = result.</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Welcome to Day 18! Today we’re learning about Stacks and Queues. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<p>A palindrome is a word, phrase, number, or other sequence of characters which reads the same backwards and forwards. Can you determine if a given string, <strong>s</strong>, is a palindrome?</p>
+<p>To solve this challenge, we must first take each character in <strong>s</strong>, enqueue it in a queue, and also push that same character onto a stack. Once that’s done, we must dequeue the first character from the queue and pop the top character off the stack, then compare the two characters to see if they are the same; as long as the characters match, we continue dequeueing, popping, and comparing each character until our containers are empty (a non-match means <strong>s</strong> isn’t a palindrome).</p>
+<p>Write the following declarations and implementations:</p>
+<ol>
+<li>Two instance variables: one for your <strong>stack</strong>, and one for your <strong>queue</strong>.</li>
+<li>A void pushCharacter(char ch) method that pushes a character onto a stack.</li>
+<li>A void enqueueCharacter(char ch) method that enqueues a character in the <strong>queue</strong> instance variable.</li>
+<li>A char popCharacter() method that pops and returns the character at the top of the <strong>stack</strong> instance variable.</li>
+<li>A char dequeueCharacter() method that dequeues and returns the first character in the <strong>queue</strong> instance variable.</li>
+</ol>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day5_Loops/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day18_QueuesAndStack/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -352,7 +367,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T05:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T12:08:18.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -365,23 +380,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day4_ClassVsInstance/">Day4 Class vs. Instance</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day17_MoreExceptions/">Day17 More Exceptions</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this challenge, we’re going to learn about the difference between a class and an instance; because this is an Object Oriented concept, it’s only enabled in certain languages. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Yesterday’s challenge taught you to manage exceptional situations by using try and catch blocks. In today’s challenge, you’re going to practice throwing and propagating an exception. Check out the Tutorial tab for learning materials and an instructional video!</p>
 <br>
 
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a Person class with an instance variable, , and a constructor that takes an integer, , as a parameter. The constructor must assign  to  after confirming the argument passed as  is not negative; if a negative argument is passed as , the constructor should set  to  and print Age is not valid, setting age to 0.. In addition, you must write the following instance methods:</p>
-<p>yearPasses() should increase the  instance variable by .<br>amIOld() should perform the following conditional actions:<br>If , print You are young..<br>If  and , print You are a teenager..<br>Otherwise, print You are old..<br>To help you learn by example and complete this challenge, much of the code is provided for you, but you’ll be writing everything in the future. The code that creates each instance of your Person class is in the main method. Don’t worry if you don’t understand it all quite yet!</p>
-<p><strong>Note:</strong> Do not remove or alter the stub code in the editor.</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a Calculator class with a single method: int power(int,int). The power method takes two integers, <strong>n</strong> and <strong>p</strong>, as parameters and returns the integer result of <strong>n<sup>p</sup></strong>. If either  or  is negative, then the method must throw an exception with the message: n and p should be non-negative.</p>
+<p><strong>Note:</strong> Do not use an access modifier (e.g.: public) in the declaration for your Calculator class.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day4_ClassVsInstance/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day17_MoreExceptions/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -403,7 +417,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T04:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T11:05:46.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -416,28 +430,129 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day3_IntroToConditionalStatements/">Day3 Intro to Conditional Statements</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day16_ExceptionsStringToInteger/">Day16 Exceptions - String to Integer</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this challenge, we’re getting started with conditional statements. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re getting started with Exceptions by learning how to parse an integer from a string and print a custom error message. Check out the Tutorial tab for learning materials and an instructional video!</p>
 <br>
 
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an integer, <strong>n</strong>, perform the following conditional actions:</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Read a string, <strong>S</strong>, and print its integer value; if <strong>S</strong> cannot be converted to an integer, print Bad String.</p>
+<p><strong>Note:</strong> You must use the String-to-Integer and exception handling constructs built into your submission language. If you attempt to use loops/conditional statements, you will get a <strong>0</strong> score.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day16_ExceptionsStringToInteger/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T11:01:34.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day15_LinkedList/">Day15 Linked List</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re working with Linked Lists. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<p>A Node class is provided for you in the editor. A Node object has an integer data field, <strong>data</strong>, and a Node instance pointer, <strong>next</strong>, pointing to another node (i.e.: the next node in a list).</p>
+<p>A Node insert function is also declared in your editor. It has two parameters: a pointer, <strong>head</strong>, pointing to the first node of a linked list, and an integer <strong>data</strong> value that must be added to the end of the list as a new Node object.</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Complete the insert function in your editor so that it creates a new Node (pass <strong>data</strong> as the Node constructor argument) and inserts it at the tail of the linked list referenced by the <strong>head</strong> parameter. Once the new node is added, return the reference to the <strong>head</strong> node.</p>
+<p><strong>Note:</strong> If the <strong>head</strong> argument passed to the insert function is null, then the initial list is empty.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day15_LinkedList/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T10:38:51.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day14_Scope/">Day14 Scope</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing scope. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<p>The absolute difference between two integers, <strong>a</strong> and <strong>b</strong>, is written as <strong>|a - b|</strong>. The maximum absolute difference between two integers in a set of positive integers, <strong>elements</strong>, is the largest absolute difference between any two integers in <strong>elements</strong>.</p>
+<p>The Difference class is started for you in the editor. It has a private integer array (<strong>elements</strong>) for storing <strong>N</strong> non-negative integers, and a public integer (<strong>maximumDifference</strong>) for storing the maximum absolute difference.</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Complete the Difference class by writing the following:</p>
 <ul>
-<li>If <strong>n</strong> is odd, print Weird</li>
-<li>If <strong>n</strong> is even and in the inclusive range of <strong>2</strong> to <strong>5</strong>, print Not Weird</li>
-<li>If <strong>n</strong> is even and in the inclusive range of <strong>6</strong> to <strong>20</strong>, print Weird</li>
-<li>If <strong>n</strong> is even and greater than <strong>20</strong>, print Not Weird</li>
+<li>A class constructor that takes an array of integers as a parameter and saves it to the <strong>elements</strong> instance variable.</li>
+<li>A computeDifference method that finds the maximum absolute difference between any <strong>2</strong> numbers in <strong>N</strong> and stores it in the <strong>maximumDifference</strong> instance variable.</li>
 </ul>
-<p>Complete the stub code provided in your editor to print whether or not  is weird.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day3_IntroToConditionalStatements/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day14_Scope/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -459,7 +574,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T03:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T10:20:34.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -472,85 +587,39 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day2_Operator/">Day2 Operators</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day13_AbstractClasses/">Day13 Abstract Classes</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this challenge, you’ll work with arithmetic operators. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re taking what we learned yesterday about Inheritance and extending it to Abstract Classes. Because this is a very specific Object-Oriented concept, submissions are limited to the few languages that use this construct. Check out the Tutorial tab for learning materials and an instructional video!</p>
 <br>
 
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal’s total cost.</p>
-<p><strong>Note</strong>: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result!</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day2_Operator/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-14T16:01:34.000Z">2019-06-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day1_DataTypes/">Day1 Data Types</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re discussing data types. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<br>
-
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Complete the code in the editor below. The variables <strong>i</strong>, <strong>d</strong>, and <strong>s</strong> are already declared and initialized for you. You must:</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a Book class and a Solution class, write a MyBook class that does the following:</p>
+<ul>
+<li>Inherits from Book</li>
+<li>Has a parameterized constructor taking these <strong>3</strong> parameters:</li>
+</ul>
 <ol>
-<li><p>Declare <strong>3</strong> variables: one of type int, one of type double, and one of type String.</p>
-</li>
-<li><p>Read <strong>3</strong> lines of input from stdin (according to the sequence given in the Input Format section below) and initialize your <strong>3</strong> variables.</p>
-</li>
-<li><p>Use the <strong>+</strong> operator to perform the following operations: </p>
+<li>string <strong>title</strong></li>
+<li>string <strong>author</strong></li>
+<li>int <strong>price</strong></li>
+</ol>
+<ul>
+<li>Implements the Book class’ abstract display() method so it prints these <strong>3</strong> lines:</li>
+</ul>
 <ol>
-<li>Print the sum of <strong>i</strong> plus your int variable on a new line.</li>
-<li>Print the sum of <strong>d</strong> plus your double variable to a scale of one decimal place on a new line.</li>
-<li>Concatenate <strong>s</strong> with the string you read as input and print the result on a new line.</li>
+<li><strong>title</strong>, a space, and then the current instance’s <strong>title</strong>.</li>
+<li><strong>author</strong>, a space, and then the current instance’s <strong>author</strong>.</li>
+<li><strong>price</strong>, a space, and then the current instance’s <strong>price</strong>.</li>
 </ol>
-</li>
-</ol>
-<p><strong>Note</strong>: If you are using a language that doesn’t support using <strong>+</strong> for string concatenation (e.g.: C), you can just print one variable immediately following the other on the same line. The string provided in your editor must be printed first, immediately followed by the string you read as input.</p>
+<p><strong>Note:</strong> Because these classes are being written in the same file, you must not use an access modifier (e.g.: <strong>public</strong>) when declaring MyBook or your code will not execute.</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day1_DataTypes/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day13_AbstractClasses/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -572,7 +641,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-14T15:01:34.000Z">2019-06-15</time>
+                <time class="level-item has-text-grey" datetime="2019-06-16T09:49:34.000Z">2019-06-16</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
@@ -585,69 +654,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/15/algorithm/hackerrank/Day0_HelloWorld/">Day0 Hello World</a>
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day12_Inheritance/">Day12 Inheritance</a>
             
         </h1>
         <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>In this challenge, we review some basic concepts that will get you started with this series. You will need to use the same (or similar) syntax to read input and write output in challenges throughout HackerRank. Check out the Tutorial tab for learning materials and an instructional video!</p>
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re delving into Inheritance. Check out the attached tutorial for learning materials and an instructional video!</p>
 <br>
 
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>To complete this challenge, you must save a line of input from stdin to a variable, print Hello, World. on a single line, and finally print the value of your variable on a second line.</p>
-<p>You’ve got this!</p>
-<p><strong>Note</strong>: The instructions are Java-based, but we support submissions in many popular languages. You can switch languages using the drop-down menu above your editor, and the <strong>InputString</strong> variable may be written differently depending on the best-practice conventions of your submission language.</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>You are given two classes, Person and Student, where Person is the base class and Student is the derived class. Completed code for Person and a declaration for Student are provided for you in the editor. Observe that Student inherits all the properties of Person.</p>
+<p>Complete the Student class by writing the following:</p>
+<ul>
+<li>A Student class constructor, which has <strong>4</strong> parameters:</li>
+</ul>
+<ol>
+<li>A string, <strong>firstName</strong>.</li>
+<li>A string, <strong>lastName</strong>.</li>
+<li>An integer, <strong>id</strong>.</li>
+<li>An integer array (or vector) of test scores, <strong>scores</strong>.</li>
+</ol>
+<ul>
+<li>A char calculate() method that calculates a Student object’s average and returns the grade character representative of their calculated average:</li>
+</ul>
+<p><img src="https://s3.amazonaws.com/hr-challenge-images/17165/1458142706-3073bc9143-Grading.png" alt="Grading Scale"></p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/15/algorithm/hackerrank/Day0_HelloWorld/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-14T14:06:38.000Z">2019-06-14</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level1/">Level1</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/14/algorithm/programmers/level1-10/">프로그래머스 - 문자열 내 마음대로 정렬하기</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>문자열로 구성된 리스트 strings와, 정수 n이 주어졌을 때, 각 문자열의 인덱스 n번째 글자를 기준으로 오름차순 정렬하려 합니다.<br>예를 들어 strings가 [sun, bed, car]이고 n이 1이면 각 단어의 인덱스 1의 문자 u, e, a로 strings를 정렬합니다.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/14/algorithm/programmers/level1-10/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day12_Inheritance/#more">Read More</a>
                 </div>
             </div>
         </div>
@@ -684,6 +719,10 @@
             <li><a class="pagination-link is-current" href="/categories/Algorithm/page/4/">4</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/categories/Algorithm/page/5/">5</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/Algorithm/page/6/">6</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/Algorithm/page/7/">7</a></li>
             
         </ul>
     </nav>
@@ -731,7 +770,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        49
+                        62
                     </p>
                 </div>
             </div>
@@ -803,7 +842,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">49</span>
+                <span class="level-item tag">62</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -819,7 +858,7 @@
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">20</span>
+                <span class="level-item tag">33</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -833,7 +872,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/HackerRank/" style="font-size: 15px;">HackerRank</a> <a href="/tags/Programmers/" style="font-size: 10px;">Programmers</a> <a href="/tags/프로그래머스/" style="font-size: 10px;">프로그래머스</a>
+        <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/HackerRank/" style="font-size: 10px;">HackerRank</a> <a href="/tags/Programmers/" style="font-size: 15px;">Programmers</a> <a href="/tags/프로그래머스/" style="font-size: 15px;">프로그래머스</a>
     </div>
 </div>
 
@@ -852,8 +891,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:50:39.000Z">2019-06-22</time></div>
-                    <a href="/2019/06/22/algorithm/programmers/level2-01/" class="has-link-black-ter is-size-6">프로그래머스 - 프린터</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-23T02:50:39.000Z">2019-06-23</time></div>
+                    <a href="/2019/06/23/algorithm/programmers/level2-01/" class="has-link-black-ter is-size-6">프로그래머스 - 프린터</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -865,8 +904,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T13:59:39.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/algorithm/programmers/level1-19/" class="has-link-black-ter is-size-6">프로그래머스 - 자연수 뒤집어 배열로 만들기</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T14:41:18.000Z">2019-06-22</time></div>
+                    <a href="/2019/06/22/algorithm/programmers/level1-32/" class="has-link-black-ter is-size-6">프로그래머스 - 예산</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -878,8 +917,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-20T16:09:22.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/algorithm/programmers/level1-18/" class="has-link-black-ter is-size-6">프로그래머스 - 자릿수 더하기</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:42:15.000Z">2019-06-22</time></div>
+                    <a href="/2019/06/22/algorithm/programmers/level1-31/" class="has-link-black-ter is-size-6">프로그래머스 - 직사각형 별찍기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -891,8 +930,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-19T15:50:49.000Z">2019-06-20</time></div>
-                    <a href="/2019/06/20/algorithm/programmers/level1-17/" class="has-link-black-ter is-size-6">프로그래머스 - 이상한 문자 만들기</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:31:27.000Z">2019-06-22</time></div>
+                    <a href="/2019/06/22/algorithm/programmers/level1-30/" class="has-link-black-ter is-size-6">프로그래머스 - x만큼 간격이 있는 n개의 숫자</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -904,8 +943,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
-                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:29:15.000Z">2019-06-22</time></div>
+                    <a href="/2019/06/22/algorithm/programmers/level1-29/" class="has-link-black-ter is-size-6">프로그래머스 - 행렬의 덧셈</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -931,7 +970,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">49</span>
+                    <span class="level-item tag">62</span>
                 </span>
             </a>
         </li>
@@ -952,7 +991,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">49</span>
+                        <span class="tag is-grey">62</span>
                     </a>
                 </div>
                 
@@ -966,14 +1005,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">20</span>
+                        <span class="tag is-grey">33</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">20</span>
+                        <span class="tag is-grey">33</span>
                     </a>
                 </div>
                 
@@ -1004,8 +1043,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:50:39.000Z">2019-06-22</time></div>
-                    <a href="/2019/06/22/algorithm/programmers/level2-01/" class="has-link-black-ter is-size-6">프로그래머스 - 프린터</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-23T02:50:39.000Z">2019-06-23</time></div>
+                    <a href="/2019/06/23/algorithm/programmers/level2-01/" class="has-link-black-ter is-size-6">프로그래머스 - 프린터</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -1017,8 +1056,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T13:59:39.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/algorithm/programmers/level1-19/" class="has-link-black-ter is-size-6">프로그래머스 - 자연수 뒤집어 배열로 만들기</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T14:41:18.000Z">2019-06-22</time></div>
+                    <a href="/2019/06/22/algorithm/programmers/level1-32/" class="has-link-black-ter is-size-6">프로그래머스 - 예산</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -1030,8 +1069,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-20T16:09:22.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/algorithm/programmers/level1-18/" class="has-link-black-ter is-size-6">프로그래머스 - 자릿수 더하기</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:42:15.000Z">2019-06-22</time></div>
+                    <a href="/2019/06/22/algorithm/programmers/level1-31/" class="has-link-black-ter is-size-6">프로그래머스 - 직사각형 별찍기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -1043,8 +1082,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-19T15:50:49.000Z">2019-06-20</time></div>
-                    <a href="/2019/06/20/algorithm/programmers/level1-17/" class="has-link-black-ter is-size-6">프로그래머스 - 이상한 문자 만들기</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:31:27.000Z">2019-06-22</time></div>
+                    <a href="/2019/06/22/algorithm/programmers/level1-30/" class="has-link-black-ter is-size-6">프로그래머스 - x만큼 간격이 있는 n개의 숫자</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -1056,8 +1095,8 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T15:52:49.000Z">2019-06-19</time></div>
-                    <a href="/2019/06/19/algorithm/programmers/level1-16/" class="has-link-black-ter is-size-6">프로그래머스 - 약수의 합</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:29:15.000Z">2019-06-22</time></div>
+                    <a href="/2019/06/22/algorithm/programmers/level1-29/" class="has-link-black-ter is-size-6">프로그래머스 - 행렬의 덧셈</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -1083,7 +1122,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">49</span>
+                    <span class="level-item tag">62</span>
                 </span>
             </a>
         </li>
@@ -1104,7 +1143,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">49</span>
+                        <span class="tag is-grey">62</span>
                     </a>
                 </div>
                 
@@ -1118,14 +1157,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">20</span>
+                        <span class="tag is-grey">33</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">20</span>
+                        <span class="tag is-grey">33</span>
                     </a>
                 </div>
                 
