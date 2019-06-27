@@ -156,6 +156,163 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T13:20:30.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day21_Generics/">Day21 Generics</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today we’re discussing Generics; be aware that not all languages support this construct, so fewer languages are enabled for this challenge. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a single generic function named printArray; this function must take an array of generic elements as a parameter (the exception to this is C++, which takes a vector). The locked Solution class in your editor tests your function.</p>
+<p><strong>Note:</strong> You must use generics to solve this challenge. Do not write overloaded functions.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day21_Generics/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T13:01:03.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day20_Sorting/">Day20 Sorting</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re discussing a simple sorting algorithm called Bubble Sort. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<h3 id="Consider-the-following-version-of-Bubble-Sort"><a href="#Consider-the-following-version-of-Bubble-Sort" class="headerlink" title="Consider the following version of Bubble Sort:"></a>Consider the following version of Bubble Sort:</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    // Track number of elements swapped during a single array traversal</span><br><span class="line">    int numberOfSwaps = 0;</span><br><span class="line">    </span><br><span class="line">    for (int j = 0; j &lt; n - 1; j++) &#123;</span><br><span class="line">        // Swap adjacent elements if they are in decreasing order</span><br><span class="line">        if (a[j] &gt; a[j + 1]) &#123;</span><br><span class="line">            swap(a[j], a[j + 1]);</span><br><span class="line">            numberOfSwaps++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // If no elements were swapped during a traversal, array is sorted</span><br><span class="line">    if (numberOfSwaps == 0) &#123;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given an array, <strong>a</strong>, of size <strong>n</strong> distinct elements, sort the array in ascending order using the Bubble Sort algorithm above. Once sorted, print the following <strong>3</strong> lines:</p>
+<ol>
+<li>Array is sorted in numSwaps swaps.<br>where <strong>numSwaps</strong> is the number of swaps that took place.</li>
+<li>First Element: firstElement<br>where <strong>firstElement</strong> is the first element in the sorted array.</li>
+<li>Last Element: lastElement<br>where <strong>lastElement</strong> is the last element in the sorted array.</li>
+</ol>
+<p><strong>Hint:</strong> To complete this challenge, you will need to add a variable that keeps a running tally of all swaps that occur during execution.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day20_Sorting/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-16T12:53:20.000Z">2019-06-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day19_Interfaces/">Day19 Interfaces</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning about Interfaces. Check out the Tutorial tab for learning materials and an instructional video!</p>
+<br>
+
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>The AdvancedArithmetic interface and the method declaration for the abstract divisorSum(n) method are provided for you in the editor below.</p>
+<p>Complete the implementation of Calculator class, which implements the AdvancedArithmetic interface. The implementation for the divisorSum(n) method must return the sum of all divisors of <strong>n</strong>.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day19_Interfaces/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-06-16T12:39:34.000Z">2019-06-16</time>
                 
                 <div class="level-item">
@@ -543,165 +700,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-16T09:24:41.000Z">2019-06-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day11_2DArrays/">Day11 2D Arrays</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re building on our knowledge of Arrays by adding another dimension. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<br>
-
-<h2 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h2><p>Given a <strong>6 X 6</strong> 2D Array, <strong>A</strong>:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 1 1 0 0 0</span><br><span class="line">0 1 0 0 0 0</span><br><span class="line">1 1 1 0 0 0</span><br><span class="line">0 0 0 0 0 0</span><br><span class="line">0 0 0 0 0 0</span><br><span class="line">0 0 0 0 0 0</span><br></pre></td></tr></table></figure>
-
-<p>We define an hourglass in <strong>A</strong> to be a subset of values with indices falling in this pattern in <strong>A</strong>‘s graphical representation:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a b c</span><br><span class="line">  d</span><br><span class="line">e f g</span><br></pre></td></tr></table></figure>
-
-<p>There are <strong>16</strong> hourglasses in <strong>A</strong>, and an hourglass sum is the sum of an hourglass’ values.</p>
-<br>
-
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Calculate the hourglass sum for every hourglass in <strong>A</strong>, then print the maximum hourglass sum.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day11_2DArrays/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T16:01:34.000Z">2019-06-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day10_BinaryNumbers/">Day10 Binary Numbers</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re working with binary numbers. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<br>
-
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Given a base-<strong>10</strong> integer, <strong>n</strong>, convert it to binary (base-<strong>2</strong>). Then find and print the base-<strong>10</strong> integer denoting the maximum number of consecutive <strong>1</strong>‘s in <strong>n</strong>‘s binary representation.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day10_BinaryNumbers/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-15T15:01:34.000Z">2019-06-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/30DaysOfCode/">30DaysOfCode</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/16/algorithm/hackerrank/Day9_Recursion3/">Day9 Recursion 3</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>Today, we’re learning and practicing an algorithmic concept called Recursion. Check out the Tutorial tab for learning materials and an instructional video!</p>
-<p><strong>Recursive Method for Calculating Factorial</strong></p>
-<p><img src="https://latex.codecogs.com/svg.latex?factorial(N)&space;=&space;%5Cbegin%7Bcases%7D&space;1&space;&&space;%5Ctext%7B&space;%7D&space;N%5Cleq&space;1&space;%5C&space;N&space;%5Ctimes&space;factorial(N&space;-&space;1)&space;&&space;%5Ctext%7B%7D&space;otherwise&space;%5Cend%7Bcases%7D" alt="Recursive Method for Calculating Factorial"></p>
-<br>
-
-<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>Write a factorial function that takes a positive integer, <strong>N</strong> as a parameter and prints the result of <strong>N!</strong> (<strong>N</strong> factorial).</p>
-<p><strong>Note:</strong> If you fail to use recursion or fail to name your recursive function factorial or Factorial, you will get a score of <strong>0</strong>.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/16/algorithm/hackerrank/Day9_Recursion3/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -719,6 +717,8 @@
             <li><a class="pagination-link is-current" href="/categories/Algorithm/HackerRank/page/2/">2</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/categories/Algorithm/HackerRank/page/3/">3</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/Algorithm/HackerRank/page/4/">4</a></li>
             
         </ul>
     </nav>
@@ -766,7 +766,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        64
+                        67
                     </p>
                 </div>
             </div>
@@ -776,7 +776,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </div>
             </div>
@@ -786,7 +786,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -838,7 +838,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">64</span>
+                <span class="level-item tag">67</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -846,7 +846,7 @@
                 <span class="level-item">HackerRank</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">29</span>
+                <span class="level-item tag">32</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
@@ -868,7 +868,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/HackerRank/" style="font-size: 10px;">HackerRank</a> <a href="/tags/Programmers/" style="font-size: 15px;">Programmers</a> <a href="/tags/프로그래머스/" style="font-size: 15px;">프로그래머스</a>
+        <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/HackerRank/" style="font-size: 13.33px;">HackerRank</a> <a href="/tags/ProblemSolving/" style="font-size: 10px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 16.67px;">Programmers</a> <a href="/tags/프로그래머스/" style="font-size: 16.67px;">프로그래머스</a>
     </div>
 </div>
 
@@ -882,6 +882,45 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T14:42:38.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/" class="has-link-black-ter is-size-6">Compare the Triplets</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T14:12:10.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/algorithm/hackerrank/01_SimpleArraySum/" class="has-link-black-ter is-size-6">Simple Array Sum</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T13:55:10.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/algorithm/hackerrank/00_SolveMeFirst/" class="has-link-black-ter is-size-6">Solve Me First</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -909,45 +948,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-23T02:50:39.000Z">2019-06-23</time></div>
-                    <a href="/2019/06/23/algorithm/programmers/level2-01/" class="has-link-black-ter is-size-6">프로그래머스 - 프린터</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T14:41:18.000Z">2019-06-22</time></div>
-                    <a href="/2019/06/22/algorithm/programmers/level1-32/" class="has-link-black-ter is-size-6">프로그래머스 - 예산</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:42:15.000Z">2019-06-22</time></div>
-                    <a href="/2019/06/22/algorithm/programmers/level1-31/" class="has-link-black-ter is-size-6">프로그래머스 - 직사각형 별찍기</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -966,7 +966,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">64</span>
+                    <span class="level-item tag">67</span>
                 </span>
             </a>
         </li>
@@ -987,14 +987,21 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">64</span>
+                        <span class="tag is-grey">67</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HackerRank/">
                         <span class="tag">HackerRank</span>
-                        <span class="tag is-grey">29</span>
+                        <span class="tag is-grey">32</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ProblemSolving/">
+                        <span class="tag">ProblemSolving</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1039,6 +1046,45 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T14:42:38.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/" class="has-link-black-ter is-size-6">Compare the Triplets</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T14:12:10.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/algorithm/hackerrank/01_SimpleArraySum/" class="has-link-black-ter is-size-6">Simple Array Sum</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T13:55:10.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/algorithm/hackerrank/00_SolveMeFirst/" class="has-link-black-ter is-size-6">Solve Me First</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-26T13:53:39.000Z">2019-06-26</time></div>
                     <a href="/2019/06/26/algorithm/programmers/level2-03/" class="has-link-black-ter is-size-6">프로그래머스 - 스킬트리</a>
                     <p class="is-size-7 is-uppercase">
@@ -1054,45 +1100,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-24T14:50:39.000Z">2019-06-24</time></div>
                     <a href="/2019/06/24/algorithm/programmers/level2-02/" class="has-link-black-ter is-size-6">프로그래머스 - 쇠막대기</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-23T02:50:39.000Z">2019-06-23</time></div>
-                    <a href="/2019/06/23/algorithm/programmers/level2-01/" class="has-link-black-ter is-size-6">프로그래머스 - 프린터</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T14:41:18.000Z">2019-06-22</time></div>
-                    <a href="/2019/06/22/algorithm/programmers/level1-32/" class="has-link-black-ter is-size-6">프로그래머스 - 예산</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-22T13:42:15.000Z">2019-06-22</time></div>
-                    <a href="/2019/06/22/algorithm/programmers/level1-31/" class="has-link-black-ter is-size-6">프로그래머스 - 직사각형 별찍기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
@@ -1118,7 +1125,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">64</span>
+                    <span class="level-item tag">67</span>
                 </span>
             </a>
         </li>
@@ -1139,14 +1146,21 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">64</span>
+                        <span class="tag is-grey">67</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/HackerRank/">
                         <span class="tag">HackerRank</span>
-                        <span class="tag is-grey">29</span>
+                        <span class="tag is-grey">32</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ProblemSolving/">
+                        <span class="tag">ProblemSolving</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
