@@ -8,8 +8,24 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>alley&#39;s blog for study</description>
-    <pubDate>Thu, 27 Jun 2019 16:13:05 GMT</pubDate>
+    <pubDate>Fri, 28 Jun 2019 14:18:13 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>프로그래머스 - 탑</title>
+      <link>https://alleyful.github.io/2019/06/28/algorithm/programmers/level2-04/</link>
+      <guid>https://alleyful.github.io/2019/06/28/algorithm/programmers/level2-04/</guid>
+      <pubDate>Fri, 28 Jun 2019 14:39:16 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;문제-설명&quot;&gt;&lt;a href=&quot;#문제-설명&quot; class=&quot;headerlink&quot; title=&quot;문제 설명&quot;&gt;&lt;/a&gt;문제 설명&lt;/h2&gt;&lt;p&gt;수평 직선에 탑 N대를 세웠습니다. 모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다. 발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다. 또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.&lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>수평 직선에 탑 N대를 세웠습니다. 모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다. 발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다. 또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.</p><a id="more"></a><p>예를 들어 높이가 6, 9, 5, 7, 4인 다섯 탑이 왼쪽으로 동시에 레이저 신호를 발사합니다.<br>그러면, 탑은 다음과 같이 신호를 주고받습니다.<br>높이가 4인 다섯 번째 탑에서 발사한 신호는 높이가 7인 네 번째 탑이 수신하고, 높이가 7인 네 번째 탑의 신호는 높이가 9인 두 번째 탑이, 높이가 5인 세 번째 탑의 신호도 높이가 9인 두 번째 탑이 수신합니다. 높이가 9인 두 번째 탑과 높이가 6인 첫 번째 탑이 보낸 레이저 신호는 어떤 탑에서도 수신할 수 없습니다.</p><table><thead><tr><th align="left">송신탑(높이)</th><th align="left">수신 탑(높이)</th></tr></thead><tbody><tr><td align="left">5(4)</td><td align="left">4(7)</td></tr><tr><td align="left">4(7)</td><td align="left">2(9)</td></tr><tr><td align="left">3(5)</td><td align="left">2(9)</td></tr><tr><td align="left">2(9)</td><td align="left">-</td></tr><tr><td align="left">1(6)</td><td align="left">-</td></tr></tbody></table><p>맨 왼쪽부터 순서대로 탑의 높이를 담은 배열 heights가 매개변수로 주어질 때 각 탑이 쏜 신호를 어느 탑에서 받았는지 기록한 배열을 return 하도록 solution 함수를 작성해주세요.</p><br><h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>heights는 길이 2 이상 100 이하인 정수 배열입니다.<br>모든 탑의 높이는 1 이상 100 이하입니다.<br>신호를 수신하는 탑이 없으면 0으로 표시합니다.</p><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="left">heights</th><th align="left">return</th></tr></thead><tbody><tr><td align="left">[6,9,5,7,4]</td><td align="left">[0,0,2,2,4]</td></tr><tr><td align="left">[3,9,9,3,5,7,2]</td><td align="left">[0,0,0,3,3,3,6]</td></tr><tr><td align="left">[1,5,3,6,7,6,5]</td><td align="left">[0,0,2,0,0,5,6]</td></tr></tbody></table><h3 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h3><ul><li><p>입출력 예 #1</p><ul><li>앞서 설명한 예와 같습니다.</li></ul></li><li><p>입출력 예 #2</p><ul><li>[1,2,3] 번째 탑이 쏜 신호는 아무도 수신하지 않습니다.</li><li>[4,5,6] 번째 탑이 쏜 신호는 3번째 탑이 수신합니다.</li><li>[7] 번째 탑이 쏜 신호는 6번째 탑이 수신합니다.</li></ul></li><li><p>입출력 예 #3</p><ul><li>[1,2,4,5] 번째 탑이 쏜 신호는 아무도 수신하지 않습니다.</li><li>[3] 번째 탑이 쏜 신호는 2번째 탑이 수신합니다.</li><li>[6] 번째 탑이 쏜 신호는 5번째 탑이 수신합니다.</li><li>[7] 번째 탑이 쏜 신호는 6번째 탑이 수신합니다.</li></ul></li></ul><br><hr><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">heights</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> stack = [...heights];</span><br><span class="line">    <span class="hljs-keyword">return</span> heights.reduceRight(<span class="hljs-function">(<span class="hljs-params">target, height</span>) =&gt;</span> &#123;</span><br><span class="line">        stack.pop();</span><br><span class="line">        target.push(stack.reduceRight(<span class="hljs-function">(<span class="hljs-params">target, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">            item &gt; height &amp;&amp; target.push(index + <span class="hljs-number">1</span>); </span><br><span class="line">            <span class="hljs-keyword">return</span> target;</span><br><span class="line">        &#125;, [])[<span class="hljs-number">0</span>] || <span class="hljs-number">0</span>);</span><br><span class="line">        <span class="hljs-keyword">return</span> target;</span><br><span class="line">    &#125;, []).reverse();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://alleyful.github.io/2019/06/28/algorithm/programmers/level2-04/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Compare the Triplets</title>
@@ -340,22 +356,6 @@
       <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>함수 solution은 정수 n을 매개변수로 입력받습니다.<br>n의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수를 리턴해주세요.<br>예를들어 n이 118372면 873211을 리턴하면 됩니다.</p><a id="more"></a><br><h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><p>n은 1이상 8000000000 이하인 자연수입니다.</p><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="left">n</th><th align="left">return</th></tr></thead><tbody><tr><td align="left">118372</td><td align="left">873211</td></tr></tbody></table><br><hr><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>([...String(n)].sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b - a).join(<span class="hljs-string">''</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
       
       <comments>https://alleyful.github.io/2019/06/22/algorithm/programmers/level1-20/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>프로그래머스 - 자연수 뒤집어 배열로 만들기</title>
-      <link>https://alleyful.github.io/2019/06/21/algorithm/programmers/level1-19/</link>
-      <guid>https://alleyful.github.io/2019/06/21/algorithm/programmers/level1-19/</guid>
-      <pubDate>Fri, 21 Jun 2019 13:59:39 GMT</pubDate>
-      <description>
-      
-        &lt;h2 id=&quot;문제-설명&quot;&gt;&lt;a href=&quot;#문제-설명&quot; class=&quot;headerlink&quot; title=&quot;문제 설명&quot;&gt;&lt;/a&gt;문제 설명&lt;/h2&gt;&lt;p&gt;자연수 n을 뒤집어 각 자리 숫자를 원소로 가지는 배열 형태로 리턴해주세요.&lt;br&gt;예를들어 n이 12345이면 [5,4,3,2,1]을 리턴합니다.&lt;/p&gt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>자연수 n을 뒤집어 각 자리 숫자를 원소로 가지는 배열 형태로 리턴해주세요.<br>예를들어 n이 12345이면 [5,4,3,2,1]을 리턴합니다.</p><a id="more"></a><br><h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><p>n은 10,000,000,000이하인 자연수입니다.</p><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="center">n</th><th align="center">return</th></tr></thead><tbody><tr><td align="center">12345</td><td align="center">[5,4,3,2,1]</td></tr></tbody></table><br><hr><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> [...n.toString()].reverse().map(<span class="hljs-function"><span class="hljs-params">v</span> =&gt;</span> <span class="hljs-built_in">Number</span>(v))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      <comments>https://alleyful.github.io/2019/06/21/algorithm/programmers/level1-19/#disqus_thread</comments>
     </item>
     
   </channel>
