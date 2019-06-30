@@ -8,8 +8,25 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>alley&#39;s blog for study</description>
-    <pubDate>Fri, 28 Jun 2019 14:18:13 GMT</pubDate>
+    <pubDate>Sun, 30 Jun 2019 05:16:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>A Very Big Sum</title>
+      <link>https://alleyful.github.io/2019/06/30/algorithm/hackerrank/03_AVeryBigSum/</link>
+      <guid>https://alleyful.github.io/2019/06/30/algorithm/hackerrank/03_AVeryBigSum/</guid>
+      <pubDate>Sun, 30 Jun 2019 01:24:18 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Calculate and print the sum of the elements in an array, keeping in mind that some of those integers may be quite large.&lt;/p&gt;
+&lt;br&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>Calculate and print the sum of the elements in an array, keeping in mind that some of those integers may be quite large.</p><br><a id="more"></a><h2 id="Function-Description"><a href="#Function-Description" class="headerlink" title="Function Description"></a>Function Description</h2><p>Complete the aVeryBigSum function in the editor below. It must return the sum of all array elements.</p><p>aVeryBigSum has the following parameter(s):</p><ul><li>ar: an array of integers.</li></ul><br><h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line of the input consists of an integer <strong>n</strong>. The next line contains <strong>n</strong> space-separated integers contained in the array.</p><br><h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print the integer sum of the elements in the array.</p><br><h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul><li><img src="https://latex.codecogs.com/gif.latex?1&space;%5Cleq&space;n%5Cleq&space;10" alt></li><li><img src="https://latex.codecogs.com/gif.latex?1&space;%5Cleq&space;ar%5Cleq&space;10%5E%7B10%7D" alt></li></ul><br><h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1000000001 1000000002 1000000003 1000000004 1000000005</span><br></pre></td></tr></table></figure><br><h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5000000015</span><br></pre></td></tr></table></figure><br><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>The range of the 32-bit integer is <img src="https://latex.codecogs.com/gif.latex?(-2%5E%7B31%7D)&space;to&space;(2%5E%7B31%7D&space;-&space;1)&space;or&space;%5B-2147483648,&space;2147483647%5D" alt>.When we add several integer values, the resulting sum might exceed the above range. You might need to use long long int in C/C++ or long data type in Java to store such sums.</p><br><hr><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">aVeryBigSum</span>(<span class="hljs-params">ar</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> ar.reduce(<span class="hljs-function">(<span class="hljs-params">target, number</span>) =&gt;</span> &#123; </span><br><span class="line">        <span class="hljs-keyword">return</span> target + number;</span><br><span class="line">    &#125;, <span class="hljs-number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://alleyful.github.io/2019/06/30/algorithm/hackerrank/03_AVeryBigSum/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>프로그래머스 - 탑</title>
@@ -340,22 +357,6 @@
       <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>임의의 정수 n에 대해, n이 어떤 정수 x의 제곱인지 아닌지 판단하려 합니다.<br>n이 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 정수 x의 제곱이 아니라면 -1을 리턴하는 함수를 완성하세요.</p><a id="more"></a><br><h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>n은 1이상, 50000000000000 이하인 정수입니다.</p><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="left">n</th><th align="center">return</th></tr></thead><tbody><tr><td align="left">121</td><td align="center">144</td></tr><tr><td align="left">3</td><td align="center">-1</td></tr></tbody></table><br><h3 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h3><ul><li><p>입출력 예#1</p><ul><li>121은 정수 11의 제곱이므로, (11+1)를 제곱한 144를 리턴합니다.</li></ul></li><li><p>입출력 예#2</p><ul><li>3은 정수의 제곱이 아니므로, -1을 리턴합니다.</li></ul></li></ul><br><hr><h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>.isInteger(<span class="hljs-built_in">Math</span>.sqrt(n)) ? <span class="hljs-built_in">Math</span>.pow((<span class="hljs-built_in">Math</span>.sqrt(n) + <span class="hljs-number">1</span>), <span class="hljs-number">2</span>) : <span class="hljs-number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>.isInteger(<span class="hljs-built_in">Math</span>.sqrt(n)) ? (<span class="hljs-built_in">Math</span>.sqrt(n) + <span class="hljs-number">1</span>) ** <span class="hljs-number">2</span> : <span class="hljs-number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
       
       <comments>https://alleyful.github.io/2019/06/22/algorithm/programmers/level1-21/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>프로그래머스 - 정수 내림차순으로 배치하기</title>
-      <link>https://alleyful.github.io/2019/06/22/algorithm/programmers/level1-20/</link>
-      <guid>https://alleyful.github.io/2019/06/22/algorithm/programmers/level1-20/</guid>
-      <pubDate>Sat, 22 Jun 2019 11:59:39 GMT</pubDate>
-      <description>
-      
-        &lt;h2 id=&quot;문제-설명&quot;&gt;&lt;a href=&quot;#문제-설명&quot; class=&quot;headerlink&quot; title=&quot;문제 설명&quot;&gt;&lt;/a&gt;문제 설명&lt;/h2&gt;&lt;p&gt;함수 solution은 정수 n을 매개변수로 입력받습니다.&lt;br&gt;n의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수를 리턴해주세요.&lt;br&gt;예를들어 n이 118372면 873211을 리턴하면 됩니다.&lt;/p&gt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>함수 solution은 정수 n을 매개변수로 입력받습니다.<br>n의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수를 리턴해주세요.<br>예를들어 n이 118372면 873211을 리턴하면 됩니다.</p><a id="more"></a><br><h2 id="제한-조건"><a href="#제한-조건" class="headerlink" title="제한 조건"></a>제한 조건</h2><p>n은 1이상 8000000000 이하인 자연수입니다.</p><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="left">n</th><th align="left">return</th></tr></thead><tbody><tr><td align="left">118372</td><td align="left">873211</td></tr></tbody></table><br><hr><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Number</span>([...String(n)].sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> b - a).join(<span class="hljs-string">''</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      <comments>https://alleyful.github.io/2019/06/22/algorithm/programmers/level1-20/#disqus_thread</comments>
     </item>
     
   </channel>
