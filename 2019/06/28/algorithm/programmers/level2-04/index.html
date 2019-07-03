@@ -8,19 +8,19 @@
 <link rel="canonical" href="https://alleyful.github.io/2019/06/28/algorithm/programmers/level2-04/">
 
 
-    <meta name="description" content="문제 설명수평 직선에 탑 N대를 세웠습니다. 모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다. 발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다. 또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.">
+    <meta name="description" content="문제 설명수평 직선에 탑 N대를 세웠습니다.모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다.발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다.또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.">
 <meta name="keywords" content="Algorithm,Programmers,프로그래머스">
 <meta property="og:type" content="article">
 <meta property="og:title" content="프로그래머스 - 탑">
 <meta property="og:url" content="https://alleyful.github.io/2019/06/28/algorithm/programmers/level2-04/index.html">
 <meta property="og:site_name" content="ALLEY">
-<meta property="og:description" content="문제 설명수평 직선에 탑 N대를 세웠습니다. 모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다. 발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다. 또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.">
+<meta property="og:description" content="문제 설명수평 직선에 탑 N대를 세웠습니다.모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다.발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다.또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-28T14:18:13.539Z">
+<meta property="og:updated_time" content="2019-07-03T04:06:00.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="프로그래머스 - 탑">
-<meta name="twitter:description" content="문제 설명수평 직선에 탑 N대를 세웠습니다. 모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다. 발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다. 또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.">
+<meta name="twitter:description" content="문제 설명수평 직선에 탑 N대를 세웠습니다.모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다.발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다.또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.">
 <meta name="twitter:image" content="https://alleyful.github.io/images/og_image.png">
 
 
@@ -161,8 +161,9 @@
             
         </h1>
         <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>수평 직선에 탑 N대를 세웠습니다. 모든 탑의 꼭대기에는 신호를 송/수신하는 장치를 설치했습니다. 발사한 신호는 신호를 보낸 탑보다 높은 탑에서만 수신합니다. 또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.</p>
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>수평 직선에 탑 N대를 세웠습니다.<br>모든 <code>탑의 꼭대기에는 신호를 송/수신하는 장치</code>를 설치했습니다.<br>발사한 신호는 <code>신호를 보낸 탑보다 높은 탑에서만 수신</code>합니다.<br>또한, 한 번 수신된 신호는 다른 탑으로 송신되지 않습니다.</p>
 <a id="more"></a>
+
 <p>예를 들어 높이가 6, 9, 5, 7, 4인 다섯 탑이 왼쪽으로 동시에 레이저 신호를 발사합니다.<br>그러면, 탑은 다음과 같이 신호를 주고받습니다.<br>높이가 4인 다섯 번째 탑에서 발사한 신호는 높이가 7인 네 번째 탑이 수신하고, 높이가 7인 네 번째 탑의 신호는 높이가 9인 두 번째 탑이, 높이가 5인 세 번째 탑의 신호도 높이가 9인 두 번째 탑이 수신합니다. 높이가 9인 두 번째 탑과 높이가 6인 첫 번째 탑이 보낸 레이저 신호는 어떤 탑에서도 수신할 수 없습니다.</p>
 <table>
 <thead>
