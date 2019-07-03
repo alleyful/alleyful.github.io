@@ -143,6 +143,95 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-02T14:29:19.000Z">2019-07-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level2/">Level2</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/07/02/algorithm/programmers/level2-05/">프로그래머스 - 124 나라의 숫자</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>124 나라가 있습니다.<br>124 나라에서는 10진법이 아닌 다음과 같은 자신들만의 규칙으로 수를 표현합니다.</p>
+<p>124 나라에는 자연수만 존재합니다.<br>124 나라에는 모든 수를 표현할 때 1, 2, 4만 사용합니다.<br>예를 들어서 124 나라에서 사용하는 숫자는 다음과 같이 변환됩니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">10진법</th>
+<th align="center">124 나라</th>
+<th align="center">10진법</th>
+<th align="center">124 나라</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">6</td>
+<td align="center">14</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">7</td>
+<td align="center">21</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">8</td>
+<td align="center">22</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">11</td>
+<td align="center">9</td>
+<td align="center">24</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">12</td>
+<td align="center">10</td>
+<td align="center">41</td>
+</tr>
+</tbody></table>
+<p>자연수 n이 매개변수로 주어질 때, n을 124 나라에서 사용하는 숫자로 바꾼 값을 return 하도록 solution 함수를 완성해 주세요.</p>
+<br>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/07/02/algorithm/programmers/level2-05/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-07-01T04:11:40.000Z">2019-07-01</time>
                 
                 <div class="level-item">
@@ -580,59 +669,6 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-23T02:50:39.000Z">2019-06-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level2/">Level2</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/23/algorithm/programmers/level2-01/">프로그래머스 - 프린터</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>일반적인 프린터는 인쇄 요청이 들어온 순서대로 인쇄합니다.<br>그렇기 때문에 중요한 문서가 나중에 인쇄될 수 있습니다.<br>이런 문제를 보완하기 위해 중요도가 높은 문서를 먼저 인쇄하는 프린터를 개발했습니다.<br>이 새롭게 개발한 프린터는 아래와 같은 방식으로 인쇄 작업을 수행합니다.</p>
-<ol>
-<li>인쇄 대기목록의 가장 앞에 있는 문서(J)를 대기목록에서 꺼냅니다.</li>
-<li>나머지 인쇄 대기목록에서 J보다 중요도가 높은 문서가 한 개라도 존재하면 J를 대기목록의 가장 마지막에 넣습니다.</li>
-<li>그렇지 않으면 J를 인쇄합니다.<br>예를 들어, 4개의 문서(A, B, C, D)가 순서대로 인쇄 대기목록에 있고 중요도가 2 1 3 2 라면 C D A B 순으로 인쇄하게 됩니다.</li>
-</ol>
-<p>내가 인쇄를 요청한 문서가 몇 번째로 인쇄되는지 알고 싶습니다. 위의 예에서 C는 1번째로, A는 3번째로 인쇄됩니다.</p>
-<p>현재 대기목록에 있는 문서의 중요도가 순서대로 담긴 배열 priorities와 내가 인쇄를 요청한 문서가 현재 대기목록의 어떤 위치에 있는지를 알려주는 location이 매개변수로 주어질 때, 내가 인쇄를 요청한 문서가 몇 번째로 인쇄되는지 return 하도록 solution 함수를 작성해주세요.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/23/algorithm/programmers/level2-01/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -699,7 +735,7 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        71
+                        72
                     </p>
                 </div>
             </div>
@@ -771,7 +807,7 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">71</span>
+                <span class="level-item tag">72</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -787,7 +823,7 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                 <span class="level-item">Programmers</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">36</span>
+                <span class="level-item tag">37</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -820,6 +856,19 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-02T14:29:19.000Z">2019-07-02</time></div>
+                    <a href="/2019/07/02/algorithm/programmers/level2-05/" class="has-link-black-ter is-size-6">프로그래머스 - 124 나라의 숫자</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-01T04:11:40.000Z">2019-07-01</time></div>
                     <a href="/2019/07/01/algorithm/hackerrank/05_PlusMinus/" class="has-link-black-ter is-size-6">Plus Minus</a>
                     <p class="is-size-7 is-uppercase">
@@ -868,19 +917,6 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T14:42:38.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/" class="has-link-black-ter is-size-6">Compare the Triplets</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -899,7 +935,7 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                     <span class="level-item">July 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -931,7 +967,7 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">71</span>
+                        <span class="tag is-grey">72</span>
                     </a>
                 </div>
                 
@@ -952,14 +988,14 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">36</span>
+                        <span class="tag is-grey">37</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">36</span>
+                        <span class="tag is-grey">37</span>
                     </a>
                 </div>
                 
@@ -990,6 +1026,19 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-02T14:29:19.000Z">2019-07-02</time></div>
+                    <a href="/2019/07/02/algorithm/programmers/level2-05/" class="has-link-black-ter is-size-6">프로그래머스 - 124 나라의 숫자</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-01T04:11:40.000Z">2019-07-01</time></div>
                     <a href="/2019/07/01/algorithm/hackerrank/05_PlusMinus/" class="has-link-black-ter is-size-6">Plus Minus</a>
                     <p class="is-size-7 is-uppercase">
@@ -1038,19 +1087,6 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
             </div>
         </article>
         
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T14:42:38.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/" class="has-link-black-ter is-size-6">Compare the Triplets</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1069,7 +1105,7 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                     <span class="level-item">July 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1101,7 +1137,7 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Algorithm/">
                         <span class="tag">Algorithm</span>
-                        <span class="tag is-grey">71</span>
+                        <span class="tag is-grey">72</span>
                     </a>
                 </div>
                 
@@ -1122,14 +1158,14 @@ Their absolute difference is <strong>|15 - 17| = 2</strong>.</p>
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Programmers/">
                         <span class="tag">Programmers</span>
-                        <span class="tag is-grey">36</span>
+                        <span class="tag is-grey">37</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/프로그래머스/">
                         <span class="tag">프로그래머스</span>
-                        <span class="tag is-grey">36</span>
+                        <span class="tag is-grey">37</span>
                     </a>
                 </div>
                 
