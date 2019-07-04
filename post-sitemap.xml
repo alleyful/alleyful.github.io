@@ -9,55 +9,7 @@
 
     <url>
         <loc>https://alleyful.github.io/2019/07/03/algorithm/hackerrank/06_Staircase/</loc>
-        <lastmod>2019-07-03T15:12:46.465Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/07/02/algorithm/programmers/level2-05/</loc>
-        <lastmod>2019-07-03T04:22:28.155Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/06/28/algorithm/programmers/level2-04/</loc>
-        <lastmod>2019-07-03T04:11:10.713Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/06/24/algorithm/programmers/level2-02/</loc>
-        <lastmod>2019-07-03T04:10:48.190Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/06/23/algorithm/programmers/level2-01/</loc>
-        <lastmod>2019-07-03T04:09:42.841Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/07/01/algorithm/hackerrank/05_PlusMinus/</loc>
-        <lastmod>2019-07-01T04:26:11.839Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/06/30/algorithm/hackerrank/04_DiagonalDifference/</loc>
-        <lastmod>2019-06-30T15:15:08.698Z</lastmod>
+        <lastmod>2019-07-04T15:56:01.696Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -65,23 +17,7 @@
 
     <url>
         <loc>https://alleyful.github.io/2019/06/30/algorithm/hackerrank/03_AVeryBigSum/</loc>
-        <lastmod>2019-06-30T05:16:23.335Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/</loc>
-        <lastmod>2019-06-27T16:13:05.606Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/06/27/algorithm/hackerrank/01_SimpleArraySum/</loc>
-        <lastmod>2019-06-27T16:10:01.954Z</lastmod>
+        <lastmod>2019-07-04T15:56:01.694Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -89,7 +25,55 @@
 
     <url>
         <loc>https://alleyful.github.io/2019/06/27/algorithm/hackerrank/00_SolveMeFirst/</loc>
-        <lastmod>2019-06-27T16:08:12.299Z</lastmod>
+        <lastmod>2019-07-04T15:56:01.692Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/06/30/algorithm/hackerrank/04_DiagonalDifference/</loc>
+        <lastmod>2019-07-04T15:56:01.690Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/07/01/algorithm/hackerrank/05_PlusMinus/</loc>
+        <lastmod>2019-07-04T15:56:01.687Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/06/27/algorithm/hackerrank/01_SimpleArraySum/</loc>
+        <lastmod>2019-07-04T15:56:01.685Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/</loc>
+        <lastmod>2019-07-04T15:56:01.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/07/04/algorithm/hackerrank/07_Mini-MaxSum/</loc>
+        <lastmod>2019-07-04T15:49:22.798Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/06/28/algorithm/programmers/level2-04/</loc>
+        <lastmod>2019-07-04T15:02:20.147Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -97,7 +81,31 @@
 
     <url>
         <loc>https://alleyful.github.io/2019/06/26/algorithm/programmers/level2-03/</loc>
-        <lastmod>2019-06-26T15:14:59.277Z</lastmod>
+        <lastmod>2019-07-04T15:02:20.144Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/06/23/algorithm/programmers/level2-01/</loc>
+        <lastmod>2019-07-04T15:02:20.142Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/06/24/algorithm/programmers/level2-02/</loc>
+        <lastmod>2019-07-04T15:02:20.138Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/07/02/algorithm/programmers/level2-05/</loc>
+        <lastmod>2019-07-04T15:01:04.247Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
