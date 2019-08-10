@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>HEXO - 검색 엔진 최적화(SEO) - ALLEY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="canonical" href="https://alleyful.github.io/2019/08/10/tools/hexo/hexo-guide-03/">
+
+
+    <meta name="description" content="검색 엔진 최적화(SEO)블로그 생성 후 내가 작성한 포스트가 검색에 노출되기 위해서는 검색엔진에 노출 될 수 있도록 검색 엔진 최적화 작업을 진행해 주어야 합니다. 검색 엔진 최적화(search engine optimization, SEO)는 웹 페이지 검색엔진이 자료를 수집하고 순위를 매기는 방식에 맞게 웹 페이지를 구성해서 검색 결과의 상위에 나올 수">
+<meta name="keywords" content="Hexo,github.io,blog,seo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HEXO - 검색 엔진 최적화(SEO)">
+<meta property="og:url" content="https://alleyful.github.io/2019/08/10/tools/hexo/hexo-guide-03/index.html">
+<meta property="og:site_name" content="ALLEY">
+<meta property="og:description" content="검색 엔진 최적화(SEO)블로그 생성 후 내가 작성한 포스트가 검색에 노출되기 위해서는 검색엔진에 노출 될 수 있도록 검색 엔진 최적화 작업을 진행해 주어야 합니다. 검색 엔진 최적화(search engine optimization, SEO)는 웹 페이지 검색엔진이 자료를 수집하고 순위를 매기는 방식에 맞게 웹 페이지를 구성해서 검색 결과의 상위에 나올 수">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/hexo.jpg">
+<meta property="og:updated_time" content="2019-08-10T01:47:54.457Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HEXO - 검색 엔진 최적화(SEO)">
+<meta name="twitter:description" content="검색 엔진 최적화(SEO)블로그 생성 후 내가 작성한 포스트가 검색에 노출되기 위해서는 검색엔진에 노출 될 수 있도록 검색 엔진 최적화 작업을 진행해 주어야 합니다. 검색 엔진 최적화(search engine optimization, SEO)는 웹 페이지 검색엔진이 자료를 수집하고 순위를 매기는 방식에 맞게 웹 페이지를 구성해서 검색 결과의 상위에 나올 수">
+<meta name="twitter:image" content="https://alleyful.github.io/images/gallery/thumbnails/hexo.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141822876-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141822876-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/hexo.jpg" alt="HEXO - 검색 엔진 최적화(SEO)">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T01:20:22.000Z">2019-08-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Tools/">Tools</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Tools/Hexo/">Hexo</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                HEXO - 검색 엔진 최적화(SEO)
+            
+        </h1>
+        <div class="content">
+            <h2 id="검색-엔진-최적화-SEO"><a href="#검색-엔진-최적화-SEO" class="headerlink" title="검색 엔진 최적화(SEO)"></a>검색 엔진 최적화(SEO)</h2><p>블로그 생성 후 내가 작성한 포스트가 검색에 노출되기 위해서는 검색엔진에 노출 될 수 있도록 검색 엔진 최적화 작업을 진행해 주어야 합니다.</p>
+<blockquote><p><code>검색 엔진 최적화(search engine optimization, SEO)</code>는 웹 페이지 검색엔진이 자료를 수집하고 순위를 매기는 방식에 맞게 웹 페이지를 구성해서 검색 결과의 상위에 나올 수 있도록 하는 작업을 말한다. 웹 페이지와 관련된 검색어로 검색한 검색 결과 상위에 나오게 된다면 방문 트래픽이 늘어나기 때문에 효과적인 인터넷 마케팅 방법 중의 하나라고 할 수 있다. 기본적인 작업 방식은 특정한 검색어를 웹 페이지에 적절하게 배치하고 다른 웹 페이지에서 링크가 많이 연결되도록 하는 것이다. 구글 등장 이후 검색 엔진들이 콘텐츠의 신뢰도를 파악하는 기초적인 지표로 다른 웹사이트에 얼마나 인용되었나를 사용하기 때문에 타 사이트에 인용되는 횟수를 늘리는 방향으로 최적화 한다.</p>
+<footer><strong>위키백과</strong><cite>검색 엔진 최적화</cite></footer></blockquote>
+
+<br>
+<br>
+<a id="more"></a>
+
+<h2 id="검색엔진-최적화-SEO-에-유용한-플러그인-설치하기"><a href="#검색엔진-최적화-SEO-에-유용한-플러그인-설치하기" class="headerlink" title="검색엔진 최적화(SEO)에 유용한 플러그인 설치하기"></a>검색엔진 최적화(SEO)에 유용한 플러그인 설치하기</h2><p>HEXO에서는 SEO와 관련된 다양한 플로그인들이 있으며 그 중 몇 가지를 이용할 수 있도록 정리해 보겠습니다.</p>
+<ul>
+<li>hexo-auto-canonical</li>
+<li>hexo-generator-robotstxt</li>
+<li>hexo-autonofollow</li>
+<li>hexo-generator-feed</li>
+<li>hexo-generator-seo-friendly-sitemap</li>
+</ul>
+<br>
+<br>
+
+<h3 id="hexo-auto-canonical"><a href="#hexo-auto-canonical" class="headerlink" title="hexo-auto-canonical"></a>hexo-auto-canonical</h3><ul>
+<li>대표 URL(표준 링크)을 자동으로 생성해주는 플러그인입니다. </li>
+<li>설치     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal-1" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal-1')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`npm install --save hexo-auto-canonical`, {onCompleteDelay: 500})
+          .respond(`	`)
+          .end();
+    </script> 
+
+</li>
+</ul>
+<br>
+
+<ul>
+<li><p>사용</p>
+<ul>
+<li><p>설치한 테마 내 HEAD 태그 내 삽입해서 사용합니다.</p>
+</li>
+<li><p>icarus의 경우에는 themes &gt; icarus &gt; layout &gt; common &gt; head 파일 내 <code>&lt;%- meta(page) %&gt;</code> 아래에 다음 코드를 넣어줍니다.  </p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//.ejs</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">%-</span> <span class="hljs-attr">autoCanonical</span>(<span class="hljs-attr">config</span>, <span class="hljs-attr">page</span>) %&gt;</span></span><br><span class="line"></span><br><span class="line">//.jade</span><br><span class="line">| !&#123; autoCanonical(config, page) &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain hljs"><figcaption><span>head.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- meta(page) %&gt;</span><br><span class="line">&lt;%- autoCanonical(config, page) %&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+
+<h3 id="hexo-generator-robotstxt"><a href="#hexo-generator-robotstxt" class="headerlink" title="hexo-generator-robotstxt"></a>hexo-generator-robotstxt</h3><ul>
+<li><p>자동으로 robot.txt 파일을 생성해주는 플러그인 입니다.</p>
+<blockquote><p>로봇 배제 표준은 웹 사이트에 로봇이 접근하는 것을 방지하기 위한 규약으로, 일반적으로 접근 제한에 대한 설명을 robots.txt에 기술한다. 이 규약은 권고안이며, 로봇이 robots.txt 파일을 읽고 접근을 중지하는 것을 목적으로 한다. 따라서, 접근 방지 설정을 하였다고 해도, 다른 사람들이 그 파일에 접근할 수 있다. robots.txt 파일은 항상 사이트의 루트 디렉토리에 위치해야 한다.</p>
+<footer><strong>위키백과</strong><cite>로봇 배제 표준</cite></footer></blockquote>
+</li>
+<li><p>설치</p>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal-4" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal-4')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`npm install hexo-generator-robotstxt --save`, {onCompleteDelay: 500})
+          .respond(`  `)
+          .end();
+    </script> 
+
+<br>
+</li>
+<li><p>사용</p>
+  <figure class="highlight plain hljs"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">robotstxt:</span><br><span class="line">  useragent: &quot;*&quot;</span><br><span class="line">  allow:</span><br><span class="line">    - /</span><br><span class="line">  sitemap: https://username.github.io/sitemap.xml</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+<br>
+
+<h3 id="hexo-autonofollow"><a href="#hexo-autonofollow" class="headerlink" title="hexo-autonofollow"></a>hexo-autonofollow</h3><ul>
+<li><p>외부 링크에 <code>rel=&quot;external nofollow</code> 속성을 자동으로 추가해주는 기능을 하는 플러그인입니다.</p>
+</li>
+<li><p>설치</p>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal-2" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal-2')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`npm install hexo-autonofollow --save`, {onCompleteDelay: 500})
+          .respond(`  `)
+          .end();
+    </script> 
+
+<br>
+</li>
+<li><p>사용</p>
+  <figure class="highlight plain hljs"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nofollow:</span><br><span class="line">    enable: true</span><br><span class="line">    exclude:</span><br><span class="line">    - exclude1.com</span><br><span class="line">    - exclude2.com</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">옵션</th>
+<th align="center">내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">enable</td>
+<td align="center">플러그인 활성화 여부 (true, false)</td>
+</tr>
+<tr>
+<td align="center">exclude</td>
+<td align="center">제외시킬 host</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<br>
+<br>
+
+<h3 id="hexo-generator-feed"><a href="#hexo-generator-feed" class="headerlink" title="hexo-generator-feed"></a>hexo-generator-feed</h3><ul>
+<li><p>자동으로 RSS feed를 생성해주는 플러그인 입니다.  </p>
+<blockquote><p>어떤 사이트가 있을 때, 그 사이트를 매일 방문해서 재미있는 새로운 기사가 있는지 확인하는 것은 번거롭습니다. 특히 새 기사가 매일 또는 정기적으로 올라오는 것이 아니라 불규칙할 때는 더욱 그렇습니다.<br>그 사이트를 직접 방문하지 않고, 새 기사들만 자신의 컴퓨터로 “배달”이 된다면 편리할 것입니다.<br>RSS(Really Simple Syndication 의 약자) 같은 “사이트 피드”란, 새 기사들의 제목만, 또는 새 기사들 전체를 뽑아서 하나의 파일로 만들어 놓은 것입니다.<br>이제 각 사이트들에서 제공하는 RSS파일 주소만 수집하여 확인하면, 자신의 취향에 맞는 새로운 읽을거리를 쉽게 찾아서 읽을 수 있습니다.<br>그러나 모든 사이트에서 RSS피드를 제공하는 것은 아닙니다. 1년 내내 새로운 내용이 없는 정적인 사이트에서는 제공하지 않는 것이 보통입니다. 새로운 읽을거리가 자주 올라오는 “뉴스형”, “블로그형” 사이트에서 주로 제공됩니다.</p>
+<footer><strong>RSS Feed</strong></footer></blockquote>
+</li>
+<li><p>설치</p>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal-3" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal-3')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`npm install hexo-generator-feed --save`, {onCompleteDelay: 500})
+          .respond(`  `)
+          .end();
+    </script> 
+
+<br>
+</li>
+<li><p>사용</p>
+  <figure class="highlight plain hljs"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: rss2</span><br><span class="line">  path: rss2.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">옵션</th>
+<th align="center">내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">type</td>
+<td align="center">feed의 종류 (atom/rss2) - * 네이버는 atom을 지원하지 않음</td>
+</tr>
+<tr>
+<td align="center">path</td>
+<td align="center">feed가 생성될 경로(default : atom.xml, rss2.xml)</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">최신 포스트 수 설정 (0 또는 false - 전체 포스트)</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<br>
+<br>
+
+<h3 id="hexo-generator-seo-friendly-sitemap"><a href="#hexo-generator-seo-friendly-sitemap" class="headerlink" title="hexo-generator-seo-friendly-sitemap"></a>hexo-generator-seo-friendly-sitemap</h3><ul>
+<li><p>크롤러가 블로그를 더욱 효율적으로 클롤링 할 수 있도록 사이트맵 xml 파일을 자동으로 생생해 줍니다.</p>
+</li>
+<li><p>설치</p>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal-5" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal-5')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`npm install hexo-generator-seo-friendly-sitemap --save`, {onCompleteDelay: 500})
+          .respond(`  `)
+          .end();
+    </script> 
+
+<br>
+</li>
+<li><p>사용</p>
+  <figure class="highlight plain hljs"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">  tag: false</span><br><span class="line">  category: false</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">옵션</th>
+<th align="center">내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">type</td>
+<td align="center">sitemap이 생성될 경로</td>
+</tr>
+<tr>
+<td align="center">path</td>
+<td align="center">sitemap에 tag 포함 여부</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">sitemap에 category 포함 여부</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<br>
+<br>
+
+
+
+<h2 id="검색엔진-등록하기"><a href="#검색엔진-등록하기" class="headerlink" title="검색엔진 등록하기"></a>검색엔진 등록하기</h2><h3 id="구글"><a href="#구글" class="headerlink" title="구글"></a>구글</h3><ul>
+<li><p><a href="https://accounts.google.com" rel="external nofollow noopener noreferrer" target="_blank">구글 애널리틱스</a>(Google Analytic)</p>
+<ul>
+<li><p>가입 후 사이트 이름과 URL 등을 입력하고 추적 ID를 발급 받습니다. 이 아이디는 themes의 <code>_config.yml</code> 내 <code>google_analytics</code>에 넣어 줍니다.</p>
+</li>
+<li><p>사용</p>
+<figure class="highlight plain hljs"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line">    google-analytics:</span><br><span class="line">        # Google Analytics tracking id</span><br><span class="line">        tracking_id: UA-*********-1</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<br>
+</li>
+</ul>
+</li>
+<li><p><a href="https://search.google.com/search-console" rel="external nofollow noopener noreferrer" target="_blank">google search console</a> </p>
+<ul>
+<li><p>구글 웹 마스터 도구가 Search Console로 변경되었습니다. 가입 후 속성을 추가해 줍니다. 생성된 html파일을 루트에 올린 후 확인 하는 방법과 애널리스틱 가입을 확인하는 방법으로 인증을 하는데, 저는 전자로 인증을 했습니다.</p>
+</li>
+<li><p>Sitemaps 메뉴에 위에서 생성한 <code>sitemap.xml</code>과 <code>rss2.xml</code>을 추가해 주세요.<br><img src="/images/tools/search-console-sitemap.png" alt>  </p>
+</li>
+<li><p>사이드 등록 후 확인하기까지 시간이 걸릴 수 있습니다. Search Console에서 해당 사이트의 데이터를 수집 후 처리하는데 시간이 좀 걸리는 것 같습니다. 보통 2~3일 정도 예싱을 해야하며, 제 블로그 같은 경우 주말 포함 약 5일 정도의 시간이 지난 후 확인 할 수 있었습니다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+
+<h3 id="네이버"><a href="#네이버" class="headerlink" title="네이버"></a>네이버</h3><ul>
+<li><p><a href="https://webmastertool.naver.com/" rel="external nofollow noopener noreferrer" target="_blank">NAVER 웹마스터도구</a></p>
+<ul>
+<li><p>네이버 웹마스터 도구 페이지에서 <code>사이트 간단 체크하기</code> 메뉴를 통해 현재 블로그의 최적화 상태를 알아볼 수 있습니다.<br><img src="/images/tools/naver-webmaster-01.png" alt></p>
+<br>
+</li>
+<li><p>연동 사이트 목록 페이지 내 사이트 추가에 블로그 주소를 추가해 줍니다.<br><img src="/images/tools/naver-webmaster-02.png" alt></p>
+<br>
+</li>
+<li><p>추가 된 블로그를 클릭 후 요청 메뉴 내 사이트맵 RSS를 제출해 줍니다.<br><img src="/images/tools/naver-webmaster-03.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+
+<h3 id="다음"><a href="#다음" class="headerlink" title="다음"></a>다음</h3><ul>
+<li><a href="https://register.search.daum.net" rel="external nofollow noopener noreferrer" target="_blank">다음 검색 등록</a> <ul>
+<li>다음 검색 등록에서 신규등을 하면 됩니다. 등록한 이메일 접수완료 메일을 받을 수 있습니다.<br><img src="/images/tools/daum-search.png" alt></li>
+</ul>
+</li>
+</ul>
+<br>
+
+<hr>
+<br>
+
+<h2 id="Refenence"><a href="#Refenence" class="headerlink" title="Refenence"></a>Refenence</h2><ul>
+<li><a href="https://iseongho.github.io/posts/hexo-seo/" rel="external nofollow noopener noreferrer" target="_blank">https://iseongho.github.io/posts/hexo-seo/</a></li>
+<li><a href="https://futurecreator.github.io/2016/06/23/search-engine-optimization-hexo-plugins/" rel="external nofollow noopener noreferrer" target="_blank">https://futurecreator.github.io/2016/06/23/search-engine-optimization-hexo-plugins/</a></li>
+<li><a href="http://mwultong.blogspot.com/2007/10/rss-rss-feed.html" rel="external nofollow noopener noreferrer" target="_blank">http://mwultong.blogspot.com/2007/10/rss-rss-feed.html</a></li>
+</ul>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>, <a class="has-link-grey -link" href="/tags/blog/">blog</a>, <a class="has-link-grey -link" href="/tags/github-io/">github.io</a>, <a class="has-link-grey -link" href="/tags/seo/">seo</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/10/algorithm/hackerrank/37_JumpingOnTheClouds/">
+                <span class="level-item">Jumping on the Clouds(Revisited)</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/08/10/tools/hexo/hexo-guide-03/';
+        this.page.identifier = '2019/08/10/tools/hexo/hexo-guide-03/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Alley
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Front-End Developer
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        132
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        10
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        15
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/alleyful" target="_blank" rel="external nofollow noopener noreferrer">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#검색-엔진-최적화-SEO">
+        <span class="has-mr-6">1</span>
+        <span>검색 엔진 최적화(SEO)</span>
+        </a></li><li>
+        <a class="is-flex" href="#검색엔진-최적화-SEO-에-유용한-플러그인-설치하기">
+        <span class="has-mr-6">2</span>
+        <span>검색엔진 최적화(SEO)에 유용한 플러그인 설치하기</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#hexo-auto-canonical">
+        <span class="has-mr-6">2.1</span>
+        <span>hexo-auto-canonical</span>
+        </a></li><li>
+        <a class="is-flex" href="#hexo-generator-robotstxt">
+        <span class="has-mr-6">2.2</span>
+        <span>hexo-generator-robotstxt</span>
+        </a></li><li>
+        <a class="is-flex" href="#hexo-autonofollow">
+        <span class="has-mr-6">2.3</span>
+        <span>hexo-autonofollow</span>
+        </a></li><li>
+        <a class="is-flex" href="#hexo-generator-feed">
+        <span class="has-mr-6">2.4</span>
+        <span>hexo-generator-feed</span>
+        </a></li><li>
+        <a class="is-flex" href="#hexo-generator-seo-friendly-sitemap">
+        <span class="has-mr-6">2.5</span>
+        <span>hexo-generator-seo-friendly-sitemap</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#검색엔진-등록하기">
+        <span class="has-mr-6">3</span>
+        <span>검색엔진 등록하기</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#구글">
+        <span class="has-mr-6">3.1</span>
+        <span>구글</span>
+        </a></li><li>
+        <a class="is-flex" href="#네이버">
+        <span class="has-mr-6">3.2</span>
+        <span>네이버</span>
+        </a></li><li>
+        <a class="is-flex" href="#다음">
+        <span class="has-mr-6">3.3</span>
+        <span>다음</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Refenence">
+        <span class="has-mr-6">4</span>
+        <span>Refenence</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/10/tools/hexo/hexo-guide-03/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hexo.jpg" alt="HEXO - 검색 엔진 최적화(SEO)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T01:20:22.000Z">2019-08-10</time></div>
+                    <a href="/2019/08/10/tools/hexo/hexo-guide-03/" class="has-link-black-ter is-size-6">HEXO - 검색 엔진 최적화(SEO)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Tools/">Tools</a> / <a class="has-link-grey -link" href="/categories/Tools/Hexo/">Hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/10/algorithm/hackerrank/37_JumpingOnTheClouds/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Jumping on the Clouds(Revisited)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-09T15:14:42.000Z">2019-08-10</time></div>
+                    <a href="/2019/08/10/algorithm/hackerrank/37_JumpingOnTheClouds/" class="has-link-black-ter is-size-6">Jumping on the Clouds(Revisited)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/09/algorithm/hackerrank/36_ClimbingTheLeaderboard/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Climbing the Leaderboard">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-09T02:14:42.000Z">2019-08-09</time></div>
+                    <a href="/2019/08/09/algorithm/hackerrank/36_ClimbingTheLeaderboard/" class="has-link-black-ter is-size-6">Climbing the Leaderboard</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">129</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
+            <span class="level-start">
+                <span class="level-item">HackerRank</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">89</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
+            <span class="level-start">
+                <span class="level-item">Programmers</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">40</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Tools/Hexo/">
+            <span class="level-start">
+                <span class="level-item">Hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">11</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">29</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">88</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/10DaysOfJS/" style="font-size: 14.29px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/HackerRank/" style="font-size: 18.57px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 11.43px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 15.71px;">Javascript</a> <a href="/tags/ProblemSolving/" style="font-size: 15.71px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 17.14px;">Programmers</a> <a href="/tags/blog/" style="font-size: 11.43px;">blog</a> <a href="/tags/github-io/" style="font-size: 11.43px;">github.io</a> <a href="/tags/queue/" style="font-size: 12.86px;">queue</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/stack/" style="font-size: 12.86px;">stack</a> <a href="/tags/정렬/" style="font-size: 10px;">정렬</a> <a href="/tags/프로그래머스/" style="font-size: 17.14px;">프로그래머스</a>
+    </div>
+</div>
+
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 alley&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
