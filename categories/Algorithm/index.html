@@ -151,6 +151,61 @@
     <div class="card">
     
     <div class="card-image">
+        <a href="/2019/08/20/algorithm/hackerrank/47_CutTheSticks/" class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Cut the sticks">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-20T01:18:17.000Z">2019-08-20</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/ProblemSolving/">ProblemSolving</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/20/algorithm/hackerrank/47_CutTheSticks/">Cut the sticks</a>
+            
+        </h1>
+        <div class="content">
+            <p>You are given a number of sticks of varying lengths. You will iteratively cut the sticks into smaller sticks, discarding the shortest pieces until there are none left. At each iteration you will determine the length of the shortest stick remaining, cut that length from each of the longer sticks and then discard all the pieces of that shortest length. When all the remaining sticks are the same length, they cannot be shortened so discard them.</p>
+<p>Given the lengths of <strong>n</strong> sticks, print the number of sticks that are left before each iteration until there are none left.</p>
+<p>For example, there are <strong>n = 3</strong> sticks of lengths <strong>arr = [1, 2, 3]</strong>. The shortest stick length is <strong>1</strong>, so we cut that length from the longer two and discard the pieces of length <strong>1</strong>. Now our lengths are <strong>arr = [1, 2]</strong>. Again, the shortest stick is of length <strong>1</strong>, so we cut that amount from the longer stick and discard those pieces. There is only one stick left, <strong>arr = [1]</strong>, so we discard that stick. Our lengths are <code>answer = [3, 2, 1]</code>.</p>
+<br>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/20/algorithm/hackerrank/47_CutTheSticks/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
         <a href="/2019/08/19/algorithm/hackerrank/46_JumpingOnTheClouds/" class="image is-7by1">
             <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Jumping on the Clouds">
         </a>
@@ -657,63 +712,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/08/10/algorithm/hackerrank/37_JumpingOnTheClouds/" class="image is-7by1">
-            <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Jumping on the Clouds(Revisited)">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-09T15:14:42.000Z">2019-08-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/ProblemSolving/">ProblemSolving</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/algorithm/hackerrank/37_JumpingOnTheClouds/">Jumping on the Clouds(Revisited)</a>
-            
-        </h1>
-        <div class="content">
-            <p>Aerith is playing a cloud hopping game. In this game, there are sequentially numbered clouds that can be thunderheads or cumulus clouds. Her character must jump from cloud to cloud until it reaches the start again.</p>
-<p>To play, Aerith is given an array of clouds, <strong>c</strong> and an energy level <strong>e = 100</strong>. She starts from <strong>c[0]</strong> and uses <strong>1</strong> unit of energy to make a jump of size <strong>k</strong> to cloud <strong>c[(i + k) % n]</strong>. If Aerith lands on a thundercloud, <strong>c[i] = 1</strong>, her energy (e) decreases by <strong>2</strong> additional units. The game ends when Aerith lands back on cloud <strong>0</strong>.</p>
-<p>Given the values of <strong>n</strong>, <strong>k</strong>, and the configuration of the clouds as an array <strong>c</strong>, can you determine the final value of <strong>e</strong> after the game ends?</p>
-<p>For example, give <strong>c = [0, 0, 1, 0]</strong> and <strong>k = 2</strong>, the indices of her path are <strong>0 -&gt; 2 -&gt; 0</strong>. Her energy level reduces by <strong>1</strong> for each jump to <strong>98</strong>. She landed on one thunderhead at an additional cost of <strong>2</strong> energy units. Her final energy level is <strong>96</strong>.</p>
-<p><strong>Note</strong>: Recall that <strong>%</strong> refers to the modulo operation. In this case, it serves to make the route circular. If Aerith is at <strong>c[n -1]</strong> and jumps <strong>1</strong>, she will arrive at <strong>c[0]</strong>.</p>
-<br>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/algorithm/hackerrank/37_JumpingOnTheClouds/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -776,7 +774,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        141
+                        142
                     </p>
                 </div>
             </div>
@@ -821,6 +819,25 @@
         
         <article class="media">
             
+            <a href="/2019/08/20/algorithm/hackerrank/47_CutTheSticks/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Cut the sticks">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-20T01:18:17.000Z">2019-08-20</time></div>
+                    <a href="/2019/08/20/algorithm/hackerrank/47_CutTheSticks/" class="has-link-black-ter is-size-6">Cut the sticks</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/08/19/algorithm/hackerrank/46_JumpingOnTheClouds/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Jumping on the Clouds">
@@ -857,25 +874,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/08/17/algorithm/hackerrank/44_EqualizeTheArray/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Equalize the Array">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-16T16:26:17.000Z">2019-08-17</time></div>
-                    <a href="/2019/08/17/algorithm/hackerrank/44_EqualizeTheArray/" class="has-link-black-ter is-size-6">Equalize the Array</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -894,7 +892,7 @@
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">138</span>
+                <span class="level-item tag">139</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -902,7 +900,7 @@
                 <span class="level-item">HackerRank</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">98</span>
+                <span class="level-item tag">99</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
@@ -948,7 +946,7 @@
                     <span class="level-item">August 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">20</span>
+                    <span class="level-item tag">21</span>
                 </span>
             </a>
         </li>
