@@ -150,6 +150,61 @@
     <div class="card">
     
     <div class="card-image">
+        <a href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/" class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Modified Kaprekar Numbers">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-22T15:06:54.000Z">2019-08-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/ProblemSolving/">ProblemSolving</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/">Modified Kaprekar Numbers</a>
+            
+        </h1>
+        <div class="content">
+            <p>A modified Kaprekar number is a positive whole number with a special property. If you square it, then split the number into two integers and sum those integers, you have the same value you started with.</p>
+<p>Consider a positive whole number <strong>n</strong> with <strong>d</strong> digits. We square <strong>n</strong> to arrive at a number that is either <strong>2 x d</strong> digits long or <strong>(2 x d) - 1</strong> digits long. Split the string representation of the square into two parts, <strong>l</strong> and <strong>r</strong>. The right hand part, <strong>r</strong> must be <strong>d</strong> digits long. The left is the remaining substring. Convert those two substrings back to integers, add them and see if you get <strong>n</strong>.</p>
+<p>For example, if <strong>n = 5</strong>, <strong>d = 1</strong> then <img src="https://latex.codecogs.com/gif.latex?n%5E%7B2%7D&space;=&space;25" alt>. We split that into two strings and convert them back to integers <strong>2</strong> and <strong>5</strong>. We test <img src="https://latex.codecogs.com/gif.latex?2&space;&plus;&space;5&space;=&space;7%5Cneq&space;5" alt>, so this is not a modified Kaprekar number. If <strong>n = 9</strong>, still <strong>d = 1</strong>, and <img src="https://latex.codecogs.com/gif.latex?n%5E%7B2%7D&space;=&space;81" alt>. This gives us <strong>1 + 8 = 9</strong>, the original <strong>n</strong>.</p>
+<p><strong>Note</strong>: r may have leading zeros.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
         <a href="/2019/08/22/algorithm/hackerrank/49_Encryption/" class="image is-7by1">
             <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Encryption">
         </a>
@@ -657,65 +712,6 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/08/13/algorithm/hackerrank/40_AppendAndDelete/" class="image is-7by1">
-            <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Append and Delete">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-12T15:02:31.000Z">2019-08-13</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/ProblemSolving/">ProblemSolving</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/algorithm/hackerrank/40_AppendAndDelete/">Append and Delete</a>
-            
-        </h1>
-        <div class="content">
-            <p>You have a string of lowercase English alphabetic letters. You can perform two types of operations on the string:</p>
-<ol>
-<li>Append a lowercase English alphabetic letter to the end of the string.  </li>
-<li>Delete the last character in the string. Performing this operation on an empty string results in an empty string.  </li>
-</ol>
-<p>Given an integer, <strong>k</strong>, and two strings, <strong>s</strong> and <strong>t</strong>, determine whether or not you can convert <strong>s</strong> to <strong>t</strong> by performing exactly <strong>k</strong> of the above operations on <strong>s</strong>. If it’s possible, print <code>Yes</code>. Otherwise, print <code>No</code>.</p>
-<p>For example, strings <code>s = [a, b, c]</code> and <code>t = [d, e, f]</code>. Our number of moves, <strong>k = 6</strong>. To convert <strong>s</strong> to <strong>t</strong>, we first delete all of the characters in <strong>3</strong> moves. Next we add each of the characters of <strong>t</strong> in order. On the <img src="https://latex.codecogs.com/gif.latex?6%5E%7Bth%7D" alt> move, you will have the matching string. If there had been more moves available, they could have been eliminated by performing multiple deletions on an empty string. If there were fewer than <strong>6</strong> moves, we would not have succeeded in creating the new string.</p>
-<br>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/algorithm/hackerrank/40_AppendAndDelete/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -734,7 +730,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/tags/ProblemSolving/page/5/">5</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/tags/ProblemSolving/page/6/">6</a></li>
             
         </ul>
     </nav>
@@ -778,7 +774,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        144
+                        145
                     </p>
                 </div>
             </div>
@@ -823,6 +819,25 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
         
         <article class="media">
             
+            <a href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Modified Kaprekar Numbers">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-22T15:06:54.000Z">2019-08-23</time></div>
+                    <a href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/" class="has-link-black-ter is-size-6">Modified Kaprekar Numbers</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/08/22/algorithm/hackerrank/49_Encryption/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Encryption">
@@ -859,25 +874,6 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/08/20/algorithm/hackerrank/47_CutTheSticks/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Cut the sticks">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-20T01:18:17.000Z">2019-08-20</time></div>
-                    <a href="/2019/08/20/algorithm/hackerrank/47_CutTheSticks/" class="has-link-black-ter is-size-6">Cut the sticks</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -896,7 +892,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                 <span class="level-item">Algorithm</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">141</span>
+                <span class="level-item tag">142</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
@@ -904,7 +900,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                 <span class="level-item">HackerRank</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">101</span>
+                <span class="level-item tag">102</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
@@ -950,7 +946,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                     <span class="level-item">August 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">23</span>
+                    <span class="level-item tag">24</span>
                 </span>
             </a>
         </li>
