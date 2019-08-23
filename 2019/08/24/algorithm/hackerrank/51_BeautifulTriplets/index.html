@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>Beautiful Triplets - ALLEY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="canonical" href="https://alleyful.github.io/2019/08/24/algorithm/hackerrank/51_beautifultriplets/">
+
+
+    <meta name="description" content="Given a sequence of integers a, a triplet (a[i], a[j], a[k]) is beautiful if:  i &amp;lt; j &amp;lt; k a[j] - a[i] = a[k] - a[j] = d  Given an increasing sequenc of integers and the value of d, count the numb">
+<meta name="keywords" content="Algorithm,HackerRank,ProblemSolving,Javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beautiful Triplets">
+<meta property="og:url" content="https://alleyful.github.io/2019/08/24/algorithm/hackerrank/51_BeautifulTriplets/index.html">
+<meta property="og:site_name" content="ALLEY">
+<meta property="og:description" content="Given a sequence of integers a, a triplet (a[i], a[j], a[k]) is beautiful if:  i &amp;lt; j &amp;lt; k a[j] - a[i] = a[k] - a[j] = d  Given an increasing sequenc of integers and the value of d, count the numb">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/hackerrank.jpg">
+<meta property="og:updated_time" content="2019-08-23T05:42:35.387Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Beautiful Triplets">
+<meta name="twitter:description" content="Given a sequence of integers a, a triplet (a[i], a[j], a[k]) is beautiful if:  i &amp;lt; j &amp;lt; k a[j] - a[i] = a[k] - a[j] = d  Given an increasing sequenc of integers and the value of d, count the numb">
+<meta name="twitter:image" content="https://alleyful.github.io/images/gallery/thumbnails/hackerrank.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141822876-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141822876-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Beautiful Triplets">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-23T15:02:37.000Z">2019-08-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/ProblemSolving/">ProblemSolving</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Beautiful Triplets
+            
+        </h1>
+        <div class="content">
+            <p>Given a sequence of integers <strong>a</strong>, a triplet <strong>(a[i], a[j], a[k])</strong> is beautiful if:</p>
+<ul>
+<li>i &lt; j &lt; k</li>
+<li><code>a[j] - a[i] = a[k] - a[j] = d</code></li>
+</ul>
+<p>Given an increasing sequenc of integers and the value of <strong>d</strong>, count the number of beautiful triplets in the sequence.</p>
+<p>For example, the sequence <strong>arr = [2, 2, 3, 4, 5]</strong> and <strong>d = 1</strong>. There are three beautiful triplets, by index: <strong>[i, j, k] = [0, 2, 3], [1, 2, 3], [2, 3, 4]</strong>. To test the first triplet, <code>arr[j] - arr[i] = 3 - 2 = 1</code> and <code>arr[k] = arr[j] = 4 - 3 = 1</code>.</p>
+<br>
+<a id="more"></a>
+
+<h2 id="Function-Description"><a href="#Function-Description" class="headerlink" title="Function Description"></a>Function Description</h2><p>Complete the beautifulTriplets function in the editor below. It must return an integer that represents the number of beautiful triplets in the sequence.</p>
+<p>beautifulTriplets has the following parameters:</p>
+<ul>
+<li>d: an integer</li>
+<li>arr: an array of integers, sorted ascending</li>
+</ul>
+<br>
+
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains <strong>2</strong> space-separated integers <strong>n</strong> and <strong>d</strong>, the length of the sequence and the beautiful difference.<br>The second line contains <strong>n</strong> space-separated integers <strong>arr[i]</strong>.</p>
+<br>
+
+<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><ul>
+<li><img src="https://latex.codecogs.com/gif.latex?1%5Cleq&space;n%5Cleq&space;10%5E%7B4%7D" alt></li>
+<li><img src="https://latex.codecogs.com/gif.latex?1%5Cleq&space;d%5Cleq&space;20" alt></li>
+<li><img src="https://latex.codecogs.com/gif.latex?0%5Cleq&space;arr%5Bi%5D%5Cleq&space;2%5Ctimes&space;10%5E%7B4%7D" alt></li>
+<li><img src="https://latex.codecogs.com/gif.latex?arr%5Bi%5D&space;%3E&space;arr%5Bi&space;-&space;1%5D" alt></li>
+</ul>
+<br>
+
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>Print a single line denoting the number of beautiful triplets in the sequence.</p>
+<br>
+
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7 3</span><br><span class="line">1 2 4 5 7 8 10</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h2><p>The input sequence is <strong>1, 2, 4, 5, 6, 8, 10</strong>, and our beautiful difference <strong>d = 3</strong>. There are many possible triplets <strong>(arr[i], arr[j], arr[k])</strong>, but our only beautiful triplets are <strong>(1, 4, 7)</strong>, <strong>(4, 7, 10)</strong> and <strong>(2, 5, 8)</strong> by value not index. Please see the equations below:</p>
+<ul>
+<li><strong>7 - 4 = 4 - 1 = 3 = d</strong></li>
+<li><strong>10 - 7 = 7 - 4 = 3 = d</strong></li>
+<li><strong>8 - 5 = 5 - 2 = 3 = d</strong></li>
+</ul>
+<p>Recall that a beautiful triplet satisfies the following equivalence relation:<br><strong>arr[j] - arr[i] = arr[k] - arr[j] = d</strong> where <strong>i &lt; j &lt; k</strong>.</p>
+<br>
+
+<hr>
+<h3 id="Solution-Accepted"><a href="#Solution-Accepted" class="headerlink" title="Solution Accepted"></a>Solution <code>Accepted</code></h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">beautifulTriplets</span>(<span class="hljs-params">d, arr</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> arraySet = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(arr);</span><br><span class="line">  <span class="hljs-keyword">const</span> array = [...arr];</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">return</span> array.reduce(<span class="hljs-function">(<span class="hljs-params">target, number</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>).fill(<span class="hljs-number">0</span>).reduce(<span class="hljs-function">(<span class="hljs-params">innerTarget, item, index</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">let</span> value = number + index * d;</span><br><span class="line">      arraySet.has(value) &amp;&amp; innerTarget++;</span><br><span class="line">      <span class="hljs-keyword">return</span> innerTarget;</span><br><span class="line">    &#125;, <span class="hljs-number">0</span>) === <span class="hljs-number">3</span> &amp;&amp; target++;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> target;</span><br><span class="line">  &#125;, <span class="hljs-number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Algorithm/">Algorithm</a>, <a class="has-link-grey -link" href="/tags/HackerRank/">HackerRank</a>, <a class="has-link-grey -link" href="/tags/Javascript/">Javascript</a>, <a class="has-link-grey -link" href="/tags/ProblemSolving/">ProblemSolving</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/">
+                <span class="level-item">Modified Kaprekar Numbers</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/08/24/algorithm/hackerrank/51_BeautifulTriplets/';
+        this.page.identifier = '2019/08/24/algorithm/hackerrank/51_BeautifulTriplets/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Alley
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Front-End Developer
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        146
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        10
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        15
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/alleyful" target="_blank" rel="external nofollow noopener noreferrer">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/24/algorithm/hackerrank/51_BeautifulTriplets/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Beautiful Triplets">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-23T15:02:37.000Z">2019-08-24</time></div>
+                    <a href="/2019/08/24/algorithm/hackerrank/51_BeautifulTriplets/" class="has-link-black-ter is-size-6">Beautiful Triplets</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Modified Kaprekar Numbers">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-22T15:06:54.000Z">2019-08-23</time></div>
+                    <a href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/" class="has-link-black-ter is-size-6">Modified Kaprekar Numbers</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/22/algorithm/hackerrank/49_Encryption/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Encryption">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-22T01:30:19.000Z">2019-08-22</time></div>
+                    <a href="/2019/08/22/algorithm/hackerrank/49_Encryption/" class="has-link-black-ter is-size-6">Encryption</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">143</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
+            <span class="level-start">
+                <span class="level-item">HackerRank</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">103</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
+            <span class="level-start">
+                <span class="level-item">Programmers</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">40</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Tools/Hexo/">
+            <span class="level-start">
+                <span class="level-item">Hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">29</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">88</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/10DaysOfJS/" style="font-size: 14.29px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/HackerRank/" style="font-size: 18.57px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 11.43px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/ProblemSolving/" style="font-size: 17.14px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 15.71px;">Programmers</a> <a href="/tags/blog/" style="font-size: 11.43px;">blog</a> <a href="/tags/github-io/" style="font-size: 11.43px;">github.io</a> <a href="/tags/queue/" style="font-size: 12.86px;">queue</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/stack/" style="font-size: 12.86px;">stack</a> <a href="/tags/정렬/" style="font-size: 10px;">정렬</a> <a href="/tags/프로그래머스/" style="font-size: 15.71px;">프로그래머스</a>
+    </div>
+</div>
+
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 alley&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
