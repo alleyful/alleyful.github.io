@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>ReactJS Challenge - Day1 - ALLEY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="canonical" href="https://alleyful.github.io/2019/08/30/develop/react/react-challenge-day1/">
+
+
+    <meta name="description" content="오늘의 강의: #1.0 ~ #1.5오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.    [멤버십] 초보를 위한 React JS  1.1 Arrow Functions 1.2 Template Literals 1.3 Object Destructuring 1.4 Spread Operator 1.5 Classes">
+<meta name="keywords" content="react,challenge,nomadcoders">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ReactJS Challenge - Day1">
+<meta property="og:url" content="https://alleyful.github.io/2019/08/30/develop/react/react-challenge-day1/index.html">
+<meta property="og:site_name" content="ALLEY">
+<meta property="og:description" content="오늘의 강의: #1.0 ~ #1.5오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.    [멤버십] 초보를 위한 React JS  1.1 Arrow Functions 1.2 Template Literals 1.3 Object Destructuring 1.4 Spread Operator 1.5 Classes">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/react.jpg">
+<meta property="og:updated_time" content="2019-08-29T16:03:24.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ReactJS Challenge - Day1">
+<meta name="twitter:description" content="오늘의 강의: #1.0 ~ #1.5오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.    [멤버십] 초보를 위한 React JS  1.1 Arrow Functions 1.2 Template Literals 1.3 Object Destructuring 1.4 Spread Operator 1.5 Classes">
+<meta name="twitter:image" content="https://alleyful.github.io/images/gallery/thumbnails/react.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141822876-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141822876-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="ReactJS Challenge - Day1">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-29T15:48:44.000Z">2019-08-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/develop/">develop</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/develop/react/">react</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                ReactJS Challenge - Day1
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>오늘의 강의: #1.0 ~ #1.5<br>오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.</p>
+</blockquote>
+<br>
+
+<p><a href="https://academy.nomadcoders.co/courses/436641/lectures/8467057" rel="external nofollow noopener noreferrer" target="_blank">[멤버십] 초보를 위한 React JS</a></p>
+<ul>
+<li>1.1 Arrow Functions</li>
+<li>1.2 Template Literals</li>
+<li>1.3 Object Destructuring</li>
+<li>1.4 Spread Operator</li>
+<li>1.5 Classes</li>
+</ul>
+<br>
+<a id="more"></a>
+
+<hr>
+<br>
+
+<h2 id="Lecture-Summery"><a href="#Lecture-Summery" class="headerlink" title="Lecture Summery"></a>Lecture Summery</h2><h3 id="Arrow-Functions"><a href="#Arrow-Functions" class="headerlink" title="Arrow Functions"></a>Arrow Functions</h3><p>화살표 함수(Arrow function)는 function 키워드 대신 (=&gt;)를 사용하여 보다 간략한 함수를 선언할 수 있다.</p>
+<ul>
+<li>기본 문법   </li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 매개변수 지정 방법</span><br><span class="line">    () =&gt; &#123; ... &#125; // 매개변수가 없을 경우</span><br><span class="line">     x =&gt; &#123; ... &#125; // 매개변수가 한 개인 경우, 소괄호를 생략할 수 있다.</span><br><span class="line">(x, y) =&gt; &#123; ... &#125; // 매개변수가 여러 개인 경우, 소괄호를 생략할 수 없다.</span><br><span class="line"></span><br><span class="line">// 함수 몸체 지정 방법</span><br><span class="line">x =&gt; &#123; return x * x &#125;  // single line block</span><br><span class="line">x =&gt; x * x             // 함수 몸체가 한줄의 구문이라면 중괄호를 생략할 수 있으며 암묵적으로 return된다. 위 표현과 동일하다.</span><br><span class="line"></span><br><span class="line">() =&gt; &#123; return &#123; a: 1 &#125;; &#125;</span><br><span class="line">() =&gt; (&#123; a: 1 &#125;)  // 위 표현과 동일하다. 객체 반환시 소괄호를 사용한다.</span><br><span class="line"></span><br><span class="line">() =&gt; &#123;           // multi line block.</span><br><span class="line">  const x = 10;</span><br><span class="line">  return x * x;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<ul>
+<li>사용 방법   </li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span>(<span class="hljs-params">name = <span class="hljs-string">"Alley"</span></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">"Hello"</span> + name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// arrow Function</span></span><br><span class="line"><span class="hljs-keyword">const</span> sayHello = <span class="hljs-function">(<span class="hljs-params">name = <span class="hljs-string">"Alley"</span></span>) =&gt;</span> <span class="hljs-string">"Hello"</span> + name;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<ul>
+<li>화살표 함수 Vs 일반함수  <ol>
+<li>화살표 함수는 항상 바인딩 된 this를 갖는다.(Lexical this)</li>
+<li>화살표 함수는 생성자로 사용할 수 없다(constructor, prototype 없음)</li>
+<li>arguments를 지원하지 않음.</li>
+</ol>
+</li>
+</ul>
+<br>
+
+<ul>
+<li>화살표 함수를 사용해서는 안되는 경우<ol>
+<li>메소드: 메소드를 호출한 객체를 가리키지 않고 상위 컨택스트를 가리킨다. =&gt; ES6 축약 메소드 표현 사용</li>
+<li>prototype: 위와 같은 문제가 발생하여 일반 함수를 할당하게 된다. </li>
+<li>생성자 함수: 화살표 함수는 prototype 프로퍼티를 가지고 있지 않기때문에 프로토타입 객제의 constructor를 사용할 수 없다.</li>
+</ol>
+</li>
+</ul>
+<br>
+
+<ul>
+<li>Reference<ul>
+<li><a href="https://academy.nomadcoders.co/courses/436641/lectures/8467057" rel="external nofollow noopener noreferrer" target="_blank">#1.1 Arrow Functions</a></li>
+<li><a href="https://poiemaweb.com/es6-arrow-function" rel="external nofollow noopener noreferrer" target="_blank">화살표 함수</a></li>
+<li><a href="http://webframeworks.kr/tutorials/translate/arrow-function/" rel="external nofollow noopener noreferrer" target="_blank">화살표 함수와 메소드 정의</a></li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98" rel="external nofollow noopener noreferrer" target="_blank">MDN 화살표 함수와</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+<br>
+
+<h3 id="Template-Literals"><a href="#Template-Literals" class="headerlink" title="Template Literals"></a>Template Literals</h3><p>ES6의 새로운 문자열 표기이다. 일반적인 문자열과 달리 여러 줄에 걸쳐 문자열을 작성할 수 있으며 템플릿 리터럴 내의 모든 white-space는 있는 그대로 적용된다.<br>템플릿 리터럴은 + 연산자를 사용하지 않아도 간단한 방법으로 새로운 문자열을 삽입할 수 있는 기능을 제공한다. 이를 문자열 인터폴레이션(String Interpolation)이라 한다.<br>문자열 인터폴레이션은 ${ … }으로 표현식을 감싼다. 문자열 인터폴레이션 내의 표현식은 문자열로 강제 타입 변환된다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> sayHello = <span class="hljs-function">(<span class="hljs-params">name = <span class="hljs-string">"Alley"</span></span>) =&gt;</span> <span class="hljs-string">`Hello <span class="hljs-subst">$&#123;name&#125;</span>`</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`1 + 1 = <span class="hljs-subst">$&#123;<span class="hljs-number">1</span> + <span class="hljs-number">1</span>&#125;</span>`</span>); <span class="hljs-comment">// "1 + 1 = 2"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<ul>
+<li>Reference<ul>
+<li><a href="https://poiemaweb.com/es6-template-literals" rel="external nofollow noopener noreferrer" target="_blank">템플릿 리터럴</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+<br>
+
+<h3 id="Object-Destructuring"><a href="#Object-Destructuring" class="headerlink" title="Object Destructuring"></a>Object Destructuring</h3><p>디스트럭처링(Destructuring)은 구조화된 배열 또는 객체를 Destructuring(비구조화, 파괴)하여 개별적인 변수에 할당하는 것이다.<br>배열 또는 객체 리터럴에서 필요한 값만을 추출하여 변수에 할당하거나 반환할 때 유용하다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> human = &#123;</span><br><span class="line">  name: <span class="hljs-string">"Alley"</span>,</span><br><span class="line">  lastName: <span class="hljs-string">"Kim"</span>,</span><br><span class="line">  nation: <span class="hljs-string">"Korea"</span>,</span><br><span class="line">  favFood: &#123;</span><br><span class="line">    breakfast: <span class="hljs-string">"egg"</span>,</span><br><span class="line">    lunch: <span class="hljs-string">"bread"</span>,</span><br><span class="line">    dinner: <span class="hljs-string">"meat"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> name = human.name;</span><br><span class="line"><span class="hljs-keyword">const</span> lastName = human.lastName;</span><br><span class="line"><span class="hljs-keyword">const</span> difNation = human.nation;</span><br><span class="line"><span class="hljs-keyword">const</span> dinner = human.favFood.dinner;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//Destructuring</span></span><br><span class="line"><span class="hljs-keyword">const</span> &#123; name, lastName, <span class="hljs-attr">nation</span>: difNation, <span class="hljs-attr">favFood</span>: &#123; dinner &#125; &#125; = human;</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+<br>
+
+<h3 id="Spread-Operator"><a href="#Spread-Operator" class="headerlink" title="Spread Operator"></a>Spread Operator</h3><p>Spread 연산자는 연산자의 대상 배열 또는 이터러블(iterable)을 “개별” 요소로 분리한다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Array</span></span><br><span class="line"><span class="hljs-keyword">const</span> days = [ <span class="hljs-string">'Mon'</span>, <span class="hljs-string">'Tues'</span>, <span class="hljs-string">'Wed'</span> ];</span><br><span class="line"><span class="hljs-keyword">const</span> otherDays = [ <span class="hljs-string">'Thu'</span>, <span class="hljs-string">'Fri'</span>, <span class="hljs-string">'Sat'</span> ];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> allDays = [ ...days, ...otherDays, <span class="hljs-string">'Sun'</span> ];</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Obj</span></span><br><span class="line"><span class="hljs-keyword">const</span> ob = &#123;</span><br><span class="line">  first: <span class="hljs-string">'hi'</span>,</span><br><span class="line">  second: <span class="hljs-string">'hello'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> ab = &#123;</span><br><span class="line">  thrid: <span class="hljs-string">'bye bye'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> two = &#123; ...ob, ...ab &#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+<br>
+
+<h3 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h3><p>자바스크립트는 프로토타입 기반(prototype-based) 객체지향 언어다. 비록 다른 객체지향 언어들과의 차이점에 대한 논쟁이 있긴 하지만, 자바스크립트는 강력한 객체지향 프로그래밍 능력을 지니고 있다.</p>
+<p>프로토타입 기반 프로그래밍은 클래스가 필요없는(class-free) 객체지향 프로그래밍 스타일로 프로토타입 체인과 클로저 등으로 객체 지향 언어의 상속, 캡슐화(정보 은닉) 등의 개념을 구현할 수 있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name, lastName) &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">    <span class="hljs-keyword">this</span>.lastName = lastName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Baby</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Human</span> </span>&#123;</span><br><span class="line">  cry() &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Waaaaaa'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  sayName() &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`My Name is <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>`</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> myBaby = <span class="hljs-keyword">new</span> Baby(<span class="hljs-string">'mini'</span>, <span class="hljs-string">'me'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(myBaby.cry(), myBaby.sayName());</span><br></pre></td></tr></table></figure>
+
+<p>ES6 클래스는 class 키워드를 사용하여 정의하며, new 연산자와 함께 클래스 이름을 호출하면 클래스의 인스턴스가 생성된다.  </p>
+<p>constructor는 인스턴스를 생성하고 클래스 필드를 초기화하기 위한 특수한 메소드이다. constructor는 클래스 내에 한 개만 존재할 수 있으며 만약 클래스가 2개 이상의 constructor를 포함하면 문법 에러(SyntaxError)가 발생한다. constructor는 인스턴스의 생성과 동시에 클래스 필드의 생성과 초기화를 실행한다. 따라서 클래스 필드를 초기화해야 한다면 constructor를 생략해서는 안된다.</p>
+<p>클래스의 정적(static) 메소드를 정의할 때 static 키워드를 사용한다. 정적 메소드는 클래스의 인스턴스가 아닌 클래스 이름으로 호출한다. 따라서 클래스의 인스턴스를 생성하지 않아도 호출할 수 있다. 정적 메소드는 클래스 이름으로 호출하기 때문에 클래스의 인스턴스를 생성하지 않아도 사용할 수 있다. 단, 정적 메소드는 this를 사용할 수 없다. 달리 말하면 메소드 내부에서 this를 사용할 필요가 없는 메소드는 정적 메소드로 만들 수 있다. 정적 메소드는 Math 객체의 메소드처럼 애플리케이션 전역에서 사용할 유틸리티(utility) 함수를 생성할 때 주로 사용한다.</p>
+<br>
+
+<ul>
+<li>Reference<ul>
+<li><a href="https://poiemaweb.com/es6-class" rel="external nofollow noopener noreferrer" target="_blank">클래스</a></li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/static" rel="external nofollow noopener noreferrer" target="_blank">static</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+
+<hr>
+<br>
+
+<h2 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="hljs-comment">/* Your magic here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> objA = &#123;</span><br><span class="line">  name: <span class="hljs-string">"Nicolas"</span>,</span><br><span class="line">  favFood: <span class="hljs-string">"Kimchi"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> objB = &#123;</span><br><span class="line">  password: <span class="hljs-string">"12345"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> user = ObjectUtilities.mergeObjects(objA, objB);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(user);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> cleanUser = ObjectUtilities.removePassword(user);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(cleanUser);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> frozenUser = ObjectUtilities.freezeObj(cleanUser);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> onlyValues = ObjectUtilities.getOnlyValues(frozenUser);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(onlyValues);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> onlyProperties = ObjectUtilities.getOnlyProperties(frozenUser);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(onlyProperties);</span><br><span class="line"></span><br><span class="line">frozenUser.name = <span class="hljs-string">"Hello!"</span>; <span class="hljs-comment">// This should show an error</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><p>Complete the “<strong>ObjectUtilities</strong>“ class with the following functions.</p>
+<ul>
+<li><strong>mergeObjects</strong>: Merge two objects. Return an object.</li>
+<li><strong>removePassword</strong>: Remove the ‘password’ key on an object. Return an object.</li>
+<li><strong>freezeObj</strong>: Freezes an object. Returns the frozen object.</li>
+<li><strong>getOnlyValues</strong>: Returns an array of all the values inside of an object.</li>
+<li><strong>getOnlyProperties</strong>: Returns an array of all the properties inside of an object.<br>Changing the ‘<strong>name</strong>‘ of the ‘<strong>frozenUser</strong>‘ SHOULD throw an error.</li>
+</ul>
+<br>
+
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>This is the desired output.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">▶ Object &#123;name: &quot;Nicolas&quot;, favFood: &quot;Kimchi&quot;, password: &quot;12345&quot;&#125;</span><br><span class="line">▶ Object &#123;name: &quot;Nicolas&quot;, favFood: &quot;Kimchi&quot;&#125;</span><br><span class="line">▶ [&quot;Nicolas&quot;, &quot;Kimchi&quot;]</span><br><span class="line">▶ [&quot;name&quot;, &quot;favFood&quot;]</span><br><span class="line">Error in sandbox: </span><br><span class="line">▶ TypeError: Cannot assign to read only property &apos;name&apos; of object &apos;#&lt;Object&gt;&apos;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Condition"><a href="#Condition" class="headerlink" title="Condition"></a>Condition</h3><ul>
+<li>The output of the program must be EXACTLY like on the image above.</li>
+<li>Place your functions INSIDE of ‘ObjectUtilities’</li>
+<li>DO NOT edit ANYTHING OUTSIDE of ‘ObjectUtiliies’.</li>
+<li>Don’t give up!</li>
+</ul>
+<br>
+
+<h3 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h3><ul>
+<li>Use arrow functions</li>
+<li>Use spread and rest operators</li>
+</ul>
+<br>
+
+<h3 id="Submit"><a href="#Submit" class="headerlink" title="Submit"></a>Submit</h3><p><code>My Answer</code><br><a href="https://codesandbox.io/s/day-one-blueprint-hrvg2" rel="external nofollow noopener noreferrer" target="_blank">Day1 CodeSandbox</a></p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="hljs-comment">// 주어진 조건에서 instance 생성을 하지 않으므로 static methid 이용.</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> mergeObjects = <span class="hljs-function">(<span class="hljs-params">objA, objB</span>) =&gt;</span> (&#123; ...objA, ...objB &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> removePassword = <span class="hljs-function">(<span class="hljs-params">&#123; password, ...user &#125;</span>) =&gt;</span> (&#123; ...user &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> freezeObj = <span class="hljs-function"><span class="hljs-params">cleanUser</span> =&gt;</span> <span class="hljs-built_in">Object</span>.freeze(cleanUser);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> getOnlyValues = <span class="hljs-function"><span class="hljs-params">frozenUser</span> =&gt;</span> <span class="hljs-built_in">Object</span>.keys(frozenUser).map(<span class="hljs-function"><span class="hljs-params">k</span> =&gt;</span> frozenUser[k]);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> getOnlyProperties = <span class="hljs-function"><span class="hljs-params">frozenUser</span> =&gt;</span> <span class="hljs-built_in">Object</span>.keys(frozenUser).map(<span class="hljs-function"><span class="hljs-params">k</span> =&gt;</span> k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><code>Correct</code><br><a href="https://codesandbox.io/s/day-one-solution-qsule" rel="external nofollow noopener noreferrer" target="_blank">Day1 Correct</a></p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">static</span> mergeObjects = <span class="hljs-function">(<span class="hljs-params">objectA, objectB</span>) =&gt;</span> (&#123; ...objectA, ...objectB &#125;);</span><br><span class="line">  <span class="hljs-keyword">static</span> removePassword = <span class="hljs-function">(<span class="hljs-params">&#123; password, ...rest &#125;</span>) =&gt;</span> rest;</span><br><span class="line">  <span class="hljs-keyword">static</span> getOnlyProperties = <span class="hljs-function"><span class="hljs-params">obj</span> =&gt;</span> <span class="hljs-built_in">Object</span>.keys(obj);</span><br><span class="line">  <span class="hljs-keyword">static</span> getOnlyValues = <span class="hljs-function"><span class="hljs-params">obj</span> =&gt;</span> <span class="hljs-built_in">Object</span>.values(obj);</span><br><span class="line">  <span class="hljs-keyword">static</span> freezeObj = <span class="hljs-function"><span class="hljs-params">obj</span> =&gt;</span> <span class="hljs-built_in">Object</span>.freeze(obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<h2 id="Day1-정리"><a href="#Day1-정리" class="headerlink" title="Day1 정리"></a>Day1 정리</h2><ul>
+<li><p>오늘의 강의</p>
+<ul>
+<li>1.1 Arrow Functions</li>
+<li>1.2 Template Literals</li>
+<li>1.3 Object Destructuring</li>
+<li>1.4 Spread Operator</li>
+<li>1.5 Classes</li>
+</ul>
+</li>
+<li><p>강의노트: <a href="/2019/08/27/develop/react/react-challenge-day1/">Day1 Note</a></p>
+</li>
+<li><p>오늘의 과제: <a href="https://codesandbox.io/s/day-one-blueprint-fdmk3" rel="external nofollow noopener noreferrer" target="_blank">Day1 Question</a></p>
+</li>
+<li><p>제출: <a href="https://codesandbox.io/s/day-one-blueprint-hrvg2" rel="external nofollow noopener noreferrer" target="_blank">Day1 Answer</a></p>
+</li>
+<li><p>정답: <a href="https://codesandbox.io/s/day-one-solution-qsule" rel="external nofollow noopener noreferrer" target="_blank">Day1 Correct</a></p>
+</li>
+<li><p>회고<br>  오늘의 강의는 arrow function, templeate literals 등 ES6를 접하게 되면 처음 배우는 내용이었다.<br>  이미 머리로는 알고 있는 내용이었지만, 정작 인스턴스를 만들지 않고 함수를 호출하는 부분에서부터 막힐줄은 몰랐다. ‘해당 메소드를 찾을 수…..’<br>  모르는 것보다 <strong>알고 있다고 착각</strong>하는 것을 더욱 조심하자.</p>
+<blockquote>
+<p>정적 메서드는 클래스의 인스턴스 없이 호출이 가능하며 클래스가 인스턴스화되면 호출할 수 없다. 정적 메서드는 종종 어플리케이션의 유틸리티 함수를 만드는데 사용된다.</p>
+</blockquote>
+</li>
+</ul>
+<br>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/challenge/">challenge</a>, <a class="has-link-grey -link" href="/tags/nomadcoders/">nomadcoders</a>, <a class="has-link-grey -link" href="/tags/react/">react</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/28/algorithm/hackerrank/54_ChocolateFeast/">
+                <span class="level-item">Chocolate Feast</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/08/30/develop/react/react-challenge-day1/';
+        this.page.identifier = '2019/08/30/develop/react/react-challenge-day1/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Alley
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Front-End Developer
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        151
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        12
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        18
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/alleyful" target="_blank" rel="external nofollow noopener noreferrer">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Lecture-Summery">
+        <span class="has-mr-6">1</span>
+        <span>Lecture Summery</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Arrow-Functions">
+        <span class="has-mr-6">1.1</span>
+        <span>Arrow Functions</span>
+        </a></li><li>
+        <a class="is-flex" href="#Template-Literals">
+        <span class="has-mr-6">1.2</span>
+        <span>Template Literals</span>
+        </a></li><li>
+        <a class="is-flex" href="#Object-Destructuring">
+        <span class="has-mr-6">1.3</span>
+        <span>Object Destructuring</span>
+        </a></li><li>
+        <a class="is-flex" href="#Spread-Operator">
+        <span class="has-mr-6">1.4</span>
+        <span>Spread Operator</span>
+        </a></li><li>
+        <a class="is-flex" href="#Classes">
+        <span class="has-mr-6">1.5</span>
+        <span>Classes</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Homework">
+        <span class="has-mr-6">2</span>
+        <span>Homework</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Constraints">
+        <span class="has-mr-6">2.1</span>
+        <span>Constraints</span>
+        </a></li><li>
+        <a class="is-flex" href="#Output">
+        <span class="has-mr-6">2.2</span>
+        <span>Output</span>
+        </a></li><li>
+        <a class="is-flex" href="#Condition">
+        <span class="has-mr-6">2.3</span>
+        <span>Condition</span>
+        </a></li><li>
+        <a class="is-flex" href="#Hint">
+        <span class="has-mr-6">2.4</span>
+        <span>Hint</span>
+        </a></li><li>
+        <a class="is-flex" href="#Submit">
+        <span class="has-mr-6">2.5</span>
+        <span>Submit</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Day1-정리">
+        <span class="has-mr-6">3</span>
+        <span>Day1 정리</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/30/develop/react/react-challenge-day1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="ReactJS Challenge - Day1">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-29T15:48:44.000Z">2019-08-30</time></div>
+                    <a href="/2019/08/30/develop/react/react-challenge-day1/" class="has-link-black-ter is-size-6">ReactJS Challenge - Day1</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/react/">react</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/28/algorithm/hackerrank/54_ChocolateFeast/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Chocolate Feast">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-27T16:03:51.000Z">2019-08-28</time></div>
+                    <a href="/2019/08/28/algorithm/hackerrank/54_ChocolateFeast/" class="has-link-black-ter is-size-6">Chocolate Feast</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/27/develop/react/react-challenge-start/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="ReactJS Challenge - 시작하기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-27T11:28:44.000Z">2019-08-27</time></div>
+                    <a href="/2019/08/27/develop/react/react-challenge-start/" class="has-link-black-ter is-size-6">ReactJS Challenge - 시작하기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/react/">react</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">146</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
+            <span class="level-start">
+                <span class="level-item">HackerRank</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">106</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
+            <span class="level-start">
+                <span class="level-item">Programmers</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">40</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Tools/Hexo/">
+            <span class="level-start">
+                <span class="level-item">Hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/develop/">
+            <span class="level-start">
+                <span class="level-item">develop</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/develop/react/">
+            <span class="level-start">
+                <span class="level-item">react</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">30</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">29</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">88</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/10DaysOfJS/" style="font-size: 15px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/HackerRank/" style="font-size: 18.75px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 12.5px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 17.5px;">Javascript</a> <a href="/tags/ProblemSolving/" style="font-size: 17.5px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 16.25px;">Programmers</a> <a href="/tags/blog/" style="font-size: 12.5px;">blog</a> <a href="/tags/challenge/" style="font-size: 11.25px;">challenge</a> <a href="/tags/github-io/" style="font-size: 12.5px;">github.io</a> <a href="/tags/nomadcoders/" style="font-size: 11.25px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 13.75px;">queue</a> <a href="/tags/react/" style="font-size: 11.25px;">react</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 10px;">sort</a> <a href="/tags/stack/" style="font-size: 13.75px;">stack</a> <a href="/tags/정렬/" style="font-size: 10px;">정렬</a> <a href="/tags/프로그래머스/" style="font-size: 16.25px;">프로그래머스</a>
+    </div>
+</div>
+
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 alley&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
