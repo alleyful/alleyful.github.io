@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>https://alleyful.github.io/2019/09/03/develop/react/react-challenge-day4/</loc>
+        <lastmod>2019-09-02T14:59:39.152Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://alleyful.github.io/2019/09/01/develop/react/react-challenge-day3/</loc>
-        <lastmod>2019-09-02T05:29:19.181Z</lastmod>
+        <lastmod>2019-09-02T14:59:39.149Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +25,15 @@
 
     <url>
         <loc>https://alleyful.github.io/2019/08/31/develop/react/react-challenge-day2/</loc>
-        <lastmod>2019-09-02T05:29:19.177Z</lastmod>
+        <lastmod>2019-09-02T14:59:39.146Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/08/30/develop/react/react-challenge-day1/</loc>
+        <lastmod>2019-09-02T14:58:50.921Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,14 +42,6 @@
     <url>
         <loc>https://alleyful.github.io/2019/08/27/develop/react/react-challenge-start/</loc>
         <lastmod>2019-09-02T05:29:19.172Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/08/30/develop/react/react-challenge-day1/</loc>
-        <lastmod>2019-09-02T05:29:19.168Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
