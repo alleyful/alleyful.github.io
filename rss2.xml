@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>alley&#39;s blog for study</description>
-    <pubDate>Sat, 14 Sep 2019 12:34:50 GMT</pubDate>
+    <pubDate>Sat, 14 Sep 2019 23:03:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -23,13 +23,14 @@
 &lt;li&gt;1 + 2 + 3 + 4 + 5 = 15&lt;/li&gt;
 &lt;li&gt;4 + 5 + 6 = 15&lt;/li&gt;
 &lt;li&gt;7 + 8 = 15&lt;/li&gt;
-&lt;li&gt;15 = 15&lt;br&gt;자연수 n이 매개변수로 주어질 때, &lt;code&gt;연속된 자연수들로 n을 표현하는 방법의 수를 return하는 solution를 완성&lt;/code&gt;해주세요.&lt;/li&gt;
+&lt;li&gt;15 = 15&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;자연수 n이 매개변수로 주어질 때, &lt;code&gt;연속된 자연수들로 n을 표현하는 방법의 수를 return하는 solution를 완성&lt;/code&gt;해주세요.&lt;/p&gt;
 &lt;br&gt;
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>Finn은 요즘 수학공부에 빠져 있습니다. 수학 공부를 하던 Finn은 자연수 n을 연속한 자연수들로 표현 하는 방법이 여러개라는 사실을 알게 되었습니다. 예를들어 15는 다음과 같이 4가지로 표현 할 수 있습니다.</p><ul><li>1 + 2 + 3 + 4 + 5 = 15</li><li>4 + 5 + 6 = 15</li><li>7 + 8 = 15</li><li>15 = 15<br>자연수 n이 매개변수로 주어질 때, <code>연속된 자연수들로 n을 표현하는 방법의 수를 return하는 solution를 완성</code>해주세요.</li></ul><br><a id="more"></a><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><ul><li>n은 10,000 이하의 자연수 입니다.</li></ul><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="center">n</th><th align="center">result</th></tr></thead><tbody><tr><td align="center">15</td><td align="center">4</td></tr></tbody></table><br><h2 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h2><h3 id="입출력-예-1"><a href="#입출력-예-1" class="headerlink" title="입출력 예#1"></a>입출력 예#1</h3><p>문제의 예시와 같습니다.</p><br><hr><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>(n).fill().map(<span class="hljs-function">(<span class="hljs-params">v, i</span>) =&gt;</span> i + <span class="hljs-number">1</span>).filter(<span class="hljs-function"><span class="hljs-params">v</span> =&gt;</span> ( !(n % v) &amp;&amp; (v % <span class="hljs-number">2</span>)) ).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>Finn은 요즘 수학공부에 빠져 있습니다. 수학 공부를 하던 Finn은 자연수 n을 연속한 자연수들로 표현 하는 방법이 여러개라는 사실을 알게 되었습니다. 예를들어 15는 다음과 같이 4가지로 표현 할 수 있습니다.</p><ul><li>1 + 2 + 3 + 4 + 5 = 15</li><li>4 + 5 + 6 = 15</li><li>7 + 8 = 15</li><li>15 = 15</li></ul><p>자연수 n이 매개변수로 주어질 때, <code>연속된 자연수들로 n을 표현하는 방법의 수를 return하는 solution를 완성</code>해주세요.</p><br><a id="more"></a><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><ul><li>n은 10,000 이하의 자연수 입니다.</li></ul><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="center">n</th><th align="center">result</th></tr></thead><tbody><tr><td align="center">15</td><td align="center">4</td></tr></tbody></table><br><h2 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h2><h3 id="입출력-예-1"><a href="#입출력-예-1" class="headerlink" title="입출력 예#1"></a>입출력 예#1</h3><p>문제의 예시와 같습니다.</p><br><hr><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>(n).fill().map(<span class="hljs-function">(<span class="hljs-params">v, i</span>) =&gt;</span> i + <span class="hljs-number">1</span>).filter(<span class="hljs-function"><span class="hljs-params">v</span> =&gt;</span> ( !(n % v) &amp;&amp; (v % <span class="hljs-number">2</span>)) ).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
       
       <comments>https://alleyful.github.io/2019/09/15/algorithm/programmers/level2-11/#disqus_thread</comments>
     </item>
