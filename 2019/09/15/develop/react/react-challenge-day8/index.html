@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>NOMADCODERS ReactJS Challenge - Day8 - ALLEY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="canonical" href="https://alleyful.github.io/2019/09/15/develop/react/react-challenge-day8/">
+
+
+    <meta name="description" content="오늘의 강의: #6.8 ~ #6.9  오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.  이번 챌린지는 2일간 진행되는 챌린지 입니다.    [노마드 코더] 초보를 위한 React JS     6.8 Detail Container part One 6.9 Detail Container part Two">
+<meta name="keywords" content="react,challenge,nomadcoders,노마드코더,챌린지,react-router">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NOMADCODERS ReactJS Challenge - Day8">
+<meta property="og:url" content="https://alleyful.github.io/2019/09/15/develop/react/react-challenge-day8/index.html">
+<meta property="og:site_name" content="ALLEY">
+<meta property="og:description" content="오늘의 강의: #6.8 ~ #6.9  오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.  이번 챌린지는 2일간 진행되는 챌린지 입니다.    [노마드 코더] 초보를 위한 React JS     6.8 Detail Container part One 6.9 Detail Container part Two">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/react.jpg">
+<meta property="og:updated_time" content="2019-09-15T15:27:13.489Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NOMADCODERS ReactJS Challenge - Day8">
+<meta name="twitter:description" content="오늘의 강의: #6.8 ~ #6.9  오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.  이번 챌린지는 2일간 진행되는 챌린지 입니다.    [노마드 코더] 초보를 위한 React JS     6.8 Detail Container part One 6.9 Detail Container part Two">
+<meta name="twitter:image" content="https://alleyful.github.io/images/gallery/thumbnails/react.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141822876-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141822876-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="NOMADCODERS ReactJS Challenge - Day8">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-14T15:10:51.000Z">2019-09-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/develop/">develop</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/develop/react/">react</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                NOMADCODERS ReactJS Challenge - Day8
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>오늘의 강의: #6.8 ~ #6.9<br>  오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.<br>  이번 챌린지는 2일간 진행되는 챌린지 입니다.</p>
+</blockquote>
+<br>
+
+<p><a href="https://academy.nomadcoders.co/courses/436641/lectures/8467057" rel="external nofollow noopener noreferrer" target="_blank">[노마드 코더] 초보를 위한 React JS</a>   </p>
+<ul>
+<li>6.8 Detail Container part One</li>
+<li>6.9 Detail Container part Two</li>
+</ul>
+<br>
+<a id="more"></a>
+
+<hr>
+<br>
+
+<h2 id="Lecture-Summery"><a href="#Lecture-Summery" class="headerlink" title="Lecture Summery"></a>Lecture Summery</h2><h3 id="Directory"><a href="#Directory" class="headerlink" title="Directory"></a>Directory</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">my-app</span><br><span class="line">└── src</span><br><span class="line">    └── Screen</span><br><span class="line">        └── Coin</span><br><span class="line">            ├── CoinContainer.js   </span><br><span class="line">            ├── CoinPresenter.js   </span><br><span class="line">            └── index.js</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="index-js"><a href="#index-js" class="headerlink" title="index.js"></a>index.js</h3><figure class="highlight jsx hljs"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> CoinContainer <span class="hljs-keyword">from</span> <span class="hljs-string">"./CoinContainer"</span>;</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> CoinContainer;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="CoinContainer-js"><a href="#CoinContainer-js" class="headerlink" title="CoinContainer.js"></a>CoinContainer.js</h3><figure class="highlight jsx hljs"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> CoinPresenter <span class="hljs-keyword">from</span> <span class="hljs-string">"./CoinPresenter"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> &#123; getCoinDetail &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">"../../api"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    loading: <span class="hljs-literal">true</span>,</span><br><span class="line">    coin: <span class="hljs-literal">null</span></span><br><span class="line">  &#125;;</span><br><span class="line">  getCoin = <span class="hljs-keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> &#123;</span><br><span class="line">      match: &#123;</span><br><span class="line">        params: &#123; id &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; = <span class="hljs-keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> &#123; <span class="hljs-attr">data</span>: coin &#125; = <span class="hljs-keyword">await</span> getCoinDetail(id);</span><br><span class="line">      <span class="hljs-keyword">this</span>.setState(&#123;</span><br><span class="line">        coin</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="hljs-keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(e);</span><br><span class="line">    &#125; <span class="hljs-keyword">finally</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">this</span>.setState(&#123; <span class="hljs-attr">loading</span>: <span class="hljs-literal">false</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.getCoin();</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> &lt;CoinPresenter &#123;...this.state&#125; /&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="CoinPresenter-js"><a href="#CoinPresenter-js" class="headerlink" title="CoinPresenter.js"></a>CoinPresenter.js</h3><figure class="highlight jsx hljs"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> styled <span class="hljs-keyword">from</span> <span class="hljs-string">"styled-components"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">"prop-types"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> &#123; Route, Link, withRouter &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">"react-router-dom"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Loader <span class="hljs-keyword">from</span> <span class="hljs-string">"../../Components/Loader"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Markets <span class="hljs-keyword">from</span> <span class="hljs-string">"../Markets"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Exchanges <span class="hljs-keyword">from</span> <span class="hljs-string">"../CoinExchanges"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> Title = styled(<span class="hljs-string">"h1"</span>)<span class="hljs-string">``</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> Description = styled(<span class="hljs-string">"p"</span>)<span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">  margin: 30px 0px;</span></span><br><span class="line"><span class="hljs-string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> KeyValueRow = styled(<span class="hljs-string">"div"</span>)<span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">  margin-bottom: 5px;</span></span><br><span class="line"><span class="hljs-string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> Key = styled(<span class="hljs-string">"span"</span>)<span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">  font-weight: 600;</span></span><br><span class="line"><span class="hljs-string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> Value = styled(<span class="hljs-string">"span"</span>)<span class="hljs-string">``</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> InsideMenu = styled(<span class="hljs-string">"div"</span>)<span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">  margin: 20px 0px;</span></span><br><span class="line"><span class="hljs-string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> List = styled(<span class="hljs-string">"ul"</span>)<span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">  display: flex;</span></span><br><span class="line"><span class="hljs-string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> Item = styled(<span class="hljs-string">"li"</span>)<span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">  margin-right: 20px;</span></span><br><span class="line"><span class="hljs-string">  text-transform: uppercase;</span></span><br><span class="line"><span class="hljs-string">  font-weight: 600;</span></span><br><span class="line"><span class="hljs-string">  border: 2px solid #1abc9c;</span></span><br><span class="line"><span class="hljs-string">  padding: 5px;</span></span><br><span class="line"><span class="hljs-string">  border-radius: 3px;</span></span><br><span class="line"><span class="hljs-string">  background-color: <span class="hljs-subst">$&#123;props =&gt; (props.active ? <span class="hljs-string">"#1abc9c"</span> : <span class="hljs-string">"transparent"</span>)&#125;</span>;</span></span><br><span class="line"><span class="hljs-string">  color: <span class="hljs-subst">$&#123;props =&gt; (props.active ? <span class="hljs-string">"white"</span> : <span class="hljs-string">"black"</span>)&#125;</span>;</span></span><br><span class="line"><span class="hljs-string">`</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> CoinPresenter = withRouter(<span class="hljs-function">(<span class="hljs-params">&#123; location: &#123; pathname &#125;, loading, coin &#125;</span>) =&gt;</span></span><br><span class="line">  loading ? (</span><br><span class="line">    &lt;Loader /&gt;</span><br><span class="line">  ) : (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      &lt;Title&gt;</span><br><span class="line">        &#123;coin.name&#125; / &#123;coin.symbol&#125;</span><br><span class="line">      &lt;<span class="hljs-regexp">/Title&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;Description&gt;&#123;coin.description&#125;&lt;/</span>Description&gt;</span><br><span class="line">      &lt;KeyValueRow&gt;</span><br><span class="line">        &lt;Key&gt;Rank:&lt;/Key&gt; &lt;Value&gt;&#123;coin.rank&#125;&lt;/Value&gt;</span><br><span class="line">      &lt;<span class="hljs-regexp">/KeyValueRow&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;KeyValueRow&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;Key&gt;Open Source:&lt;/</span>Key&gt; &lt;Value&gt;&#123;coin.open_source ? "Yes" : "No"&#125;&lt;/Value&gt;</span><br><span class="line">      &lt;<span class="hljs-regexp">/KeyValueRow&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;KeyValueRow&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;Key&gt;Proof Type:&lt;/</span>Key&gt; &lt;Value&gt;&#123;coin.proof_type&#125;&lt;/Value&gt;</span><br><span class="line">      &lt;<span class="hljs-regexp">/KeyValueRow&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;KeyValueRow&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;Key&gt;Structure:&lt;/</span>Key&gt; &lt;Value&gt;&#123;coin.org_structure&#125;&lt;/Value&gt;</span><br><span class="line">      &lt;<span class="hljs-regexp">/KeyValueRow&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;InsideMenu&gt;</span></span><br><span class="line"><span class="hljs-regexp">        &lt;List&gt;</span></span><br><span class="line"><span class="hljs-regexp">          &lt;Item active=&#123;pathname === `/</span>coins/$&#123;coin.id&#125;/markets<span class="hljs-string">`&#125;&gt;</span></span><br><span class="line"><span class="hljs-string">            &lt;Link to=&#123;`</span>/coins/$&#123;coin.id&#125;/markets<span class="hljs-string">`&#125;&gt;Markets&lt;/Link&gt;</span></span><br><span class="line"><span class="hljs-string">          &lt;/Item&gt;</span></span><br><span class="line"><span class="hljs-string">          &lt;Item active=&#123;pathname === `</span>/coins/$&#123;coin.id&#125;/exchanges<span class="hljs-string">`&#125;&gt;</span></span><br><span class="line"><span class="hljs-string">            &lt;Link to=&#123;`</span>/coins/$&#123;coin.id&#125;/exchanges<span class="hljs-string">`&#125;&gt;Exchanges&lt;/Link&gt;</span></span><br><span class="line"><span class="hljs-string">          &lt;/Item&gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;/List&gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;/InsideMenu&gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;Route path="/coins/:id/markets" component=&#123;Markets&#125; /&gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;Route path="/coins/:id/exchanges" component=&#123;Exchanges&#125; /&gt;</span></span><br><span class="line"><span class="hljs-string">    &lt;/&gt;</span></span><br><span class="line"><span class="hljs-string">  )</span></span><br><span class="line"><span class="hljs-string">);</span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string">CoinPresenter.propTypes = &#123;</span></span><br><span class="line"><span class="hljs-string">  loading: PropTypes.bool.isRequired,</span></span><br><span class="line"><span class="hljs-string">  coin: PropTypes.shape(&#123;</span></span><br><span class="line"><span class="hljs-string">    id: PropTypes.string.isRequired,</span></span><br><span class="line"><span class="hljs-string">    name: PropTypes.string.isRequired,</span></span><br><span class="line"><span class="hljs-string">    symbol: PropTypes.string.isRequired,</span></span><br><span class="line"><span class="hljs-string">    description: PropTypes.string.isRequired,</span></span><br><span class="line"><span class="hljs-string">    rank: PropTypes.number.isRequired,</span></span><br><span class="line"><span class="hljs-string">    open_source: PropTypes.bool.isRequired,</span></span><br><span class="line"><span class="hljs-string">    proof_type: PropTypes.string.isRequired,</span></span><br><span class="line"><span class="hljs-string">    org_structure: PropTypes.string.isRequired</span></span><br><span class="line"><span class="hljs-string">  &#125;)</span></span><br><span class="line"><span class="hljs-string">&#125;;</span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string">export default CoinPresenter;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<h2 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h2><p><a href="https://codesandbox.io/s/day-five-solution-xoocs" rel="external nofollow noopener noreferrer" target="_blank">Day8 템플릿</a></p>
+<p><a href="https://youtu.be/A7Zn8o-JL5Q" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://img.youtube.com/vi/A7Zn8o-JL5Q/0.jpg" alt="Video Label"></a></p>
+<br>
+
+<p>Extend the Coin Explorer to create a detail view of each coin. You have to make the following URLs on your existing app.</p>
+<ol>
+<li>/coins/{coin_id} <code>https://api.coinpaprika.com/v1/coins/{coin_id}</code></li>
+<li>/coins/{coin_id}/exchanges <code>https://api.coinpaprika.com/v1/coins/{coin_id}/exchanges</code></li>
+<li>/coins/{coin_id}/markets <code>https://api.coinpaprika.com/v1/coins/{coin_id}/markets</code></li>
+</ol>
+<p>Documentation: <code>https://api.coinpaprika.com/?ref=public-apis#operation/getCoinById</code></p>
+<ul>
+<li><strong>Coin Markets &amp; Coin Exchanges</strong>: These two <strong>ROUTES</strong> should be inside of the Coin Detail. </li>
+</ul>
+<br>
+
+<h3 id="Global-Requirements"><a href="#Global-Requirements" class="headerlink" title="Global Requirements:"></a>Global Requirements:</h3><ul>
+<li>Use <strong>Container/Presenter</strong> pattern with <strong>class</strong> components.</li>
+<li><strong>DO NOT</strong> use <strong>Hooks</strong>. I know they are awesome, we will use them later.</li>
+<li><strong>ALL PRESENTERS</strong> should use <strong>PropTypes</strong>.</li>
+<li>Use <strong>PropTypes.shape</strong></li>
+<li>Use <strong>async/await</strong></li>
+<li>All AJAX requests MUST be made with an <strong>AXIOS INSTANCE</strong> (‘axios.create’)</li>
+<li>Containers MUST NEVER call Axios directly, they should call the instance.</li>
+<li>Use a <strong>Loader</strong> Component.</li>
+<li>Coin Markets and Coin Exchanges should be <strong>ROUTES</strong>. </li>
+</ul>
+<br>
+
+<h3 id="Submit"><a href="#Submit" class="headerlink" title="Submit"></a>Submit</h3><p><code>My Answer</code><br><a href="https://codesandbox.io/s/day-five-solution-2wr12" rel="external nofollow noopener noreferrer" target="_blank">Day8 Answer</a></p>
+<br>
+
+<p><code>correct</code><br><a href="https://codesandbox.io/s/day-six-solution-6n2q7" rel="external nofollow noopener noreferrer" target="_blank">Day8 Currect</a></p>
+<br>
+
+<hr>
+<br>
+
+<h3 id="Day8-9-2일간-진행되는-Challenges"><a href="#Day8-9-2일간-진행되는-Challenges" class="headerlink" title="Day8 ~ 9 (2일간 진행되는 Challenges)"></a>Day8 ~ 9 (2일간 진행되는 Challenges)</h3><ul>
+<li>오늘의 강의<ul>
+<li>6.8 Detail Container part One</li>
+<li>6.9 Detail Container part Two</li>
+</ul>
+</li>
+<li>강의노트: <a href="https://github.com/alleyful/nomflix" rel="external nofollow noopener noreferrer" target="_blank">Day8 Note</a></li>
+<li>오늘의 과제: <a href="https://codesandbox.io/s/day-five-solution-xoocs" rel="external nofollow noopener noreferrer" target="_blank">Day8 Question</a></li>
+<li>제출: <a href="https://codesandbox.io/s/day-five-solution-2wr12" rel="external nofollow noopener noreferrer" target="_blank">Day8 Answer</a></li>
+<li>정답: <a href="https://codesandbox.io/s/day-six-solution-6n2q7" rel="external nofollow noopener noreferrer" target="_blank">Day8 Current</a> </li>
+<li>회고<br>  답을 알고보면 정말 간단히 풀리는 것을 많이 돌아돌아 겨우 풀어낸 것 같다. 아마 깊이 있게 알지 못하고 경험이 부족하기 때문이 아닐까 싶다.<br>  더욱더 많은 노력이 필요할 것 같다는 생각을 다시한번 해본다. react-router에 대해 다시한번 알아볼 수 있는 기회가 되어 더욱 좋은 시간이었다.</li>
+</ul>
+<br>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/challenge/">challenge</a>, <a class="has-link-grey -link" href="/tags/nomadcoders/">nomadcoders</a>, <a class="has-link-grey -link" href="/tags/react/">react</a>, <a class="has-link-grey -link" href="/tags/react-router/">react-router</a>, <a class="has-link-grey -link" href="/tags/노마드코더/">노마드코더</a>, <a class="has-link-grey -link" href="/tags/챌린지/">챌린지</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/15/algorithm/programmers/level2-11/">
+                <span class="level-item">프로그래머스 - 숫자의 표현</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/09/15/develop/react/react-challenge-day8/';
+        this.page.identifier = '2019/09/15/develop/react/react-challenge-day8/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Alley
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Front-End Developer
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        161
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        12
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        21
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/alleyful" target="_blank" rel="external nofollow noopener noreferrer">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Lecture-Summery">
+        <span class="has-mr-6">1</span>
+        <span>Lecture Summery</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Directory">
+        <span class="has-mr-6">1.1</span>
+        <span>Directory</span>
+        </a></li><li>
+        <a class="is-flex" href="#index-js">
+        <span class="has-mr-6">1.2</span>
+        <span>index.js</span>
+        </a></li><li>
+        <a class="is-flex" href="#CoinContainer-js">
+        <span class="has-mr-6">1.3</span>
+        <span>CoinContainer.js</span>
+        </a></li><li>
+        <a class="is-flex" href="#CoinPresenter-js">
+        <span class="has-mr-6">1.4</span>
+        <span>CoinPresenter.js</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Homework">
+        <span class="has-mr-6">2</span>
+        <span>Homework</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Global-Requirements">
+        <span class="has-mr-6">2.1</span>
+        <span>Global Requirements:</span>
+        </a></li><li>
+        <a class="is-flex" href="#Submit">
+        <span class="has-mr-6">2.2</span>
+        <span>Submit</span>
+        </a></li><li>
+        <a class="is-flex" href="#Day8-9-2일간-진행되는-Challenges">
+        <span class="has-mr-6">2.3</span>
+        <span>Day8 ~ 9 (2일간 진행되는 Challenges)</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/09/15/develop/react/react-challenge-day8/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="NOMADCODERS ReactJS Challenge - Day8">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T15:10:51.000Z">2019-09-15</time></div>
+                    <a href="/2019/09/15/develop/react/react-challenge-day8/" class="has-link-black-ter is-size-6">NOMADCODERS ReactJS Challenge - Day8</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/react/">react</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/15/algorithm/programmers/level2-11/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/programmers.png" alt="프로그래머스 - 숫자의 표현">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T15:03:19.000Z">2019-09-15</time></div>
+                    <a href="/2019/09/15/algorithm/programmers/level2-11/" class="has-link-black-ter is-size-6">프로그래머스 - 숫자의 표현</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/13/develop/react/react-challenge-day5/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="NOMADCODERS ReactJS Challenge - Day5">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-13T11:10:29.000Z">2019-09-13</time></div>
+                    <a href="/2019/09/13/develop/react/react-challenge-day5/" class="has-link-black-ter is-size-6">NOMADCODERS ReactJS Challenge - Day5</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/react/">react</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">151</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
+            <span class="level-start">
+                <span class="level-item">HackerRank</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">108</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
+            <span class="level-start">
+                <span class="level-item">Programmers</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">43</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Tools/Hexo/">
+            <span class="level-start">
+                <span class="level-item">Hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/develop/">
+            <span class="level-start">
+                <span class="level-item">develop</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">7</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/develop/react/">
+            <span class="level-start">
+                <span class="level-item">react</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">7</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">9</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">29</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">88</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/10DaysOfJS/" style="font-size: 15.56px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/HackerRank/" style="font-size: 18.89px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 12.22px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 17.78px;">Javascript</a> <a href="/tags/ProblemSolving/" style="font-size: 17.78px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 16.67px;">Programmers</a> <a href="/tags/blog/" style="font-size: 12.22px;">blog</a> <a href="/tags/challenge/" style="font-size: 14.44px;">challenge</a> <a href="/tags/github-io/" style="font-size: 12.22px;">github.io</a> <a href="/tags/nomadcoders/" style="font-size: 14.44px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 13.33px;">queue</a> <a href="/tags/react/" style="font-size: 14.44px;">react</a> <a href="/tags/react-router/" style="font-size: 10px;">react-router</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 11.11px;">sort</a> <a href="/tags/stack/" style="font-size: 13.33px;">stack</a> <a href="/tags/노마드코더/" style="font-size: 14.44px;">노마드코더</a> <a href="/tags/정렬/" style="font-size: 11.11px;">정렬</a> <a href="/tags/챌린지/" style="font-size: 14.44px;">챌린지</a> <a href="/tags/프로그래머스/" style="font-size: 16.67px;">프로그래머스</a>
+    </div>
+</div>
+
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 alley&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
