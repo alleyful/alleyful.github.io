@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>NOMADCODERS ReactJS Challenge - Day5 - ALLEY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="canonical" href="https://alleyful.github.io/2019/09/13/log/react-challenge/react-challenge-day5/">
+
+
+    <meta name="description" content="오늘의 강의: #4.1 ~ #6.2오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.이번 챌린지는 2일간 진행되는 챌린지 입니다.    [노마드 코더] 초보를 위한 React JS4 Networking  4.0 Introduction to The Movie DB API  4.1 Sexy Networking with Axios">
+<meta name="keywords" content="react,challenge,nomadcoders,노마드코더,챌린지">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NOMADCODERS ReactJS Challenge - Day5">
+<meta property="og:url" content="https://alleyful.github.io/2019/09/13/log/react-challenge/react-challenge-day5/index.html">
+<meta property="og:site_name" content="ALLEY">
+<meta property="og:description" content="오늘의 강의: #4.1 ~ #6.2오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.이번 챌린지는 2일간 진행되는 챌린지 입니다.    [노마드 코더] 초보를 위한 React JS4 Networking  4.0 Introduction to The Movie DB API  4.1 Sexy Networking with Axios">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/react.jpg">
+<meta property="og:updated_time" content="2019-09-16T12:00:21.785Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NOMADCODERS ReactJS Challenge - Day5">
+<meta name="twitter:description" content="오늘의 강의: #4.1 ~ #6.2오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.이번 챌린지는 2일간 진행되는 챌린지 입니다.    [노마드 코더] 초보를 위한 React JS4 Networking  4.0 Introduction to The Movie DB API  4.1 Sexy Networking with Axios">
+<meta name="twitter:image" content="https://alleyful.github.io/images/gallery/thumbnails/react.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141822876-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141822876-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="NOMADCODERS ReactJS Challenge - Day5">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-13T11:10:29.000Z">2019-09-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/develop/">develop</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/develop/log/">log</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/develop/log/react-challenge/">react-challenge</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                NOMADCODERS ReactJS Challenge - Day5
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>오늘의 강의: #4.1 ~ #6.2<br>오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.<br>이번 챌린지는 2일간 진행되는 챌린지 입니다.</p>
+</blockquote>
+<br>
+
+<p><a href="https://academy.nomadcoders.co/courses/436641/lectures/8467057" rel="external nofollow noopener noreferrer" target="_blank">[노마드 코더] 초보를 위한 React JS</a><br><code>4 Networking</code></p>
+<ul>
+<li>4.0 Introduction to The Movie DB API </li>
+<li>4.1 Sexy Networking with Axios Instances </li>
+<li>4.2 API Verbs part One </li>
+<li>4.3 API Verbs part Two     </li>
+</ul>
+<p><code>5 Containers</code></p>
+<ul>
+<li>5.0 Container Presenter Pattern part One </li>
+<li>5.1 Container Presenter Pattern part Two </li>
+<li>5.2 Home Container </li>
+<li>5.3 TV Container </li>
+<li>5.4 Search Container </li>
+<li>5.5 Detail Container part One </li>
+<li>5.6 Detail Container part Two </li>
+<li>5.7 Destructuring assignment with let </li>
+</ul>
+<p><code>6 Presenters</code></p>
+<ul>
+<li>6.0 Presenter Structure </li>
+<li>6.1 HomePresenter and Section Components </li>
+<li>6.2 TVPresenter and Loader Components </li>
+</ul>
+<br>
+<a id="more"></a>
+
+<hr>
+<br>
+
+<h1 id="Lecture-Summery"><a href="#Lecture-Summery" class="headerlink" title="Lecture Summery"></a>Lecture Summery</h1><br>
+
+<h2 id="Networking"><a href="#Networking" class="headerlink" title="Networking"></a>Networking</h2><br>
+
+<h3 id="Restful-API"><a href="#Restful-API" class="headerlink" title="Restful API"></a>Restful API</h3><ul>
+<li>REST(REpresentational State Transfer) ‘대표적인 상태 전달’ </li>
+<li>REST란, “웹에 존재하는 모든 자원(이미지, 동영상, DB 자원)에 고유한 URI를 부여해 활용”하는 것으로, 자원을 정의하고 자원에 대한 주소를 지정하는 방법론을 의미한다고 한다.</li>
+<li>따라서 Restful API는 REST 특징을 지키면서 API를 제공하는 것을 의미한다</li>
+</ul>
+<br>
+
+<h4 id="REST-구성"><a href="#REST-구성" class="headerlink" title="REST 구성"></a><strong>REST 구성</strong></h4><ul>
+<li>자원 (Resouce) - URI</li>
+<li>행위 (Verb) - HTTP Method</li>
+<li>표현 (Representations)</li>
+</ul>
+<br>
+
+<h4 id="REST의-특징"><a href="#REST의-특징" class="headerlink" title="REST의 특징"></a><strong>REST의 특징</strong></h4><p>  1)  Uniform (유니폼 인터페이스)<br>  HTTP 표준에만 따른다면, 안드로이드/IOS 플랫폼이든, 특정 언어나 기술에 종속되지 않고 모든 플랫폼에 사용이 가능하며, URI로 지정한 리소스에 대한 조작이 가능한 아키텍처 스타일을 의미한다.</p>
+<p>  2) Stateless (무상태성)<br>  HTTP는 Stateless Protocol 이므로, REST 역시 무상태성을 갖는다. 즉, HttpSession과 같은 컨텍스트 저장소에 상태정보를 따로 저장하고 관리하지 않고, API 서버는 들어오는 요청만을 단순 처리하면 된다. 세션과 같은 컨텍스트 정보를 신경쓸 필요가 없어 구현이 단순해진다.</p>
+<p>  3) Cacheable (캐시가능)<br>  HTTP 기존의 웹 표준을 그대로 사용하므로, 웹에서 사용하는 기존의 인프라를 그대로 활용 가능하다. HTTP 프로토콜 기반의 로드밸런서(mod_proxy)나, SSL은 물론이고 HTTP가 가진 가장 강력한 특징 중의 하나인 캐싱 기능을 적용할 수 있다. 일반적인 서비스에서 조회 기능이 주로 사용됨을 감안하면, HTTP 리소스들을 웹 캐쉬 서버 등에 캐싱하는 것은 용량이나 성능 면에서 이점이 있다. 캐싱 구현은 HTTP 프로토콜 표준에서 사용하는 Last-Modified 태그나 E-Tag를 이용하면 가능하다.</p>
+<p>  4) Self-descriptiveness (자체 표현 구조)<br>  동사(Method) + 명사(URI) 로 이루어져있어 어떤 메서드에 무슨 행위를 하는지 알 수 있으며, 메시지 포맷 역시 JSON을 이용해서 직관적으로 이해가 가능한 구조로, REST API 메시지만 보고도 이를 쉽게 이해할 수 있다.</p>
+<p>  5) Client - Server 구조<br>  REST 서버는 API 제공, 클라이언트는 사용자 인증이나 컨텍스트(세션, 로그인 정보 등)을 직접 관리하는 구조로 각각의 역할이 확실히 구분되기 때문에 클라이언트와 서버에서 개발해야 할 내용이 명확해지고 서로간 의존성이 줄어들게 된다.</p>
+<p>  6) 계층형 구조<br>  API 서버는 순수 비지니스 로직을 수행하고, 그 앞단에 사용자 인증, 암호화(ssl), 로드밸런싱 등을 하는 계층을 추가하여 구조상의 유연상을 둘 수 있다. 이는 간단하게는 HA Proxy나 Apache의 Reverse Proxy를 통해, 더 나아가서는 API gateway 등을 활용하여 Micro Service Architecture로도 구현이 가능하게 한다.</p>
+<br>
+
+<h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><p>Axios는 HTTP통신을 하는데 매우 인기있는 Javascript<br>Axios는 브라우저와 Node.js 플랫폼에서 모두 사용할 수 있다.<br>Axios는 Promise를 기반으로하여 async/await문법을 사용하여 XHR요청을 매우 쉽게 할 수 있다.     </p>
+<p>Fetch API보다 Axios가 더 좋은 장점</p>
+<ul>
+<li>구형브라우저를 지원. (Fetch API의 경우는 폴리필 필요)</li>
+<li>요청을 중단시킬 수 있다.</li>
+<li>응답 시간 초과를 설정하는 방법이 있다.</li>
+<li>CSRF 보호 기능이 내장</li>
+<li>JSON 데이터 자동변환</li>
+<li>Node.js에서의 사용</li>
+</ul>
+<br>
+
+<h3 id="GET-요청"><a href="#GET-요청" class="headerlink" title="GET 요청"></a>GET 요청</h3><p>Axios를 사용하는 편한 방법 중 하나는 async/ await 구문을 사용하는 것이다.</p>
+<p>이 Node.js 예제는 Dog APi를 사용하여 모든 Dog의 breed 목록을 가져와 axios.get()</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> axios = <span class="hljs-built_in">require</span>(<span class="hljs-string">'axios'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> getBreeds = <span class="hljs-keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> axios.get(<span class="hljs-string">'https://dog.ceo/api/breeds/list/all'</span>);</span><br><span class="line">  &#125; <span class="hljs-keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.error(error);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> countBreeds = <span class="hljs-keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> breeds = <span class="hljs-keyword">await</span> getBreeds();</span><br><span class="line">  </span><br><span class="line">  <span class="hljs-keyword">if</span> (breeds.data.message) &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`현재 강아지의 수는 <span class="hljs-subst">$&#123;<span class="hljs-built_in">Object</span>.entries(breeds.data.message).length&#125;</span>입니다.`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">countBreeds();</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>만약 async / await 구문을 사용하지 않는다면 Promise 구문을 사용 할 수 있다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> axios = <span class="hljs-built_in">require</span>(<span class="hljs-string">'axios'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> getBreeds = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">'https://dog.ceo/api/breeds/list/all'</span>);</span><br><span class="line">  &#125; <span class="hljs-keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.error(error)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> countBreeds = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> breeds = getBreeds()</span><br><span class="line">  	.then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">if</span> (response.data.message) &#123;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`현재 강아지의 수는 <span class="hljs-subst">$&#123;<span class="hljs-built_in">Object</span>.entries(breeds.data.message).length&#125;</span>입니다.`</span>);</span><br><span class="line">      &#125;</span><br><span class="line">  	&#125;)</span><br><span class="line">  	.catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(error);</span><br><span class="line">  	&#125;)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">countBreeds();</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="GET-요청에-매개-변수-추가"><a href="#GET-요청에-매개-변수-추가" class="headerlink" title="GET 요청에 매개 변수 추가"></a><strong>GET 요청에 매개 변수 추가</strong></h4><p>Axios를 사용하여 GET 요청시 간단하게 매개변수를 추가 할 수 있다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axios.get(&apos;https://test.com/?foo=bar&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>또는 params옵션에서 추가하여 사용 할 수 있다.</p>
+<figure class="highlight jsx hljs"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="hljs-string">'https://test.com/'</span>, &#123;</span><br><span class="line">  params: &#123;</span><br><span class="line">    foo: <span class="hljs-string">'bar'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="POST-요청"><a href="#POST-요청" class="headerlink" title="POST 요청"></a>POST 요청</h3><p>axios.post처럼 POST 요청은 axios.getGET 요청과 같이 거의 같다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axios.post(&apos;https://test.com&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>POST 역시 매개변수를 추가하는방법은 GET과 같다.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axios.post(&apos;https://test.com/&apos;, &#123;</span><br><span class="line">  params: &#123;</span><br><span class="line">    foo: &apos;bar&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<h2 id="Containers-amp-Presenters"><a href="#Containers-amp-Presenters" class="headerlink" title="Containers &amp; Presenters"></a>Containers &amp; Presenters</h2><br>
+
+<h3 id="React-디자인-패턴"><a href="#React-디자인-패턴" class="headerlink" title="React 디자인 패턴"></a>React 디자인 패턴</h3><ul>
+<li><p>Container<br>Logic : API Requests, errors etc…</p>
+</li>
+<li><p>Presenter<br>Data comes from props. No logic. Only UI</p>
+</li>
+</ul>
+<br>
+
+<p>Derectory</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">my-app</span><br><span class="line">└── src</span><br><span class="line">    └── Screen</span><br><span class="line">        ├── PricesContainer.js   </span><br><span class="line">        ├── PricesPresenter.js   </span><br><span class="line">        └── index.js</span><br></pre></td></tr></table></figure>
+
+<p>index.js</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> PricesContainer <span class="hljs-keyword">from</span> <span class="hljs-string">"./PricesContainer"</span>;</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> PricesContainer;</span><br></pre></td></tr></table></figure>
+
+<p>PricesContainer.js</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> PricesPresenter <span class="hljs-keyword">from</span> <span class="hljs-string">"./PricesPresenter"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> &#123; getPrices &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">"../../api"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    loading: <span class="hljs-literal">true</span>,</span><br><span class="line">    prices: []</span><br><span class="line">  &#125;;</span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.getPrices();</span><br><span class="line">  &#125;</span><br><span class="line">  getPrices = <span class="hljs-keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">const</span> &#123; <span class="hljs-attr">data</span>: prices &#125; = <span class="hljs-keyword">await</span> getPrices();</span><br><span class="line">      <span class="hljs-keyword">this</span>.setState(&#123;</span><br><span class="line">        prices</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="hljs-keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(e);</span><br><span class="line">    &#125; <span class="hljs-keyword">finally</span> &#123;</span><br><span class="line">      <span class="hljs-keyword">this</span>.setState(&#123; <span class="hljs-attr">loading</span>: <span class="hljs-literal">false</span> &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> &lt;PricesPresenter &#123;...this.state&#125; /&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>PricesPresenter.js</p>
+<figure class="highlight jsx hljs"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">"prop-types"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Loader <span class="hljs-keyword">from</span> <span class="hljs-string">"../../Components/Loader"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Price <span class="hljs-keyword">from</span> <span class="hljs-string">"../../Components/Price"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> PricesPresenter = <span class="hljs-function">(<span class="hljs-params">&#123; loading, prices &#125;</span>) =&gt;</span></span><br><span class="line">  loading ? (</span><br><span class="line">    &lt;Loader /&gt;</span><br><span class="line">  ) : (</span><br><span class="line">    prices.map(<span class="hljs-function"><span class="hljs-params">price</span> =&gt;</span> &lt;Price key=&#123;price.id&#125; &#123;...price&#125; /&gt;)</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">PricesPresenter.propTypes = &#123;</span><br><span class="line">  loading: PropTypes.bool.isRequired,</span><br><span class="line">  prices: PropTypes.arrayOf(</span><br><span class="line">    PropTypes.shape(&#123;</span><br><span class="line">      id: PropTypes.string.isRequired,</span><br><span class="line">      name: PropTypes.string.isRequired,</span><br><span class="line">      symbol: PropTypes.string.isRequired,</span><br><span class="line">      quotes: PropTypes.shape(&#123;</span><br><span class="line">        USD: PropTypes.shape(&#123;</span><br><span class="line">          price: PropTypes.number.isRequired</span><br><span class="line">        &#125;).isRequired</span><br><span class="line">      &#125;).isRequired</span><br><span class="line">    &#125;).isRequired</span><br><span class="line">  ).isRequired</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default PricesPresenter;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/@sangboaklee/react-proptypes-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0-7a0615da236" rel="external nofollow noopener noreferrer" target="_blank">[React] PropTypes 활용하기</a></li>
+<li><a href="https://github.com/axios/axios" rel="external nofollow noopener noreferrer" target="_blank">axios</a></li>
+<li><a href="https://mangkyu.tistory.com/46" rel="external nofollow noopener noreferrer" target="_blank">[Restful API] Rest API란?</a></li>
+</ul>
+<br>
+
+<hr>
+<br>
+
+<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><p><a href="https://codesandbox.io/s/day-five-blueprint-ubv3d" rel="external nofollow noopener noreferrer" target="_blank">Day5 템플릿</a></p>
+<p><a href="https://youtu.be/gBCUJuS5-HU" rel="external nofollow noopener noreferrer" target="_blank"><img src="http://img.youtube.com/vi/gBCUJuS5-HU/0.jpg" alt="Video Label"></a></p>
+<br>
+
+<p>Extend the Coin Explorer to call the following API endpoints on the following pages:</p>
+<p>/(Homepage) <a href="https://api.coinpaprika.com/v1/tickers" rel="external nofollow noopener noreferrer" target="_blank">https://api.coinpaprika.com/v1/tickers</a><br>/exchanges <a href="https://api.coinpaprika.com/v1/exchanges" rel="external nofollow noopener noreferrer" target="_blank">https://api.coinpaprika.com/v1/exchanges</a><br>/coins <a href="https://api.coinpaprika.com/v1/coins" rel="external nofollow noopener noreferrer" target="_blank">https://api.coinpaprika.com/v1/coins</a>   </p>
+<ul>
+<li>Homepage: Show the name of the coin, the symbol and price.</li>
+<li>Exchanges: Show the name of the exchange, description and website link.</li>
+<li>Coins: List the coins and sort them by rank.</li>
+</ul>
+<br>
+
+<h2 id="Global-Requirements"><a href="#Global-Requirements" class="headerlink" title="Global Requirements:"></a>Global Requirements:</h2><ul>
+<li>Use <strong>Container/Presenter</strong> pattern with class components.   </li>
+<li><strong>DO NOT use Hooks</strong>. I know they are awesome, we will use them later.   </li>
+<li>ALL PRESENTERS should use <strong>PropTypes</strong>.   </li>
+<li>Use <strong>PropTypes.shape</strong>   </li>
+<li>Use <strong>async/await</strong>   </li>
+<li>All AJAX requests MUST be made with an <strong>AXIOS INSTANCE</strong> (‘axios.create’)   </li>
+<li>Containers MUST NEVER call Axios directly, they should call the instance.   </li>
+<li>Use a <strong>Loader</strong> Component.   </li>
+</ul>
+<br>
+
+<h2 id="Submit"><a href="#Submit" class="headerlink" title="Submit"></a>Submit</h2><p><code>My Answer</code><br><a href="https://codesandbox.io/s/day-five-blueprint-swptw" rel="external nofollow noopener noreferrer" target="_blank">Day5 Answer</a></p>
+<br>
+
+<p><code>correct</code><br><a href="https://codesandbox.io/s/day-five-solution-xoocs" rel="external nofollow noopener noreferrer" target="_blank">Day5 Currect</a></p>
+<br>
+
+<hr>
+<br>
+
+<h1 id="Day5-6-2일간-진행되는-Challenges"><a href="#Day5-6-2일간-진행되는-Challenges" class="headerlink" title="Day5 ~ 6 (2일간 진행되는 Challenges)"></a>Day5 ~ 6 (2일간 진행되는 Challenges)</h1><ul>
+<li><p>오늘의 강의<br>  <code>4 Networking</code></p>
+<ul>
+<li><p>4.0 Introduction to The Movie DB API </p>
+</li>
+<li><p>4.1 Sexy Networking with Axios Instances </p>
+</li>
+<li><p>4.2 API Verbs part One </p>
+</li>
+<li><p>4.3 API Verbs part Two     </p>
+<p><code>5 Containers</code></p>
+</li>
+<li><p>5.0 Container Presenter Pattern part One </p>
+</li>
+<li><p>5.1 Container Presenter Pattern part Two </p>
+</li>
+<li><p>5.2 Home Container </p>
+</li>
+<li><p>5.3 TV Container </p>
+</li>
+<li><p>5.4 Search Container </p>
+</li>
+<li><p>5.5 Detail Container part One </p>
+</li>
+<li><p>5.6 Detail Container part Two </p>
+</li>
+<li><p>5.7 Destructuring assignment with let </p>
+<p><code>6 Presenters</code></p>
+</li>
+<li><p>6.0 Presenter Structure </p>
+</li>
+<li><p>6.1 HomePresenter and Section Components </p>
+</li>
+<li><p>6.2 TVPresenter and Loader Components </p>
+</li>
+</ul>
+</li>
+<li><p>강의노트: <a href="https://github.com/alleyful/nomflix" rel="external nofollow noopener noreferrer" target="_blank">Day5 Note</a></p>
+</li>
+<li><p>오늘의 과제: <a href="https://codesandbox.io/s/day-five-blueprint-ubv3d" rel="external nofollow noopener noreferrer" target="_blank">Day5 Question</a></p>
+</li>
+<li><p>제출: <a href="https://codesandbox.io/s/day-five-blueprint-swptw" rel="external nofollow noopener noreferrer" target="_blank">Day5 Answer</a></p>
+</li>
+<li><p>정답: <a href="https://codesandbox.io/s/day-five-solution-xoocs" rel="external nofollow noopener noreferrer" target="_blank">Day5 Current</a> </p>
+</li>
+</ul>
+<br>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/challenge/">challenge</a>, <a class="has-link-grey -link" href="/tags/nomadcoders/">nomadcoders</a>, <a class="has-link-grey -link" href="/tags/react/">react</a>, <a class="has-link-grey -link" href="/tags/노마드코더/">노마드코더</a>, <a class="has-link-grey -link" href="/tags/챌린지/">챌린지</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/15/algorithm/programmers/level2-11/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">프로그래머스 - 숫자의 표현</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/11/algorithm/programmers/level2-10/">
+                <span class="level-item">프로그래머스 - 땅따먹기</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/09/13/log/react-challenge/react-challenge-day5/';
+        this.page.identifier = '2019/09/13/log/react-challenge/react-challenge-day5/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Alley
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Front-End Developer
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        162
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        14
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        25
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/alleyful" target="_blank" rel="external nofollow noopener noreferrer">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Lecture-Summery">
+        <span class="has-mr-6">1</span>
+        <span>Lecture Summery</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Networking">
+        <span class="has-mr-6">1.1</span>
+        <span>Networking</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Restful-API">
+        <span class="has-mr-6">1.1.1</span>
+        <span>Restful API</span>
+        </a></li><li>
+        <a class="is-flex" href="#axios">
+        <span class="has-mr-6">1.1.2</span>
+        <span>axios</span>
+        </a></li><li>
+        <a class="is-flex" href="#GET-요청">
+        <span class="has-mr-6">1.1.3</span>
+        <span>GET 요청</span>
+        </a></li><li>
+        <a class="is-flex" href="#POST-요청">
+        <span class="has-mr-6">1.1.4</span>
+        <span>POST 요청</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Containers-amp-Presenters">
+        <span class="has-mr-6">1.2</span>
+        <span>Containers &amp; Presenters</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#React-디자인-패턴">
+        <span class="has-mr-6">1.2.1</span>
+        <span>React 디자인 패턴</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Reference">
+        <span class="has-mr-6">1.3</span>
+        <span>Reference</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Homework">
+        <span class="has-mr-6">2</span>
+        <span>Homework</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Global-Requirements">
+        <span class="has-mr-6">2.1</span>
+        <span>Global Requirements:</span>
+        </a></li><li>
+        <a class="is-flex" href="#Submit">
+        <span class="has-mr-6">2.2</span>
+        <span>Submit</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Day5-6-2일간-진행되는-Challenges">
+        <span class="has-mr-6">3</span>
+        <span>Day5 ~ 6 (2일간 진행되는 Challenges)</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/09/16/log/youtube-challenge/youtube-challenge-start/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/youtubeChallenge.png" alt="NOMADCODERS Youtube Challenge - 시작하기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-16T12:06:41.000Z">2019-09-16</time></div>
+                    <a href="/2019/09/16/log/youtube-challenge/youtube-challenge-start/" class="has-link-black-ter is-size-6">NOMADCODERS Youtube Challenge - 시작하기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/log/">log</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/15/log/react-challenge/react-challenge-day8/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="NOMADCODERS ReactJS Challenge - Day8">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T15:10:51.000Z">2019-09-15</time></div>
+                    <a href="/2019/09/15/log/react-challenge/react-challenge-day8/" class="has-link-black-ter is-size-6">NOMADCODERS ReactJS Challenge - Day8</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/log/">log</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/15/algorithm/programmers/level2-11/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/programmers.png" alt="프로그래머스 - 숫자의 표현">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-14T15:03:19.000Z">2019-09-15</time></div>
+                    <a href="/2019/09/15/algorithm/programmers/level2-11/" class="has-link-black-ter is-size-6">프로그래머스 - 숫자의 표현</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">151</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
+            <span class="level-start">
+                <span class="level-item">HackerRank</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">108</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
+            <span class="level-start">
+                <span class="level-item">Programmers</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">43</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Tools/Hexo/">
+            <span class="level-start">
+                <span class="level-item">Hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/develop/">
+            <span class="level-start">
+                <span class="level-item">develop</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/develop/log/">
+            <span class="level-start">
+                <span class="level-item">log</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">10</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">29</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">88</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/10DaysOfJS/" style="font-size: 16px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HackerRank/" style="font-size: 19px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 12px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 18px;">Javascript</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/ProblemSolving/" style="font-size: 18px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 17px;">Programmers</a> <a href="/tags/Pug/" style="font-size: 10px;">Pug</a> <a href="/tags/blog/" style="font-size: 12px;">blog</a> <a href="/tags/challenge/" style="font-size: 15px;">challenge</a> <a href="/tags/github-io/" style="font-size: 12px;">github.io</a> <a href="/tags/nomadcoders/" style="font-size: 15px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 13px;">queue</a> <a href="/tags/react/" style="font-size: 14px;">react</a> <a href="/tags/react-router/" style="font-size: 10px;">react-router</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 11px;">sort</a> <a href="/tags/stack/" style="font-size: 13px;">stack</a> <a href="/tags/노마드코더/" style="font-size: 15px;">노마드코더</a> <a href="/tags/정렬/" style="font-size: 11px;">정렬</a> <a href="/tags/챌린지/" style="font-size: 15px;">챌린지</a> <a href="/tags/프로그래머스/" style="font-size: 17px;">프로그래머스</a>
+    </div>
+</div>
+
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 alley&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

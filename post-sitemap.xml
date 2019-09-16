@@ -8,8 +8,64 @@
     </url>
 
     <url>
-        <loc>https://alleyful.github.io/2019/09/15/develop/react/react-challenge-day8/</loc>
-        <lastmod>2019-09-15T15:32:49.721Z</lastmod>
+        <loc>https://alleyful.github.io/2019/09/16/log/youtube-challenge/youtube-challenge-start/</loc>
+        <lastmod>2019-09-16T12:10:51.155Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/08/27/log/react-challenge/react-challenge-start/</loc>
+        <lastmod>2019-09-16T12:00:21.811Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/09/03/log/react-challenge/react-challenge-day4/</loc>
+        <lastmod>2019-09-16T12:00:21.807Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/08/31/log/react-challenge/react-challenge-day2/</loc>
+        <lastmod>2019-09-16T12:00:21.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/09/15/log/react-challenge/react-challenge-day8/</loc>
+        <lastmod>2019-09-16T12:00:21.799Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/08/30/log/react-challenge/react-challenge-day1/</loc>
+        <lastmod>2019-09-16T12:00:21.795Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/09/01/log/react-challenge/react-challenge-day3/</loc>
+        <lastmod>2019-09-16T12:00:21.791Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://alleyful.github.io/2019/09/13/log/react-challenge/react-challenge-day5/</loc>
+        <lastmod>2019-09-16T12:00:21.785Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,22 +74,6 @@
     <url>
         <loc>https://alleyful.github.io/2019/09/15/algorithm/programmers/level2-11/</loc>
         <lastmod>2019-09-14T23:06:30.038Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/09/13/develop/react/react-challenge-day5/</loc>
-        <lastmod>2019-09-14T12:35:36.778Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/09/03/develop/react/react-challenge-day4/</loc>
-        <lastmod>2019-09-13T14:34:24.850Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -58,38 +98,6 @@
     <url>
         <loc>https://alleyful.github.io/2019/09/04/algorithm/hackerrank/56_LisasWorkbook/</loc>
         <lastmod>2019-09-04T05:09:46.298Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/09/01/develop/react/react-challenge-day3/</loc>
-        <lastmod>2019-09-02T14:59:39.149Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/08/31/develop/react/react-challenge-day2/</loc>
-        <lastmod>2019-09-02T14:59:39.146Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/08/30/develop/react/react-challenge-day1/</loc>
-        <lastmod>2019-09-02T14:58:50.921Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://alleyful.github.io/2019/08/27/develop/react/react-challenge-start/</loc>
-        <lastmod>2019-09-02T05:29:19.172Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
