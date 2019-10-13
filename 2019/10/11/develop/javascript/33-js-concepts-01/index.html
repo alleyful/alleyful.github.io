@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>자바스크립트 개발자라면 알아야하는 핵심 컨셉 33 - ALLEY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="canonical" href="https://alleyful.github.io/2019/10/11/develop/javascript/33-js-concepts-01/">
+
+
+    <meta name="description" content="1. Call Stack여러 함수들(functions)을 호출하는 스크립트에서 해당 위치를 추적하는 인터프리터 (웹 브라우저의 자바스크립트 인터프리터같은)를 위한 메커니즘.현재 어떤 함수가 동작하고 있는지, 그 함수 내에서 어떤 함수가 동작하는지, 다음에 어떤 함수가 호출되어야 하는지 등을 제어.  스크립트가 함수를 호출하면 인터프리터는 이를 호출 스택에">
+<meta name="keywords" content="ES6,javascript,call stack,Primitive Types,Reference Types">
+<meta property="og:type" content="article">
+<meta property="og:title" content="자바스크립트 개발자라면 알아야하는 핵심 컨셉 33">
+<meta property="og:url" content="https://alleyful.github.io/2019/10/11/develop/javascript/33-js-concepts-01/index.html">
+<meta property="og:site_name" content="ALLEY">
+<meta property="og:description" content="1. Call Stack여러 함수들(functions)을 호출하는 스크립트에서 해당 위치를 추적하는 인터프리터 (웹 브라우저의 자바스크립트 인터프리터같은)를 위한 메커니즘.현재 어떤 함수가 동작하고 있는지, 그 함수 내에서 어떤 함수가 동작하는지, 다음에 어떤 함수가 호출되어야 하는지 등을 제어.  스크립트가 함수를 호출하면 인터프리터는 이를 호출 스택에">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/javascript.png">
+<meta property="og:updated_time" content="2019-10-13T12:26:30.566Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="자바스크립트 개발자라면 알아야하는 핵심 컨셉 33">
+<meta name="twitter:description" content="1. Call Stack여러 함수들(functions)을 호출하는 스크립트에서 해당 위치를 추적하는 인터프리터 (웹 브라우저의 자바스크립트 인터프리터같은)를 위한 메커니즘.현재 어떤 함수가 동작하고 있는지, 그 함수 내에서 어떤 함수가 동작하는지, 다음에 어떤 함수가 호출되어야 하는지 등을 제어.  스크립트가 함수를 호출하면 인터프리터는 이를 호출 스택에">
+<meta name="twitter:image" content="https://alleyful.github.io/images/gallery/thumbnails/javascript.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141822876-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141822876-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/javascript.png" alt="자바스크립트 개발자라면 알아야하는 핵심 컨셉 33">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-11T08:31:19.000Z">2019-10-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/develop/">develop</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/develop/javascript/">javascript</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                자바스크립트 개발자라면 알아야하는 핵심 컨셉 33
+            
+        </h1>
+        <div class="content">
+            <h1 id="1-Call-Stack"><a href="#1-Call-Stack" class="headerlink" title="1. Call Stack"></a>1. Call Stack</h1><p>여러 함수들(functions)을 호출하는 스크립트에서 해당 위치를 추적하는 인터프리터 (웹 브라우저의 자바스크립트 인터프리터같은)를 위한 메커니즘.<br>현재 어떤 함수가 동작하고 있는지, 그 함수 내에서 어떤 함수가 동작하는지, 다음에 어떤 함수가 호출되어야 하는지 등을 제어.</p>
+<ul>
+<li>스크립트가 함수를 호출하면 인터프리터는 이를 호출 스택에 추가한 다음 함수를 수행하기 시작.</li>
+<li>해당 함수에 의해 호출되는 모든 함수는 호출 스택에 추가되고 호출이 도달하는 위치에서 실행.</li>
+<li>메인 함수가 끝나면 인터프리터는 스택을 제거하고 메인 코드 목록에서 중단된 실행을 다시 시작.</li>
+<li>스택이 할당된 공간보다 많은 공간을 차지하면 “stack overflow” 에러가 발생.</li>
+</ul>
+<a id="more"></a>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">three</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'I love JS'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  three();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  two();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">zero</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  one();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">zero();</span><br></pre></td></tr></table></figure>
+
+<p><code>callstack</code></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">0. empty 스택</span><br><span class="line">1. zero() 스택 삽입</span><br><span class="line">2. zero() =&gt; one() 스택 삽입</span><br><span class="line">3. zero() =&gt; one() =&gt; two() 스택 삽입</span><br><span class="line">4. zero() =&gt; one() =&gt; two() =&gt; three() 스택 삽입</span><br><span class="line">5. zero() =&gt; one() =&gt; two() =&gt; three() =&gt; console.log() 실행완료</span><br><span class="line">6. zero() =&gt; one() =&gt; two() =&gt; three() 스택에서 제거</span><br><span class="line">7. zero() =&gt; one() =&gt; two() 스택에서 제거</span><br><span class="line">8. zero() =&gt; one() 스택에서 제거</span><br><span class="line">9. zero() 스택에서 제거</span><br><span class="line">10. empty 스택</span><br></pre></td></tr></table></figure>
+
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Glossary/Call_stack" rel="external nofollow noopener noreferrer" target="_blank">MDN Callstack</a></li>
+<li><a href="https://www.youtube.com/watch?v=QkFkFqg-J04&list=PL7jH19IHhOLMmmjrwCi7-dMFVdoU0hhgF&index=10" rel="external nofollow noopener noreferrer" target="_blank">Nomadcoders</a></li>
+</ul>
+<br>
+
+<h1 id="2-Primitive-Types"><a href="#2-Primitive-Types" class="headerlink" title="2. Primitive Types"></a>2. Primitive Types</h1><p>Primitive Types는 원시 자료형 또는 기본 자료형으로 자바스크립트의 기본이 되는 자료형을 의미. </p>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
+<li>숫자의 자료형을 의미. </li>
+<li>숫자가 아님을 뜻하는 NaN(Not a Number)도 숫자 자료형.  </li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-number">1</span> <span class="hljs-comment">// "number"</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">NaN</span> <span class="hljs-comment">// "number"</span></span><br><span class="line"><span class="hljs-built_in">Math</span>.pow(<span class="hljs-number">2</span>, <span class="hljs-string">'abc'</span>) <span class="hljs-comment">//NaN</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ul>
+<li>자바스크립트 문자열을 의미하며, 텍스트 데이터를 나타내는데 사용. </li>
+<li>“, ‘ 또는 ` 기호 안에 텍스트를 기입하는 방식으로 사용하며 시작한 기호로 끝내야 한다.</li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-string">"Hello"</span></span><br><span class="line"><span class="hljs-string">'Hi'</span></span><br><span class="line"><span class="hljs-string">`Nice`</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>“ “ 안에 ‘ ‘ 쌍을 쓸 수 있습니다. 하지만 “ “ 쌍 안에 “ “를 쓰려면 역슬래쉬로 이스케이프(escape) 해야 한다.</li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-string">"Hello \"Javascript\" "</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><ul>
+<li>논리적인 요소를 나타내는 타입으로 true(참)와 false(거짓)이 있음. </li>
+<li>만약 “true”와 “false”로 쓰면 이는 문자형으로 인지됨.</li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-string">"Hello"</span> === <span class="hljs-string">"Hi"</span> <span class="hljs-comment">//false</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">true</span> <span class="hljs-comment">//"boolean"</span></span><br><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-string">"true"</span> <span class="hljs-comment">//"string"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h2><ul>
+<li>Null은 존재하지 않음이라는 정의를 한 것.</li>
+</ul>
+<br>
+
+<h2 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h2><ul>
+<li>정의 자체를 하지 않은 것을 의미.</li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">null</span> === <span class="hljs-keyword">typeof</span> <span class="hljs-literal">undefined</span> <span class="hljs-comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Symbol-ES6에서-추가"><a href="#Symbol-ES6에서-추가" class="headerlink" title="Symbol(ES6에서 추가)"></a>Symbol(ES6에서 추가)</h2><ul>
+<li>심볼(symbol)은 ES6에서 새롭게 추가된 7번째 타입으로 변경 불가능한 원시 타입의 값. </li>
+<li>주로 이름의 충돌 위험이 없는 유일한 객체의 프로퍼티 키(property key)를 만들기 위해 사용.</li>
+</ul>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> mySymbol = <span class="hljs-built_in">Symbol</span>();</span><br><span class="line"><span class="hljs-built_in">console</span>.log(mySymbol);        <span class="hljs-comment">// Symbol()</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> mySymbol); <span class="hljs-comment">// symbol</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> mySymbol = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">'mySymbol'</span>);</span><br><span class="line">obj[mySymbol] = <span class="hljs-number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj); <span class="hljs-comment">// &#123; [Symbol(mySymbol)]: 123 &#125;</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj[mySymbol]); <span class="hljs-comment">// 123</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures#Primitive_values" rel="external nofollow noopener noreferrer" target="_blank">MDN data types</a></li>
+<li><a href="https://poiemaweb.com/es6-symbol" rel="external nofollow noopener noreferrer" target="_blank">7번째 타입 심볼(Symbol)</a></li>
+</ul>
+<br>
+
+<h1 id="3-Value-Types-and-Reference-Types"><a href="#3-Value-Types-and-Reference-Types" class="headerlink" title="3. Value Types and Reference Types"></a>3. Value Types and Reference Types</h1><p><img src="/images/develop/javascript/33-js-1.png" alt="Value Types and Reference Types"></p>
+<h2 id="Value-Types"><a href="#Value-Types" class="headerlink" title="Value Types"></a>Value Types</h2><ul>
+<li>원시타입(Value Types or primitive type) : Number, String, Boolean, Null, Undefined, Symbol</li>
+<li>원시 타입 데이터는 변수에 할당될 때 메모리 상에 고정된 크기로 저장되고 해당 변수가 원시 데이터의 값을 보관한다. </li>
+<li>원시 타입 자료형은 모두 변수 선언, 초기화, 할당시 값이 저장된 메모리 영역에 직접적으로 접근한다, 즉 변수에 새 값이 할당 될 때 변수에 할당된 메모리 블럭에 저장된 값을 바로 변경한다는 뜻이다.<br><img src="/images/develop/javascript/33-js-2.png" alt="Value Types"></li>
+</ul>
+<h2 id="Referunce-Types"><a href="#Referunce-Types" class="headerlink" title="Referunce Types"></a>Referunce Types</h2><ul>
+<li>참조타입(reference type) : Object, Array, Function</li>
+<li>참조 타입 데이터는 변수에 할당될 때 값이 직접 해당 변수에 저장될 수 없으며, 변수에는 데이터에 대한 참조, 즉 변수의 값이 저장된 힙(Heap) 메모리의 주소값을 저장한다. </li>
+<li>참조 타입은 변수의 값이 저장된 메모리 블럭의 주소를 가지고 있고, 자바스크립트 엔진이 변수가 가지고 있는 메모리 주소를 이용해서 변수의 값에 접근한다<br><img src="/images/develop/javascript/33-js-3.png" alt="Referunce Types"></li>
+</ul>
+<br>
+
+<h1 id="4-Type-Coercoin"><a href="#4-Type-Coercoin" class="headerlink" title="4. Type Coercoin"></a>4. Type Coercoin</h1><p>동적 타입 언어인 자바스크립트는 개발자의 의도와는 상관없이 자바스크립트 엔진에 의해 암묵적으로 타입이 자동 변환되기도 한다.<br>이를 암묵적 타입 변환(Implicit coercion) 또는 타입 강제 변환(Type coercion)이라고 한다.</p>
+<br>
+
+<h2 id="String-1"><a href="#String-1" class="headerlink" title="String"></a>String</h2><ul>
+<li>위의 + 연산자는 피연산자중 문자열이 있으면 문자열의 연결 연산자로 동작한다. </li>
+<li>때문에 4 (Number) -&gt; ‘4’ (String)의 묵시적 형변환이 일어난다.<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">4</span> + <span class="hljs-string">"hello"</span>); <span class="hljs-comment">//4hello</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">4</span> + <span class="hljs-number">4</span> + <span class="hljs-string">"hello"</span>); <span class="hljs-comment">//8hello</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span> + <span class="hljs-string">''</span>); <span class="hljs-comment">// "1"</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+
+<h2 id="Number-1"><a href="#Number-1" class="headerlink" title="Number"></a>Number</h2><ul>
+<li>‘-‘, ‘*’, ‘/‘ 등의 산술연산자는 피연산자가 숫자가 아니면 숫자 타입으로 묵시적 형변환 후 연산한다.<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span> - <span class="hljs-string">'1'</span>); <span class="hljs-comment">//0</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(+<span class="hljs-string">'0'</span>); <span class="hljs-comment">// 0</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+
+<h2 id="Boolean-Truthy-값-참으로-인식할-값-또는-Falsy-값-거짓으로-인식할-값"><a href="#Boolean-Truthy-값-참으로-인식할-값-또는-Falsy-값-거짓으로-인식할-값" class="headerlink" title="Boolean : Truthy 값(참으로 인식할 값) 또는 Falsy 값(거짓으로 인식할 값)"></a>Boolean : Truthy 값(참으로 인식할 값) 또는 Falsy 값(거짓으로 인식할 값)</h2><p>JavaScript에서는 아래의 값들은 모두 falsy이고, 이를 제외한 모든 값들은 truthy다.</p>
+<ul>
+<li>false</li>
+<li>undefined</li>
+<li>null</li>
+<li>0, -0</li>
+<li>NaN</li>
+<li>’’ (빈문자열)<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">""</span> == <span class="hljs-literal">true</span>); <span class="hljs-comment">//false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span> == <span class="hljs-literal">true</span>); <span class="hljs-comment">//true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> + <span class="hljs-string">''</span>); <span class="hljs-comment">// "true"</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(+<span class="hljs-literal">true</span>); <span class="hljs-comment">// 1</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span> * <span class="hljs-number">1</span>); <span class="hljs-comment">// 1</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-number">66</span> + <span class="hljs-literal">true</span>); <span class="hljs-comment">//67</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+
+<h1 id="5-vs-vs-typeof"><a href="#5-vs-vs-typeof" class="headerlink" title="5. == vs === vs typeof"></a>5. == vs === vs typeof</h1><h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>변수의 데이터 타입을 반환하는 연산자.</p>
+<ul>
+<li>undefined : 변수가 정의되지 않거나 값이 없을 때</li>
+<li>number : 데이터 타입이 수일 때</li>
+<li>string : 데이터 타입이 문자열일 때</li>
+<li>boolean : 데이터 타입이 불리언일 때</li>
+<li>object : 데이터 타입이 함수, 배열 등 객체일 때</li>
+<li>function : 변수의 값이 함수일 때</li>
+<li>symbol : 데이터 타입이 심볼일 때</li>
+</ul>
+<br>
+
+<h2 id><a href="#" class="headerlink" title="=="></a>==</h2><p>두 가지를 비교할 때 유형 변환을 수행하고 IEEE 754를 준수하기 위해 NaN, -0 및 +0을 특별히 처리합니다 (NaN != NaN, -0 == +0)</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> num = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(<span class="hljs-string">"0"</span>);</span><br><span class="line"><span class="hljs-keyword">var</span> str = <span class="hljs-string">"0"</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> b = <span class="hljs-literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(num == num); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj == obj); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(str == str); <span class="hljs-comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(num == obj); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(num == str); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj == str); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-literal">null</span> == <span class="hljs-literal">undefined</span>); <span class="hljs-comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 둘 다 false, 드문 경우를 제외하고는</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj == <span class="hljs-literal">null</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj == <span class="hljs-literal">undefined</span>);</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="-1"><a href="#-1" class="headerlink" title="==="></a>===</h2><p>이중 equals (NaN, -0 및 +0의 특수 처리 포함)와 동일한 비교를 수행하지만 유형 변환은 수행하지 않습니다. 형식이 다른 경우 false가 반환됩니다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> num = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(<span class="hljs-string">"0"</span>);</span><br><span class="line"><span class="hljs-keyword">var</span> str = <span class="hljs-string">"0"</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> b = <span class="hljs-literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(num === num); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj === obj); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(str === str); <span class="hljs-comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(num === obj); <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(num === str); <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj === str); <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-literal">null</span> === <span class="hljs-literal">undefined</span>); <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj === <span class="hljs-literal">null</span>); <span class="hljs-comment">// false</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(obj === <span class="hljs-literal">undefined</span>); <span class="hljs-comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="Object-is"><a href="#Object-is" class="headerlink" title="Object.is"></a>Object.is</h2><p>형식 변환을하지 않으며 NaN, -0 및 +0에 대한 특수 처리를 수행하지 않습니다 (특수 숫자 값을 제외하고는 ===와 동일한 동작을 제공함).</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/ES6/">ES6</a>, <a class="has-link-grey -link" href="/tags/Primitive-Types/">Primitive Types</a>, <a class="has-link-grey -link" href="/tags/Reference-Types/">Reference Types</a>, <a class="has-link-grey -link" href="/tags/call-stack/">call stack</a>, <a class="has-link-grey -link" href="/tags/javascript/">javascript</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/09/log/youtube-challenge/youtube-challenge-day9/">
+                <span class="level-item">NOMADCODERS Youtube Challenge - Day9 of 42</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/10/11/develop/javascript/33-js-concepts-01/';
+        this.page.identifier = '2019/10/11/develop/javascript/33-js-concepts-01/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Alley
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Front-End Developer
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        174
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        15
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        29
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/alleyful" target="_blank" rel="external nofollow noopener noreferrer">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/11/develop/javascript/33-js-concepts-01/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/javascript.png" alt="자바스크립트 개발자라면 알아야하는 핵심 컨셉 33">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T08:31:19.000Z">2019-10-11</time></div>
+                    <a href="/2019/10/11/develop/javascript/33-js-concepts-01/" class="has-link-black-ter is-size-6">자바스크립트 개발자라면 알아야하는 핵심 컨셉 33</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/09/log/youtube-challenge/youtube-challenge-day9/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/youtubeChallenge.png" alt="NOMADCODERS Youtube Challenge - Day9 of 42">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-09T14:01:38.000Z">2019-10-09</time></div>
+                    <a href="/2019/10/09/log/youtube-challenge/youtube-challenge-day9/" class="has-link-black-ter is-size-6">NOMADCODERS Youtube Challenge - Day9 of 42</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/log/">log</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/08/algorithm/programmers/level2-15/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/programmers.png" alt="프로그래머스 - 행렬의 곱셈">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-08T11:17:12.000Z">2019-10-08</time></div>
+                    <a href="/2019/10/08/algorithm/programmers/level2-15/" class="has-link-black-ter is-size-6">프로그래머스 - 행렬의 곱셈</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">155</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
+            <span class="level-start">
+                <span class="level-item">HackerRank</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">108</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
+            <span class="level-start">
+                <span class="level-item">Programmers</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">47</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Tools/Hexo/">
+            <span class="level-start">
+                <span class="level-item">Hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/develop/">
+            <span class="level-start">
+                <span class="level-item">develop</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">16</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/develop/javascript/">
+            <span class="level-start">
+                <span class="level-item">javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/develop/log/">
+            <span class="level-start">
+                <span class="level-item">log</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">15</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">October 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">17</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">29</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">88</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/10DaysOfJS/" style="font-size: 16.67px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/HackerRank/" style="font-size: 19.17px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 11.67px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 18.33px;">Javascript</a> <a href="/tags/MongoDB/" style="font-size: 14.17px;">MongoDB</a> <a href="/tags/NodeJS/" style="font-size: 14.17px;">NodeJS</a> <a href="/tags/Primitive-Types/" style="font-size: 10px;">Primitive Types</a> <a href="/tags/ProblemSolving/" style="font-size: 18.33px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 17.5px;">Programmers</a> <a href="/tags/Pug/" style="font-size: 14.17px;">Pug</a> <a href="/tags/Reference-Types/" style="font-size: 10px;">Reference Types</a> <a href="/tags/blog/" style="font-size: 11.67px;">blog</a> <a href="/tags/call-stack/" style="font-size: 10px;">call stack</a> <a href="/tags/challenge/" style="font-size: 15.83px;">challenge</a> <a href="/tags/github-io/" style="font-size: 11.67px;">github.io</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/nomadcoders/" style="font-size: 15.83px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 12.5px;">queue</a> <a href="/tags/react/" style="font-size: 13.33px;">react</a> <a href="/tags/react-router/" style="font-size: 10px;">react-router</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 10.83px;">sort</a> <a href="/tags/stack/" style="font-size: 12.5px;">stack</a> <a href="/tags/노마드코더/" style="font-size: 15.83px;">노마드코더</a> <a href="/tags/정렬/" style="font-size: 10.83px;">정렬</a> <a href="/tags/챌린지/" style="font-size: 15.83px;">챌린지</a> <a href="/tags/프로그래머스/" style="font-size: 17.5px;">프로그래머스</a>
+    </div>
+</div>
+
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 alley&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

@@ -140,6 +140,61 @@
     <div class="card">
     
     <div class="card-image">
+        <a href="/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/" class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Compare the Triplets">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-27T14:42:38.000Z">2019-06-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/ProblemSolving/">ProblemSolving</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/">Compare the Triplets</a>
+            
+        </h1>
+        <div class="content">
+            <p>Alice and Bob each created one problem for HackerRank. A reviewer rates the two challenges, awarding points on a scale from <strong>1</strong> to <strong>100</strong> for three categories: problem clarity, originality, and difficulty.</p>
+<p>We define the rating for Alice’s challenge to be the triplet <code>a = (a[0], a[1], a[2])</code>, and the rating for Bob’s challenge to be the triplet <code>b = (b[0], b[1], b[2])</code>.</p>
+<p>Your task is to find their comparison points by comparing <strong>a[0]</strong> with <strong>b[0]</strong>, <strong>a[1]</strong> with <strong>b[1]</strong>, and <strong>a[2]</strong> with <strong>b[2]</strong>.</p>
+<br>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/27/algorithm/hackerrank/02_CompareTheTriplets/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
         <a href="/2019/06/27/algorithm/hackerrank/01_SimpleArraySum/" class="image is-7by1">
             <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Simple Array Sum">
         </a>
@@ -352,65 +407,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/06/23/algorithm/programmers/level2-01/" class="image is-7by1">
-            <img class="thumbnail" src="/images/gallery/thumbnails/programmers.png" alt="프로그래머스 - 프린터">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-23T02:50:39.000Z">2019-06-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/Programmers/Level2/">Level2</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/23/algorithm/programmers/level2-01/">프로그래머스 - 프린터</a>
-            
-        </h1>
-        <div class="content">
-            <p>일반적인 프린터는 인쇄 요청이 들어온 순서대로 인쇄합니다.<br>그렇기 때문에 중요한 문서가 나중에 인쇄될 수 있습니다.<br>이런 문제를 보완하기 위해 <code>중요도가 높은 문서를 먼저 인쇄하는 프린터</code>를 개발했습니다.<br>이 새롭게 개발한 프린터는 아래와 같은 방식으로 인쇄 작업을 수행합니다.</p>
-<ol>
-<li>인쇄 대기목록의 가장 앞에 있는 문서(J)를 대기목록에서 꺼냅니다.</li>
-<li>나머지 인쇄 대기목록에서 J보다 중요도가 높은 문서가 한 개라도 존재하면 J를 대기목록의 가장 마지막에 넣습니다.</li>
-<li>그렇지 않으면 J를 인쇄합니다.<br>예를 들어, 4개의 문서(A, B, C, D)가 순서대로 인쇄 대기목록에 있고 중요도가 2 1 3 2 라면 C D A B 순으로 인쇄하게 됩니다.</li>
-</ol>
-<p>내가 인쇄를 <code>요청한 문서가 몇 번째로 인쇄</code>되는지 알고 싶습니다. 위의 예에서 C는 1번째로, A는 3번째로 인쇄됩니다.</p>
-<p>현재 대기목록에 있는 문서의 중요도가 순서대로 담긴 배열 priorities와 내가 인쇄를 요청한 문서가 현재 대기목록의 어떤 위치에 있는지를 알려주는 location이 매개변수로 주어질 때, 내가 인쇄를 요청한 문서가 몇 번째로 인쇄되는지 return 하도록 solution 함수를 작성해주세요.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/23/algorithm/programmers/level2-01/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -479,7 +475,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        173
+                        174
                     </p>
                 </div>
             </div>
@@ -489,7 +485,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        14
+                        15
                     </p>
                 </div>
             </div>
@@ -499,7 +495,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        25
+                        29
                     </p>
                 </div>
             </div>
@@ -521,6 +517,25 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/11/develop/javascript/33-js-concepts-01/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/javascript.png" alt="자바스크립트 개발자라면 알아야하는 핵심 컨셉 33">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-11T08:31:19.000Z">2019-10-11</time></div>
+                    <a href="/2019/10/11/develop/javascript/33-js-concepts-01/" class="has-link-black-ter is-size-6">자바스크립트 개발자라면 알아야하는 핵심 컨셉 33</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -555,25 +570,6 @@
                     <a href="/2019/10/08/algorithm/programmers/level2-15/" class="has-link-black-ter is-size-6">프로그래머스 - 행렬의 곱셈</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/05/log/youtube-challenge/youtube-challenge-day8/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/gallery/thumbnails/youtubeChallenge.png" alt="NOMADCODERS Youtube Challenge - Day8 of 42">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-05T13:19:58.000Z">2019-10-05</time></div>
-                    <a href="/2019/10/05/log/youtube-challenge/youtube-challenge-day8/" class="has-link-black-ter is-size-6">NOMADCODERS Youtube Challenge - Day8 of 42</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/log/">log</a>
                     </p>
                 </div>
             </div>
@@ -637,9 +633,17 @@
                 <span class="level-item">develop</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a><ul><li>
+        <a class="level is-marginless" href="/categories/develop/javascript/">
+            <span class="level-start">
+                <span class="level-item">javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/develop/log/">
             <span class="level-start">
                 <span class="level-item">log</span>
@@ -667,7 +671,7 @@
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -738,7 +742,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/10DaysOfJS/" style="font-size: 16.36px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/ES6/" style="font-size: 14.55px;">ES6</a> <a href="/tags/HackerRank/" style="font-size: 19.09px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 11.82px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 18.18px;">Javascript</a> <a href="/tags/MongoDB/" style="font-size: 14.55px;">MongoDB</a> <a href="/tags/NodeJS/" style="font-size: 14.55px;">NodeJS</a> <a href="/tags/ProblemSolving/" style="font-size: 18.18px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 17.27px;">Programmers</a> <a href="/tags/Pug/" style="font-size: 14.55px;">Pug</a> <a href="/tags/blog/" style="font-size: 11.82px;">blog</a> <a href="/tags/challenge/" style="font-size: 15.45px;">challenge</a> <a href="/tags/github-io/" style="font-size: 11.82px;">github.io</a> <a href="/tags/nomadcoders/" style="font-size: 15.45px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 12.73px;">queue</a> <a href="/tags/react/" style="font-size: 13.64px;">react</a> <a href="/tags/react-router/" style="font-size: 10px;">react-router</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 10.91px;">sort</a> <a href="/tags/stack/" style="font-size: 12.73px;">stack</a> <a href="/tags/노마드코더/" style="font-size: 15.45px;">노마드코더</a> <a href="/tags/정렬/" style="font-size: 10.91px;">정렬</a> <a href="/tags/챌린지/" style="font-size: 15.45px;">챌린지</a> <a href="/tags/프로그래머스/" style="font-size: 17.27px;">프로그래머스</a>
+        <a href="/tags/10DaysOfJS/" style="font-size: 16.67px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/HackerRank/" style="font-size: 19.17px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 11.67px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 18.33px;">Javascript</a> <a href="/tags/MongoDB/" style="font-size: 14.17px;">MongoDB</a> <a href="/tags/NodeJS/" style="font-size: 14.17px;">NodeJS</a> <a href="/tags/Primitive-Types/" style="font-size: 10px;">Primitive Types</a> <a href="/tags/ProblemSolving/" style="font-size: 18.33px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 17.5px;">Programmers</a> <a href="/tags/Pug/" style="font-size: 14.17px;">Pug</a> <a href="/tags/Reference-Types/" style="font-size: 10px;">Reference Types</a> <a href="/tags/blog/" style="font-size: 11.67px;">blog</a> <a href="/tags/call-stack/" style="font-size: 10px;">call stack</a> <a href="/tags/challenge/" style="font-size: 15.83px;">challenge</a> <a href="/tags/github-io/" style="font-size: 11.67px;">github.io</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/nomadcoders/" style="font-size: 15.83px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 12.5px;">queue</a> <a href="/tags/react/" style="font-size: 13.33px;">react</a> <a href="/tags/react-router/" style="font-size: 10px;">react-router</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 10.83px;">sort</a> <a href="/tags/stack/" style="font-size: 12.5px;">stack</a> <a href="/tags/노마드코더/" style="font-size: 15.83px;">노마드코더</a> <a href="/tags/정렬/" style="font-size: 10.83px;">정렬</a> <a href="/tags/챌린지/" style="font-size: 15.83px;">챌린지</a> <a href="/tags/프로그래머스/" style="font-size: 17.5px;">프로그래머스</a>
     </div>
 </div>
 
