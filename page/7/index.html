@@ -140,6 +140,61 @@
     <div class="card">
     
     <div class="card-image">
+        <a href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/" class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Modified Kaprekar Numbers">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-22T15:06:54.000Z">2019-08-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/ProblemSolving/">ProblemSolving</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/">Modified Kaprekar Numbers</a>
+            
+        </h1>
+        <div class="content">
+            <p>A modified Kaprekar number is a positive whole number with a special property. If you square it, then split the number into two integers and sum those integers, you have the same value you started with.</p>
+<p>Consider a positive whole number <strong>n</strong> with <strong>d</strong> digits. We square <strong>n</strong> to arrive at a number that is either <strong>2 x d</strong> digits long or <strong>(2 x d) - 1</strong> digits long. Split the string representation of the square into two parts, <strong>l</strong> and <strong>r</strong>. The right hand part, <strong>r</strong> must be <strong>d</strong> digits long. The left is the remaining substring. Convert those two substrings back to integers, add them and see if you get <strong>n</strong>.</p>
+<p>For example, if <strong>n = 5</strong>, <strong>d = 1</strong> then <img src="https://latex.codecogs.com/gif.latex?n%5E%7B2%7D&space;=&space;25" alt>. We split that into two strings and convert them back to integers <strong>2</strong> and <strong>5</strong>. We test <img src="https://latex.codecogs.com/gif.latex?2&space;&plus;&space;5&space;=&space;7%5Cneq&space;5" alt>, so this is not a modified Kaprekar number. If <strong>n = 9</strong>, still <strong>d = 1</strong>, and <img src="https://latex.codecogs.com/gif.latex?n%5E%7B2%7D&space;=&space;81" alt>. This gives us <strong>1 + 8 = 9</strong>, the original <strong>n</strong>.</p>
+<p><strong>Note</strong>: r may have leading zeros.</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/23/algorithm/hackerrank/50_ModifiedKaprekarNumbers/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
         <a href="/2019/08/22/algorithm/hackerrank/49_Encryption/" class="image is-7by1">
             <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="Encryption">
         </a>
@@ -362,67 +417,6 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/08/18/algorithm/hackerrank/45_ACM_ICPC_Team/" class="image is-7by1">
-            <img class="thumbnail" src="/images/gallery/thumbnails/hackerrank.jpg" alt="ACM ICPC Team">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-17T15:02:10.000Z">2019-08-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/">HackerRank</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Algorithm/HackerRank/ProblemSolving/">ProblemSolving</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/18/algorithm/hackerrank/45_ACM_ICPC_Team/">ACM ICPC Team</a>
-            
-        </h1>
-        <div class="content">
-            <p>There are a number of people who will be attending ACM-ICPC World Finals. Each of them may be well versed in a number of topics. Given a list of topics known by each attendee, you must determine the maximum number of topics a 2-person team can know. Also find out how many ways a team can be formed to know that many topics. Lists will be in the form of bit strings, where each string represents an attendee and each position in that string represents a field of knowledge, 1 if its a known field or 0 if not.</p>
-<p>For example, given three attendees’ data as follows:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">10101</span><br><span class="line">11110</span><br><span class="line">00010</span><br></pre></td></tr></table></figure>
-
-<p>These are all possible teams that can be formed:</p>
-<p>Members Subjects</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1,2)   [1,2,3,4,5]</span><br><span class="line">(1,3)   [1,3,4,5]</span><br><span class="line">(2,3)   [1,2,3,4]</span><br></pre></td></tr></table></figure>
-
-<p>In this case, the first team will know all 5 subjects. They are the only team that can be created knowing that many subjects.</p>
-<br>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/18/algorithm/hackerrank/45_ACM_ICPC_Team/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -491,7 +485,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        174
+                        175
                     </p>
                 </div>
             </div>
@@ -511,7 +505,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        29
+                        30
                     </p>
                 </div>
             </div>
@@ -533,6 +527,25 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/19/log/react-challenge/react-challenge-day10/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="NOMADCODERS ReactJS Challenge - Day10">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-19T13:30:52.000Z">2019-10-19</time></div>
+                    <a href="/2019/10/19/log/react-challenge/react-challenge-day10/" class="has-link-black-ter is-size-6">NOMADCODERS ReactJS Challenge - Day10</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/log/">log</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -567,25 +580,6 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                     <a href="/2019/10/09/log/youtube-challenge/youtube-challenge-day9/" class="has-link-black-ter is-size-6">NOMADCODERS Youtube Challenge - Day9 of 42</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/log/">log</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/08/algorithm/programmers/level2-15/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/gallery/thumbnails/programmers.png" alt="프로그래머스 - 행렬의 곱셈">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-08T11:17:12.000Z">2019-10-08</time></div>
-                    <a href="/2019/10/08/algorithm/programmers/level2-15/" class="has-link-black-ter is-size-6">프로그래머스 - 행렬의 곱셈</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Algorithm/">Algorithm</a> / <a class="has-link-grey -link" href="/categories/Algorithm/Programmers/">Programmers</a>
                     </p>
                 </div>
             </div>
@@ -649,7 +643,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                 <span class="level-item">develop</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">16</span>
+                <span class="level-item tag">17</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/develop/javascript/">
@@ -665,7 +659,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                 <span class="level-item">log</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">15</span>
+                <span class="level-item tag">16</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -687,7 +681,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
                     <span class="level-item">October 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -758,7 +752,7 @@ after removing spaces is <strong>54</strong> characters long. <img src="https://
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/10DaysOfJS/" style="font-size: 16.67px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/HackerRank/" style="font-size: 19.17px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 11.67px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 18.33px;">Javascript</a> <a href="/tags/MongoDB/" style="font-size: 14.17px;">MongoDB</a> <a href="/tags/NodeJS/" style="font-size: 14.17px;">NodeJS</a> <a href="/tags/Primitive-Types/" style="font-size: 10px;">Primitive Types</a> <a href="/tags/ProblemSolving/" style="font-size: 18.33px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 17.5px;">Programmers</a> <a href="/tags/Pug/" style="font-size: 14.17px;">Pug</a> <a href="/tags/Reference-Types/" style="font-size: 10px;">Reference Types</a> <a href="/tags/blog/" style="font-size: 11.67px;">blog</a> <a href="/tags/call-stack/" style="font-size: 10px;">call stack</a> <a href="/tags/challenge/" style="font-size: 15.83px;">challenge</a> <a href="/tags/github-io/" style="font-size: 11.67px;">github.io</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/nomadcoders/" style="font-size: 15.83px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 12.5px;">queue</a> <a href="/tags/react/" style="font-size: 13.33px;">react</a> <a href="/tags/react-router/" style="font-size: 10px;">react-router</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 10.83px;">sort</a> <a href="/tags/stack/" style="font-size: 12.5px;">stack</a> <a href="/tags/노마드코더/" style="font-size: 15.83px;">노마드코더</a> <a href="/tags/정렬/" style="font-size: 10.83px;">정렬</a> <a href="/tags/챌린지/" style="font-size: 15.83px;">챌린지</a> <a href="/tags/프로그래머스/" style="font-size: 17.5px;">프로그래머스</a>
+        <a href="/tags/10DaysOfJS/" style="font-size: 16.36px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/ES6/" style="font-size: 14.55px;">ES6</a> <a href="/tags/HackerRank/" style="font-size: 19.09px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 11.82px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 18.18px;">Javascript</a> <a href="/tags/MongoDB/" style="font-size: 13.64px;">MongoDB</a> <a href="/tags/NodeJS/" style="font-size: 13.64px;">NodeJS</a> <a href="/tags/Primitive-Types/" style="font-size: 10px;">Primitive Types</a> <a href="/tags/ProblemSolving/" style="font-size: 18.18px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 17.27px;">Programmers</a> <a href="/tags/Pug/" style="font-size: 13.64px;">Pug</a> <a href="/tags/Reference-Types/" style="font-size: 10px;">Reference Types</a> <a href="/tags/blog/" style="font-size: 11.82px;">blog</a> <a href="/tags/call-stack/" style="font-size: 10px;">call stack</a> <a href="/tags/challenge/" style="font-size: 15.45px;">challenge</a> <a href="/tags/github-io/" style="font-size: 11.82px;">github.io</a> <a href="/tags/hooks/" style="font-size: 10px;">hooks</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/nomadcoders/" style="font-size: 15.45px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 12.73px;">queue</a> <a href="/tags/react/" style="font-size: 13.64px;">react</a> <a href="/tags/react-router/" style="font-size: 10px;">react-router</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 10.91px;">sort</a> <a href="/tags/stack/" style="font-size: 12.73px;">stack</a> <a href="/tags/노마드코더/" style="font-size: 15.45px;">노마드코더</a> <a href="/tags/정렬/" style="font-size: 10.91px;">정렬</a> <a href="/tags/챌린지/" style="font-size: 15.45px;">챌린지</a> <a href="/tags/프로그래머스/" style="font-size: 17.27px;">프로그래머스</a>
     </div>
 </div>
 
