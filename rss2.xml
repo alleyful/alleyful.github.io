@@ -8,8 +8,43 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>alley&#39;s blog for study</description>
-    <pubDate>Thu, 24 Oct 2019 15:41:46 GMT</pubDate>
+    <pubDate>Sat, 26 Oct 2019 12:09:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>NOMADCODERS Youtube Challenge - Day10 of 42</title>
+      <link>https://alleyful.github.io/2019/10/25/log/youtube-challenge/youtube-challenge-day10/</link>
+      <guid>https://alleyful.github.io/2019/10/25/log/youtube-challenge/youtube-challenge-day10/</guid>
+      <pubDate>Fri, 25 Oct 2019 12:41:27 GMT</pubDate>
+      <description>
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Today’s quiz is based on videos #2.13 to #2.17&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;오늘의 강의: 유튜브 클론코딩 #2.13 to #2.17&lt;/li&gt;
+&lt;li&gt;오늘의 과제: 위의 강의를 시청하신 후, 아래 퀴즈를 풀면 됩니다.  &lt;/li&gt;
+&lt;li&gt;제출기간: 익일 오전 6시까지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://academy.nomadcoders.co/courses/enrolled/435438&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;[노마드 코더] 유튜브 클론 코딩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;#2 ExpressJS&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2.13 Installing Pug &lt;/li&gt;
+&lt;li&gt;2.14 Layouts with Pug &lt;/li&gt;
+&lt;li&gt;2.15 Partials with Pug &lt;/li&gt;
+&lt;li&gt;2.16 Local Variables in Pug &lt;/li&gt;
+&lt;li&gt;2.17 Template Variables in Pug &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<blockquote><p>Today’s quiz is based on videos #2.13 to #2.17</p></blockquote><ul><li>오늘의 강의: 유튜브 클론코딩 #2.13 to #2.17</li><li>오늘의 과제: 위의 강의를 시청하신 후, 아래 퀴즈를 풀면 됩니다.  </li><li>제출기간: 익일 오전 6시까지</li></ul><br><p><a href="https://academy.nomadcoders.co/courses/enrolled/435438" rel="external nofollow noopener noreferrer" target="_blank">[노마드 코더] 유튜브 클론 코딩</a></p><p><code>#2 ExpressJS</code></p><ul><li>2.13 Installing Pug </li><li>2.14 Layouts with Pug </li><li>2.15 Partials with Pug </li><li>2.16 Local Variables in Pug </li><li>2.17 Template Variables in Pug </li></ul><br><a id="more"></a><hr><br><h2 id="Lecture-Summery"><a href="#Lecture-Summery" class="headerlink" title="Lecture Summery"></a>Lecture Summery</h2><br><hr><br><h2 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h2><h3 id="Quiz"><a href="#Quiz" class="headerlink" title="Quiz"></a>Quiz</h3><ol><li><p>How can we make express use pug as the view engine *   </p><p> 1) Using “app.views(“engine”, “pug”)”<br> 2) <code>Using &quot;app.set(&quot;view engine&quot;, &quot;pug&quot;)</code></p> <br></li><li><p>What is the default directory where express will look for the views *   </p><p> 1) /templates<br> 2) /html<br> 3) <code>/views</code><br> 4) /static</p> <br></li><li><p>How can I change the default views directory to “/dist” *   </p><p> 1) Using “app.views(“template”, “/dist”)”<br> 2) <code>Using &quot;app.set(&quot;views&quot;, &quot;/dist&quot;)&quot;</code><br> 3) Using “app.set(“template”, “/dist”)”<br> 4) Using “app.views(“views”, “/dist”)<br> 5) /static</p> <br></li><li><p>How can I render a pug template from a controller *   </p><p> 1) Using “res.template(<template_name>)”<br> 2) Using “res.pug(<template_name>)”<br> 3) <code>Using &quot;res.render(&lt;TEMPLATE_NAME&gt;)&quot;</code></template_name></template_name></p> <br></li><li><p>How can I reuse the same page structure using pug *   </p><p> 1) Copy / Paste as fast as you can<br> 2) <code>Creating templates and extending from them</code></p> <br></li><li><p>What is a partial *   </p><p> 1) <code>It&#39;s a piece of HTML code that I can reuse on pug</code><br> 2) It’s a piece of JS code that I can reuse on app</p> <br></li><li><p>How can I use the partial “footer.pug” inside of my “layout.pug” *   </p><p> 1) Using “partial ./footer”<br> 2) <code>Using &quot;include ./footer&quot;</code><br> 3) Using “extends /.footer”</p> <br></li><li><p>What is a “block” in pug *   </p><p> 1) It’s a way of defining a flex-container<br> 2) It’s a way of making space for CSS code<br> 3) <code>It&#39;s a way of making space for dynamic content inside of a template</code><br> 4) It’s a way of making space for dynamic content inside of a route</p> <br></li><li><p>How can I do <span class="hello"> in pug *   </span></p><p> 1) <code>span.hello</code><br> 2) span#hello<br> 3) span(“hello”)</p> <br></li><li><p>Doing “.hello” is the same as doing “div.hello” in pug *   </p><p>1) <code>True</code><br>2) False</p><br></li><li><p>How can we add information to all the templates at the same time *   </p><p>1) <code>Using res.locals</code><br>2) Using res.global</p><br></li><li><p>How can I render a template with a variable “name” from the controller *   </p><p>1) Using “res.render(&lt; TEMPLATE &gt;, { vars:{name: “Nico”}})”<br>2) Using “res.render(&lt; TEMPLATE &gt;, name: “Nico”)”<br>3) <code>Using &quot;res.render(&lt; TEMPLATE &gt;, { name:&quot;Nico&quot;})&quot;</code></p></li></ol>]]></content:encoded>
+      
+      <comments>https://alleyful.github.io/2019/10/25/log/youtube-challenge/youtube-challenge-day10/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>NOMADCODERS ReactJS Challenge - Day12</title>
@@ -555,30 +590,6 @@
       <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>땅따먹기 게임을 하려고 합니다. 땅따먹기 게임의 땅(land)은 총 N행 4열로 이루어져 있고, 모든 칸에는 점수가 쓰여 있습니다. 1행부터 땅을 밟으며 한 행씩 내려올 때, 각 행의 4칸 중 한 칸만 밟으면서 내려와야 합니다. 단, 땅따먹기 게임에는 한 행씩 내려올 때, 같은 열을 연속해서 밟을 수 없는 특수 규칙이 있습니다.</p><p>예를 들면,</p><p>| 1 | 2 | 3 | 5 |</p><p>| 5 | 6 | 7 | 8 |</p><p>| 4 | 3 | 2 | 1 |</p><p>로 땅이 주어졌다면, 1행에서 네번째 칸 (5)를 밟았으면, 2행의 네번째 칸 (8)은 밟을 수 없습니다.</p><p>마지막 행까지 모두 내려왔을 때, <code>얻을 수 있는 점수의 최대값을 return하는 solution 함수</code>를 완성해 주세요. </p><p>위 예의 경우, 1행의 네번째 칸 (5), 2행의 세번째 칸 (7), 3행의 첫번째 칸 (4) 땅을 밟아 16점이 최고점이 되므로 16을 return 하면 됩니다.</p><br><a id="more"></a><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><p>행의 개수 N : 100,000 이하의 자연수<br>열의 개수는 4개이고, 땅(land)은 2차원 배열로 주어집니다.<br>점수 : 100 이하의 자연수</p><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="center">land</th><th align="center">answer</th></tr></thead><tbody><tr><td align="center">[[1,2,3,5],[5,6,7,8],[4,3,2,1]]</td><td align="center">16</td></tr></tbody></table><br><h2 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h2><h3 id="입출력-예-1"><a href="#입출력-예-1" class="headerlink" title="입출력 예 #1"></a>입출력 예 #1</h3><p>문제의 예시와 같습니다.</p><br><hr><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">land</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(...land.reduce(<span class="hljs-function">(<span class="hljs-params">target, score</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> [</span><br><span class="line">            score[<span class="hljs-number">0</span>] + <span class="hljs-built_in">Math</span>.max(target[<span class="hljs-number">1</span>], target[<span class="hljs-number">2</span>], target[<span class="hljs-number">3</span>]),  </span><br><span class="line">            score[<span class="hljs-number">1</span>] + <span class="hljs-built_in">Math</span>.max(target[<span class="hljs-number">0</span>], target[<span class="hljs-number">2</span>], target[<span class="hljs-number">3</span>]),</span><br><span class="line">            score[<span class="hljs-number">2</span>] + <span class="hljs-built_in">Math</span>.max(target[<span class="hljs-number">0</span>], target[<span class="hljs-number">1</span>], target[<span class="hljs-number">3</span>]),</span><br><span class="line">            score[<span class="hljs-number">3</span>] + <span class="hljs-built_in">Math</span>.max(target[<span class="hljs-number">0</span>], target[<span class="hljs-number">1</span>], target[<span class="hljs-number">2</span>]),</span><br><span class="line">        ];</span><br><span class="line">    &#125;, [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
       
       <comments>https://alleyful.github.io/2019/09/11/algorithm/programmers/level2-10/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>프로그래머스 - 다음 큰 숫자</title>
-      <link>https://alleyful.github.io/2019/09/10/algorithm/programmers/level2-09/</link>
-      <guid>https://alleyful.github.io/2019/09/10/algorithm/programmers/level2-09/</guid>
-      <pubDate>Tue, 10 Sep 2019 14:01:28 GMT</pubDate>
-      <description>
-      
-        &lt;h2 id=&quot;문제-설명&quot;&gt;&lt;a href=&quot;#문제-설명&quot; class=&quot;headerlink&quot; title=&quot;문제 설명&quot;&gt;&lt;/a&gt;문제 설명&lt;/h2&gt;&lt;p&gt;자연수 n이 주어졌을 때, n의 다음 큰 숫자는 다음과 같이 정의 합니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;조건 1. n의 다음 큰 숫자는 n보다 큰 자연수 입니다.&lt;/li&gt;
-&lt;li&gt;조건 2. n의 다음 큰 숫자와 n은 2진수로 변환했을 때 1의 갯수가 같습니다.&lt;/li&gt;
-&lt;li&gt;조건 3. n의 다음 큰 숫자는 조건 1, 2를 만족하는 수 중 가장 작은 수 입니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;예를 들어서 78(1001110)의 다음 큰 숫자는 83(1010011)입니다.&lt;/p&gt;
-&lt;p&gt;자연수 n이 매개변수로 주어질 때, &lt;code&gt;n의 다음 큰 숫자를 return 하는 solution 함수&lt;/code&gt;를 완성해주세요.&lt;/p&gt;
-&lt;br&gt;
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>자연수 n이 주어졌을 때, n의 다음 큰 숫자는 다음과 같이 정의 합니다.</p><ul><li>조건 1. n의 다음 큰 숫자는 n보다 큰 자연수 입니다.</li><li>조건 2. n의 다음 큰 숫자와 n은 2진수로 변환했을 때 1의 갯수가 같습니다.</li><li>조건 3. n의 다음 큰 숫자는 조건 1, 2를 만족하는 수 중 가장 작은 수 입니다.</li></ul><p>예를 들어서 78(1001110)의 다음 큰 숫자는 83(1010011)입니다.</p><p>자연수 n이 매개변수로 주어질 때, <code>n의 다음 큰 숫자를 return 하는 solution 함수</code>를 완성해주세요.</p><br><a id="more"></a><h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><p>n은 1,000,000 이하의 자연수 입니다.</p><br><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th align="center">n</th><th align="center">result</th></tr></thead><tbody><tr><td align="center">78</td><td align="center">83</td></tr><tr><td align="center">15</td><td align="center">23</td></tr></tbody></table><br><h2 id="입출력-예-설명"><a href="#입출력-예-설명" class="headerlink" title="입출력 예 설명"></a>입출력 예 설명</h2><h3 id="입출력-예-1"><a href="#입출력-예-1" class="headerlink" title="입출력 예#1"></a>입출력 예#1</h3><p>문제 예시와 같습니다.</p><h3 id="입출력-예-2"><a href="#입출력-예-2" class="headerlink" title="입출력 예#2"></a>입출력 예#2</h3><p>15(1111)의 다음 큰 숫자는 23(10111)입니다.</p><br><hr><h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n,a=n+<span class="hljs-number">1</span></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> n.toString(<span class="hljs-number">2</span>).match(<span class="hljs-regexp">/1/g</span>).length == a.toString(<span class="hljs-number">2</span>).match(<span class="hljs-regexp">/1/g</span>).length ? a : solution(n,a+<span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><h3 id="Sountion-2"><a href="#Sountion-2" class="headerlink" title="Sountion 2"></a>Sountion 2</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">solution</span>(<span class="hljs-params">n</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> lengthBy1 = n.toString(<span class="hljs-number">2</span>).match(<span class="hljs-regexp">/1/g</span>).length;</span><br><span class="line">    <span class="hljs-keyword">while</span> (n++) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(n.toString(<span class="hljs-number">2</span>).match(<span class="hljs-regexp">/1/g</span>).length === lengthBy1) <span class="hljs-keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      <comments>https://alleyful.github.io/2019/09/10/algorithm/programmers/level2-09/#disqus_thread</comments>
     </item>
     
   </channel>
