@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>macOS 개발환경 기본설정 - ALLEY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="canonical" href="https://alleyful.github.io/2019/11/10/tools/env/mac-setting-01/">
+
+
+    <meta name="description" content="OverviewMacOS 기본 환경 설정을 위한 가이드입니다.저를 포함해 많은 분들에게 도움이 될 수 있었으면 좋겠습니다.">
+<meta name="keywords" content="개발환경,기본설정,mac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="macOS 개발환경 기본설정">
+<meta property="og:url" content="https://alleyful.github.io/2019/11/10/tools/env/mac-setting-01/index.html">
+<meta property="og:site_name" content="ALLEY">
+<meta property="og:description" content="OverviewMacOS 기본 환경 설정을 위한 가이드입니다.저를 포함해 많은 분들에게 도움이 될 수 있었으면 좋겠습니다.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/macbook.jpg">
+<meta property="og:updated_time" content="2019-11-10T13:18:18.376Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="macOS 개발환경 기본설정">
+<meta name="twitter:description" content="OverviewMacOS 기본 환경 설정을 위한 가이드입니다.저를 포함해 많은 분들에게 도움이 될 수 있었으면 좋겠습니다.">
+<meta name="twitter:image" content="https://alleyful.github.io/images/gallery/thumbnails/macbook.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141822876-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141822876-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <i class="fas fa-laptop-code" style="font-size:24px"></i>
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/gallery/thumbnails/macbook.jpg" alt="macOS 개발환경 기본설정">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-10T03:20:22.000Z">2019-11-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/tools/">tools</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/tools/env/">env</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                macOS 개발환경 기본설정
+            
+        </h1>
+        <div class="content">
+            <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>MacOS 기본 환경 설정을 위한 가이드입니다.<br>저를 포함해 많은 분들에게 도움이 될 수 있었으면 좋겠습니다.</p>
+<br>
+
+<br>
+
+<a id="more"></a>
+
+<h2 id="기본-설정"><a href="#기본-설정" class="headerlink" title="기본 설정"></a>기본 설정</h2><h3 id="Finder-숨김-폴더-및-파일-노출-설정"><a href="#Finder-숨김-폴더-및-파일-노출-설정" class="headerlink" title="Finder 숨김 폴더 및 파일 노출 설정"></a>Finder 숨김 폴더 및 파일 노출 설정</h3><ul>
+<li>Finder 에서 숨겨진 폴더 또는 파일을 보여주거나 숨기고 싶을 때 아래와 같은 단축키로 제어할 수 있습니다.</li>
+<li><code>command</code> + <code>shift</code> + <code>.</code></li>
+</ul>
+<br>
+
+<br>
+
+<h3 id="Finder-기본-폴더-설정"><a href="#Finder-기본-폴더-설정" class="headerlink" title="Finder 기본 폴더 설정"></a>Finder 기본 폴더 설정</h3><ul>
+<li>Finder 실행 시 기본 폴더를 Home 폴더로 설정합니다.</li>
+<li>General &gt; New Finder windows show: (home folder)</li>
+</ul>
+<br>
+
+<br>
+
+<h3 id="파일-확장자-보여주기"><a href="#파일-확장자-보여주기" class="headerlink" title="파일 확장자 보여주기"></a>파일 확장자 보여주기</h3><ul>
+<li>모든 파일의 확장자를 보여주는 설정은 아래와 같습니다.</li>
+<li><code>Advanced</code> &gt; <code>Show all filename extensions</code>: 체크하세요.</li>
+</ul>
+<br>
+
+<br>
+
+<h3 id="모든-텍스트-자동-변경-옵션-끄기"><a href="#모든-텍스트-자동-변경-옵션-끄기" class="headerlink" title="모든 텍스트 자동 변경 옵션 끄기"></a>모든 텍스트 자동 변경 옵션 끄기</h3><ul>
+<li><code>Keyboard</code> &gt; <code>Text</code>: 모든 자동 변경 옵션 끄기</li>
+<li>입력한 단어를 컴퓨터 마음대로 바꾸는 걸 방지</li>
+<li>특히 Use smart quotes and dashes는 코드 복사하다가 따옴표가 바뀌면서 고생이 시작됨</li>
+</ul>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<h2 id="필수-프로그램"><a href="#필수-프로그램" class="headerlink" title="필수 프로그램"></a>필수 프로그램</h2><h3 id="Xcode"><a href="#Xcode" class="headerlink" title="Xcode"></a>Xcode</h3><p>macOS에서 <code>gcc</code>, <code>make</code> 같은 컴파일 도구를 사용하려면 기본적으로 Homebrew 또는 명령어 라인 도구(Command Line Tools)을 먼저 설치해야 합니다.</p>
+<p>Command Line Tools는 Xcode를 설치하면 자동으로 같이 설치됩니다.</p>
+<p>하지만, Xcode 용량이 크고 모든 사람이 IDE가 필요한 게 아니므로 명령어 도구만 따로 설치하겠습니다.</p>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal1" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal1')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`xcode-select --install`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h3 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h3><blockquote>
+<p>Homebrew는 macOS 용 패키지 관리자로, 필요한 프로그램을 설치하는 데 용이합니다.</p>
+</blockquote>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal2" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal2')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<ul>
+<li><a href="https://brew.sh/" rel="external nofollow noopener noreferrer" target="_blank">Homebrew 홈페이지</a></li>
+<li><a href="https://docs.brew.sh/Manpage.html" rel="external nofollow noopener noreferrer" target="_blank">brew 명령어</a></li>
+<li><a href="https://formulae.brew.sh/" rel="external nofollow noopener noreferrer" target="_blank">brew 패키지 검색</a></li>
+</ul>
+<br>
+
+<br>
+
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p>Version 관리 도구로 macOS에 기본으로 설치되어 있지만 최신 버전이 아니므로 brew를 이용하여 업데이트 합니다.</p>
+<p>아래 순서대로 우선 시 됩니다.</p>
+<ol>
+<li><code>.git/config</code> : 이 파일은 Git 디렉토리에 있고 특정 저장소(혹은 현재 작업 중인 프로젝트)에만 적용됩니다.</li>
+<li><code>~/.gitconfig</code> : 특정 사용자에게만 적용되는 설정이다. git config –global 옵션으로 이 파일을 읽고 쓸 수 있습니다.</li>
+<li><code>/etc/gitconfig</code> : 시스템의 모든 사용자와 모든 저장소에 적용되는 설정이다. git config –system 옵션으로 이 파일을 읽고 쓸 수 있습니다.</li>
+</ol>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal7" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal7')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew install git`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;you@your-domain.com&quot;</span><br><span class="line">git config --global core.precomposeunicode true</span><br><span class="line">git config --global core.quotepath false</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://git-scm.com/" rel="external nofollow noopener noreferrer" target="_blank">git</a></li>
+</ul>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<h2 id="터미널-설정"><a href="#터미널-설정" class="headerlink" title="터미널 설정"></a>터미널 설정</h2><h3 id="iTerm2"><a href="#iTerm2" class="headerlink" title="iTerm2"></a>iTerm2</h3><p>macOS에 기본으로 설치되어 있는 Terminal 앱 대신 iTerm2를 터미널 앱으로 사용합니다.<br>iTerm2는 기본 앱에 없는 다양한 기능이 있고 손쉽게 테마를 설정할 수 있습니다.</p>
+<h4 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h4><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal8" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal8')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew cask install iterm2`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h4 id="테마선택"><a href="#테마선택" class="headerlink" title="테마선택"></a>테마선택</h4><p><a href="https://iterm2colorschemes.com/" rel="external nofollow noopener noreferrer" target="_blank">여러개의 테마</a> 중 마음에 드는 것을 골라 다운로드 한 뒤, 파일을 더블클릭 하면 자동으로 <code>iTerm color Preset</code>에 추가됩니다.</p>
+<br>
+
+<br>
+
+<h4 id="테마적용"><a href="#테마적용" class="headerlink" title="테마적용"></a>테마적용</h4><p>iTerm을 실행하고 설정(<code>⌘</code> + <code>,</code>)창에서 Profiles 항목을 선택하고 Colors탭을 선택합니다.<br>테마 및 컬러설정, 타이틀바, 스크롤바 등의 수정을 할 수 있습니다.</p>
+<br>
+
+<br>
+
+<br>
+
+<h3 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h3><p>macOS 의 기본 shell은 bash 를 대체할 zsh를 설치합니다.</p>
+<ul>
+<li>컨텍스트 기반 자동완성 기능(tab)</li>
+<li>다양하고 예쁜 테마와 플러그인</li>
+<li>스펠링 체크</li>
+<li>history 기능</li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal3" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal3')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew install zsh;chsh -s $(which zsh)`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h3 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h3><p>zsh과 oh-my-zsh의 조합으로 강력한 쉘을 사용할 수 있게 되었습니다. 여기서 모든 기능을 설명할 순 없지만 자주 사용하는 몇 가지 팁을 소개합니다.</p>
+<ul>
+<li>명령어가 기억나지 않으면 tab을 누르세요</li>
+<li>cd ../.. 대신 …, …., ….., …</li>
+<li>단축명령어 - git status =&gt; gst, git pull =&gt; gl 등등 다양한 <a href="https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git/" rel="external nofollow noopener noreferrer" target="_blank">단축명령어</a></li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal4" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal4')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h4 id="oh-my-zsh-테마변경"><a href="#oh-my-zsh-테마변경" class="headerlink" title="oh-my-zsh 테마변경"></a>oh-my-zsh 테마변경</h4><p>oh-my-zsh에서 제공하는 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes" rel="external nofollow noopener noreferrer" target="_blank">Themes</a> 를 확인하고 <code>~/.zshrc</code>를 열고 테마명을 지정해주면 테마를 설정 할 수 있습니다.</p>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+<h2 id="개발환경-설정"><a href="#개발환경-설정" class="headerlink" title="개발환경 설정"></a>개발환경 설정</h2><h3 id="NVM-설치-및-설정"><a href="#NVM-설치-및-설정" class="headerlink" title="NVM 설치 및 설정"></a>NVM 설치 및 설정</h3><p>개발 환경이나 필요에 따라 다양한 node.js의 버전을 사용해야 하는 경우가 있습니다.</p>
+<p>NVM은 <code>Node Version Manager</code>로, 다양한 버전 node.js를 설치할 수 있으며 설치 한 Node version을 간단한 명령어로 전환 할 수 있습니다.</p>
+<p>brew를 통한 아래 명령어로 쉽게 설치 하세요.</p>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal9" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal9')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew install nvm`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h4 id="Node-버전-및-설치-유무-확인"><a href="#Node-버전-및-설치-유무-확인" class="headerlink" title="Node 버전 및 설치 유무 확인"></a>Node 버전 및 설치 유무 확인</h4><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal10" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal10')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`node —version`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<ul>
+<li>이미 설치되어 있다면 아래와 같이 삭제합니다.</li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal10-1" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal10-1')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew uninstall --force node`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h4 id="NVM-환경변수-및-설정-내용-추가"><a href="#NVM-환경변수-및-설정-내용-추가" class="headerlink" title="NVM 환경변수 및 설정 내용 추가"></a>NVM 환경변수 및 설정 내용 추가</h4><ul>
+<li><code>.zshrc</code> 파일을 열어 하단에 아래 내용을 추가 한 후 저장합니다.</li>
+</ul>
+<figure class="highlight plain hljs"><figcaption><span>.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># NVM</span><br><span class="line"></span><br><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">. &quot;$(brew --prefix nvm)/nvm.sh&quot;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<ul>
+<li><code>.zshrc</code> 파일을 읽어 파일 내 내용을 실행시켜 적용합니다.</li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal10-2" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal10-2')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`source .zshrc`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h4 id="NVM을-통한-Node-설치-및-버전-전환"><a href="#NVM을-통한-Node-설치-및-버전-전환" class="headerlink" title="NVM을 통한 Node 설치 및 버전 전환"></a>NVM을 통한 Node 설치 및 버전 전환</h4><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal10-3" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal10-3')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`nvm install 10.15.3;nvm use 10.15.3`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h3 id="Yarn-설치"><a href="#Yarn-설치" class="headerlink" title="Yarn 설치"></a>Yarn 설치</h3><p>수많은 개발자들은 코드의 패키지를 공유하고 이 것을 조립하여 프로젝트를 빌드하는 도구로 Package Manager를 사용합니다.</p>
+<p>그리고 전 세계적으로 가장 인기있고 많이 쓰이는 JavaScript Package Manager는 <code>NPM</code> 입니다.</p>
+<p>NPM은 배포가 쉽고 종속성을 쉽게 해결할 수 있다는 장점이 있지만 패키지가 중복으로 설치될 수 있다는 단점이 있습니다.</p>
+<p>이러한 이슈를 해결하기 위한 새로운 자바스크립트 패키지 매니저가 <code>Yarn</code>입니다.</p>
+<ol>
+<li><p>NPM3보다 패키지 설치 속도가 빠릅니다.</p>
+</li>
+<li><p>JSON 포맷을 사용하지 않습니다.</p>
+</li>
+<li><p>오프라인 모드가 가능합니다.</p>
+</li>
+</ol>
+<br>
+
+<br>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal11" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal11')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew install yarn`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h3 id="SSH-Key-설정"><a href="#SSH-Key-설정" class="headerlink" title="SSH Key 설정"></a>SSH Key 설정</h3><p><code>새로운 SSH key 생성하기</code></p>
+<ol>
+<li>Termial을 열어 Github 이메일 주소와 함께 아래와 같이 붙여넣습니다.</li>
+</ol>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal13-1" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal13-1')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`ssh-keygen -t rsa -b 4096 -C "<your_email@example.com>"`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<ol start="2">
+<li><p>새로운 ssh key가 생성되고, “Enter a file in which to save the key,”라는 문구가 뜬다면, <code>Enter</code> 키를 눌러주세요.</p>
+</li>
+<li><p>아래와 같은 내용이 뜬다면, <code>Enter</code> 키를 눌러주세요.</p>
+</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Enter passphrase (empty for no passphrase): [Type a passphrase]</span><br><span class="line">&gt; Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>생성된 ssh key 내용을 복사합니다.</li>
+</ol>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal13-2" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal13-2')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`pbcopy < ~/.ssh/id_rsa.pub`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<ol start="5">
+<li><a href="https://github.com/settings/ssh/new" rel="external nofollow noopener noreferrer" target="_blank">Add New SSH keys on Github</a> 에 접속하여 <code>Title</code>에는 userName을, <code>Key</code>에는 복사한 내용을 붙여넣고 추가합니다.</li>
+</ol>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<h2 id="필요한-어플리케이션-설치"><a href="#필요한-어플리케이션-설치" class="headerlink" title="필요한 어플리케이션 설치"></a>필요한 어플리케이션 설치</h2><h3 id="chrome-설치"><a href="#chrome-설치" class="headerlink" title="chrome 설치"></a>chrome 설치</h3><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal12" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal12')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew cask install google-chrome`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+
+<br>
+
+<br>
+
+<h3 id="alfred"><a href="#alfred" class="headerlink" title="alfred"></a>alfred</h3><p>alfred는 독특한 단축키와 키스트로크 시스템을 통해 생산성을 높여줍니다.</p>
+<ul>
+<li>앱을 실행하고 파일을 찾고 계산하는 것은 물론 빠르고 정확하게 맥을 제어할 수 있습니다.</li>
+<li>사용자 설정 기능도 강력합니다.</li>
+<li>MacOS의 단점인 스폿라이트(spotlight)를 훌륭하게 보완한 앱입니다.</li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal5" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal5')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew cask install alfred`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+<br>
+
+<br>
+
+<h3 id="divvy"><a href="#divvy" class="headerlink" title="divvy"></a>divvy</h3><p>divvy는 사용자가 화면 창의 크기와 위치를 마음대로 조절 할 수 있습니다.</p>
+<ul>
+<li>free trial version 을 사용합니다.</li>
+<li><code>시스템설정</code> &gt; <code>사용자그룹</code> &gt; <code>로그인 항목</code></li>
+<li><code>설정</code> &gt; <code>보안 및 개인정보보호</code> &gt; <code>손쉬운 사용</code> 내 하단의 자물쇠 버튼을 클릭하여 <code>Divvy.app</code> 체크박스 활성화</li>
+</ul>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.css"><script src="https://cdn.jsdelivr.net/npm/@glorious/demo@0.8.0/dist/gdemo.min.js"></script>
+            <div id="demo-teriminal6" style="height: 70px"></div>
+            <script>
+        new GDemo('#demo-teriminal6')
+          .openApp('terminal', {minHeight: '70px', windowTitle: 'zsh', promptString: '$'})
+          .command(`brew cask install divvy`, {onCompleteDelay: 500})
+          .respond(``)
+          .end();
+    </script>
+
+
+<hr>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://subicura.com/2017/11/22/mac-os-development-environment-setup.html" rel="external nofollow noopener noreferrer" target="_blank">본격 macOS에 개발 환경 구축하기</a></li>
+<li><a href="https://lunarscents.github.io/2019/08/17/developmentEnvironmentInMac/#more" rel="external nofollow noopener noreferrer" target="_blank">Mac OS 개발 환경 설정 Guide</a></li>
+</ul>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/mac/">mac</a>, <a class="has-link-grey -link" href="/tags/개발환경/">개발환경</a>, <a class="has-link-grey -link" href="/tags/기본설정/">기본설정</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/11/03/log/youtube-challenge/youtube-challenge-day15/">
+                <span class="level-item">NOMADCODERS Youtube Challenge - Day15 of 42</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://alleyful.github.io/2019/11/10/tools/env/mac-setting-01/';
+        this.page.identifier = '2019/11/10/tools/env/mac-setting-01/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'alley-kim' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/react-brands.svg" alt="Alley">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Alley
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Front-End Developer
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        182
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        17
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        34
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/alleyful" target="_blank" rel="external nofollow noopener noreferrer">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Overview">
+        <span class="has-mr-6">1</span>
+        <span>Overview</span>
+        </a></li><li>
+        <a class="is-flex" href="#기본-설정">
+        <span class="has-mr-6">2</span>
+        <span>기본 설정</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Finder-숨김-폴더-및-파일-노출-설정">
+        <span class="has-mr-6">2.1</span>
+        <span>Finder 숨김 폴더 및 파일 노출 설정</span>
+        </a></li><li>
+        <a class="is-flex" href="#Finder-기본-폴더-설정">
+        <span class="has-mr-6">2.2</span>
+        <span>Finder 기본 폴더 설정</span>
+        </a></li><li>
+        <a class="is-flex" href="#파일-확장자-보여주기">
+        <span class="has-mr-6">2.3</span>
+        <span>파일 확장자 보여주기</span>
+        </a></li><li>
+        <a class="is-flex" href="#모든-텍스트-자동-변경-옵션-끄기">
+        <span class="has-mr-6">2.4</span>
+        <span>모든 텍스트 자동 변경 옵션 끄기</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#필수-프로그램">
+        <span class="has-mr-6">3</span>
+        <span>필수 프로그램</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Xcode">
+        <span class="has-mr-6">3.1</span>
+        <span>Xcode</span>
+        </a></li><li>
+        <a class="is-flex" href="#Homebrew">
+        <span class="has-mr-6">3.2</span>
+        <span>Homebrew</span>
+        </a></li><li>
+        <a class="is-flex" href="#git">
+        <span class="has-mr-6">3.3</span>
+        <span>git</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#터미널-설정">
+        <span class="has-mr-6">4</span>
+        <span>터미널 설정</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#iTerm2">
+        <span class="has-mr-6">4.1</span>
+        <span>iTerm2</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#설치">
+        <span class="has-mr-6">4.1.1</span>
+        <span>설치</span>
+        </a></li><li>
+        <a class="is-flex" href="#테마선택">
+        <span class="has-mr-6">4.1.2</span>
+        <span>테마선택</span>
+        </a></li><li>
+        <a class="is-flex" href="#테마적용">
+        <span class="has-mr-6">4.1.3</span>
+        <span>테마적용</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#zsh">
+        <span class="has-mr-6">4.2</span>
+        <span>zsh</span>
+        </a></li><li>
+        <a class="is-flex" href="#oh-my-zsh">
+        <span class="has-mr-6">4.3</span>
+        <span>oh-my-zsh</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#oh-my-zsh-테마변경">
+        <span class="has-mr-6">4.3.1</span>
+        <span>oh-my-zsh 테마변경</span>
+        </a></li></ul></li></ul></li><li>
+        <a class="is-flex" href="#개발환경-설정">
+        <span class="has-mr-6">5</span>
+        <span>개발환경 설정</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#NVM-설치-및-설정">
+        <span class="has-mr-6">5.1</span>
+        <span>NVM 설치 및 설정</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Node-버전-및-설치-유무-확인">
+        <span class="has-mr-6">5.1.1</span>
+        <span>Node 버전 및 설치 유무 확인</span>
+        </a></li><li>
+        <a class="is-flex" href="#NVM-환경변수-및-설정-내용-추가">
+        <span class="has-mr-6">5.1.2</span>
+        <span>NVM 환경변수 및 설정 내용 추가</span>
+        </a></li><li>
+        <a class="is-flex" href="#NVM을-통한-Node-설치-및-버전-전환">
+        <span class="has-mr-6">5.1.3</span>
+        <span>NVM을 통한 Node 설치 및 버전 전환</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Yarn-설치">
+        <span class="has-mr-6">5.2</span>
+        <span>Yarn 설치</span>
+        </a></li><li>
+        <a class="is-flex" href="#SSH-Key-설정">
+        <span class="has-mr-6">5.3</span>
+        <span>SSH Key 설정</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#필요한-어플리케이션-설치">
+        <span class="has-mr-6">6</span>
+        <span>필요한 어플리케이션 설치</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#chrome-설치">
+        <span class="has-mr-6">6.1</span>
+        <span>chrome 설치</span>
+        </a></li><li>
+        <a class="is-flex" href="#alfred">
+        <span class="has-mr-6">6.2</span>
+        <span>alfred</span>
+        </a></li><li>
+        <a class="is-flex" href="#divvy">
+        <span class="has-mr-6">6.3</span>
+        <span>divvy</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Reference">
+        <span class="has-mr-6">7</span>
+        <span>Reference</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/11/10/tools/env/mac-setting-01/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/macbook.jpg" alt="macOS 개발환경 기본설정">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-10T03:20:22.000Z">2019-11-10</time></div>
+                    <a href="/2019/11/10/tools/env/mac-setting-01/" class="has-link-black-ter is-size-6">macOS 개발환경 기본설정</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/tools/">tools</a> / <a class="has-link-grey -link" href="/categories/tools/env/">env</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/11/03/log/youtube-challenge/youtube-challenge-day15/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/youtubeChallenge.png" alt="NOMADCODERS Youtube Challenge - Day15 of 42">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-03T11:17:28.000Z">2019-11-03</time></div>
+                    <a href="/2019/11/03/log/youtube-challenge/youtube-challenge-day15/" class="has-link-black-ter is-size-6">NOMADCODERS Youtube Challenge - Day15 of 42</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/log/">log</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/28/log/react-challenge/react-challenge-day14/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/gallery/thumbnails/react.jpg" alt="NOMADCODERS ReactJS Challenge - Day14~16">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-28T14:15:49.000Z">2019-10-28</time></div>
+                    <a href="/2019/10/28/log/react-challenge/react-challenge-day14/" class="has-link-black-ter is-size-6">NOMADCODERS ReactJS Challenge - Day14~16</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/develop/">develop</a> / <a class="has-link-grey -link" href="/categories/develop/log/">log</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Algorithm/">
+            <span class="level-start">
+                <span class="level-item">Algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">155</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Algorithm/HackerRank/">
+            <span class="level-start">
+                <span class="level-item">HackerRank</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">108</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Algorithm/Programmers/">
+            <span class="level-start">
+                <span class="level-item">Programmers</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">47</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Tools/Hexo/">
+            <span class="level-start">
+                <span class="level-item">Hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/develop/">
+            <span class="level-start">
+                <span class="level-item">develop</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">23</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/develop/javascript/">
+            <span class="level-start">
+                <span class="level-item">javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/develop/log/">
+            <span class="level-start">
+                <span class="level-item">log</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">22</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/tools/">
+            <span class="level-start">
+                <span class="level-item">tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/tools/env/">
+            <span class="level-start">
+                <span class="level-item">env</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">November 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">October 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">11</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">17</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">31</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">29</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">88</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/10DaysOfJS/" style="font-size: 16px;">10DaysOfJS</a> <a href="/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/ExpressJS/" style="font-size: 12px;">ExpressJS</a> <a href="/tags/HackerRank/" style="font-size: 19px;">HackerRank</a> <a href="/tags/Hexo/" style="font-size: 12px;">Hexo</a> <a href="/tags/Javascript/" style="font-size: 18px;">Javascript</a> <a href="/tags/MongoDB/" style="font-size: 14px;">MongoDB</a> <a href="/tags/NodeJS/" style="font-size: 14px;">NodeJS</a> <a href="/tags/Primitive-Types/" style="font-size: 10px;">Primitive Types</a> <a href="/tags/ProblemSolving/" style="font-size: 18px;">ProblemSolving</a> <a href="/tags/Programmers/" style="font-size: 17px;">Programmers</a> <a href="/tags/Pug/" style="font-size: 14px;">Pug</a> <a href="/tags/Reference-Types/" style="font-size: 10px;">Reference Types</a> <a href="/tags/blog/" style="font-size: 12px;">blog</a> <a href="/tags/call-stack/" style="font-size: 10px;">call stack</a> <a href="/tags/challenge/" style="font-size: 16px;">challenge</a> <a href="/tags/github-io/" style="font-size: 12px;">github.io</a> <a href="/tags/hooks/" style="font-size: 10px;">hooks</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/nomadcoders/" style="font-size: 16px;">nomadcoders</a> <a href="/tags/queue/" style="font-size: 13px;">queue</a> <a href="/tags/react/" style="font-size: 14px;">react</a> <a href="/tags/react-router/" style="font-size: 10px;">react-router</a> <a href="/tags/seo/" style="font-size: 10px;">seo</a> <a href="/tags/sort/" style="font-size: 11px;">sort</a> <a href="/tags/stack/" style="font-size: 13px;">stack</a> <a href="/tags/개발환경/" style="font-size: 10px;">개발환경</a> <a href="/tags/기본설정/" style="font-size: 10px;">기본설정</a> <a href="/tags/노마드코더/" style="font-size: 16px;">노마드코더</a> <a href="/tags/정렬/" style="font-size: 11px;">정렬</a> <a href="/tags/챌린지/" style="font-size: 16px;">챌린지</a> <a href="/tags/프로그래머스/" style="font-size: 17px;">프로그래머스</a>
+    </div>
+</div>
+
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <i class="fas fa-laptop-code" style="font-size:20px"></i>
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 alley&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus" rel="external nofollow noopener noreferrer">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
