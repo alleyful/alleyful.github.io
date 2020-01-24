@@ -17,7 +17,7 @@
 <meta property="og:description" content="오늘의 강의: #2.1 ~ #2.2오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.    [노마드 코더] 초보를 위한 React JS  2.0 Setting Up the Project 2.1 React Router Part One 2.2 React Router Part Two">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/react.jpg">
-<meta property="og:updated_time" content="2019-09-16T12:00:21.791Z">
+<meta property="og:updated_time" content="2020-01-24T08:40:40.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOMADCODERS ReactJS Challenge - Day3">
 <meta name="twitter:description" content="오늘의 강의: #2.1 ~ #2.2오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.    [노마드 코더] 초보를 위한 React JS  2.0 Setting Up the Project 2.1 React Router Part One 2.2 React Router Part Two">
@@ -192,25 +192,25 @@
 
 <h3 id="2-0-Setting-Up-the-Project"><a href="#2-0-Setting-Up-the-Project" class="headerlink" title="2.0 Setting Up the Project"></a>2.0 Setting Up the Project</h3><br>
 
-<h4 id="React"><a href="#React" class="headerlink" title="React"></a>React</h4><p>React는 사용자 인터페이스를 구축하기 위한 선언적이고 효율적이며 유연한 JavaScript 라이브러리다.  </p>
+<h4 id="React"><a href="#React" class="headerlink" title="React"></a>React</h4><p>React는 사용자 인터페이스를 구축하기 위한 선언적이고 효율적이며 유연한 JavaScript 라이브러리다.</p>
 <br>
 
 <h4 id="create-react-app"><a href="#create-react-app" class="headerlink" title="create-react-app"></a>create-react-app</h4><p>create-react-app은 페이스북에서 만든 react 웹 개발용 boilerplate이다.</p>
 <ul>
-<li>설치 및 사용<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npx create-react-app my-app</span><br><span class="line">$ cd my-app</span><br><span class="line">$ yarn start</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>설치 및 사용</li>
 </ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npx create-react-app my-app</span><br><span class="line">$ cd my-app</span><br><span class="line">$ yarn start</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p><strong>주의</strong><br>첫 번째 줄의 ‘npx’는 실수가 아니며 npm 5.2+ 버전의 패키지 실행 도구.</p>
 </blockquote>
 <br>
 
 <ul>
-<li>Output<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">my-app</span><br><span class="line">├── README.md</span><br><span class="line">├── node_modules</span><br><span class="line">├── package.json</span><br><span class="line">├── .gitignore</span><br><span class="line">├── public</span><br><span class="line">│   ├── favicon.ico</span><br><span class="line">│   ├── index.html</span><br><span class="line">│   └── manifest.json</span><br><span class="line">└── src</span><br><span class="line">    ├── App.css</span><br><span class="line">    ├── App.js</span><br><span class="line">    ├── App.test.js</span><br><span class="line">    ├── index.css</span><br><span class="line">    ├── index.js</span><br><span class="line">    ├── logo.svg</span><br><span class="line">    └── serviceWorker.js</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>Output</li>
 </ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">my-app</span><br><span class="line">├── README.md</span><br><span class="line">├── node_modules</span><br><span class="line">├── package.json</span><br><span class="line">├── .gitignore</span><br><span class="line">├── public</span><br><span class="line">│   ├── favicon.ico</span><br><span class="line">│   ├── index.html</span><br><span class="line">│   └── manifest.json</span><br><span class="line">└── src</span><br><span class="line">    ├── App.css</span><br><span class="line">    ├── App.js</span><br><span class="line">    ├── App.test.js</span><br><span class="line">    ├── index.css</span><br><span class="line">    ├── index.js</span><br><span class="line">    ├── logo.svg</span><br><span class="line">    └── serviceWorker.js</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>사용하지 않는 파일 및 내용을 삭제하여 기본적인 설치를 완료합니다.</p>
 </blockquote>
@@ -282,7 +282,7 @@
 </ul>
 </li>
 </ul>
-<br>    
+<br>
 
 <br>
 
@@ -296,49 +296,60 @@
 <hr>
 <br>
 
-<h2 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h2><p><a href="https://codesandbox.io/s/day-three-blueprint-hdx6m" rel="external nofollow noopener noreferrer" target="_blank">Day3 템플릿</a></p>
-<p><img src="https://github.com/alleyful/nomflix/raw/master/note/images/day3.gif" alt></p>
-<br>
+<!--
 
-<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><ul>
-<li>DO NOT create or delete ANY file.</li>
-<li>DO NOT use <a></a></li>
-</ul>
-<br>
+## Homework
+[Day3 템플릿](https://codesandbox.io/s/day-three-blueprint-hdx6m)
 
-<h3 id="Submit"><a href="#Submit" class="headerlink" title="Submit"></a>Submit</h3><p><code>My Answer</code><br><a href="https://codesandbox.io/s/day-three-blueprint-nplo3" rel="external nofollow noopener noreferrer" target="_blank">Day3 CodeSandbox</a></p>
-<p><code>Components/Header.js</code></p>
-<figure class="highlight jsx hljs"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> &#123; Link &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">"react-router-dom"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> () =&gt; (</span><br><span class="line">  &lt;header&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;Link to=<span class="hljs-string">"/prices"</span>&gt;Prices&lt;<span class="hljs-regexp">/Link&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;/</span>li&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;Link to=<span class="hljs-string">"/exchanges"</span>&gt;Exchanges&lt;<span class="hljs-regexp">/Link&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;/</span>li&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;Link to=<span class="hljs-string">"/coins"</span>&gt;Coins&lt;<span class="hljs-regexp">/Link&gt;</span></span><br><span class="line"><span class="hljs-regexp">      &lt;/</span>li&gt;</span><br><span class="line">    &lt;<span class="hljs-regexp">/ul&gt;</span></span><br><span class="line"><span class="hljs-regexp">  &lt;/</span>header&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+![](https://github.com/alleyful/nomflix/raw/master/note/images/day3.gif)
 
-<br>
+<br/>
+
+### Constraints
+- DO NOT create or delete ANY file.
+- DO NOT use <a></a>
+
+<br/>
+
+### Submit
+
+`My Answer`
+[Day3 CodeSandbox](https://codesandbox.io/s/day-three-blueprint-nplo3)
+
+`Components/Header.js`
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Link &#125; <span class="keyword">from</span> <span class="string">"react-router-dom"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> () =&gt; (</span><br><span class="line">  &lt;header&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;Link to=<span class="string">"/prices"</span>&gt;Prices&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>li&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;Link to=<span class="string">"/exchanges"</span>&gt;Exchanges&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>li&gt;</span><br><span class="line">      &lt;li&gt;</span><br><span class="line">        &lt;Link to=<span class="string">"/coins"</span>&gt;Coins&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>li&gt;</span><br><span class="line">    &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>header&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<br/>
 
 <p><code>Components/Router.js</code></p>
-<figure class="highlight jsx hljs"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> &#123; HashRouter <span class="hljs-keyword">as</span> Router, Route &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">"react-router-dom"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Header <span class="hljs-keyword">from</span> <span class="hljs-string">"./Header"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Coins <span class="hljs-keyword">from</span> <span class="hljs-string">"../Screens/Coins"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Exchanges <span class="hljs-keyword">from</span> <span class="hljs-string">"../Screens/Exchanges"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Prices <span class="hljs-keyword">from</span> <span class="hljs-string">"../Screens/Prices"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> () =&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> (</span><br><span class="line">    &lt;Router&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      &lt;Route path=<span class="hljs-string">"/coins"</span> component=&#123;Coins&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="hljs-string">"/exchanges"</span> component=&#123;Exchanges&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="hljs-string">"/prices"</span> component=&#123;Prices&#125; /&gt;</span><br><span class="line">    &lt;<span class="hljs-regexp">/Router&gt;</span></span><br><span class="line"><span class="hljs-regexp">  );</span></span><br><span class="line"><span class="hljs-regexp">&#125;;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; HashRouter <span class="keyword">as</span> Router, Route &#125; <span class="keyword">from</span> <span class="string">"react-router-dom"</span>;</span><br><span class="line"><span class="keyword">import</span> Header <span class="keyword">from</span> <span class="string">"./Header"</span>;</span><br><span class="line"><span class="keyword">import</span> Coins <span class="keyword">from</span> <span class="string">"../Screens/Coins"</span>;</span><br><span class="line"><span class="keyword">import</span> Exchanges <span class="keyword">from</span> <span class="string">"../Screens/Exchanges"</span>;</span><br><span class="line"><span class="keyword">import</span> Prices <span class="keyword">from</span> <span class="string">"../Screens/Prices"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Router&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/coins"</span> component=&#123;Coins&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/exchanges"</span> component=&#123;Exchanges&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/prices"</span> component=&#123;Prices&#125; /&gt;</span><br><span class="line">    &lt;<span class="regexp">/Router&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;;</span></span><br></pre></td></tr></table></figure>
 
-<br>
+<br/>
 
-<p><code>Correct</code><br><a href="https://codesandbox.io/s/day-three-solution-o4vol" rel="external nofollow noopener noreferrer" target="_blank">Day3 Correct</a></p>
+<p><code>Correct</code><br><a href="https://codesandbox.io/s/day-three-solution-o4vol">Day3 Correct</a></p>
 <p><code>Components/Router.js</code></p>
-<figure class="highlight jsx hljs"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> &#123; HashRouter <span class="hljs-keyword">as</span> Router, Route &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">"react-router-dom"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Header <span class="hljs-keyword">from</span> <span class="hljs-string">"./Header"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Coins <span class="hljs-keyword">from</span> <span class="hljs-string">"../Screens/Coins"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Exchanges <span class="hljs-keyword">from</span> <span class="hljs-string">"../Screens/Exchanges"</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> Prices <span class="hljs-keyword">from</span> <span class="hljs-string">"../Screens/Prices"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> () =&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> (</span><br><span class="line">    &lt;Router&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      &lt;Route path=<span class="hljs-string">"/"</span> exact component=&#123;Prices&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="hljs-string">"/exchanges"</span> component=&#123;Exchanges&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="hljs-string">"/coins"</span> exact component=&#123;Coins&#125; /&gt;</span><br><span class="line">    &lt;<span class="hljs-regexp">/Router&gt;</span></span><br><span class="line"><span class="hljs-regexp">  );</span></span><br><span class="line"><span class="hljs-regexp">&#125;;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; HashRouter <span class="keyword">as</span> Router, Route &#125; <span class="keyword">from</span> <span class="string">"react-router-dom"</span>;</span><br><span class="line"><span class="keyword">import</span> Header <span class="keyword">from</span> <span class="string">"./Header"</span>;</span><br><span class="line"><span class="keyword">import</span> Coins <span class="keyword">from</span> <span class="string">"../Screens/Coins"</span>;</span><br><span class="line"><span class="keyword">import</span> Exchanges <span class="keyword">from</span> <span class="string">"../Screens/Exchanges"</span>;</span><br><span class="line"><span class="keyword">import</span> Prices <span class="keyword">from</span> <span class="string">"../Screens/Prices"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Router&gt;</span><br><span class="line">      &lt;Header /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/"</span> exact component=&#123;Prices&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/exchanges"</span> component=&#123;Exchanges&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/coins"</span> exact component=&#123;Coins&#125; /&gt;</span><br><span class="line">    &lt;<span class="regexp">/Router&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;;</span></span><br></pre></td></tr></table></figure>
 
-<br>
+<br/>
 
 <hr>
-<br>
+<br/>
 
 <h2 id="Day3-정리"><a href="#Day3-정리" class="headerlink" title="Day3 정리"></a>Day3 정리</h2><ul>
-<li>오늘의 강의 : <a href="https://academy.nomadcoders.co/courses/436641/lectures/8467057" rel="external nofollow noopener noreferrer" target="_blank">[노마드 코더] 초보를 위한 React JS</a><ul>
+<li>오늘의 강의 : <a href="https://academy.nomadcoders.co/courses/436641/lectures/8467057">[노마드 코더] 초보를 위한 React JS</a><ul>
 <li>2.1 React Router Part One</li>
 <li>2.2 React Router Part Two</li>
 </ul>
 </li>
-<li>강의노트: <a href="https://github.com/alleyful/nomflix" rel="external nofollow noopener noreferrer" target="_blank">Day3 Note</a></li>
-<li>오늘의 과제: <a href="https://codesandbox.io/s/day-two-blueprint-kfv4j" rel="external nofollow noopener noreferrer" target="_blank">Day3 Question</a></li>
-<li>제출: <a href="https://codesandbox.io/s/day-two-blueprint-8zzqh" rel="external nofollow noopener noreferrer" target="_blank">Day3 Answer</a></li>
-<li>정답: <a href="https://codesandbox.io/s/day-three-solution-o4vol" rel="external nofollow noopener noreferrer" target="_blank">Day3 Correct</a></li>
+<li>강의노트: <a href="https://github.com/alleyful/nomflix">Day3 Note</a></li>
+<li>오늘의 과제: <a href="https://codesandbox.io/s/day-two-blueprint-kfv4j">Day3 Question</a></li>
+<li>제출: <a href="https://codesandbox.io/s/day-two-blueprint-8zzqh">Day3 Answer</a></li>
+<li>정답: <a href="https://codesandbox.io/s/day-three-solution-o4vol">Day3 Correct</a></li>
 </ul>
-<br>
+<br/>
 
+<p>–&gt;</p>
+-->
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -521,23 +532,7 @@
         <a class="is-flex" href="#Reference">
         <span class="has-mr-6">1.3</span>
         <span>Reference</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#Homework">
-        <span class="has-mr-6">2</span>
-        <span>Homework</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#Constraints">
-        <span class="has-mr-6">2.1</span>
-        <span>Constraints</span>
-        </a></li><li>
-        <a class="is-flex" href="#Submit">
-        <span class="has-mr-6">2.2</span>
-        <span>Submit</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#Day3-정리">
-        <span class="has-mr-6">3</span>
-        <span>Day3 정리</span>
-        </a></li></ul>
+        </a></li></ul></li></ul>
         </div>
     </div>
 </div>
@@ -822,7 +817,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 alley&nbsp;
+                &copy; 2020 alley&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>

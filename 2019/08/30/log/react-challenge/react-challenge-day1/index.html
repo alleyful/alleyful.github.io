@@ -17,7 +17,7 @@
 <meta property="og:description" content="오늘의 강의: #1.0 ~ #1.5오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.    [노마드 코더] 초보를 위한 React JS  1.1 Arrow Functions 1.2 Template Literals 1.3 Object Destructuring 1.4 Spread Operator 1.5 Classes">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://alleyful.github.io/images/gallery/thumbnails/react.jpg">
-<meta property="og:updated_time" content="2019-09-16T12:00:21.795Z">
+<meta property="og:updated_time" content="2020-01-24T08:39:49.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOMADCODERS ReactJS Challenge - Day1">
 <meta name="twitter:description" content="오늘의 강의: #1.0 ~ #1.5오늘의 과제: 위의 강의들을 시청하신 후, 아래 코드 챌린지를 제출하면 됩니다.    [노마드 코더] 초보를 위한 React JS  1.1 Arrow Functions 1.2 Template Literals 1.3 Object Destructuring 1.4 Spread Operator 1.5 Classes">
@@ -192,21 +192,21 @@
 
 <h2 id="Lecture-Summery"><a href="#Lecture-Summery" class="headerlink" title="Lecture Summery"></a>Lecture Summery</h2><h3 id="Arrow-Functions"><a href="#Arrow-Functions" class="headerlink" title="Arrow Functions"></a>Arrow Functions</h3><p>화살표 함수(Arrow function)는 function 키워드 대신 (=&gt;)를 사용하여 보다 간략한 함수를 선언할 수 있다.</p>
 <ul>
-<li>기본 문법   </li>
+<li>기본 문법</li>
 </ul>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 매개변수 지정 방법</span><br><span class="line">    () =&gt; &#123; ... &#125; // 매개변수가 없을 경우</span><br><span class="line">     x =&gt; &#123; ... &#125; // 매개변수가 한 개인 경우, 소괄호를 생략할 수 있다.</span><br><span class="line">(x, y) =&gt; &#123; ... &#125; // 매개변수가 여러 개인 경우, 소괄호를 생략할 수 없다.</span><br><span class="line"></span><br><span class="line">// 함수 몸체 지정 방법</span><br><span class="line">x =&gt; &#123; return x * x &#125;  // single line block</span><br><span class="line">x =&gt; x * x             // 함수 몸체가 한줄의 구문이라면 중괄호를 생략할 수 있으며 암묵적으로 return된다. 위 표현과 동일하다.</span><br><span class="line"></span><br><span class="line">() =&gt; &#123; return &#123; a: 1 &#125;; &#125;</span><br><span class="line">() =&gt; (&#123; a: 1 &#125;)  // 위 표현과 동일하다. 객체 반환시 소괄호를 사용한다.</span><br><span class="line"></span><br><span class="line">() =&gt; &#123;           // multi line block.</span><br><span class="line">  const x = 10;</span><br><span class="line">  return x * x;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <ul>
-<li>사용 방법   </li>
+<li>사용 방법</li>
 </ul>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span>(<span class="hljs-params">name = <span class="hljs-string">"Alley"</span></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-string">"Hello"</span> + name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// arrow Function</span></span><br><span class="line"><span class="hljs-keyword">const</span> sayHello = <span class="hljs-function">(<span class="hljs-params">name = <span class="hljs-string">"Alley"</span></span>) =&gt;</span> <span class="hljs-string">"Hello"</span> + name;</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <ul>
-<li>화살표 함수 Vs 일반함수  <ol>
+<li>화살표 함수 Vs 일반함수<ol>
 <li>화살표 함수는 항상 바인딩 된 this를 갖는다.(Lexical this)</li>
 <li>화살표 함수는 생성자로 사용할 수 없다(constructor, prototype 없음)</li>
 <li>arguments를 지원하지 않음.</li>
@@ -218,7 +218,7 @@
 <ul>
 <li>화살표 함수를 사용해서는 안되는 경우<ol>
 <li>메소드: 메소드를 호출한 객체를 가리키지 않고 상위 컨택스트를 가리킨다. =&gt; ES6 축약 메소드 표현 사용</li>
-<li>prototype: 위와 같은 문제가 발생하여 일반 함수를 할당하게 된다. </li>
+<li>prototype: 위와 같은 문제가 발생하여 일반 함수를 할당하게 된다.</li>
 <li>생성자 함수: 화살표 함수는 prototype 프로퍼티를 가지고 있지 않기때문에 프로토타입 객제의 constructor를 사용할 수 없다.</li>
 </ol>
 </li>
@@ -254,18 +254,18 @@
 <br>
 
 <h3 id="Object-Destructuring"><a href="#Object-Destructuring" class="headerlink" title="Object Destructuring"></a>Object Destructuring</h3><p>디스트럭처링(Destructuring)은 구조화된 배열 또는 객체를 Destructuring(비구조화, 파괴)하여 개별적인 변수에 할당하는 것이다.<br>배열 또는 객체 리터럴에서 필요한 값만을 추출하여 변수에 할당하거나 반환할 때 유용하다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> human = &#123;</span><br><span class="line">  name: <span class="hljs-string">"Alley"</span>,</span><br><span class="line">  lastName: <span class="hljs-string">"Kim"</span>,</span><br><span class="line">  nation: <span class="hljs-string">"Korea"</span>,</span><br><span class="line">  favFood: &#123;</span><br><span class="line">    breakfast: <span class="hljs-string">"egg"</span>,</span><br><span class="line">    lunch: <span class="hljs-string">"bread"</span>,</span><br><span class="line">    dinner: <span class="hljs-string">"meat"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> name = human.name;</span><br><span class="line"><span class="hljs-keyword">const</span> lastName = human.lastName;</span><br><span class="line"><span class="hljs-keyword">const</span> difNation = human.nation;</span><br><span class="line"><span class="hljs-keyword">const</span> dinner = human.favFood.dinner;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//Destructuring</span></span><br><span class="line"><span class="hljs-keyword">const</span> &#123; name, lastName, <span class="hljs-attr">nation</span>: difNation, <span class="hljs-attr">favFood</span>: &#123; dinner &#125; &#125; = human;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> human = &#123;</span><br><span class="line">  name: <span class="hljs-string">"Alley"</span>,</span><br><span class="line">  lastName: <span class="hljs-string">"Kim"</span>,</span><br><span class="line">  nation: <span class="hljs-string">"Korea"</span>,</span><br><span class="line">  favFood: &#123;</span><br><span class="line">    breakfast: <span class="hljs-string">"egg"</span>,</span><br><span class="line">    lunch: <span class="hljs-string">"bread"</span>,</span><br><span class="line">    dinner: <span class="hljs-string">"meat"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> name = human.name;</span><br><span class="line"><span class="hljs-keyword">const</span> lastName = human.lastName;</span><br><span class="line"><span class="hljs-keyword">const</span> difNation = human.nation;</span><br><span class="line"><span class="hljs-keyword">const</span> dinner = human.favFood.dinner;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//Destructuring</span></span><br><span class="line"><span class="hljs-keyword">const</span> &#123;</span><br><span class="line">  name,</span><br><span class="line">  lastName,</span><br><span class="line">  nation: difNation,</span><br><span class="line">  favFood: &#123; dinner &#125;</span><br><span class="line">&#125; = human;</span><br></pre></td></tr></table></figure>
 
 <br>
 <br>
 <br>
 
 <h3 id="Spread-Operator"><a href="#Spread-Operator" class="headerlink" title="Spread Operator"></a>Spread Operator</h3><p>Spread 연산자는 연산자의 대상 배열 또는 이터러블(iterable)을 “개별” 요소로 분리한다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Array</span></span><br><span class="line"><span class="hljs-keyword">const</span> days = [ <span class="hljs-string">'Mon'</span>, <span class="hljs-string">'Tues'</span>, <span class="hljs-string">'Wed'</span> ];</span><br><span class="line"><span class="hljs-keyword">const</span> otherDays = [ <span class="hljs-string">'Thu'</span>, <span class="hljs-string">'Fri'</span>, <span class="hljs-string">'Sat'</span> ];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> allDays = [ ...days, ...otherDays, <span class="hljs-string">'Sun'</span> ];</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Array</span></span><br><span class="line"><span class="hljs-keyword">const</span> days = [<span class="hljs-string">"Mon"</span>, <span class="hljs-string">"Tues"</span>, <span class="hljs-string">"Wed"</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> otherDays = [<span class="hljs-string">"Thu"</span>, <span class="hljs-string">"Fri"</span>, <span class="hljs-string">"Sat"</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> allDays = [...days, ...otherDays, <span class="hljs-string">"Sun"</span>];</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Obj</span></span><br><span class="line"><span class="hljs-keyword">const</span> ob = &#123;</span><br><span class="line">  first: <span class="hljs-string">'hi'</span>,</span><br><span class="line">  second: <span class="hljs-string">'hello'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> ab = &#123;</span><br><span class="line">  thrid: <span class="hljs-string">'bye bye'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> two = &#123; ...ob, ...ab &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Obj</span></span><br><span class="line"><span class="hljs-keyword">const</span> ob = &#123;</span><br><span class="line">  first: <span class="hljs-string">"hi"</span>,</span><br><span class="line">  second: <span class="hljs-string">"hello"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> ab = &#123;</span><br><span class="line">  thrid: <span class="hljs-string">"bye bye"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> two = &#123; ...ob, ...ab &#125;;</span><br></pre></td></tr></table></figure>
 
 <br>
 <br>
@@ -273,9 +273,9 @@
 
 <h3 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h3><p>자바스크립트는 프로토타입 기반(prototype-based) 객체지향 언어다. 비록 다른 객체지향 언어들과의 차이점에 대한 논쟁이 있긴 하지만, 자바스크립트는 강력한 객체지향 프로그래밍 능력을 지니고 있다.</p>
 <p>프로토타입 기반 프로그래밍은 클래스가 필요없는(class-free) 객체지향 프로그래밍 스타일로 프로토타입 체인과 클로저 등으로 객체 지향 언어의 상속, 캡슐화(정보 은닉) 등의 개념을 구현할 수 있다.</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name, lastName) &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">    <span class="hljs-keyword">this</span>.lastName = lastName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Baby</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Human</span> </span>&#123;</span><br><span class="line">  cry() &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Waaaaaa'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  sayName() &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`My Name is <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>`</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> myBaby = <span class="hljs-keyword">new</span> Baby(<span class="hljs-string">'mini'</span>, <span class="hljs-string">'me'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(myBaby.cry(), myBaby.sayName());</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(name, lastName) &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.name = name;</span><br><span class="line">    <span class="hljs-keyword">this</span>.lastName = lastName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Baby</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Human</span> </span>&#123;</span><br><span class="line">  cry() &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Waaaaaa"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  sayName() &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`My Name is <span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> myBaby = <span class="hljs-keyword">new</span> Baby(<span class="hljs-string">"mini"</span>, <span class="hljs-string">"me"</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(myBaby.cry(), myBaby.sayName());</span><br></pre></td></tr></table></figure>
 
-<p>ES6 클래스는 class 키워드를 사용하여 정의하며, new 연산자와 함께 클래스 이름을 호출하면 클래스의 인스턴스가 생성된다.  </p>
+<p>ES6 클래스는 class 키워드를 사용하여 정의하며, new 연산자와 함께 클래스 이름을 호출하면 클래스의 인스턴스가 생성된다.</p>
 <p>constructor는 인스턴스를 생성하고 클래스 필드를 초기화하기 위한 특수한 메소드이다. constructor는 클래스 내에 한 개만 존재할 수 있으며 만약 클래스가 2개 이상의 constructor를 포함하면 문법 에러(SyntaxError)가 발생한다. constructor는 인스턴스의 생성과 동시에 클래스 필드의 생성과 초기화를 실행한다. 따라서 클래스 필드를 초기화해야 한다면 constructor를 생략해서는 안된다.</p>
 <p>클래스의 정적(static) 메소드를 정의할 때 static 키워드를 사용한다. 정적 메소드는 클래스의 인스턴스가 아닌 클래스 이름으로 호출한다. 따라서 클래스의 인스턴스를 생성하지 않아도 호출할 수 있다. 정적 메소드는 클래스 이름으로 호출하기 때문에 클래스의 인스턴스를 생성하지 않아도 사용할 수 있다. 단, 정적 메소드는 this를 사용할 수 없다. 달리 말하면 메소드 내부에서 this를 사용할 필요가 없는 메소드는 정적 메소드로 만들 수 있다. 정적 메소드는 Math 객체의 메소드처럼 애플리케이션 전역에서 사용할 유틸리티(utility) 함수를 생성할 때 주로 사용한다.</p>
 <br>
@@ -293,9 +293,12 @@
 <hr>
 <br>
 
-<h2 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="hljs-comment">/* Your magic here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> objA = &#123;</span><br><span class="line">  name: <span class="hljs-string">"Nicolas"</span>,</span><br><span class="line">  favFood: <span class="hljs-string">"Kimchi"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> objB = &#123;</span><br><span class="line">  password: <span class="hljs-string">"12345"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> user = ObjectUtilities.mergeObjects(objA, objB);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(user);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> cleanUser = ObjectUtilities.removePassword(user);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(cleanUser);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> frozenUser = ObjectUtilities.freezeObj(cleanUser);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> onlyValues = ObjectUtilities.getOnlyValues(frozenUser);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(onlyValues);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> onlyProperties = ObjectUtilities.getOnlyProperties(frozenUser);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(onlyProperties);</span><br><span class="line"></span><br><span class="line">frozenUser.name = <span class="hljs-string">"Hello!"</span>; <span class="hljs-comment">// This should show an error</span></span><br></pre></td></tr></table></figure>
+<!--
 
-<br>
+## Homework
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="comment">/* Your magic here */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objA = &#123;</span><br><span class="line">  name: <span class="string">"Nicolas"</span>,</span><br><span class="line">  favFood: <span class="string">"Kimchi"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objB = &#123;</span><br><span class="line">  password: <span class="string">"12345"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user = ObjectUtilities.mergeObjects(objA, objB);</span><br><span class="line"><span class="built_in">console</span>.log(user);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> cleanUser = ObjectUtilities.removePassword(user);</span><br><span class="line"><span class="built_in">console</span>.log(cleanUser);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> frozenUser = ObjectUtilities.freezeObj(cleanUser);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> onlyValues = ObjectUtilities.getOnlyValues(frozenUser);</span><br><span class="line"><span class="built_in">console</span>.log(onlyValues);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> onlyProperties = ObjectUtilities.getOnlyProperties(frozenUser);</span><br><span class="line"><span class="built_in">console</span>.log(onlyProperties);</span><br><span class="line"></span><br><span class="line">frozenUser.name = <span class="string">"Hello!"</span>; <span class="comment">// This should show an error</span></span><br></pre></td></tr></table></figure>
+
+<br/>
 
 <h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><p>Complete the “<strong>ObjectUtilities</strong>“ class with the following functions.</p>
 <ul>
@@ -305,12 +308,12 @@
 <li><strong>getOnlyValues</strong>: Returns an array of all the values inside of an object.</li>
 <li><strong>getOnlyProperties</strong>: Returns an array of all the properties inside of an object.<br>Changing the ‘<strong>name</strong>‘ of the ‘<strong>frozenUser</strong>‘ SHOULD throw an error.</li>
 </ul>
-<br>
+<br/>
 
 <h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>This is the desired output.</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">▶ Object &#123;name: &quot;Nicolas&quot;, favFood: &quot;Kimchi&quot;, password: &quot;12345&quot;&#125;</span><br><span class="line">▶ Object &#123;name: &quot;Nicolas&quot;, favFood: &quot;Kimchi&quot;&#125;</span><br><span class="line">▶ [&quot;Nicolas&quot;, &quot;Kimchi&quot;]</span><br><span class="line">▶ [&quot;name&quot;, &quot;favFood&quot;]</span><br><span class="line">Error in sandbox: </span><br><span class="line">▶ TypeError: Cannot assign to read only property &apos;name&apos; of object &apos;#&lt;Object&gt;&apos;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">▶ Object &#123;name: &quot;Nicolas&quot;, favFood: &quot;Kimchi&quot;, password: &quot;12345&quot;&#125;</span><br><span class="line">▶ Object &#123;name: &quot;Nicolas&quot;, favFood: &quot;Kimchi&quot;&#125;</span><br><span class="line">▶ [&quot;Nicolas&quot;, &quot;Kimchi&quot;]</span><br><span class="line">▶ [&quot;name&quot;, &quot;favFood&quot;]</span><br><span class="line">Error in sandbox:</span><br><span class="line">▶ TypeError: Cannot assign to read only property &apos;name&apos; of object &apos;#&lt;Object&gt;&apos;</span><br></pre></td></tr></table></figure>
 
-<br>
+<br/>
 
 <h3 id="Condition"><a href="#Condition" class="headerlink" title="Condition"></a>Condition</h3><ul>
 <li>The output of the program must be EXACTLY like on the image above.</li>
@@ -318,29 +321,29 @@
 <li>DO NOT edit ANYTHING OUTSIDE of ‘ObjectUtiliies’.</li>
 <li>Don’t give up!</li>
 </ul>
-<br>
+<br/>
 
 <h3 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h3><ul>
 <li>Use arrow functions</li>
 <li>Use spread and rest operators</li>
 </ul>
-<br>
+<br/>
 
-<h3 id="Submit"><a href="#Submit" class="headerlink" title="Submit"></a>Submit</h3><p><code>My Answer</code><br><a href="https://codesandbox.io/s/day-one-blueprint-hrvg2" rel="external nofollow noopener noreferrer" target="_blank">Day1 CodeSandbox</a></p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="hljs-comment">// 주어진 조건에서 instance 생성을 하지 않으므로 static methid 이용.</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> mergeObjects = <span class="hljs-function">(<span class="hljs-params">objA, objB</span>) =&gt;</span> (&#123; ...objA, ...objB &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> removePassword = <span class="hljs-function">(<span class="hljs-params">&#123; password, ...user &#125;</span>) =&gt;</span> (&#123; ...user &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> freezeObj = <span class="hljs-function"><span class="hljs-params">cleanUser</span> =&gt;</span> <span class="hljs-built_in">Object</span>.freeze(cleanUser);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> getOnlyValues = <span class="hljs-function"><span class="hljs-params">frozenUser</span> =&gt;</span> <span class="hljs-built_in">Object</span>.keys(frozenUser).map(<span class="hljs-function"><span class="hljs-params">k</span> =&gt;</span> frozenUser[k]);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">static</span> getOnlyProperties = <span class="hljs-function"><span class="hljs-params">frozenUser</span> =&gt;</span> <span class="hljs-built_in">Object</span>.keys(frozenUser).map(<span class="hljs-function"><span class="hljs-params">k</span> =&gt;</span> k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Submit"><a href="#Submit" class="headerlink" title="Submit"></a>Submit</h3><p><code>My Answer</code><br><a href="https://codesandbox.io/s/day-one-blueprint-hrvg2">Day1 CodeSandbox</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 주어진 조건에서 instance 생성을 하지 않으므로 static methid 이용.</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> mergeObjects = <span class="function">(<span class="params">objA, objB</span>) =&gt;</span> (&#123; ...objA, ...objB &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> removePassword = <span class="function">(<span class="params">&#123; password, ...user &#125;</span>) =&gt;</span> (&#123; ...user &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> freezeObj = <span class="function"><span class="params">cleanUser</span> =&gt;</span> <span class="built_in">Object</span>.freeze(cleanUser);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> getOnlyValues = <span class="function"><span class="params">frozenUser</span> =&gt;</span> <span class="built_in">Object</span>.keys(frozenUser).map(<span class="function"><span class="params">k</span> =&gt;</span> frozenUser[k]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> getOnlyProperties = <span class="function"><span class="params">frozenUser</span> =&gt;</span> <span class="built_in">Object</span>.keys(frozenUser).map(<span class="function"><span class="params">k</span> =&gt;</span> k);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<br>
+<br/>
 
-<p><code>Correct</code><br><a href="https://codesandbox.io/s/day-one-solution-qsule" rel="external nofollow noopener noreferrer" target="_blank">Day1 Correct</a></p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">static</span> mergeObjects = <span class="hljs-function">(<span class="hljs-params">objectA, objectB</span>) =&gt;</span> (&#123; ...objectA, ...objectB &#125;);</span><br><span class="line">  <span class="hljs-keyword">static</span> removePassword = <span class="hljs-function">(<span class="hljs-params">&#123; password, ...rest &#125;</span>) =&gt;</span> rest;</span><br><span class="line">  <span class="hljs-keyword">static</span> getOnlyProperties = <span class="hljs-function"><span class="hljs-params">obj</span> =&gt;</span> <span class="hljs-built_in">Object</span>.keys(obj);</span><br><span class="line">  <span class="hljs-keyword">static</span> getOnlyValues = <span class="hljs-function"><span class="hljs-params">obj</span> =&gt;</span> <span class="hljs-built_in">Object</span>.values(obj);</span><br><span class="line">  <span class="hljs-keyword">static</span> freezeObj = <span class="hljs-function"><span class="hljs-params">obj</span> =&gt;</span> <span class="hljs-built_in">Object</span>.freeze(obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>Correct</code><br><a href="https://codesandbox.io/s/day-one-solution-qsule">Day1 Correct</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ObjectUtilities</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> mergeObjects = <span class="function">(<span class="params">objectA, objectB</span>) =&gt;</span> (&#123; ...objectA, ...objectB &#125;);</span><br><span class="line">  <span class="keyword">static</span> removePassword = <span class="function">(<span class="params">&#123; password, ...rest &#125;</span>) =&gt;</span> rest;</span><br><span class="line">  <span class="keyword">static</span> getOnlyProperties = <span class="function"><span class="params">obj</span> =&gt;</span> <span class="built_in">Object</span>.keys(obj);</span><br><span class="line">  <span class="keyword">static</span> getOnlyValues = <span class="function"><span class="params">obj</span> =&gt;</span> <span class="built_in">Object</span>.values(obj);</span><br><span class="line">  <span class="keyword">static</span> freezeObj = <span class="function"><span class="params">obj</span> =&gt;</span> <span class="built_in">Object</span>.freeze(obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<br>
+<br/>
 
 <hr>
-<br>
+<br/>
 
 <h2 id="Day1-정리"><a href="#Day1-정리" class="headerlink" title="Day1 정리"></a>Day1 정리</h2><ul>
-<li><p>오늘의 강의 : <a href="https://academy.nomadcoders.co/courses/436641/lectures/8467057" rel="external nofollow noopener noreferrer" target="_blank">[노마드 코더] 초보를 위한 React JS</a></p>
+<li><p>오늘의 강의 : <a href="https://academy.nomadcoders.co/courses/436641/lectures/8467057">[노마드 코더] 초보를 위한 React JS</a></p>
 <ul>
 <li>1.1 Arrow Functions</li>
 <li>1.2 Template Literals</li>
@@ -349,13 +352,13 @@
 <li>1.5 Classes</li>
 </ul>
 </li>
-<li><p>강의노트: <a href="https://github.com/alleyful/nomflix" rel="external nofollow noopener noreferrer" target="_blank">Note</a></p>
+<li><p>강의노트: <a href="https://github.com/alleyful/nomflix">Note</a></p>
 </li>
-<li><p>오늘의 과제: <a href="https://codesandbox.io/s/day-one-blueprint-fdmk3" rel="external nofollow noopener noreferrer" target="_blank">Day1 Question</a></p>
+<li><p>오늘의 과제: <a href="https://codesandbox.io/s/day-one-blueprint-fdmk3">Day1 Question</a></p>
 </li>
-<li><p>제출: <a href="https://codesandbox.io/s/day-one-blueprint-hrvg2" rel="external nofollow noopener noreferrer" target="_blank">Day1 Answer</a></p>
+<li><p>제출: <a href="https://codesandbox.io/s/day-one-blueprint-hrvg2">Day1 Answer</a></p>
 </li>
-<li><p>정답: <a href="https://codesandbox.io/s/day-one-solution-qsule" rel="external nofollow noopener noreferrer" target="_blank">Day1 Correct</a></p>
+<li><p>정답: <a href="https://codesandbox.io/s/day-one-solution-qsule">Day1 Correct</a></p>
 </li>
 <li><p>회고<br>  오늘의 강의는 arrow function, templeate literals 등 ES6를 접하게 되면 처음 배우는 내용이었다.<br>  이미 머리로는 알고 있는 내용이었지만, 정작 인스턴스를 만들지 않고 함수를 호출하는 부분에서부터 막힐줄은 몰랐다. ‘해당 메소드를 찾을 수…..’<br>  모르는 것보다 <strong>알고 있다고 착각</strong>하는 것을 더욱 조심하자.</p>
 <blockquote>
@@ -363,7 +366,8 @@
 </blockquote>
 </li>
 </ul>
-<br>
+<br/>
+-->
 
         </div>
         
@@ -535,35 +539,7 @@
         <a class="is-flex" href="#Classes">
         <span class="has-mr-6">1.5</span>
         <span>Classes</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#Homework">
-        <span class="has-mr-6">2</span>
-        <span>Homework</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#Constraints">
-        <span class="has-mr-6">2.1</span>
-        <span>Constraints</span>
-        </a></li><li>
-        <a class="is-flex" href="#Output">
-        <span class="has-mr-6">2.2</span>
-        <span>Output</span>
-        </a></li><li>
-        <a class="is-flex" href="#Condition">
-        <span class="has-mr-6">2.3</span>
-        <span>Condition</span>
-        </a></li><li>
-        <a class="is-flex" href="#Hint">
-        <span class="has-mr-6">2.4</span>
-        <span>Hint</span>
-        </a></li><li>
-        <a class="is-flex" href="#Submit">
-        <span class="has-mr-6">2.5</span>
-        <span>Submit</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#Day1-정리">
-        <span class="has-mr-6">3</span>
-        <span>Day1 정리</span>
-        </a></li></ul>
+        </a></li></ul></li></ul>
         </div>
     </div>
 </div>
@@ -848,7 +824,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 alley&nbsp;
+                &copy; 2020 alley&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>
